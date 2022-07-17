@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>XXY开源技术博客</title>
+  
+  
+  <link href="https://xxyopen.com/atom.xml" rel="self"/>
+  
+  <link href="https://xxyopen.com/"/>
+  <updated>2022-07-17T13:51:34.331Z</updated>
+  <id>https://xxyopen.com/</id>
+  
+  <author>
+    <name>xxy</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java 代码格式</title>
+    <link href="https://xxyopen.com/2022/07/17/java/agree/code.html"/>
+    <id>https://xxyopen.com/2022/07/17/java/agree/code.html</id>
+    <published>2022-07-17T13:46:31.000Z</published>
+    <updated>2022-07-17T13:51:34.331Z</updated>
+    
+    <content type="html"><![CDATA[<p>Java 代码格式在遵循 <a href="https://google.github.io/styleguide/javaguide.html">Google Java Style Guide</a> 的基础上，采用 Alibaba <code>4</code> 个空格缩进的规约（谷歌默认采用的是 <code>2</code> 个空格的缩进）。</p><p>IntelliJ IDEA 中导入（<code>Preferences</code> -&gt; <code>Editor</code> -&gt; <code>Code Style</code> -&gt; <code>Java</code> -&gt; <code>Schema</code> -&gt; <code>Import Schema</code>）以下格式文件：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;code_scheme name=&quot;GoogleStyle&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;codeStyleSettings language=&quot;JAVA&quot;&gt;</span><br><span class="line">        &lt;option name=&quot;KEEP_CONTROL_STATEMENT_IN_ONE_LINE&quot; value=&quot;false&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;KEEP_BLANK_LINES_IN_CODE&quot; value=&quot;1&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;BLANK_LINES_AFTER_CLASS_HEADER&quot; value=&quot;1&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;ALIGN_MULTILINE_PARAMETERS&quot; value=&quot;false&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;ALIGN_MULTILINE_RESOURCES&quot; value=&quot;false&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;ALIGN_MULTILINE_FOR&quot; value=&quot;false&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;CALL_PARAMETERS_WRAP&quot; value=&quot;1&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;METHOD_PARAMETERS_WRAP&quot; value=&quot;1&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;EXTENDS_LIST_WRAP&quot; value=&quot;1&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;THROWS_KEYWORD_WRAP&quot; value=&quot;1&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;METHOD_CALL_CHAIN_WRAP&quot; value=&quot;1&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;BINARY_OPERATION_WRAP&quot; value=&quot;1&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;BINARY_OPERATION_SIGN_ON_NEXT_LINE&quot; value=&quot;true&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;TERNARY_OPERATION_WRAP&quot; value=&quot;1&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;TERNARY_OPERATION_SIGNS_ON_NEXT_LINE&quot; value=&quot;true&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;FOR_STATEMENT_WRAP&quot; value=&quot;1&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;ARRAY_INITIALIZER_WRAP&quot; value=&quot;1&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;WRAP_COMMENTS&quot; value=&quot;true&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;IF_BRACE_FORCE&quot; value=&quot;3&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;DOWHILE_BRACE_FORCE&quot; value=&quot;3&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;WHILE_BRACE_FORCE&quot; value=&quot;3&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;FOR_BRACE_FORCE&quot; value=&quot;3&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;PARENT_SETTINGS_INSTALLED&quot; value=&quot;true&quot;/&gt;</span><br><span class="line">        &lt;indentOptions&gt;</span><br><span class="line">            &lt;option name=&quot;INDENT_SIZE&quot; value=&quot;4&quot;/&gt;</span><br><span class="line">            &lt;option name=&quot;CONTINUATION_INDENT_SIZE&quot; value=&quot;4&quot;/&gt;</span><br><span class="line">            &lt;option name=&quot;TAB_SIZE&quot; value=&quot;4&quot;/&gt;</span><br><span class="line">        &lt;/indentOptions&gt;</span><br><span class="line">    &lt;/codeStyleSettings&gt;</span><br><span class="line"></span><br><span class="line">&lt;/code_scheme&gt;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Java 代码格式在遵循 &lt;a href=&quot;https://google.github.io/styleguide/javaguide.html&quot;&gt;Google Java Style Guide&lt;/a&gt; 的基础上，采用 Alibaba &lt;code&gt;4&lt;/code&gt; 个空格缩</summary>
+      
+    
+    
+    
+    <category term="编程规约" scheme="https://xxyopen.com/categories/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/"/>
+    
+    
+    <category term="编程规约" scheme="https://xxyopen.com/tags/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/"/>
+    
+    <category term="java" scheme="https://xxyopen.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git 提交规约</title>
+    <link href="https://xxyopen.com/2022/07/17/git/agree.html"/>
+    <id>https://xxyopen.com/2022/07/17/git/agree.html</id>
+    <published>2022-07-17T13:37:46.000Z</published>
+    <updated>2022-07-17T13:50:42.237Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;type&gt;[scope]: &lt;subject&gt;</span><br><span class="line">// 空一行</span><br><span class="line">[body]</span><br><span class="line">// 空一行</span><br><span class="line">[footer]</span><br></pre></td></tr></table></figure><p><strong>注：[]代表可选，&lt;&gt;代表必选。</strong></p><h3 id="type"><a href="#type" class="headerlink" title="type"></a>type</h3><p>必填，用于指定 commit 的类型。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">feat：增加新功能</span><br><span class="line">fix：修复 bug</span><br><span class="line">docs：只改动了文档相关的内容</span><br><span class="line">style：格式修改，没有修改代码逻辑，比如格式化、换行等</span><br><span class="line">refactor：重构代码，既没有新增功能，也没有修复 bug，比如提取某段代码为一个方法、重构某个功能等</span><br><span class="line">perf：性能、体验优化等</span><br><span class="line">test：新增 test 用例或修改现有测试用例</span><br><span class="line">build：构造工具的或者外部依赖的改动，比如 maven</span><br><span class="line">ci：与 CI（持续集成服务）有关的改动</span><br><span class="line">chore：不修改 src 或者 test 的其余修改，例如构建过程或辅助工具的变动</span><br><span class="line">revert：执行 git revert 打印的 message</span><br></pre></td></tr></table></figure><p><strong>当同时有feat、fix和其他类型时，类型取feat、fix。</strong></p><h3 id="scope"><a href="#scope" class="headerlink" title="scope"></a>scope</h3><p>非必填，用于描述改动的范围，格式一般为项目名&#x2F;模块名，如果一次 commit 修改多个模块，建议拆分成多次 commit，以便更好追踪和维护。</p><h3 id="subject"><a href="#subject" class="headerlink" title="subject"></a>subject</h3><p>必填，此次提交的简短描述，动词开头，第一人称现在时，比如add，而不用 added、adds，第一个字母小写，句尾不加句号（.）</p><h3 id="body"><a href="#body" class="headerlink" title="body"></a>body</h3><p>非必填，此次提交的详细描述，主要描述改动之前的情况及修改动机，对于小的修改不作要求，但是重大需求、更新等必须添加body来作说明。</p><h3 id="footer"><a href="#footer" class="headerlink" title="footer"></a>footer</h3><p>footer只用于以下两种情况</p><ul><li>break changes</li></ul><p>break changes 指明是否产生了破坏性修改，涉及 break changes 的改动必须指明该项，类似版本升级、接口参数减少、接口删除、迁移等，以<code>BREAKING CHANGE：</code>开头，后面是变动的描述、变动的理由以及迁移的方法。</p><ul><li>关闭 issue</li></ul><p>当前提交修改了某个 issue</p><h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">fix(ngStyle): correctly remove old style when new style value is invalid</span><br><span class="line"></span><br><span class="line">Since d6098ee, old styles were not removed if `newStyles` specified an</span><br><span class="line">invalid value for the style (e.g. `false`). The assumption was that the</span><br><span class="line">new style would overwrite the old style value, but using an invalid</span><br><span class="line">value made browsers ignore the new value and thus keep the old style.</span><br><span class="line">This would typically happen when guarding a style with a boolean flag;</span><br><span class="line">e.g.: `ng-style=&quot;&#123;backgroundColor: isError &amp;&amp; &#x27;red&#x27;&#125;&quot;`</span><br><span class="line"></span><br><span class="line">This commit essentially revers commit d6098ee, whose main purpose was</span><br><span class="line">to work around jquery/jquery#4185. The jQuery issue has been fixed in</span><br><span class="line">3.4.0, so that should not be a problem any more.</span><br><span class="line"></span><br><span class="line">Fixes #16860</span><br><span class="line"></span><br><span class="line">Closes #16868</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;格式&quot;&gt;&lt;a href=&quot;#格式&quot; class=&quot;headerlink&quot; title=&quot;格式&quot;&gt;&lt;/a&gt;格式&lt;/h3&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;s</summary>
+      
+    
+    
+    
+    <category term="编程规约" scheme="https://xxyopen.com/categories/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/"/>
+    
+    
+    <category term="Git" scheme="https://xxyopen.com/tags/Git/"/>
+    
+    <category term="编程规约" scheme="https://xxyopen.com/tags/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/"/>
+    
+  </entry>
+  
+</feed>
