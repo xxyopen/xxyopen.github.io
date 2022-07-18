@@ -3,8 +3,8 @@
     <head>
   <!-- 元数据 -->
   <meta charset="utf-8">
-  <link rel="icon" href="">
-  <title>Integer.valueOf() 的享元模式应用 | XXY开源技术博客</title>
+  <link rel="icon" href="https://s1.ax1x.com/2022/07/18/jougYT.png">
+  <title>Java 代码格式 | XXY开源技术博客</title>
   <meta name="author" content="xxy" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -13,21 +13,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="Java, 设计模式" />
+    <meta name="keywords" content="Java, 编程规约" />
   
-  <meta name="description" content="在 Java 中，如果我们想要创建一个 Integer 对象，一般有以下三种方式：  通过标准对象创建语法 new Interger(int) 来创建  通过静态工厂 Integer.valueOf(int) 来创建  通过自动装箱将基本类型 int 自动转换为包装类型 Integer，这其实是通过对 Integer.valueOf() 的自动调用来完成的   方式 1 和方式 3 本质上没有什么">
+  <meta name="description" content="Java 代码格式在遵循 Google Java Style Guide 的基础上，采用 Alibaba 4 个空格缩进的规约（谷歌默认采用的是 2 个空格的缩进）。 IntelliJ IDEA 中导入（Preferences -&gt; Editor -&gt; Code Style -&gt; Java -&gt; Schema -&gt; Import Schema）以下格式文件： 1234">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Integer.valueOf() 的享元模式应用">
-<meta property="og:url" content="https://xxyopen.com/2022/07/18/java/pattern/flyweight.html">
+<meta property="og:title" content="Java 代码格式">
+<meta property="og:url" content="https://xxyopen.com/2022/07/17/agree/java_code_style.html">
 <meta property="og:site_name" content="XXY开源技术博客">
-<meta property="og:description" content="在 Java 中，如果我们想要创建一个 Integer 对象，一般有以下三种方式：  通过标准对象创建语法 new Interger(int) 来创建  通过静态工厂 Integer.valueOf(int) 来创建  通过自动装箱将基本类型 int 自动转换为包装类型 Integer，这其实是通过对 Integer.valueOf() 的自动调用来完成的   方式 1 和方式 3 本质上没有什么">
+<meta property="og:description" content="Java 代码格式在遵循 Google Java Style Guide 的基础上，采用 Alibaba 4 个空格缩进的规约（谷歌默认采用的是 2 个空格的缩进）。 IntelliJ IDEA 中导入（Preferences -&gt; Editor -&gt; Code Style -&gt; Java -&gt; Schema -&gt; Import Schema）以下格式文件： 1234">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-07-17T23:37:58.000Z">
-<meta property="article:modified_time" content="2022-07-18T00:03:39.469Z">
+<meta property="og:image" content="https://s1.ax1x.com/2022/07/18/jougYT.png">
+<meta property="article:published_time" content="2022-07-17T13:46:31.000Z">
+<meta property="article:modified_time" content="2022-07-17T23:59:47.904Z">
 <meta property="article:author" content="xxy">
-<meta property="article:tag" content="设计模式">
+<meta property="article:tag" content="编程规约">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2022/07/18/jougYT.png">
   <link rel="alternate" href="atom.xml" type="application/atom+xml">
   <!-- 站点验证相关 -->
   
@@ -50,8 +52,6 @@
   
   
   
-    <link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">
-  
   
     <link rel="stylesheet" href="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
   
@@ -64,13 +64,13 @@
   <style>
     
       .kratos-cover.kratos-cover-2 {
-        background-image: url('/images/banner.webp');
+        background-image: url('https://s1.ax1x.com/2022/07/18/joEyTS.png');
       }
     
     
       @media(min-width:768px) {
         body.custom-background {
-          background-image: url('/images/bg.webp');
+          background-image: url('https://s1.ax1x.com/2022/07/18/joZZ8J.png');
         }
       }
     
@@ -169,15 +169,15 @@
 
             <article itemscope itemtype="https://schema.org/Article">
     
-    <link itemprop="mainEntityOfPage" href="https://xxyopen.com/2022/07/18/java/pattern/flyweight.html">
+    <link itemprop="mainEntityOfPage" href="https://xxyopen.com/2022/07/17/agree/java_code_style.html">
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center" itemprop="name headline">Integer.valueOf() 的享元模式应用</h1>
+                <h1 class="kratos-entry-title text-center" itemprop="name headline">Java 代码格式</h1>
             
             
             <ul class="kratos-post-meta text-center">
-                <li><time datetime="2022-07-17T23:37:58.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2022-07-18</time></li>
+                <li><time datetime="2022-07-17T13:46:31.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2022-07-17</time></li>
                 <li itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <i class="fa fa-user"></i> 作者 <span itemprop="name">xxy</span>
                 </li>
@@ -185,7 +185,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        ~4.07K
+                        ~2.72K
                     
                     字
                 </li>
@@ -195,44 +195,13 @@
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
                 <div class="icon"><i class="fa fa-warning"></i></div>
-                <div class="text"><p>本文最后编辑于 <time datetime="1658102619469"></time> 前，其中的内容可能需要更新。</p></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1658102387904"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
             <hr />
-            <div itemprop="articleBody"><p>在 Java 中，如果我们想要创建一个 Integer 对象，一般有以下三种方式：</p>
-<ol>
-<li><p>通过标准对象创建语法 new Interger(int) 来创建</p>
-</li>
-<li><p>通过静态工厂 Integer.valueOf(int) 来创建</p>
-</li>
-<li><p>通过自动装箱将基本类型 int 自动转换为包装类型 Integer，这其实是通过对 Integer.valueOf() 的自动调用来完成的</p>
-</li>
-</ol>
-<p>方式 1 和方式 3 本质上没有什么区别，只不过方式 1 看起来更简洁，那么方式 1 和方式 2 有什么区别呢？先来看一个经典的面试题：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123; </span><br><span class="line">    Integer m = Integer.valueOf(111);  </span><br><span class="line">    Integer n = Integer.valueOf(111);  </span><br><span class="line">    System.out.println(m == n);</span><br><span class="line"></span><br><span class="line">    m = new Integer(111);  </span><br><span class="line">    n = new Integer(111);  </span><br><span class="line">    System.out.println(m == n);   </span><br><span class="line">  </span><br><span class="line">    Integer i = Integer.valueOf(222);    </span><br><span class="line">    Integer j = Integer.valueOf(222);   </span><br><span class="line">    System.out.println(i == j);</span><br><span class="line">   </span><br><span class="line">    i = new Integer(222);  </span><br><span class="line">    j = new Integer(222);   </span><br><span class="line">    System.out.println(i == j);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>大家可以不急着看答案，先独立思考一下以上的打印结果。我想刷过面试题的同学答对这道题应该问题不大，并且能够知道一些原因。但是真正深入了解源码，以及背后设计思想的同学应该也不是很多。我们先来看看构造函数 Interger(int) 的源码（JDK 17），如下所示：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">private final int value;</span><br><span class="line">@Deprecated(since=&quot;9&quot;, forRemoval = true)</span><br><span class="line">public Integer(int value) &#123;</span><br><span class="line">    this.value = value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>使用 new 关键字创建对象会自动调用该对象的相应构造函数，从以上源码中可以看出，Interger(int) 构造函数只做一件事，那就是初始化成员常量 value 的值，该常量代表了 Integer 对象的值。</p>
-<p>使用 new 关键字每次都会在堆内存上开辟一块新的空间用于存放创建出来的对象，只要使用了 new 关键字那么创建出来的对象就是新的对象，而 <code>==</code> 关系操作符比较的是两个对象之间的引用是否相等（即是否引用了同一个对象），所以使用 new 创建的每一个 Integer 对象使用<code>==</code> 关系操作符得到的结果都是<code>false</code>。</p>
-<p>我们再来看看静态工厂 Integer.valueOf(int) 的源码（JDK 17），如下所示：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">private static class IntegerCache &#123;</span><br><span class="line">    static final int low = -128;</span><br><span class="line">    static final int high;</span><br><span class="line">    static final Integer[] cache;</span><br><span class="line">    static Integer[] archivedCache;</span><br><span class="line"></span><br><span class="line">    static &#123;</span><br><span class="line">        // high value may be configured by property</span><br><span class="line">        int h = 127;</span><br><span class="line">        String integerCacheHighPropValue =</span><br><span class="line">            VM.getSavedProperty(&quot;java.lang.Integer.IntegerCache.high&quot;);</span><br><span class="line">        if (integerCacheHighPropValue != null) &#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                h = Math.max(parseInt(integerCacheHighPropValue), 127);</span><br><span class="line">                // Maximum array size is Integer.MAX_VALUE</span><br><span class="line">                h = Math.min(h, Integer.MAX_VALUE - (-low) -1);</span><br><span class="line">            &#125; catch( NumberFormatException nfe) &#123;</span><br><span class="line">                // If the property cannot be parsed into an int, ignore it.</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        high = h;</span><br><span class="line"></span><br><span class="line">        // Load IntegerCache.archivedCache from archive, if possible</span><br><span class="line">        CDS.initializeFromArchive(IntegerCache.class);</span><br><span class="line">        int size = (high - low) + 1;</span><br><span class="line"></span><br><span class="line">        // Use the archived cache if it exists and is large enough</span><br><span class="line">        if (archivedCache == null || size &gt; archivedCache.length) &#123;</span><br><span class="line">            Integer[] c = new Integer[size];</span><br><span class="line">            int j = low;</span><br><span class="line">            for(int i = 0; i &lt; c.length; i++) &#123;</span><br><span class="line">                c[i] = new Integer(j++);</span><br><span class="line">            &#125;</span><br><span class="line">            archivedCache = c;</span><br><span class="line">        &#125;</span><br><span class="line">        cache = archivedCache;</span><br><span class="line">        // range [-128, 127] must be interned (JLS7 5.1.7)</span><br><span class="line">        assert IntegerCache.high &gt;= 127;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private IntegerCache() &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">@IntrinsicCandidate</span><br><span class="line">public static Integer valueOf(int i) &#123;</span><br><span class="line">    if (i &gt;= IntegerCache.low &amp;&amp; i &lt;= IntegerCache.high)</span><br><span class="line">        return IntegerCache.cache[i + (-IntegerCache.low)];</span><br><span class="line">    return new Integer(i);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>从以上源码可以看出，Integer 类中包含一个私有的静态类 IntegerCache，该类是一个 Integer 对象数组（默认 -128 ～ 127）的缓存，缓存在第一次使用时被初始化，缓存的大小（Integer 缓存对象的最大值）可以由 JVM 参数<code>-XX:AutoBoxCacheMax=&lt;size&gt;</code> 或系统属性<code>-Djava.lang.Integer.IntegerCache.high=&lt;size&gt;</code>来设置。 </p>
-<p> 如果我们通过静态工厂 Integer.valueOf(int) 来创建 Integer 对象，首先会判断创建的对象值是否在 IntegerCache 中有缓存，有的话直接取缓存中的值，否则通过标准对象创建语法 new Interger(int) 创建并返回。</p>
-<p> 所以默认情况下，如果使用 Integer.valueOf(int) 创建的 Integer 对象值在 -128 ～ 127 之间，那么无论创建多少次，创建的每一个对象使用<code>==</code> 关系操作符得到的结果都是<code>true</code>，否则都是<code>false</code>。</p>
-<p> <strong>注：如果修改过<code>java.lang.Integer.IntegerCache.high</code>属性值，那么结果就另当别论了。</strong></p>
-<p> 静态工厂 Integer.valueOf(int) 的设计正是对享元模式的应用。享元模式定义如下：</p>
-<blockquote>
-<p>享元模式（Flyweight Pattern）主要用于减少创建对象的数量，以减少内存占用和提高性能。这种类型的设计模式属于结构型模式，它提供了减少对象数量从而改善应用所需的对象结构的方式。</p>
-</blockquote>
-<blockquote>
-<p>享元模式尝试重用现有的同类对象，如果未找到匹配的对象，则创建新对象。</p>
-</blockquote>
-<p>Integer.valueOf(int) 通过享元模式缓存频繁请求的值来显着提高空间和时间性能，效率远远高于通过 new Integer() 创建对象的方式。所以 Java 9 中直接弃用了new Integer()，我们以后在创建 Integer 的包装类型时，也尽量不要再使用 new Integer() 的方式了。</p>
-<p><strong>注：其它包装类型（Long、Short 等）也类似。</strong></p>
-</div>
+            <div itemprop="articleBody"><p>Java 代码格式在遵循 <a target="_blank" rel="noopener" href="https://google.github.io/styleguide/javaguide.html">Google Java Style Guide</a> 的基础上，采用 Alibaba <code>4</code> 个空格缩进的规约（谷歌默认采用的是 <code>2</code> 个空格的缩进）。</p>
+<p>IntelliJ IDEA 中导入（<code>Preferences</code> -&gt; <code>Editor</code> -&gt; <code>Code Style</code> -&gt; <code>Java</code> -&gt; <code>Schema</code> -&gt; <code>Import Schema</code>）以下格式文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;code_scheme name=&quot;GoogleStyle&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;codeStyleSettings language=&quot;JAVA&quot;&gt;</span><br><span class="line">        &lt;option name=&quot;KEEP_CONTROL_STATEMENT_IN_ONE_LINE&quot; value=&quot;false&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;KEEP_BLANK_LINES_IN_CODE&quot; value=&quot;1&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;BLANK_LINES_AFTER_CLASS_HEADER&quot; value=&quot;1&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;ALIGN_MULTILINE_PARAMETERS&quot; value=&quot;false&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;ALIGN_MULTILINE_RESOURCES&quot; value=&quot;false&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;ALIGN_MULTILINE_FOR&quot; value=&quot;false&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;CALL_PARAMETERS_WRAP&quot; value=&quot;1&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;METHOD_PARAMETERS_WRAP&quot; value=&quot;1&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;EXTENDS_LIST_WRAP&quot; value=&quot;1&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;THROWS_KEYWORD_WRAP&quot; value=&quot;1&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;METHOD_CALL_CHAIN_WRAP&quot; value=&quot;1&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;BINARY_OPERATION_WRAP&quot; value=&quot;1&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;BINARY_OPERATION_SIGN_ON_NEXT_LINE&quot; value=&quot;true&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;TERNARY_OPERATION_WRAP&quot; value=&quot;1&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;TERNARY_OPERATION_SIGNS_ON_NEXT_LINE&quot; value=&quot;true&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;FOR_STATEMENT_WRAP&quot; value=&quot;1&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;ARRAY_INITIALIZER_WRAP&quot; value=&quot;1&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;WRAP_COMMENTS&quot; value=&quot;true&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;IF_BRACE_FORCE&quot; value=&quot;3&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;DOWHILE_BRACE_FORCE&quot; value=&quot;3&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;WHILE_BRACE_FORCE&quot; value=&quot;3&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;FOR_BRACE_FORCE&quot; value=&quot;3&quot;/&gt;</span><br><span class="line">        &lt;option name=&quot;PARENT_SETTINGS_INSTALLED&quot; value=&quot;true&quot;/&gt;</span><br><span class="line">        &lt;indentOptions&gt;</span><br><span class="line">            &lt;option name=&quot;INDENT_SIZE&quot; value=&quot;4&quot;/&gt;</span><br><span class="line">            &lt;option name=&quot;CONTINUATION_INDENT_SIZE&quot; value=&quot;4&quot;/&gt;</span><br><span class="line">            &lt;option name=&quot;TAB_SIZE&quot; value=&quot;4&quot;/&gt;</span><br><span class="line">        &lt;/indentOptions&gt;</span><br><span class="line">    &lt;/codeStyleSettings&gt;</span><br><span class="line"></span><br><span class="line">&lt;/code_scheme&gt;</span><br></pre></td></tr></table></figure></div>
         </div>
         
             <div class="kratos-copyright text-center clearfix">
@@ -287,7 +256,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "https://xxyopen.com/2022/07/18/java/pattern/flyweight.html",
+                text: "https://xxyopen.com/2022/07/17/agree/java_code_style.html",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -299,15 +268,10 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "https://xxyopen.com/2022/07/18/java/pattern/flyweight.html";
-            const title         = "「Integer.valueOf() 的享元模式应用」";
-            const excerpt       = `在 Java 中，如果我们想要创建一个 Integer 对象，一般有以下三种方式：
-
-通过标准对象创建语法 new Interger(int) 来创建
-
-通过静态工厂 Integer.valueOf(int) 来创建
-
-通过自动装箱将...`;
+            const hostUrl       = "https://xxyopen.com/2022/07/17/agree/java_code_style.html";
+            const title         = "「Java 代码格式」";
+            const excerpt       = `Java 代码格式在遵循 Google Java Style Guide 的基础上，采用 Alibaba 4 个空格缩进的规约（谷歌默认采用的是 2 个空格的缩进）。
+IntelliJ IDEA 中导入（Preferences -&g...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -326,10 +290,10 @@
             <div class="footer-tag clearfix">
                 <div class="pull-left">
                 <i class="fa fa-tags"></i>
-                    <a class="tag-none-link" href="/tags/Java/" rel="tag">Java</a>, <a class="tag-none-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a>
+                    <a class="tag-none-link" href="/tags/Java/" rel="tag">Java</a>, <a class="tag-none-link" href="/tags/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/" rel="tag">编程规约</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2022-07-18T00:03:39.469Z" itemprop="dateModified">最后编辑：2022-07-18</time>
+                    <time datetime="2022-07-17T23:59:47.904Z" itemprop="dateModified">最后编辑：2022-07-18</time>
                 </div>
             </div>
         </footer>
@@ -338,12 +302,12 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" MySQL 官方多线程逻辑备份工具" href="/2022/07/18/tools/mysqlshell.html">&lt; 上一篇</a>
+                <a title=" Git 提交规约" href="/2022/07/17/agree/git_commit.html">&lt; 上一篇</a>
             </div>
             
             
             <div class="nav-next clearfix">
-                <a title=" Spring Boot 3 入门" href="/2022/07/18/note/java/springboot3/start.html">下一篇 &gt;</a>
+                <a title=" Shell 基础操作" href="/2022/07/18/doc/shell/base.html">下一篇 &gt;</a>
             </div>
             
         </nav>
@@ -353,8 +317,8 @@
 
 <script>
     window.livereOptions = {
-        refer: 'xxyopen.com/2022/07/18/java/pattern/flyweight.html',
-        site: 'https://xxyopen.com/2022/07/18/java/pattern/flyweight.html',
+        refer: 'xxyopen.com/2022/07/17/agree/java_code_style.html',
+        site: 'https://xxyopen.com/2022/07/17/agree/java_code_style.html',
         eagerLoading: true //主题会自己处理lazy load，没有必要让LiveRe的脚本再去做lazy load的处理
     };
     var load_comm = () => {
@@ -408,7 +372,7 @@
                 分类
             </span>
             <span class="count">
-                13
+                10
             </span>
         </a>
         <a class="meta-item" href="/tags/">
@@ -416,7 +380,7 @@
                 标签
             </span>
             <span class="count">
-                19
+                18
             </span>
         </a>
     </div>
@@ -427,7 +391,7 @@
                 
   <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Elasticsearch/">Elasticsearch</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Elasticsearch/%E5%AE%A2%E6%88%B7%E7%AB%AF/">客户端</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/%E5%B7%A5%E5%85%B7/">工具</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Spring-Boot-3/">Spring Boot 3</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%8E%A8%E8%8D%90/">开源项目推荐</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Shell/">Shell</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/novel-plus/">novel-plus</a><span class="category-list-count">7</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/">编程规约</a><span class="category-list-count">2</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Elasticsearch/">Elasticsearch</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Spring-Boot-3/">Spring Boot 3</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%8E%A8%E8%8D%90/">开源项目推荐</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Shell/">Shell</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/novel-plus/">novel-plus</a><span class="category-list-count">7</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/">编程规约</a><span class="category-list-count">2</span></li></ul>
   </aside>
 
 
@@ -436,7 +400,7 @@
   <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
     <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
       <div class="tag-clouds">
-        <a href="/tags/Docker/" style="font-size: 0.6em;">Docker</a> <a href="/tags/Elasticsearch/" style="font-size: 0.6em;">Elasticsearch</a> <a href="/tags/Git/" style="font-size: 0.6em;">Git</a> <a href="/tags/IDEA%E6%8F%92%E4%BB%B6/" style="font-size: 0.6em;">IDEA插件</a> <a href="/tags/Java/" style="font-size: 0.64em;">Java</a> <a href="/tags/MySQL/" style="font-size: 0.6em;">MySQL</a> <a href="/tags/Shell/" style="font-size: 0.6em;">Shell</a> <a href="/tags/SpringBoot3/" style="font-size: 0.76em;">SpringBoot3</a> <a href="/tags/novel/" style="font-size: 0.6em;">novel</a> <a href="/tags/novel-plus/" style="font-size: 0.8em;">novel-plus</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 0.68em;">学习笔记</a> <a href="/tags/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" style="font-size: 0.72em;">安装教程</a> <a href="/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/" style="font-size: 0.6em;">宝塔面板</a> <a href="/tags/%E5%B0%8F%E8%AF%B4%E9%A1%B9%E7%9B%AE/" style="font-size: 0.64em;">小说项目</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 0.68em;">工具</a> <a href="/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/" style="font-size: 0.72em;">开源项目</a> <a href="/tags/%E6%8E%A5%E5%8F%A3%E8%B0%83%E8%AF%95/" style="font-size: 0.6em;">接口调试</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/" style="font-size: 0.64em;">编程规约</a>
+        <a href="/tags/Docker/" style="font-size: 0.6em;">Docker</a> <a href="/tags/Elasticsearch/" style="font-size: 0.6em;">Elasticsearch</a> <a href="/tags/Git/" style="font-size: 0.6em;">Git</a> <a href="/tags/IDEA%E6%8F%92%E4%BB%B6/" style="font-size: 0.6em;">IDEA插件</a> <a href="/tags/Java/" style="font-size: 0.65em;">Java</a> <a href="/tags/MySQL/" style="font-size: 0.6em;">MySQL</a> <a href="/tags/Shell/" style="font-size: 0.6em;">Shell</a> <a href="/tags/SpringBoot3/" style="font-size: 0.75em;">SpringBoot3</a> <a href="/tags/novel/" style="font-size: 0.6em;">novel</a> <a href="/tags/novel-plus/" style="font-size: 0.8em;">novel-plus</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 0.7em;">学习笔记</a> <a href="/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/" style="font-size: 0.6em;">宝塔面板</a> <a href="/tags/%E5%B0%8F%E8%AF%B4%E9%A1%B9%E7%9B%AE/" style="font-size: 0.65em;">小说项目</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 0.7em;">工具</a> <a href="/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/" style="font-size: 0.75em;">开源项目</a> <a href="/tags/%E6%8E%A5%E5%8F%A3%E8%B0%83%E8%AF%95/" style="font-size: 0.6em;">接口调试</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/" style="font-size: 0.65em;">编程规约</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 0.6em;">设计模式</a>
       </div>
   </aside>
 
@@ -462,7 +426,7 @@
         
           
           
-            <a class="list-group-item" href="/2022/07/18/tools/easyyapi.html"><i class="fa  fa-book"></i> 接口调试利器 EasyYapi 插件</a>
+            <a class="list-group-item" href="/2022/07/18/os/easyyapi.html"><i class="fa  fa-book"></i> 接口调试利器 EasyYapi 插件</a>
             
           
         
@@ -520,7 +484,7 @@
     </div>
 </div>
 <footer>
-    <div id="footer"  class="ap-lrc"  >
+    <div id="footer"  >
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 footer-list text-center">
@@ -600,19 +564,6 @@
 
     <script async src="/js/candy.min.js"></script>
 
-
-
-    <script defer src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
-    
-    <script defer src="https://unpkg.com/meting@2/dist/Meting.min.js"></script>
-    <meting-js
-        server="netease"
-        type="playlist"
-        id="3204190542"
-        order="random"
-        fixed="true"
-    >
-    </meting-js>
 
 
 

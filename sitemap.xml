@@ -2,16 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://xxyopen.com/2022/07/18/doc/novel-plus/install/bt.html</loc>
-    
-    <lastmod>2022-07-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xxyopen.com/2022/07/18/os/novel.html</loc>
+    <loc>https://xxyopen.com/2022/07/18/mysql/mysqlshell.html</loc>
     
     <lastmod>2022-07-18</lastmod>
     
@@ -30,6 +21,60 @@
   
   <url>
     <loc>https://xxyopen.com/2022/07/18/doc/novel-plus/install/package.html</loc>
+    
+    <lastmod>2022-07-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xxyopen.com/2022/07/18/doc/novel-plus/install/docker.html</loc>
+    
+    <lastmod>2022-07-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xxyopen.com/2022/07/18/doc/novel-plus/install/bt.html</loc>
+    
+    <lastmod>2022-07-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xxyopen.com/2022/07/18/java/flyweight_pattern.html</loc>
+    
+    <lastmod>2022-07-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xxyopen.com/2022/07/18/es/esclient.html</loc>
+    
+    <lastmod>2022-07-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xxyopen.com/2022/07/18/doc/shell/base.html</loc>
+    
+    <lastmod>2022-07-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xxyopen.com/2022/07/18/doc/novel-plus/proxy.html</loc>
     
     <lastmod>2022-07-18</lastmod>
     
@@ -65,7 +110,7 @@
   </url>
   
   <url>
-    <loc>https://xxyopen.com/2022/07/18/tools/mysqlshell.html</loc>
+    <loc>https://xxyopen.com/2022/07/18/os/novel.html</loc>
     
     <lastmod>2022-07-18</lastmod>
     
@@ -74,7 +119,7 @@
   </url>
   
   <url>
-    <loc>https://xxyopen.com/2022/07/18/tools/nav.html</loc>
+    <loc>https://xxyopen.com/2022/07/18/os/nav.html</loc>
     
     <lastmod>2022-07-18</lastmod>
     
@@ -83,25 +128,7 @@
   </url>
   
   <url>
-    <loc>https://xxyopen.com/2022/07/18/tools/easyyapi.html</loc>
-    
-    <lastmod>2022-07-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xxyopen.com/2022/07/18/doc/novel-plus/proxy.html</loc>
-    
-    <lastmod>2022-07-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xxyopen.com/2022/07/18/es/esclient.html</loc>
+    <loc>https://xxyopen.com/2022/07/18/os/easyyapi.html</loc>
     
     <lastmod>2022-07-18</lastmod>
     
@@ -137,34 +164,7 @@
   </url>
   
   <url>
-    <loc>https://xxyopen.com/2022/07/18/doc/novel-plus/install/docker.html</loc>
-    
-    <lastmod>2022-07-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xxyopen.com/2022/07/18/doc/shell/base.html</loc>
-    
-    <lastmod>2022-07-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xxyopen.com/2022/07/18/java/pattern/flyweight.html</loc>
-    
-    <lastmod>2022-07-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xxyopen.com/2022/07/17/java/agree/code.html</loc>
+    <loc>https://xxyopen.com/2022/07/17/agree/java_code_style.html</loc>
     
     <lastmod>2022-07-17</lastmod>
     
@@ -173,7 +173,7 @@
   </url>
   
   <url>
-    <loc>https://xxyopen.com/2022/07/17/git/agree.html</loc>
+    <loc>https://xxyopen.com/2022/07/17/agree/git_commit.html</loc>
     
     <lastmod>2022-07-17</lastmod>
     
@@ -296,13 +296,6 @@
   </url>
   
   <url>
-    <loc>https://xxyopen.com/tags/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2022-07-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://xxyopen.com/tags/Docker/</loc>
     <lastmod>2022-07-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -354,20 +347,6 @@
   </url>
   
   <url>
-    <loc>https://xxyopen.com/categories/Java/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
-    <lastmod>2022-07-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://xxyopen.com/categories/MySQL/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2022-07-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://xxyopen.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-07-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -404,13 +383,6 @@
   
   <url>
     <loc>https://xxyopen.com/categories/Elasticsearch/</loc>
-    <lastmod>2022-07-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://xxyopen.com/categories/Elasticsearch/%E5%AE%A2%E6%88%B7%E7%AB%AF/</loc>
     <lastmod>2022-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
