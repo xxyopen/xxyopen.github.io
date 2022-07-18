@@ -15,12 +15,12 @@
   
     <meta name="keywords" content="novel-plus, 安装教程, 宝塔面板" />
   
-  <meta name="description" content="本安装教程基于 Ubuntu 系统，但适用于其它绝大部分 Linux 发行版  系统要求 操作系统：Linux 内存大小：2G+（建议 4G） 磁盘容量：无要求（根据你的存储需求来选择） 控制面板：宝塔 Linux 面板  实验环境 操作系统：Ubuntu 22.04 LTS x86_64 内存大小：4G 磁盘容量：10G 宝塔面板：免费版 7.9.2  安装文件下载在novel-plus的发行">
+  <meta name="description" content="本安装教程基于 Ubuntu 系统，但适用于其它绝大部分 Linux 发行版。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="novel-plus 宝塔安装教程">
 <meta property="og:url" content="https://xxyopen.com/2022/07/18/doc/novel-plus/install/bt.html">
 <meta property="og:site_name" content="XXY开源技术博客">
-<meta property="og:description" content="本安装教程基于 Ubuntu 系统，但适用于其它绝大部分 Linux 发行版  系统要求 操作系统：Linux 内存大小：2G+（建议 4G） 磁盘容量：无要求（根据你的存储需求来选择） 控制面板：宝塔 Linux 面板  实验环境 操作系统：Ubuntu 22.04 LTS x86_64 内存大小：4G 磁盘容量：10G 宝塔面板：免费版 7.9.2  安装文件下载在novel-plus的发行">
+<meta property="og:description" content="本安装教程基于 Ubuntu 系统，但适用于其它绝大部分 Linux 发行版。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://xxyopen.com/images/docs/novel-plus/install/download1.png">
 <meta property="og:image" content="https://xxyopen.com/images/docs/novel-plus/install/mysql1.png">
@@ -59,7 +59,7 @@
 <meta property="og:image" content="https://xxyopen.com/images/docs/novel-plus/install/admin2.png">
 <meta property="og:image" content="https://xxyopen.com/images/docs/novel-plus/install/admin3.png">
 <meta property="article:published_time" content="2022-07-18T00:30:11.000Z">
-<meta property="article:modified_time" content="2022-07-18T01:58:25.345Z">
+<meta property="article:modified_time" content="2022-07-18T04:35:35.882Z">
 <meta property="article:author" content="xxy">
 <meta property="article:tag" content="novel-plus">
 <meta property="article:tag" content="安装教程">
@@ -223,7 +223,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        ~2.95K
+                        ~2.96K
                     
                     字
                 </li>
@@ -233,13 +233,19 @@
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
                 <div class="icon"><i class="fa fa-warning"></i></div>
-                <div class="text"><p>本文最后编辑于 <time datetime="1658109505345"></time> 前，其中的内容可能需要更新。</p></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1658118935882"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
+            
+                <div class="kratos-post-inner-toc">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E8%A6%81%E6%B1%82"><span class="toc-number">1.</span> <span class="toc-text">系统要求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E7%8E%AF%E5%A2%83"><span class="toc-number">2.</span> <span class="toc-text">实验环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD"><span class="toc-number">3.</span> <span class="toc-text">安装文件下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MySQL-%E5%AE%89%E8%A3%85"><span class="toc-number">4.</span> <span class="toc-text">MySQL 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JDK-%E5%AE%89%E8%A3%85"><span class="toc-number">5.</span> <span class="toc-text">JDK 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-novel-plus-%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95"><span class="toc-number">6.</span> <span class="toc-text">创建 novel-plus 安装目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%88%AC%E8%99%AB%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85"><span class="toc-number">7.</span> <span class="toc-text">爬虫程序安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E5%8F%B0%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85"><span class="toc-number">8.</span> <span class="toc-text">前台程序安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8E%E5%8F%B0%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85"><span class="toc-number">9.</span> <span class="toc-text">后台程序安装</span></a></li></ol>
+                </div>
             
             <hr />
             <div itemprop="articleBody"><blockquote>
-<p>本安装教程基于 Ubuntu 系统，但适用于其它绝大部分 Linux 发行版</p>
+<p>本安装教程基于 Ubuntu 系统，但适用于其它绝大部分 Linux 发行版。</p>
 </blockquote>
+<span id="more"></span>
+
 <h3 id="系统要求"><a href="#系统要求" class="headerlink" title="系统要求"></a>系统要求</h3><ul>
 <li>操作系统：Linux</li>
 <li>内存大小：2G+（建议 4G）</li>
@@ -254,14 +260,19 @@
 </ul>
 <h3 id="安装文件下载"><a href="#安装文件下载" class="headerlink" title="安装文件下载"></a>安装文件下载</h3><p>在<code>novel-plus</code>的发行页面<code>https://github.com/201206030/novel-plus/releases</code>（包含 novel-plus 所有版本的安装文件），找到你想要安装的版本（例如 3.6.1），下载<code>sql.zip</code>、<code>novel-crawl.zip</code>、<code>novel-front.zip</code>和<code>novel-admin.zip</code>文件到本地机器上：</p>
 <p><img src="/images/docs/novel-plus/install/download1.png"></p>
-<p><strong>注：有些版本只有部分文件，例如 3.6.2 版本只有 novel-crawl.zip ，这是由于相较于上个版本（3.6.1）只有爬虫程序更新过，去上个版本下载其他 zip 文件即可。</strong></p>
+<div class="alert alert-info"><div class="icon"><i class="fa fa-info"></i></div><div class="text"><p>有些版本只有部分文件，例如 3.6.2 版本只有 novel-crawl.zip ，这是由于相较于上个版本（3.6.1）只有爬虫程序更新过，去上个版本下载其他 zip 文件即可。</p>
+</div></div>
+
+
 <h3 id="MySQL-安装"><a href="#MySQL-安装" class="headerlink" title="MySQL 安装"></a>MySQL 安装</h3><p>MySQL 5.7 或以上版本均可，建议安装 8.0。</p>
 <ol>
 <li>进入宝塔面板的软件商店搜索 MySQL 安装（如已安装 MySQL，可省略此步骤），如下所示：</li>
 </ol>
 <p><img src="/images/docs/novel-plus/install/mysql1.png"></p>
 <p><img src="/images/docs/novel-plus/install/mysql2.png"></p>
-<p><strong>注：根据你的服务器环境，安装 MySQL 大约在几分钟到几十分钟不等。</strong></p>
+<div class="alert alert-info"><div class="icon"><i class="fa fa-info"></i></div><div class="text"><p>根据你的服务器环境，安装 MySQL 大约在几分钟到几十分钟不等。</p>
+</div></div>
+
 <ol start="2">
 <li>MySQL 安装成功后，进入宝塔面板的数据库菜单添加<code>novel-plus</code>数据库，选择编码<code>utf8mb4</code>，如下所示：</li>
 </ol>
@@ -277,7 +288,9 @@
 <p><img src="/images/docs/novel-plus/install/java2.png"></p>
 <p>在 Ubuntu 22.04 系统中通过以上方法安装 JDK8 失败。我们可以打开终端，通过执行命令<code>java -version</code>来验证，如下所示：</p>
 <p><img src="/images/docs/novel-plus/install/java3.png"></p>
-<p><strong>注：上图要求输入的账号密码是服务器SSH登录的账号密码，而不是宝塔面板的账号密码！！！</strong></p>
+<div class="alert alert-warning"><div class="icon"><i class="fa fa-warning"></i></div><div class="text"><p>上图要求输入的账号密码是服务器 SSH 登录的账号密码，而不是宝塔面板的账号密码。</p>
+</div></div>
+
 <p><img src="/images/docs/novel-plus/install/java4.png"></p>
 <p>从上图可以看出执行命令<code>java -version</code>后提示<code>java 命令不存在</code>，说明 JDK 安装失败。</p>
 <p>如果通过安装 Tomcat8 的方式安装 JDK 失败，我们可以打开终端，通过执行如下命令来安装 JDK8:</p>
@@ -285,7 +298,9 @@
 <p>Debian 或 Ubuntu 系统：<code>sudo apt-get install openjdk-8-jdk -y</code></p>
 <p>其它 Linux 系统：自行百度或谷歌<code>XX 系统安装 JDK8</code>即可，例如：<code>Ubuntu 安装 JDK8</code></p>
 <p><img src="/images/docs/novel-plus/install/java5.png"></p>
-<p><strong>注：上图要求输入的密码是服务器的登录密码不要输成宝塔面板的登录密码了！！！</strong></p>
+<div class="alert alert-warning"><div class="icon"><i class="fa fa-warning"></i></div><div class="text"><p>上图要求输入的密码是服务器的登录密码不要输成宝塔面板的登录密码了。</p>
+</div></div>
+
 <p>安装完成后通过执行验证命令<code>java -version</code>，可以看到 JDK 的信息：</p>
 <p><img src="/images/docs/novel-plus/install/java6.png"></p>
 <h3 id="创建-novel-plus-安装目录"><a href="#创建-novel-plus-安装目录" class="headerlink" title="创建 novel-plus 安装目录"></a>创建 novel-plus 安装目录</h3><ol>
@@ -342,7 +357,9 @@
 <li>进入<code>config</code>子目录，修改<code>application-commom-prod.yml</code>文件中的数据库配置（与爬虫程序的数据库配置修改相同），如下所示：</li>
 </ol>
 <p><img src="/images/docs/novel-plus/install/front2.png"></p>
-<p><strong>注：修改完配置后，一定要记得点击左上角的保存按钮保存。</strong></p>
+<div class="alert alert-info"><div class="icon"><i class="fa fa-info"></i></div><div class="text"><p>修改完配置后，一定要记得点击左上角的保存按钮保存。</p>
+</div></div>
+
 <ol start="3">
 <li>返回<code>novel-front</code>目录，打开<code>novel-front</code>目录下的终端，执行<code>sudo bin/novel-front.sh start</code>命令启动前台程序：</li>
 </ol>
@@ -369,7 +386,9 @@
 </li>
 </ol>
 <p><img src="/images/docs/novel-plus/install/admin1.png"></p>
-<p><strong>注：修改完配置后，一定要记得点击左上角的保存按钮保存。</strong></p>
+<div class="alert alert-info"><div class="icon"><i class="fa fa-info"></i></div><div class="text"><p>修改完配置后，一定要记得点击左上角的保存按钮保存。</p>
+</div></div>
+
 <ol start="3">
 <li>返回<code>novel-admin</code>目录，打开<code>novel-admin</code>目录下的终端，执行<code>sudo bin/novel-admin.sh start</code>命令启动后台程序：</li>
 </ol>
@@ -456,16 +475,7 @@
             const twitterBase   = "https://twitter.com/intent/tweet?";
             const hostUrl       = "https://xxyopen.com/2022/07/18/doc/novel-plus/install/bt.html";
             const title         = "「novel-plus 宝塔安装教程」";
-            const excerpt       = `
-本安装教程基于 Ubuntu 系统，但适用于其它绝大部分 Linux 发行版
-
-系统要求
-操作系统：Linux
-内存大小：2G+（建议 4G）
-磁盘容量：无要求（根据你的存储需求来选择）
-控制面板：宝塔 Linux 面板
-
-实验环境...`;
+            const excerpt       = `本安装教程基于 Ubuntu 系统，但适用于其它绝大部分 Linux 发行版。`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -487,7 +497,7 @@
                     <a class="tag-none-link" href="/tags/novel-plus/" rel="tag">novel-plus</a>, <a class="tag-none-link" href="/tags/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" rel="tag">安装教程</a>, <a class="tag-none-link" href="/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/" rel="tag">宝塔面板</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2022-07-18T01:58:25.345Z" itemprop="dateModified">最后编辑：2022-07-18</time>
+                    <time datetime="2022-07-18T04:35:35.882Z" itemprop="dateModified">最后编辑：2022-07-18</time>
                 </div>
             </div>
         </footer>
@@ -578,6 +588,18 @@
             
                     <div class="sticky-area">
                 
+                    <aside id="krw-toc" class="widget widget-kratos-toc clearfix">
+    <div class="photo-background"></div>
+    <h4 class="widget-title no-after">
+        <i class="fa fa-compass"></i>
+        文章目录
+        <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
+    </h4>
+    <div class="textwidget">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E8%A6%81%E6%B1%82"><span class="toc-text">系统要求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E9%AA%8C%E7%8E%AF%E5%A2%83"><span class="toc-text">实验环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD"><span class="toc-text">安装文件下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MySQL-%E5%AE%89%E8%A3%85"><span class="toc-text">MySQL 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JDK-%E5%AE%89%E8%A3%85"><span class="toc-text">JDK 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-novel-plus-%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95"><span class="toc-text">创建 novel-plus 安装目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%88%AC%E8%99%AB%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85"><span class="toc-text">爬虫程序安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E5%8F%B0%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85"><span class="toc-text">前台程序安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8E%E5%8F%B0%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85"><span class="toc-text">后台程序安装</span></a></li></ol>
+    </div>
+</aside>
+                
                 
   <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
@@ -616,6 +638,12 @@
         
           
           
+            <a class="list-group-item" href="/2022/07/18/tools/easyyapi.html"><i class="fa  fa-book"></i> 接口调试利器 EasyYapi 插件</a>
+            
+          
+        
+          
+          
             <a class="list-group-item" href="/2022/07/18/doc/novel-plus/install/newupdate.html"><i class="fa  fa-book"></i> novel-plus v3.6.1 之后版本升级指南</a>
             
           
@@ -623,12 +651,6 @@
           
           
             <a class="list-group-item" href="/2022/07/18/doc/novel-plus/install/oldupdate.html"><i class="fa  fa-book"></i> novel-plus v3.6.1 之前版本升级 3.6.1 版本指南</a>
-            
-          
-        
-          
-          
-            <a class="list-group-item" href="/2022/07/18/doc/novel-plus/proxy.html"><i class="fa  fa-book"></i> novel-plus 的爬虫程序 HTTP 代理设置</a>
             
           
         

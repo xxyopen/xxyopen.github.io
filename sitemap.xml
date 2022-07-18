@@ -11,61 +11,7 @@
   </url>
   
   <url>
-    <loc>https://xxyopen.com/2022/07/18/es/esclient.html</loc>
-    
-    <lastmod>2022-07-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xxyopen.com/2022/07/18/doc/novel-plus/install/newupdate.html</loc>
-    
-    <lastmod>2022-07-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xxyopen.com/2022/07/18/doc/novel-plus/install/oldupdate.html</loc>
-    
-    <lastmod>2022-07-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xxyopen.com/2022/07/18/os/novel-plus.html</loc>
-    
-    <lastmod>2022-07-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xxyopen.com/2022/07/18/doc/novel-plus/proxy.html</loc>
-    
-    <lastmod>2022-07-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xxyopen.com/2022/07/18/doc/novel-plus/install/docker.html</loc>
-    
-    <lastmod>2022-07-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xxyopen.com/2022/07/18/doc/novel-plus/install/package.html</loc>
+    <loc>https://xxyopen.com/2022/07/18/os/novel.html</loc>
     
     <lastmod>2022-07-18</lastmod>
     
@@ -83,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://xxyopen.com/2022/07/18/doc/shell/base.html</loc>
+    <loc>https://xxyopen.com/2022/07/18/doc/novel-plus/install/package.html</loc>
     
     <lastmod>2022-07-18</lastmod>
     
@@ -92,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://xxyopen.com/2022/07/18/os/novel.html</loc>
+    <loc>https://xxyopen.com/2022/07/18/doc/novel-plus/install/oldupdate.html</loc>
     
     <lastmod>2022-07-18</lastmod>
     
@@ -101,7 +47,25 @@
   </url>
   
   <url>
-    <loc>https://xxyopen.com/2022/07/18/tools/easyyapi.html</loc>
+    <loc>https://xxyopen.com/2022/07/18/doc/novel-plus/install/newupdate.html</loc>
+    
+    <lastmod>2022-07-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xxyopen.com/2022/07/18/os/novel-plus.html</loc>
+    
+    <lastmod>2022-07-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xxyopen.com/2022/07/18/tools/mysqlshell.html</loc>
     
     <lastmod>2022-07-18</lastmod>
     
@@ -119,7 +83,25 @@
   </url>
   
   <url>
-    <loc>https://xxyopen.com/2022/07/18/note/java/springboot3/core.html</loc>
+    <loc>https://xxyopen.com/2022/07/18/tools/easyyapi.html</loc>
+    
+    <lastmod>2022-07-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xxyopen.com/2022/07/18/doc/novel-plus/proxy.html</loc>
+    
+    <lastmod>2022-07-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xxyopen.com/2022/07/18/es/esclient.html</loc>
     
     <lastmod>2022-07-18</lastmod>
     
@@ -146,7 +128,25 @@
   </url>
   
   <url>
-    <loc>https://xxyopen.com/2022/07/18/tools/mysqlshell.html</loc>
+    <loc>https://xxyopen.com/2022/07/18/note/java/springboot3/core.html</loc>
+    
+    <lastmod>2022-07-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xxyopen.com/2022/07/18/doc/novel-plus/install/docker.html</loc>
+    
+    <lastmod>2022-07-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xxyopen.com/2022/07/18/doc/shell/base.html</loc>
     
     <lastmod>2022-07-18</lastmod>
     
