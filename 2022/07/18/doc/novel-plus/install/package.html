@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  <link rel="icon" href="">
+  <title>novel-plus 包安装教程 | XXY开源技术博客</title>
+  <meta name="author" content="xxy" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="novel-plus, 安装教程" />
+  
+  <meta name="description" content="JDK 安装  建议安装 JDK 8 MySQL 安装： 安装 MySQL 服务 修改 MySQLmax_allowed_packet 配置（建议 100 M） 新建数据库，设置编码为 utf8mb4 执行 sql.zip&#x2F;novel_plus.sql 脚本文件  创建目录   Linux 服务器上创建novel-plus、novel-plus&#x2F;novel-crawl、novel-plu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="novel-plus 包安装教程">
+<meta property="og:url" content="https://xxyopen.com/2022/07/18/doc/novel-plus/install/package.html">
+<meta property="og:site_name" content="XXY开源技术博客">
+<meta property="og:description" content="JDK 安装  建议安装 JDK 8 MySQL 安装： 安装 MySQL 服务 修改 MySQLmax_allowed_packet 配置（建议 100 M） 新建数据库，设置编码为 utf8mb4 执行 sql.zip&#x2F;novel_plus.sql 脚本文件  创建目录   Linux 服务器上创建novel-plus、novel-plus&#x2F;novel-crawl、novel-plu">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-18T00:10:11.000Z">
+<meta property="article:modified_time" content="2022-07-18T01:10:55.464Z">
+<meta property="article:author" content="xxy">
+<meta property="article:tag" content="novel-plus">
+<meta property="article:tag" content="安装教程">
+<meta name="twitter:card" content="summary">
+  <link rel="alternate" href="atom.xml" type="application/atom+xml">
+  <!-- 站点验证相关 -->
+  
+    
+    
+    
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kratosr.min.css" type="text/css" media="all">
+  
+    <link rel="stylesheet" id="darkmode-css" href="/css/kr-color-dark.min.css" type="text/css" media="(prefers-color-scheme: dark)">
+    <script src="/js/kr-dark.min.js"></script>
+  
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/night-eighties.min.css" type="text/css" media="all">
+  
+  
+  <link rel="stylesheet" id="fontawe-css" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="nprogress-css" href="https://unpkg.com/nprogress@0.2.0/nprogress.css" type="text/css" media="all">
+  
+  
+  
+    <link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">
+  
+  
+    <link rel="stylesheet" href="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js"></script>
+  
+    <script src="https://unpkg.com/qrcode_js@1.0.0/qrcode.min.js"></script>
+  
+  
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('/images/banner.webp');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('/images/bg.webp');
+        }
+      }
+    
+  </style>
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                                    
+                                        <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/archives/"><i class="fa fa-file"></i>档案馆</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/friends/"><i class="fa fa-paw"></i>好伙伴</a></li>
+                                    
+                                
+                                    
+                                        <li>
+                                            <a><i class="fa fa-github"></i>开源项目</a>
+                                            <ul class="sub-menu">
+                                                
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://github.com/201206030/novel">novel</a></li>
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://github.com/201206030/novel-plus">novel-plus</a></li>
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://github.com/201206030/novel-cloud">novel-cloud</a></li>
+                                                    
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li><a href="/atom.xml"><i class="fa fa-rss"></i>RSS订阅</a></li>
+                                    
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">XXY开源技术博客</a></div>
+                    <div class="nav-toggle">
+                        <a class="kratos-nav-toggle js-kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>XXY开源技术博客</h2> <br />
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+                    
+
+        
+
+            <section class="col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    
+    <link itemprop="mainEntityOfPage" href="https://xxyopen.com/2022/07/18/doc/novel-plus/install/package.html">
+    <div class="kratos-hentry kratos-post-inner clearfix">
+        <header class="kratos-entry-header">
+            
+                <h1 class="kratos-entry-title text-center" itemprop="name headline">novel-plus 包安装教程</h1>
+            
+            
+            <ul class="kratos-post-meta text-center">
+                <li><time datetime="2022-07-18T00:10:11.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2022-07-18</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">xxy</span>
+                </li>
+                <li>
+                    <i class="fa fa-edit"></i> 
+                    
+                    
+                        ~1.56K
+                    
+                    字
+                </li>
+                
+            </ul>
+        </header>
+        <div class="kratos-post-content">
+            <div id="expire-alert" class="alert alert-warning hidden" role="alert">
+                <div class="icon"><i class="fa fa-warning"></i></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1658106655464"></time> 前，其中的内容可能需要更新。</p></div>
+            </div>
+            
+            <hr />
+            <div itemprop="articleBody"><h2 id="JDK-安装"><a href="#JDK-安装" class="headerlink" title="JDK 安装"></a>JDK 安装</h2><p>  建议<a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/technotes/guides/install/linux_jdk.html">安装 JDK 8</a></p>
+<h2 id="MySQL-安装："><a href="#MySQL-安装：" class="headerlink" title="MySQL 安装："></a>MySQL 安装：</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/8.0/en/linux-installation.html">安装 MySQL 服务</a></li>
+<li>修改 MySQL<code>max_allowed_packet </code>配置（建议 100 M）</li>
+<li>新建数据库，设置编码为 utf8mb4</li>
+<li>执行 <a target="_blank" rel="noopener" href="https://github.com/201206030/novel-plus/releases/download/v3.6.1/sql.zip">sql.zip</a>&#x2F;novel_plus.sql 脚本文件</li>
+</ol>
+<h2 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h2><p>   Linux 服务器上创建<code>novel-plus</code>、<code>novel-plus/novel-crawl</code>、<code>novel-plus/novel-front</code>、<code>novel-plus/novel-admin</code>目录。</p>
+<h2 id="爬虫安装"><a href="#爬虫安装" class="headerlink" title="爬虫安装"></a>爬虫安装</h2><ol>
+<li>上传 <a target="_blank" rel="noopener" href="https://github.com/201206030/novel-plus/releases/download/v3.6.1/novel-crawl.zip">novel-crawl.zip</a> 压缩包到 Linux 服务器的 novel-crawl 目录</li>
+<li>使用<code>unzip novel-crawl.zip</code>命令解压 novel-crawl.zip</li>
+<li>修改 <code>config/application-common-prod.yml</code> 文件中的数据库配置</li>
+<li>修改 <code>config/application-common-prod.yml</code> 文件中的管理员账号密码</li>
+<li>novel-crawl 目录下使用<code>bin/novel-crawl.sh start</code>命令启动爬虫程序</li>
+<li>打开浏览器，默认<code>8083</code>端口访问</li>
+<li>选择已有或新增爬虫源（支持自定义爬虫规则），点击<code>开启</code>按钮，开始采集小说数据</li>
+<li>novel-crawl 目录下使用<code>bin/novel-crawl.sh stop</code>命令停止爬虫程序</li>
+<li>novel-crawl 目录下使用<code>bin/novel-crawl.sh restart</code>命令重启爬虫程序</li>
+<li>novel-crawl 目录下使用<code>bin/novel-crawl.sh status</code>命令查看爬虫程序的运行状态</li>
+</ol>
+<h2 id="前台安装"><a href="#前台安装" class="headerlink" title="前台安装"></a>前台安装</h2><ol>
+<li>上传 <a target="_blank" rel="noopener" href="https://github.com/201206030/novel-plus/releases/download/v3.6.1/novel-front.zip">novel-front.zip</a> 压缩包到 Linux 服务器的 novel-front 目录</li>
+<li>使用<code>unzip novel-front.zip</code>命令解压 novel-front.zip</li>
+<li>修改 <code>config/application-common-prod.yml</code> 文件中的数据库配置</li>
+<li>修改 <code>config/application-website.yml</code> 配置文件中的网站信息</li>
+<li>novel-front 目录下使用<code>bin/novel-front.sh start</code>命令启动前台程序</li>
+<li>打开浏览器，默认<code>8085</code>端口访问</li>
+<li>novel-front 目录下使用<code>bin/novel-front.sh stop</code>命令停止前台程序</li>
+<li>novel-front 目录下使用<code>bin/novel-front.sh restart</code>命令重启前台程序</li>
+<li>novel-front 目录下使用<code>bin/novel-front.sh status</code>命令查看前台程序的运行状态</li>
+</ol>
+<h2 id="后台安装"><a href="#后台安装" class="headerlink" title="后台安装"></a>后台安装</h2><ol>
+<li>上传 <a target="_blank" rel="noopener" href="https://github.com/201206030/novel-plus/releases/download/v3.6.1/novel-admin.zip">novel-admin.zip</a> 压缩包到 Linux 服务器的 novel-admin 目录</li>
+<li>使用<code>unzip novel-admin.zip</code>命令解压 novel-admin.zip</li>
+<li>修改 <code>config/application-prod.yml</code> 文件中的数据库配置</li>
+<li>novel-admin 目录下使用<code>bin/novel-admin.sh start</code>命令启动后台程序</li>
+<li>打开浏览器，默认<code>8088</code>端口访问</li>
+<li>novel-admin 目录下使用<code>bin/novel-admin.sh stop</code>命令停止后台程序</li>
+<li>novel-admin 目录下使用<code>bin/novel-admin.sh restart</code>命令重启后台程序</li>
+<li>novel-admin 目录下使用<code>bin/novel-admin.sh status</code>命令查看后台程序的运行状态</li>
+</ol>
+<p><strong>注：部分环境（如新版 Mac OS 系统）获取不到主机 IP，需要手动修改 hosts 文件，增加 IP-主机名（通过 hostname 命令查看主机名）的映射。</strong></p>
+</div>
+        </div>
+        
+            <div class="kratos-copyright text-center clearfix">
+                <h5 itemprop="copyrightNotice">本作品采用 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
+            </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+                <div class="post-like-donate text-center clearfix" id="post-like-donate">
+                
+                    <a class="donate" href="javascript:;"><i class="fa fa-bitcoin"></i> 打赏</a>
+                
+                
+                    <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
+                    <div class="share-wrap" style="display: none;">
+    <div class="share-group">
+        <a href="javascript:;" class="share-plain qq" onclick="share('qq');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-qq"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain qzone" onclick="share('qzone');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-star"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weixin pop style-plain" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weixin"></i>
+            </div>
+            <div class="share-int">
+                <div class="qrcode" id="wechat-qr"></div>
+                <p>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</p>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weibo" onclick="share('weibo');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weibo"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain facebook style-plain" onclick="share('facebook');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-facebook"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain twitter style-plain" onclick="share('twitter');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-twitter"></i>
+            </div>
+        </a>
+    </div>
+    <script type="text/javascript">
+        $(()=>{
+            new QRCode("wechat-qr", {
+                text: "https://xxyopen.com/2022/07/18/doc/novel-plus/install/package.html",
+                width: 150,
+                height: 150,
+                correctLevel : QRCode.CorrectLevel.H
+            });
+        });
+        function share(dest) {
+            const qqBase        = "https://connect.qq.com/widget/shareqq/index.html?";
+            const weiboBase     = "https://service.weibo.com/share/share.php?";
+            const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
+            const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
+            const twitterBase   = "https://twitter.com/intent/tweet?";
+            const hostUrl       = "https://xxyopen.com/2022/07/18/doc/novel-plus/install/package.html";
+            const title         = "「novel-plus 包安装教程」";
+            const excerpt       = `JDK 安装  建议安装 JDK 8
+MySQL 安装：
+安装 MySQL 服务
+修改 MySQLmax_allowed_packet 配置（建议 100 M）
+新建数据库，设置编码为 utf8mb4
+执行 sql.zip&#x2F;...`;
+            let _URL;
+            switch (dest) {
+                case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
+                case "weibo"    : _URL = weiboBase+"url="+hostUrl+"&title="+title+excerpt;                                 break;
+                case "qzone"    : _URL = qzoneBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";  break;
+                case "facebook" : _URL = facebookBase+"u="+hostUrl;                                                        break;
+                case "twitter"  : _URL = twitterBase+"text="+title+excerpt+"&url="+hostUrl;                                break;
+            }
+            window.open(_URL);
+        };
+    </script>
+</div>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/novel-plus/" rel="tag">novel-plus</a>, <a class="tag-none-link" href="/tags/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" rel="tag">安装教程</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2022-07-18T01:10:55.464Z" itemprop="dateModified">最后编辑：2022-07-18</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" Docker Compose 一键部署 novel-plus" href="/2022/07/18/doc/novel-plus/install/docker.html">&lt; 上一篇</a>
+            </div>
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" novel-plus 的爬虫程序 HTTP 代理设置" href="/2022/07/18/doc/novel-plus/proxy.html">下一篇 &gt;</a>
+            </div>
+            
+        </nav>
+    
+    
+        <div id="lv-container" class="post-comments lazy-load" data-id="city" data-uid="MTAyMC81NjgxOS8zMzI4Mw=="></div>
+
+<script>
+    window.livereOptions = {
+        refer: 'xxyopen.com/2022/07/18/doc/novel-plus/install/package.html',
+        site: 'https://xxyopen.com/2022/07/18/doc/novel-plus/install/package.html',
+        eagerLoading: true //主题会自己处理lazy load，没有必要让LiveRe的脚本再去做lazy load的处理
+    };
+    var load_comm = () => {
+        if (typeof LivereTower === 'undefined') {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+            (d.head || d.body).appendChild(s);
+        } else {
+            window.LivereTower.init();
+        }
+    };
+</script>
+<noscript>Please enable JavaScript to view the <a target="_blank" href="https://livere.com/" rel="nofollow noopener">comments powered by LiveRe.</a></noscript>
+    
+</article>
+
+        
+
+            </section>
+
+        
+
+                
+            
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/images/avatar.png" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">专注于开源项目和开发技术的研究与分享</p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                20
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                13
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                19
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                    <div class="sticky-area">
+                
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Elasticsearch/">Elasticsearch</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Elasticsearch/%E5%AE%A2%E6%88%B7%E7%AB%AF/">客户端</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/%E5%B7%A5%E5%85%B7/">工具</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Spring-Boot-3/">Spring Boot 3</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%8E%A8%E8%8D%90/">开源项目推荐</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Shell/">Shell</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/novel-plus/">novel-plus</a><span class="category-list-count">7</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/">编程规约</a><span class="category-list-count">2</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/Docker/" style="font-size: 0.6em;">Docker</a> <a href="/tags/Elasticsearch/" style="font-size: 0.6em;">Elasticsearch</a> <a href="/tags/Git/" style="font-size: 0.6em;">Git</a> <a href="/tags/IDEA%E6%8F%92%E4%BB%B6/" style="font-size: 0.6em;">IDEA插件</a> <a href="/tags/Java/" style="font-size: 0.64em;">Java</a> <a href="/tags/MySQL/" style="font-size: 0.6em;">MySQL</a> <a href="/tags/Shell/" style="font-size: 0.6em;">Shell</a> <a href="/tags/SpringBoot3/" style="font-size: 0.76em;">SpringBoot3</a> <a href="/tags/novel/" style="font-size: 0.6em;">novel</a> <a href="/tags/novel-plus/" style="font-size: 0.8em;">novel-plus</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 0.68em;">学习笔记</a> <a href="/tags/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" style="font-size: 0.72em;">安装教程</a> <a href="/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/" style="font-size: 0.6em;">宝塔面板</a> <a href="/tags/%E5%B0%8F%E8%AF%B4%E9%A1%B9%E7%9B%AE/" style="font-size: 0.64em;">小说项目</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 0.68em;">工具</a> <a href="/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/" style="font-size: 0.72em;">开源项目</a> <a href="/tags/%E6%8E%A5%E5%8F%A3%E8%B0%83%E8%AF%95/" style="font-size: 0.6em;">接口调试</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/" style="font-size: 0.64em;">编程规约</a>
+      </div>
+  </aside>
+
+            
+                
+  <aside id="krw-posts" class="widget widget-kratos-posts">
+  <h4 class="widget-title"><i class="fa fa-file"></i>最新文章</h4>
+  <div class="tab-content">
+      <ul class="list-group">
+        
+        
+          
+          
+            <a class="list-group-item" href="/2022/07/18/doc/novel-plus/install/bt.html"><i class="fa  fa-book"></i> novel-plus 宝塔安装教程</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2022/07/18/es/esclient.html"><i class="fa  fa-book"></i> 全新的 Elasticsearch Java API Client 体验</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2022/07/18/doc/novel-plus/install/newupdate.html"><i class="fa  fa-book"></i> novel-plus v3.6.1 之后版本升级指南</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2022/07/18/doc/novel-plus/install/oldupdate.html"><i class="fa  fa-book"></i> novel-plus v3.6.1 之前版本升级 3.6.1 版本指南</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2022/07/18/doc/novel-plus/proxy.html"><i class="fa  fa-book"></i> novel-plus 的爬虫程序 HTTP 代理设置</a>
+            
+          
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+      </ul>
+  </div>
+  </aside>
+
+            
+    </div>
+</section>
+        
+        </div>
+    </div>
+</div>
+<footer>
+    <div id="footer"  class="ap-lrc"  >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        <li><a target="_blank" rel="nofollow" href="https://weibo.com/u/5262546028"><i class="fa fa-weibo"></i></a></li>
+                        <li><a href="mailto:xxyopen@foxmail.com"><i class="fa fa-envelope"></i></a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a target="_blank" rel="nofollow" href="https://github.com/201206030"><i class="fa fa-github"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="/atom.xml"><i class="fa fa-rss"></i></a></li>
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2022 XXY开源技术博客 版权所有.</li>
+                            <li>本站已运行<span id="span_dt">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by xxy.</li>
+                            <li>Hosted on <a href="https://pages.cloudflare.com" target="_blank">Cloudflare Pages</a></li>
+                        </div>
+                        <!-- <div>
+                            <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
+                            <li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by xxy.</li>
+                        </div>
+                        <div>
+                            <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
+                            <li>Hosted on <a href="https://pages.cloudflare.com" target="_blank">Cloudflare Pages</a></li>
+                        </div> -->
+                        <div>
+                            
+                            
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search/">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="box theme-box" id="darkmode-switch">
+                        <span class="fa fa-adjust"></span>
+                    </div>
+                
+                
+            </div>
+            <div class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+
+        <script defer src="https://unpkg.com/bootstrap@3.3.4/dist/js/bootstrap.min.js"></script>
+<script defer src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+<script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+    <script async src="/js/candy.min.js"></script>
+
+
+
+    <script defer src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    
+    <script defer src="https://unpkg.com/meting@2/dist/Meting.min.js"></script>
+    <meting-js
+        server="netease"
+        type="playlist"
+        id="3204190542"
+        order="random"
+        fixed="true"
+    >
+    </meting-js>
+
+
+
+    <script defer src="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<script defer src="https://unpkg.com/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script defer src="/js/kratosr.min.js"></script>
+<script defer src="/js/pjax.min.js"></script>
+
+    <script defer src="https://unpkg.com/layui-src@2.5.5/dist/layui.all.js"></script>
+
+
+
+<!-- Extra support for third-party plguins  -->
+
+
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?7cf4657d9d7b9fc1396e892f0d3f16d8";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    </body>
+</html>

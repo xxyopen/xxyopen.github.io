@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  <link rel="icon" href="">
+  <title>Spring Boot 3 使用 | XXY开源技术博客</title>
+  <meta name="author" content="xxy" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="SpringBoot3, 学习笔记" />
+  
+  <meta name="description" content="构建系统Spring Boot 建议我们选择 Maven 或 Gradle 等支持依赖管理并且可以发布 artifacts 到 Maven Central 中央仓库的构建系统 。我们也可以让 Spring Boot 与其他构建系统（例如 Ant）一起工作，但它们并没有得到 Spring Boot 很好的支持。 依赖管理Spring Boot 的每个版本都提供了它所支持依赖项的精选列表，我们不需要在">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring Boot 3 使用">
+<meta property="og:url" content="https://xxyopen.com/2022/07/18/note/java/springboot3/use.html">
+<meta property="og:site_name" content="XXY开源技术博客">
+<meta property="og:description" content="构建系统Spring Boot 建议我们选择 Maven 或 Gradle 等支持依赖管理并且可以发布 artifacts 到 Maven Central 中央仓库的构建系统 。我们也可以让 Spring Boot 与其他构建系统（例如 Ant）一起工作，但它们并没有得到 Spring Boot 很好的支持。 依赖管理Spring Boot 的每个版本都提供了它所支持依赖项的精选列表，我们不需要在">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-17T23:40:51.000Z">
+<meta property="article:modified_time" content="2022-07-18T00:15:12.940Z">
+<meta property="article:author" content="xxy">
+<meta property="article:tag" content="SpringBoot3">
+<meta property="article:tag" content="学习笔记">
+<meta name="twitter:card" content="summary">
+  <link rel="alternate" href="atom.xml" type="application/atom+xml">
+  <!-- 站点验证相关 -->
+  
+    
+    
+    
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kratosr.min.css" type="text/css" media="all">
+  
+    <link rel="stylesheet" id="darkmode-css" href="/css/kr-color-dark.min.css" type="text/css" media="(prefers-color-scheme: dark)">
+    <script src="/js/kr-dark.min.js"></script>
+  
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/night-eighties.min.css" type="text/css" media="all">
+  
+  
+  <link rel="stylesheet" id="fontawe-css" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="nprogress-css" href="https://unpkg.com/nprogress@0.2.0/nprogress.css" type="text/css" media="all">
+  
+  
+  
+    <link rel="stylesheet" href="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.css">
+  
+  
+    <link rel="stylesheet" href="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js"></script>
+  
+    <script src="https://unpkg.com/qrcode_js@1.0.0/qrcode.min.js"></script>
+  
+  
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('/images/banner.webp');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('/images/bg.webp');
+        }
+      }
+    
+  </style>
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                                    
+                                        <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/archives/"><i class="fa fa-file"></i>档案馆</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/friends/"><i class="fa fa-paw"></i>好伙伴</a></li>
+                                    
+                                
+                                    
+                                        <li>
+                                            <a><i class="fa fa-github"></i>开源项目</a>
+                                            <ul class="sub-menu">
+                                                
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://github.com/201206030/novel">novel</a></li>
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://github.com/201206030/novel-plus">novel-plus</a></li>
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://github.com/201206030/novel-cloud">novel-cloud</a></li>
+                                                    
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li><a href="/atom.xml"><i class="fa fa-rss"></i>RSS订阅</a></li>
+                                    
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">XXY开源技术博客</a></div>
+                    <div class="nav-toggle">
+                        <a class="kratos-nav-toggle js-kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>XXY开源技术博客</h2> <br />
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+                    
+
+        
+
+            <section class="col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    
+    <link itemprop="mainEntityOfPage" href="https://xxyopen.com/2022/07/18/note/java/springboot3/use.html">
+    <div class="kratos-hentry kratos-post-inner clearfix">
+        <header class="kratos-entry-header">
+            
+                <h1 class="kratos-entry-title text-center" itemprop="name headline">Spring Boot 3 使用</h1>
+            
+            
+            <ul class="kratos-post-meta text-center">
+                <li><time datetime="2022-07-17T23:40:51.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2022-07-18</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">xxy</span>
+                </li>
+                <li>
+                    <i class="fa fa-edit"></i> 
+                    
+                    
+                        ~14.68K
+                    
+                    字
+                </li>
+                
+            </ul>
+        </header>
+        <div class="kratos-post-content">
+            <div id="expire-alert" class="alert alert-warning hidden" role="alert">
+                <div class="icon"><i class="fa fa-warning"></i></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1658103312940"></time> 前，其中的内容可能需要更新。</p></div>
+            </div>
+            
+            <hr />
+            <div itemprop="articleBody"><h2 id="构建系统"><a href="#构建系统" class="headerlink" title="构建系统"></a>构建系统</h2><p>Spring Boot 建议我们选择 Maven 或 Gradle 等支持依赖管理并且可以发布 artifacts 到 Maven Central 中央仓库的构建系统 。我们也可以让 Spring Boot 与其他构建系统（例如 Ant）一起工作，但它们并没有得到 Spring Boot 很好的支持。</p>
+<h3 id="依赖管理"><a href="#依赖管理" class="headerlink" title="依赖管理"></a>依赖管理</h3><p>Spring Boot 的每个版本都提供了它所支持依赖项的精选列表，我们不需要在构建配置中为这些依赖项提供版本，因为 Spring Boot 会为我们管理。当我们升级 Spring Boot 版本时，这些依赖项也会以一致的方式升级。</p>
+<p>如果需要，我们可以通过覆盖自己项目中的属性来覆盖各个依赖项。例如，我们如果要使用不同版本的 SLF4J 和 Spring Data，则需要在项目 POM 文件中添加以下内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;properties&gt;</span><br><span class="line">    &lt;slf4j.version&gt;1.7.30&lt;/slf4j.version&gt;</span><br><span class="line">    &lt;spring-data-releasetrain.version&gt;Moore-SR6&lt;/spring-data-releasetrain.version&gt;</span><br><span class="line">&lt;/properties&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Spring Boot 的每个版本都与 Spring Framework 的一个基础版本相关联，Spring Boot 强烈建议我们不要指定 Spring Framework 的版本。</strong></p>
+</blockquote>
+<p>精选列表包含可以与 Spring Boot 一起使用的所有 Spring 模块以及第三方库，该列表以 spring-boot-dependencies POM 的形式提供。</p>
+<h3 id="Starters"><a href="#Starters" class="headerlink" title="Starters"></a>Starters</h3><p>Starters（启动器） 是可以加入到我们应用程序里面的一系列实用的依赖项，无需搜索示例代码和复制粘贴大量的依赖描述就可以获得所需的所有 Spring 和相关技术的一站式商店。比如，我们想使用 Spring 和 JPA 进行数据库访问，就可以将 spring-boot-starter-data-jpa 依赖项加入到我们的项目中。</p>
+<p>启动器包含使项目快速启动并运行的一组受管理的、支持传递的依赖。</p>
+<p>所有的官方启动器都遵循类似的命名模式：spring-boot-starter-*，其中 * 是特定类型的应用程序，此命名结构旨在帮助我们在需要查找启动器时提供帮助。</p>
+<p>第三方的 starter 不应该以 spring-boot 开头，因为它是为官方 Spring Boot 工作保留的，相反，第三方启动器通常以项目名称开头。比如，一个名为 thirdpartyproject 的第三方 starter 项目通常被命名为 thirdpartyproject-spring-boot-starter。</p>
+<p>下面列出 Spring Boot 提供在 org.springframework.boot group 下比较常用的一些官方启动器：</p>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>spring-boot-starter</code></td>
+<td align="left">核心启动器, 包括自动配置支持、日志和 YAML</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-amqp</code></td>
+<td align="left">使用 Spring AMQP 和 Rabbit MQ 的启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-aop</code></td>
+<td align="left">使用 Spring AOP 和 AspectJ 的面向切面编程启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-batch</code></td>
+<td align="left">使用 Spring Batch 批处理的启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-cache</code></td>
+<td align="left">使用 Spring Framework 缓存支持的启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-data-elasticsearch</code></td>
+<td align="left">使用 Elasticsearch 搜索引擎 和 Spring Data Elasticsearch 的启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-data-jdbc</code></td>
+<td align="left">使用 Spring Data JDBC 的启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-data-jpa</code></td>
+<td align="left">使用 Spring Data JPA 的启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-data-mongodb</code></td>
+<td align="left">使用面向文档的数据库 MongoDB 和 Spring Data MongoDB 的启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-data-mongodb-reactive</code></td>
+<td align="left">使用面向文档的数据库 MongoDB 和 Spring Data MongoDB Reactive 的启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-data-redis</code></td>
+<td align="left">使用 Spring Data Redis 和 Lettuce 客户端 将 Redis key-value 数据存储的启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-data-redis-reactive</code></td>
+<td align="left">使用 Spring Data Redis reactive 和 Lettuce 客户端 将 Redis key-value 数据存储的启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-data-rest</code></td>
+<td align="left">使用 Spring Data REST 通过 REST 暴露 Spring Data 存储库的启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-freemarker</code></td>
+<td align="left">使用 FreeMarker 视图构建 MVC Web 应用程序的启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-jdbc</code></td>
+<td align="left">使用 JDBC 和 HikariCP 连接池的启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-json</code></td>
+<td align="left">读写 json 的启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-mail</code></td>
+<td align="left">支持使用 Java Mail 和 Spring Framework 的电子邮件发送启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-oauth2-client</code></td>
+<td align="left">使用 Spring Security 的 OAuth2&#x2F;OpenID Connect 客户端功能的启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-oauth2-resource-server</code></td>
+<td align="left">使用 Spring Security 的 OAuth2 资源服务器特性的启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-quartz</code></td>
+<td align="left">使用 Quartz 调度器的启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-security</code></td>
+<td align="left">使用 Spring Security 的 启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-test</code></td>
+<td align="left">使用包括 JUnit Jupiter、Hamcrest 和 Mockito 在内的库测试 Spring Boot 应用程序的启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-thymeleaf</code></td>
+<td align="left">使用 Thymeleaf 视图构建 MVC Web 应用程序的启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-validation</code></td>
+<td align="left">使用带有 Hibernate Validator 的 Java Bean Validation 的 启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-web</code></td>
+<td align="left">使用 Spring MVC 构建 Web 应用程序的启动器，包括 RESTful 应用程序，使用 Tomcat 作为默认的嵌入式容器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-web-services</code></td>
+<td align="left">使用 Spring Web Services 的启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-webflux</code></td>
+<td align="left">使用 Spring Framework 的响应式 Web 支持构建 WebFlux 应用程序的启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-websocket</code></td>
+<td align="left">使用 Spring Framework 的 WebSocket 支持构建 WebSocket 应用程序的启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-actuator</code></td>
+<td align="left">使用 Spring Boot 的 Actuator 的启动器，它提供了生产就绪功能来帮助监控和管理应用程序</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-tomcat</code></td>
+<td align="left">使用 Tomcat 作为嵌入式 servlet 容器，是 spring-boot-starter-web 使用的默认 servlet 容器启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-jetty</code></td>
+<td align="left">使用 Jetty 作为嵌入式 servlet 容器的启动器，一个 spring-boot-starter-tomcat 替代方案</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-undertow</code></td>
+<td align="left">使用 Undertow 作为嵌入式 servlet 容器的启动器，一个 spring-boot-starter-tomcat 替代方案</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-reactor-netty</code></td>
+<td align="left">使用 Reactor Netty 作为嵌入式响应式 HTTP 服务器的启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-logging</code></td>
+<td align="left">使用 Logback 进行日志记录的启动器，默认的日志记录启动器</td>
+</tr>
+<tr>
+<td align="left"><code>spring-boot-starter-log4j2</code></td>
+<td align="left">使用 Log4j2 进行日志记录的启动器，一个 spring-boot-starter-logging 的替代方案</td>
+</tr>
+</tbody></table>
+<h2 id="代码结构"><a href="#代码结构" class="headerlink" title="代码结构"></a>代码结构</h2><h3 id="包命名"><a href="#包命名" class="headerlink" title="包命名"></a>包命名</h3><p>当一个类不包含 package 声明时，它被认为在默认包中。我们通常不鼓励使用默认包，应避免使用，它可能会导致使用了 @ComponentScan、@ConfigurationPropertiesScan、@EntityScan 或 @SpringBootApplication 注解的 Spring Boot 应用程序出现特殊问题，因为每个 jar 中的每个类都会被扫描读取。Spring Boot 建议遵循 Java 推荐的包命名约定并使用反向域名（例如，io.github.xxyopen）。</p>
+<h3 id="启动类"><a href="#启动类" class="headerlink" title="启动类"></a>启动类</h3><p>Spring Boot 建议将应用程序启动类放在其他类之上的根包中。@SpringBootApplication 注解通常放置在启动类上，它隐式地定义了一个基础的搜索包（根包）。使用根包的好处还包括只扫描本项目中的组件。</p>
+<p>如果不想使用 @SpringBootApplication 注解，也可以用 @EnableAutoConfiguration 和 @ComponentScan 这两个注解来代替。</p>
+<p>以下是一个典型的示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">io</span><br><span class="line"> +- github</span><br><span class="line">     +- xxyopen   </span><br><span class="line">        +- novel</span><br><span class="line">            +- NovelApplication.java -- 项目启动类</span><br><span class="line">            |</span><br><span class="line">            +- dao</span><br><span class="line">            |   +- BookDao.java </span><br><span class="line">            |   +- UserDao.java</span><br><span class="line">            | </span><br><span class="line">            +- service </span><br><span class="line">            |   +- BookService.java</span><br><span class="line">            |   +- UserService.java</span><br><span class="line">            |  </span><br><span class="line">            +- controller</span><br><span class="line">            |   +- UserController.java</span><br><span class="line">            |   +- UserController.java     </span><br><span class="line">                    </span><br></pre></td></tr></table></figure>
+<p>NovelApplication.java 被定义成启动类, 带有 @SpringBootApplication 注解, 如下所示:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@SpringBootApplication</span><br><span class="line">public class NovelApplication &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        SpringApplication.run(NovelApplication.class, args);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置类"><a href="#配置类" class="headerlink" title="配置类"></a>配置类</h2><p>Spring Boot 支持基于 Java 的配置，虽然可以使用 XML 来配置 Spring 应用程序，但 SpringBoot 建议我们使用 @Configuration 类来配置我们的应用程序。定义 main 方法的 Spring Boot 启动类通常是一个 @Configuration 主配置类。</p>
+<p>我们不需要把所有的配置都放到一个 @Configuration 配置类中，@Import 注解可用于导入其他的配置类。我们还可以使用 @ComponentScan 自动扫描获取所有的 Spring 组件，包括 @Configuration 配置类。</p>
+<p>如果我们需要使用基于 XML 的配置，Spring Boot 建议我们仍然从 @Configuration 类开始，然后使用 @ImportResource 注解来加载 XML 配置文件。</p>
+<p>以下是一个 Redis 的配置类示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">@Import(&#123;LettuceConnectionConfiguration.class, JedisConnectionConfiguration.class&#125;)</span><br><span class="line">public class RedisConfiguration &#123;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public RedisTemplate&lt;Object, Object&gt; redisTemplate(RedisConnectionFactory redisConnectionFactory) throws UnknownHostException &#123;</span><br><span class="line">        RedisTemplate&lt;Object, Object&gt; template = new RedisTemplate();</span><br><span class="line">        template.setConnectionFactory(redisConnectionFactory);</span><br><span class="line">        return template;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Bean</span><br><span class="line">    public StringRedisTemplate stringRedisTemplate(RedisConnectionFactory redisConnectionFactory) throws UnknownHostException &#123;</span><br><span class="line">        StringRedisTemplate template = new StringRedisTemplate();</span><br><span class="line">        template.setConnectionFactory(redisConnectionFactory);</span><br><span class="line">        return template;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="自动配置"><a href="#自动配置" class="headerlink" title="自动配置"></a>自动配置</h2><p>Spring Boot 自动配置会根据我们添加的 jar 依赖项自动配置我们的 Spring 应用程序。例如，如果 HSQLDB 在 classpath 类路径上，并且没有手动配置任何数据库连接 bean，那么 Spring Boot 会自动配置一个内存数据库。</p>
+<p>自动配置生效的前提是我们需要向 @Configuration 配置类上添加 @EnableAutoConfiguration 或 @SpringBootApplication 注解来开启自动配置，Spring Boot 建议我们添加到主配置类（通常是定义 main 方法的启动类）上。</p>
+<p>自动配置是非侵入性的。在任何时候，我们都可以定义自己的配置来替换自动配置的特定部分。例如，如果添加自己的 DataSource bean，则默认的嵌入式数据库支持会替换掉。</p>
+<p>如果我们要了解当前正在应用哪些自动配置以及原因，可以使用 –debug 来启动应用程序。这样可以开启调试日志，并将条件报告打印到控制台。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$  mvn spring-boot:run --debug</span><br></pre></td></tr></table></figure>
+
+<p>我们还可以通过使用 @SpringBootApplication 注解的 exclude 属性来禁用特定的自动配置类：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@SpringBootApplication(exclude = &#123; DataSourceAutoConfiguration.class &#125;)</span><br><span class="line">public class NovelApplication &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果需要禁用的自动配置类不在 classpath 类路径上，我们还可以用注解的 excludeName 属性指定类的完全限定名。我们也可以使用 @EnableAutoConfiguration 而不是 @SpringBootApplication 注解的 exclude 或 excludeName 属性来禁用自动配置类。最后，我们还可以使用 spring.autoconfigure.exclude 配置属性来控制要禁用的自动配置类列表。</p>
+<h2 id="依赖注入"><a href="#依赖注入" class="headerlink" title="依赖注入"></a>依赖注入</h2><p>我们可以使用任何 Spring Framework 标准技术来定义我们的 beans 以及注入它们的依赖。Spring Boot 建议使用构造函数注入和使用 @ComponentScan 扫描 beans。</p>
+<p>如果我们将应用程序启动类放在根包中，我们可以添加不带任何参数的 @ComponentScan 或 @SpringBootApplication（隐式包含 @ComponentScan） 注解。这样我们所有的应用程序组件（@Component、@Service、@Repository、@Controller等）都会自动注册为 Spring Bean。</p>
+<p>以下是一个使用构造函数向一个 Spring bean 注入所需依赖的例子：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@Service</span><br><span class="line">public class MyAccountService implements AccountService &#123;</span><br><span class="line"></span><br><span class="line">    private final RiskAssessor riskAssessor;</span><br><span class="line"></span><br><span class="line">    public MyAccountService(RiskAssessor riskAssessor) &#123;</span><br><span class="line">        this.riskAssessor = riskAssessor;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // ...</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果一个 bean 有多个构造函数，需要使用 @Autowired 注解来标记我们想要 Spring 使用哪一个：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">@Service</span><br><span class="line">public class MyAccountService implements AccountService &#123;</span><br><span class="line"></span><br><span class="line">    private final RiskAssessor riskAssessor;</span><br><span class="line"></span><br><span class="line">    private final PrintStream out;</span><br><span class="line"></span><br><span class="line">    @Autowired</span><br><span class="line">    public MyAccountService(RiskAssessor riskAssessor) &#123;</span><br><span class="line">        this.riskAssessor = riskAssessor;</span><br><span class="line">        this.out = System.out;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public MyAccountService(RiskAssessor riskAssessor, PrintStream out) &#123;</span><br><span class="line">        this.riskAssessor = riskAssessor;</span><br><span class="line">        this.out = out;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // ...</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>注：依赖注入的字段被声明为 final 是为了表明它以后不能再被修改。</strong></p>
+<h2 id="SpringBootApplication-注解"><a href="#SpringBootApplication-注解" class="headerlink" title="@SpringBootApplication 注解"></a>@SpringBootApplication 注解</h2><p>打开 SpringBootApplication 源文件可以发现单个 @SpringBootApplication 注解由以下三个注解组成：</p>
+<ul>
+<li><p>@EnableAutoConfiguration: 启用 Spring Boot 的自动配置机制</p>
+</li>
+<li><p>@ComponentScan ：在当前包下开启 @Component 扫描</p>
+</li>
+<li><p>@SpringBootConfiguration: 允许在 Spring 上下文中注册额外的 bean 或导入额外的配置类。Spring 标准注解 @Configuration 的替代方案，可以帮助我们在集成测试中进行配置检测。</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">@Target(&#123;ElementType.TYPE&#125;)</span><br><span class="line">@Retention(RetentionPolicy.RUNTIME)</span><br><span class="line">@Documented</span><br><span class="line">@Inherited</span><br><span class="line">@SpringBootConfiguration</span><br><span class="line">@EnableAutoConfiguration</span><br><span class="line">@ComponentScan(</span><br><span class="line">    excludeFilters = &#123;@Filter(</span><br><span class="line">    type = FilterType.CUSTOM,</span><br><span class="line">    classes = &#123;TypeExcludeFilter.class&#125;</span><br><span class="line">), @Filter(</span><br><span class="line">    type = FilterType.CUSTOM,</span><br><span class="line">    classes = &#123;AutoConfigurationExcludeFilter.class&#125;</span><br><span class="line">)&#125;</span><br><span class="line">)</span><br><span class="line">public @interface SpringBootApplication &#123;</span><br><span class="line">    @AliasFor(</span><br><span class="line">        annotation = EnableAutoConfiguration.class</span><br><span class="line">    )</span><br><span class="line">    Class&lt;?&gt;[] exclude() default &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    @AliasFor(</span><br><span class="line">        annotation = EnableAutoConfiguration.class</span><br><span class="line">    )</span><br><span class="line">    String[] excludeName() default &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    @AliasFor(</span><br><span class="line">        annotation = ComponentScan.class,</span><br><span class="line">        attribute = &quot;basePackages&quot;</span><br><span class="line">    )</span><br><span class="line">    String[] scanBasePackages() default &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    @AliasFor(</span><br><span class="line">        annotation = ComponentScan.class,</span><br><span class="line">        attribute = &quot;basePackageClasses&quot;</span><br><span class="line">    )</span><br><span class="line">    Class&lt;?&gt;[] scanBasePackageClasses() default &#123;&#125;;</span><br><span class="line"></span><br><span class="line">    @AliasFor(</span><br><span class="line">        annotation = ComponentScan.class,</span><br><span class="line">        attribute = &quot;nameGenerator&quot;</span><br><span class="line">    )</span><br><span class="line">    Class&lt;? extends BeanNameGenerator&gt; nameGenerator() default BeanNameGenerator.class;</span><br><span class="line"></span><br><span class="line">    @AliasFor(</span><br><span class="line">        annotation = Configuration.class</span><br><span class="line">    )</span><br><span class="line">    boolean proxyBeanMethods() default true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="程序运行"><a href="#程序运行" class="headerlink" title="程序运行"></a>程序运行</h2><ol>
+<li>从 IDE 导入代码运行</li>
+</ol>
+<p>使用 IntelliJ IDEA 或 Eclipse 等集成开发工具导入项目源码后运行。</p>
+<ol start="2">
+<li>打包应用程序运行</li>
+</ol>
+<p>使用 Spring Boot Maven 插件打包源码成可执行 jar 后使用 java -jar 来运行应用程序。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar target/novel-0.0.1-SNAPSHOT.jar</span><br></pre></td></tr></table></figure>
+
+<p>还可以在启用远程调试支持的情况下运行打包的应用程序，这样可以让调试器连接到打包的应用程序</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=8000,suspend=n \</span><br><span class="line">       -jar target/novel-0.0.1-SNAPSHOT.jar</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>使用 maven 插件运行</li>
+</ol>
+<p>Spring Boot Maven 插件包含一个可用于快速编译和运行应用程序的 run 目标，应用程序以分解的形式运行，就像在 IDE 中一样。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mvn spring-boot:run</span><br></pre></td></tr></table></figure>
+
+<p>如果想使用 MAVEN_OPTS 操作系统环境变量，可以使用如下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ export MAVEN_OPTS = -Xmx1024m</span><br></pre></td></tr></table></figure>
+
+<h2 id="开发者工具"><a href="#开发者工具" class="headerlink" title="开发者工具"></a>开发者工具</h2><p>Spring Boot 包含一组能够提升开发体验的工具 spring-boot-devtools，要获得该工具的支持，需要将以下的依赖添加到 Maven POM 文件中，以提供额外的开发时功能：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-devtools&lt;/artifactId&gt;</span><br><span class="line">    &lt;optional&gt;true&lt;/optional&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注：在 Maven 中将依赖项的 optional 标签设置为 true 可防止 devtools 被传递到项目的其它模块中。运行完整打包的应用程序时，开发者工具会自动禁用。</strong></p>
+<h3 id="诊断类加载问题"><a href="#诊断类加载问题" class="headerlink" title="诊断类加载问题"></a>诊断类加载问题</h3><p>重新启动功能是通过使用两个类加载器实现的，对于大多数应用程序来说，这种方法效果很好，但是，它有时会导致类加载问题，尤其是在多模块项目中。</p>
+<p>要诊断类加载问题是否确实是由 devtools 及其两个类加载器引起的，可以尝试禁用重新启动功能，看是否能够解决问题，如果是，则需要自定义重启类加载器。</p>
+<h3 id="属性默认值"><a href="#属性默认值" class="headerlink" title="属性默认值"></a>属性默认值</h3><p>Spring Boot 支持的几个库使用缓存来提高性能。例如，缓存已编译的模板引擎以避免重复解析模板文件。Spring MVC 可以在提供静态资源时将 HTTP 缓存标头添加到响应中。</p>
+<p>虽然缓存在生产中非常有用，但在开发过程中可能会适得其反，使我们无法实时看到刚刚在应用程序中所做的更改。因此，spring-boot-devtools 默认禁用缓存选项。</p>
+<p>缓存选项通常在 application.properties 文件中配置。例如，Thymeleaf 提供了 spring.thymeleaf.cache 属性。spring-boot-devtools 会自动应用合理的开发时配置，无需手动设置这些属性。</p>
+<p>下面列出了所有的应用属性：</p>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="left">Default Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>server.error.include-binding-errors</code></td>
+<td align="left"><code>always</code></td>
+</tr>
+<tr>
+<td align="left"><code>server.error.include-message</code></td>
+<td align="left"><code>always</code></td>
+</tr>
+<tr>
+<td align="left"><code>server.error.include-stacktrace</code></td>
+<td align="left"><code>always</code></td>
+</tr>
+<tr>
+<td align="left"><code>server.servlet.jsp.init-parameters.development</code></td>
+<td align="left"><code>true</code></td>
+</tr>
+<tr>
+<td align="left"><code>server.servlet.session.persistent</code></td>
+<td align="left"><code>true</code></td>
+</tr>
+<tr>
+<td align="left"><code>spring.freemarker.cache</code></td>
+<td align="left"><code>false</code></td>
+</tr>
+<tr>
+<td align="left"><code>spring.groovy.template.cache</code></td>
+<td align="left"><code>false</code></td>
+</tr>
+<tr>
+<td align="left"><code>spring.h2.console.enabled</code></td>
+<td align="left"><code>true</code></td>
+</tr>
+<tr>
+<td align="left"><code>spring.mustache.servlet.cache</code></td>
+<td align="left"><code>false</code></td>
+</tr>
+<tr>
+<td align="left"><code>spring.mvc.log-resolved-exception</code></td>
+<td align="left"><code>true</code></td>
+</tr>
+<tr>
+<td align="left"><code>spring.reactor.debug</code></td>
+<td align="left"><code>true</code></td>
+</tr>
+<tr>
+<td align="left"><code>spring.template.provider.cache</code></td>
+<td align="left"><code>false</code></td>
+</tr>
+<tr>
+<td align="left"><code>spring.thymeleaf.cache</code></td>
+<td align="left"><code>false</code></td>
+</tr>
+<tr>
+<td align="left"><code>spring.web.resources.cache.period</code></td>
+<td align="left"><code>0</code></td>
+</tr>
+<tr>
+<td align="left"><code>spring.web.resources.chain.cache</code></td>
+<td align="left"><code>false</code></td>
+</tr>
+</tbody></table>
+<p>我们可以在 application.properties 配置文件中通过设置 spring.devtools.add-properties &#x3D; false 来禁用这些默认属性。</p>
+<h3 id="自动重启"><a href="#自动重启" class="headerlink" title="自动重启"></a>自动重启</h3><p>当 classpath 类路径下的文件改变时，使用 spring-boot-devtools 的应用程序会自动重启，某些资源，例如静态资源和视图模板，不需要重新启动应用程序。</p>
+<p>由于 DevTools 监控类路径资源，触发重启的唯一方法是更新类路径。无论我们使用的是 IDE 还是其中的一个构建插件，都必须重新编译修改后的文件以触发重新启动。更新类路径的方式取决于使用的工具：</p>
+<ul>
+<li><p>在 Eclipse 中，保存修改后的文件会导致类路径更新并触发重新启动。</p>
+</li>
+<li><p>在 IntelliJ IDEA 中，构建项目 ( Build +→+ Build Project) 具有相同的效果。</p>
+</li>
+<li><p>如果使用构建插件，运行 mvn compile 命令将触发重新启动。</p>
+</li>
+</ul>
+<p>如果不想使用重启功能，可以使用 spring.devtools.restart.enabled 属性禁用它，在大多数情况下，我们可以在 application.properties 中设置此属性（这样做仍然会初始化重启类加载器，但它不会监视文件更改）</p>
+<p>如果我们想完全禁用重启支持，则需要在调用 SpringApplication.run(…​) 之前将 spring.devtools.restart.enabled 的 System 属性设置为 false，如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import org.springframework.boot.SpringApplication;</span><br><span class="line">import org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"></span><br><span class="line">@SpringBootApplication</span><br><span class="line">public class NovelApplication &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        System.setProperty(&quot;spring.devtools.restart.enabled&quot;, &quot;false&quot;);</span><br><span class="line">        SpringApplication.run(NovelApplication.class, args);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="实时重载"><a href="#实时重载" class="headerlink" title="实时重载"></a>实时重载</h3><p>spring-boot-devtools 模块包括一个嵌入式 LiveReload 服务器，可用于在资源更改时触发浏览器刷新。LiveReload 浏览器扩展可从 livereload.com 免费获得，适用于 Chrome、Firefox 和 Safari 。</p>
+<p>如果我们不想在应用程序运行时启动 LiveReload 服务器，我们可以将 spring.devtools.livereload.enabled 属性设置为 false.</p>
+<p>要在文件更改时触发 LiveReload，必须启用自动重启。</p>
+<p><strong>注：一次只能运行一个 LiveReload 服务器，在启动应用程序之前，请确保没有其他 LiveReload 服务器正在运行。如果从 IDE 启动多个应用程序，则只有第一个具有 LiveReload 支持</strong></p>
+<h3 id="全局设置"><a href="#全局设置" class="headerlink" title="全局设置"></a>全局设置</h3><p>我们可以通过将以下任何文件添加到 $HOME&#x2F;.config&#x2F;spring-boot 目录来配置全局 devtools 设置：</p>
+<ol>
+<li><p>spring-boot-devtools.properties</p>
+</li>
+<li><p>spring-boot-devtools.yaml</p>
+</li>
+<li><p>spring-boot-devtools.yml</p>
+</li>
+</ol>
+<p>添加到这些文件的任何属性都适用于我们机器上使用 devtools 的所有Spring Boot 应用程序。</p>
+<p><strong>注：默认情况下，$HOME 是用户的主目录。要自定义此位置，请设置 SPRING_DEVTOOLS_HOME 环境变量或 spring.devtools.home 系统属性。</strong></p>
+<h3 id="远程应用程序"><a href="#远程应用程序" class="headerlink" title="远程应用程序"></a>远程应用程序</h3><p>Spring Boot 开发者工具不仅限于本地开发，还可以在运行远程应用程序时使用多种功能，远程支持是可选的，因为启用它可能会带来安全风险。只有在受信任的网络上运行或使用 SSL 保护时才应启用它。</p>
+<p>要启用它，需要确保 devtools 包含在重新打包的 jar 中，如以下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;build&gt;</span><br><span class="line">    &lt;plugins&gt;</span><br><span class="line">        &lt;plugin&gt;</span><br><span class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">            &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;</span><br><span class="line">            &lt;configuration&gt;</span><br><span class="line">                &lt;excludeDevtools&gt;false&lt;/excludeDevtools&gt;</span><br><span class="line">            &lt;/configuration&gt;</span><br><span class="line">        &lt;/plugin&gt;</span><br><span class="line">    &lt;/plugins&gt;</span><br><span class="line">&lt;/build&gt;</span><br></pre></td></tr></table></figure>
+
+<p>然后需要设置 spring.devtools.remote.secret 属性，与任何重要的密码一样，该值应该是唯一且强大的，以至于无法猜测或暴力破解。</p>
+<p>远程 devtools 支持分两部分提供：接受连接的服务器端端点和在 IDE 中运行的客户端应用程序。设置 spring.devtools.remote.secret 属性时，服务端组件会自动启用，客户端组件必须手动启动。</p>
+<h2 id="程序部署"><a href="#程序部署" class="headerlink" title="程序部署"></a>程序部署</h2><p>可执行 jar 可用于生产部署。由于它们是独立的，因此它们也非常适合于基于云的部署。</p>
+<p>对于其它生产就绪功能，例如运行状况检查、审计和 REST 度量 或 JMX 端点等，需要添加 spring-boot-starter-actuator 依赖。</p>
+</div>
+        </div>
+        
+            <div class="kratos-copyright text-center clearfix">
+                <h5 itemprop="copyrightNotice">本作品采用 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
+            </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+                <div class="post-like-donate text-center clearfix" id="post-like-donate">
+                
+                    <a class="donate" href="javascript:;"><i class="fa fa-bitcoin"></i> 打赏</a>
+                
+                
+                    <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
+                    <div class="share-wrap" style="display: none;">
+    <div class="share-group">
+        <a href="javascript:;" class="share-plain qq" onclick="share('qq');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-qq"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain qzone" onclick="share('qzone');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-star"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weixin pop style-plain" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weixin"></i>
+            </div>
+            <div class="share-int">
+                <div class="qrcode" id="wechat-qr"></div>
+                <p>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</p>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weibo" onclick="share('weibo');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weibo"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain facebook style-plain" onclick="share('facebook');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-facebook"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain twitter style-plain" onclick="share('twitter');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-twitter"></i>
+            </div>
+        </a>
+    </div>
+    <script type="text/javascript">
+        $(()=>{
+            new QRCode("wechat-qr", {
+                text: "https://xxyopen.com/2022/07/18/note/java/springboot3/use.html",
+                width: 150,
+                height: 150,
+                correctLevel : QRCode.CorrectLevel.H
+            });
+        });
+        function share(dest) {
+            const qqBase        = "https://connect.qq.com/widget/shareqq/index.html?";
+            const weiboBase     = "https://service.weibo.com/share/share.php?";
+            const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
+            const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
+            const twitterBase   = "https://twitter.com/intent/tweet?";
+            const hostUrl       = "https://xxyopen.com/2022/07/18/note/java/springboot3/use.html";
+            const title         = "「Spring Boot 3 使用」";
+            const excerpt       = `构建系统Spring Boot 建议我们选择 Maven 或 Gradle 等支持依赖管理并且可以发布 artifacts 到 Maven Central 中央仓库的构建系统 。我们也可以让 Spring Boot 与其他构建系统（例...`;
+            let _URL;
+            switch (dest) {
+                case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
+                case "weibo"    : _URL = weiboBase+"url="+hostUrl+"&title="+title+excerpt;                                 break;
+                case "qzone"    : _URL = qzoneBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";  break;
+                case "facebook" : _URL = facebookBase+"u="+hostUrl;                                                        break;
+                case "twitter"  : _URL = twitterBase+"text="+title+excerpt+"&url="+hostUrl;                                break;
+            }
+            window.open(_URL);
+        };
+    </script>
+</div>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/SpringBoot3/" rel="tag">SpringBoot3</a>, <a class="tag-none-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2022-07-18T00:15:12.940Z" itemprop="dateModified">最后编辑：2022-07-18</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" Spring Boot 3 入门" href="/2022/07/18/note/java/springboot3/start.html">&lt; 上一篇</a>
+            </div>
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" Spring Boot 3 核心功能" href="/2022/07/18/note/java/springboot3/core.html">下一篇 &gt;</a>
+            </div>
+            
+        </nav>
+    
+    
+        <div id="lv-container" class="post-comments lazy-load" data-id="city" data-uid="MTAyMC81NjgxOS8zMzI4Mw=="></div>
+
+<script>
+    window.livereOptions = {
+        refer: 'xxyopen.com/2022/07/18/note/java/springboot3/use.html',
+        site: 'https://xxyopen.com/2022/07/18/note/java/springboot3/use.html',
+        eagerLoading: true //主题会自己处理lazy load，没有必要让LiveRe的脚本再去做lazy load的处理
+    };
+    var load_comm = () => {
+        if (typeof LivereTower === 'undefined') {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+            (d.head || d.body).appendChild(s);
+        } else {
+            window.LivereTower.init();
+        }
+    };
+</script>
+<noscript>Please enable JavaScript to view the <a target="_blank" href="https://livere.com/" rel="nofollow noopener">comments powered by LiveRe.</a></noscript>
+    
+</article>
+
+        
+
+            </section>
+
+        
+
+                
+            
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/images/avatar.png" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">专注于开源项目和开发技术的研究与分享</p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                20
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                13
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                19
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                    <div class="sticky-area">
+                
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Elasticsearch/">Elasticsearch</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Elasticsearch/%E5%AE%A2%E6%88%B7%E7%AB%AF/">客户端</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/">设计模式</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/%E5%B7%A5%E5%85%B7/">工具</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Spring-Boot-3/">Spring Boot 3</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%8E%A8%E8%8D%90/">开源项目推荐</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Shell/">Shell</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/novel-plus/">novel-plus</a><span class="category-list-count">7</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/">编程规约</a><span class="category-list-count">2</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/Docker/" style="font-size: 0.6em;">Docker</a> <a href="/tags/Elasticsearch/" style="font-size: 0.6em;">Elasticsearch</a> <a href="/tags/Git/" style="font-size: 0.6em;">Git</a> <a href="/tags/IDEA%E6%8F%92%E4%BB%B6/" style="font-size: 0.6em;">IDEA插件</a> <a href="/tags/Java/" style="font-size: 0.64em;">Java</a> <a href="/tags/MySQL/" style="font-size: 0.6em;">MySQL</a> <a href="/tags/Shell/" style="font-size: 0.6em;">Shell</a> <a href="/tags/SpringBoot3/" style="font-size: 0.76em;">SpringBoot3</a> <a href="/tags/novel/" style="font-size: 0.6em;">novel</a> <a href="/tags/novel-plus/" style="font-size: 0.8em;">novel-plus</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 0.68em;">学习笔记</a> <a href="/tags/%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" style="font-size: 0.72em;">安装教程</a> <a href="/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/" style="font-size: 0.6em;">宝塔面板</a> <a href="/tags/%E5%B0%8F%E8%AF%B4%E9%A1%B9%E7%9B%AE/" style="font-size: 0.64em;">小说项目</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 0.68em;">工具</a> <a href="/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/" style="font-size: 0.72em;">开源项目</a> <a href="/tags/%E6%8E%A5%E5%8F%A3%E8%B0%83%E8%AF%95/" style="font-size: 0.6em;">接口调试</a> <a href="/tags/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/" style="font-size: 0.64em;">编程规约</a>
+      </div>
+  </aside>
+
+            
+                
+  <aside id="krw-posts" class="widget widget-kratos-posts">
+  <h4 class="widget-title"><i class="fa fa-file"></i>最新文章</h4>
+  <div class="tab-content">
+      <ul class="list-group">
+        
+        
+          
+          
+            <a class="list-group-item" href="/2022/07/18/doc/novel-plus/install/bt.html"><i class="fa  fa-book"></i> novel-plus 宝塔安装教程</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2022/07/18/es/esclient.html"><i class="fa  fa-book"></i> 全新的 Elasticsearch Java API Client 体验</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2022/07/18/doc/novel-plus/install/newupdate.html"><i class="fa  fa-book"></i> novel-plus v3.6.1 之后版本升级指南</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2022/07/18/doc/novel-plus/install/oldupdate.html"><i class="fa  fa-book"></i> novel-plus v3.6.1 之前版本升级 3.6.1 版本指南</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2022/07/18/doc/novel-plus/proxy.html"><i class="fa  fa-book"></i> novel-plus 的爬虫程序 HTTP 代理设置</a>
+            
+          
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+      </ul>
+  </div>
+  </aside>
+
+            
+    </div>
+</section>
+        
+        </div>
+    </div>
+</div>
+<footer>
+    <div id="footer"  class="ap-lrc"  >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        <li><a target="_blank" rel="nofollow" href="https://weibo.com/u/5262546028"><i class="fa fa-weibo"></i></a></li>
+                        <li><a href="mailto:xxyopen@foxmail.com"><i class="fa fa-envelope"></i></a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a target="_blank" rel="nofollow" href="https://github.com/201206030"><i class="fa fa-github"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="/atom.xml"><i class="fa fa-rss"></i></a></li>
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2022 XXY开源技术博客 版权所有.</li>
+                            <li>本站已运行<span id="span_dt">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by xxy.</li>
+                            <li>Hosted on <a href="https://pages.cloudflare.com" target="_blank">Cloudflare Pages</a></li>
+                        </div>
+                        <!-- <div>
+                            <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
+                            <li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by xxy.</li>
+                        </div>
+                        <div>
+                            <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
+                            <li>Hosted on <a href="https://pages.cloudflare.com" target="_blank">Cloudflare Pages</a></li>
+                        </div> -->
+                        <div>
+                            
+                            
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search/">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="box theme-box" id="darkmode-switch">
+                        <span class="fa fa-adjust"></span>
+                    </div>
+                
+                
+            </div>
+            <div class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+
+        <script defer src="https://unpkg.com/bootstrap@3.3.4/dist/js/bootstrap.min.js"></script>
+<script defer src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+<script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+    <script async src="/js/candy.min.js"></script>
+
+
+
+    <script defer src="https://unpkg.com/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    
+    <script defer src="https://unpkg.com/meting@2/dist/Meting.min.js"></script>
+    <meting-js
+        server="netease"
+        type="playlist"
+        id="3204190542"
+        order="random"
+        fixed="true"
+    >
+    </meting-js>
+
+
+
+    <script defer src="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<script defer src="https://unpkg.com/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script defer src="/js/kratosr.min.js"></script>
+<script defer src="/js/pjax.min.js"></script>
+
+    <script defer src="https://unpkg.com/layui-src@2.5.5/dist/layui.all.js"></script>
+
+
+
+<!-- Extra support for third-party plguins  -->
+
+
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?7cf4657d9d7b9fc1396e892f0d3f16d8";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    </body>
+</html>
