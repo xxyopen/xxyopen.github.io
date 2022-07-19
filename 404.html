@@ -34,13 +34,13 @@
     
   
   <!-- 样式表文件 -->
-  <link rel="stylesheet" id="kratos-css" href="/xxyopen/css/kratosr.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="kratos-css" href="/css/kratosr.min.css" type="text/css" media="all">
   
-    <link rel="stylesheet" id="darkmode-css" href="/xxyopen/css/kr-color-dark.min.css" type="text/css" media="(prefers-color-scheme: dark)">
-    <script src="/xxyopen/js/kr-dark.min.js"></script>
+    <link rel="stylesheet" id="darkmode-css" href="/css/kr-color-dark.min.css" type="text/css" media="(prefers-color-scheme: dark)">
+    <script src="/js/kr-dark.min.js"></script>
   
   
-    <link rel="stylesheet" id="highlight-css" href="/xxyopen/css/highlight/night-eighties.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/night-eighties.min.css" type="text/css" media="all">
   
   
   <link rel="stylesheet" id="fontawe-css" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css" media="all">
@@ -88,15 +88,15 @@
                             <ul id="kratos-primary-menu" class="sf-menu">
                                 
                                     
-                                        <li><a href="/xxyopen/"><i class="fa fa-home"></i>首页</a></li>
+                                        <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
                                     
                                 
                                     
-                                        <li><a href="/xxyopen/archives/"><i class="fa fa-file"></i>档案馆</a></li>
+                                        <li><a href="/archives/"><i class="fa fa-file"></i>档案馆</a></li>
                                     
                                 
                                     
-                                        <li><a href="/xxyopen/friends/"><i class="fa fa-paw"></i>好伙伴</a></li>
+                                        <li><a href="/friends/"><i class="fa fa-paw"></i>好伙伴</a></li>
                                     
                                 
                                     
@@ -123,7 +123,7 @@
                                     
                                 
                                     
-                                        <li><a href="/xxyopen/atom.xml"><i class="fa fa-rss"></i>RSS订阅</a></li>
+                                        <li><a href="/atom.xml"><i class="fa fa-rss"></i>RSS订阅</a></li>
                                     
                                 
                             </ul>
@@ -133,7 +133,7 @@
             </header>
             <header id="kratos-mobile-topnav" class="kratos-topnav">
                 <div class="container">
-                    <div class="color-logo"><a href="/xxyopen/">XXY开源技术博客</a></div>
+                    <div class="color-logo"><a href="/">XXY开源技术博客</a></div>
                     <div class="nav-toggle">
                         <a class="kratos-nav-toggle js-kratos-nav-toggle">
                             <i></i>
@@ -146,7 +146,7 @@
             <!-- <div class="kratos-overlay"></div> -->
             <div class="kratos-cover kratos-cover-2 text-center">
                 <div class="desc desc2 animate-box">
-                    <a href="/xxyopen/">
+                    <a href="/">
                         <h2>XXY开源技术博客</h2> <br />
                         <span></span>
                     </a>
@@ -206,14 +206,14 @@
 <div class="page404">
     <div class="kratos-hentry kratos-post-inner clearfix">
         <div class="col-md-7">
-            <img src="/xxyopen/images/404.webp">
+            <img src="/images/404.webp">
         </div>
         <div class="col-md-5 text-center errtxt">
             <h3>这个页面搬家啦</h3>
             <h5>要不要试着回到主页找一找呢~</h5>
             <p>
                 <a href="javascript:history.go(-1)" class="back-p">返回上页</a>
-                <a href="/xxyopen/" class="back-index">返回主页</a>
+                <a href="/" class="back-index">返回主页</a>
             </p>
         </div>
     </div>
@@ -240,7 +240,7 @@
                         
                         
                         <li><a target="_blank" rel="nofollow" href="https://github.com/201206030"><i class="fa fa-github"></i></a></li>
-                        <li><a target="_blank" rel="nofollow" href="/xxyopen/atom.xml"><i class="fa fa-rss"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="/atom.xml"><i class="fa fa-rss"></i></a></li>
                     </ul>
                     <ul class="kratos-copyright">
                         <div>
@@ -249,7 +249,7 @@
                         </div>
                         <div>
                             <li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by xxy.</li>
-                            <li>Hosted on <a href="https://pages.cloudflare.com" target="_blank">Cloudflare Pages</a></li>
+                            <li>Hosted on <a href="https://vercel.com" target="_blank">Vercel</a></li>
                         </div>
                         <!-- <div>
                             <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
@@ -257,7 +257,7 @@
                         </div>
                         <div>
                             <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
-                            <li>Hosted on <a href="https://pages.cloudflare.com" target="_blank">Cloudflare Pages</a></li>
+                            <li>Hosted on <a href="https://vercel.com" target="_blank">Vercel</a></li>
                         </div> -->
                         <div>
                             
@@ -271,7 +271,7 @@
             <div class="tool">
                 
                     <div class="box search-box">
-                        <a href="/xxyopen/search/">
+                        <a href="/search/">
                             <span class="fa fa-search"></span>
                         </a>
                     </div>
@@ -301,18 +301,18 @@
         window.kr = {};
     }
     window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
-    window.kr.siteRoot = "/xxyopen/";
+    window.kr.siteRoot = "/";
 </script>
 
 
-    <script async src="/xxyopen/js/candy.min.js"></script>
+    <script async src="/js/candy.min.js"></script>
 
 
 
 
 <script defer src="https://unpkg.com/clipboard@2.0.6/dist/clipboard.min.js"></script>
-<script defer src="/xxyopen/js/kratosr.min.js"></script>
-<script defer src="/xxyopen/js/pjax.min.js"></script>
+<script defer src="/js/kratosr.min.js"></script>
+<script defer src="/js/pjax.min.js"></script>
 
 
 

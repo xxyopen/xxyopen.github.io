@@ -1,4 +1,6 @@
 https://xxyopen.com/2022/07/19/tools/pages_host.html
+https://xxyopen.com/2022/07/17/agree/java_code_style.html
+https://xxyopen.com/2022/07/18/java/flyweight_pattern.html
 https://xxyopen.com/2022/07/18/doc/novel-plus/install/bt.html
 https://xxyopen.com/2022/07/18/os/novel.html
 https://xxyopen.com/2022/07/18/os/easyyapi.html
@@ -7,7 +9,6 @@ https://xxyopen.com/2022/07/18/es/esclient.html
 https://xxyopen.com/2022/07/18/doc/novel-plus/install/source.html
 https://xxyopen.com/2022/07/18/doc/novel-plus/install/package.html
 https://xxyopen.com/2022/07/18/doc/novel-plus/install/docker.html
-https://xxyopen.com/2022/07/18/java/flyweight_pattern.html
 https://xxyopen.com/2022/07/18/doc/shell/base.html
 https://xxyopen.com/2022/07/18/doc/novel-plus/proxy.html
 https://xxyopen.com/2022/07/18/doc/novel-plus/install/oldupdate.html
@@ -17,11 +18,11 @@ https://xxyopen.com/2022/07/18/os/nav.html
 https://xxyopen.com/2022/07/18/note/java/springboot3/use.html
 https://xxyopen.com/2022/07/18/note/java/springboot3/start.html
 https://xxyopen.com/2022/07/18/note/java/springboot3/core.html
-https://xxyopen.com/2022/07/17/agree/java_code_style.html
 https://xxyopen.com/2022/07/17/agree/git_commit.html
 https://xxyopen.com/
 https://xxyopen.com/tags/Git/
 https://xxyopen.com/tags/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/
+https://xxyopen.com/tags/java/
 https://xxyopen.com/tags/%E5%B7%A5%E5%85%B7/
 https://xxyopen.com/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/
 https://xxyopen.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/
@@ -29,7 +30,6 @@ https://xxyopen.com/tags/%E6%8E%A5%E5%8F%A3%E8%B0%83%E8%AF%95/
 https://xxyopen.com/tags/%E5%B0%8F%E8%AF%B4%E9%A1%B9%E7%9B%AE/
 https://xxyopen.com/tags/SpringBoot3/
 https://xxyopen.com/tags/IDEA%E6%8F%92%E4%BB%B6/
-https://xxyopen.com/tags/Java/
 https://xxyopen.com/tags/Shell/
 https://xxyopen.com/tags/MySQL/
 https://xxyopen.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/
@@ -38,6 +38,7 @@ https://xxyopen.com/tags/novel-plus/
 https://xxyopen.com/tags/Docker/
 https://xxyopen.com/tags/Elasticsearch/
 https://xxyopen.com/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/
+https://xxyopen.com/tags/%E7%BD%91%E7%AB%99%E6%89%98%E7%AE%A1/
 https://xxyopen.com/categories/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/
 https://xxyopen.com/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%8E%A8%E8%8D%90/
 https://xxyopen.com/categories/MySQL/
