@@ -4,7 +4,7 @@
   <!-- 元数据 -->
   <meta charset="utf-8">
   <link rel="icon" href="https://s1.ax1x.com/2022/07/19/jozrfP.jpg">
-  <title>novel-plus v3.6.1 之后版本升级指南 | XXY开源技术博客</title>
+  <title>性能优化：使用 WebP 格式图片 | XXY开源技术博客</title>
   <meta name="author" content="xxy" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -13,22 +13,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="novel-plus" />
+    <meta name="keywords" content="WebP, 前端, 性能优化" />
   
-  <meta name="description" content="为了稳妥起见，升级前请先压缩服务器上的安装目录 novel-plus 进行备份。   升级步骤 根据 sql 文件说明 执行增量 sql 文件 替换novel-crawl.jar、novel-front.jar和novel-admin.jar文件为新版本 覆盖 novel-front&#x2F;templates 模版文件夹 相应的目录下执行bin&#x2F;novel-crawl.sh restart、bin&#x2F;no">
+  <meta name="description" content="WebP 介绍WebP 是一种同时提供了有损压缩和无损压缩的图片文件格式，可以大大压缩图片的大小，并且图片的质量和 png、jpeg 等相同。WebP 的无损压缩比 png 格式的文件平均少了 45％ 的大小。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="novel-plus v3.6.1 之后版本升级指南">
-<meta property="og:url" content="https://xxyopen.com/2022/07/18/doc/novel-plus/install/newupdate.html">
+<meta property="og:title" content="性能优化：使用 WebP 格式图片">
+<meta property="og:url" content="https://xxyopen.com/2022/07/20/web/webp.html">
 <meta property="og:site_name" content="XXY开源技术博客">
-<meta property="og:description" content="为了稳妥起见，升级前请先压缩服务器上的安装目录 novel-plus 进行备份。   升级步骤 根据 sql 文件说明 执行增量 sql 文件 替换novel-crawl.jar、novel-front.jar和novel-admin.jar文件为新版本 覆盖 novel-front&#x2F;templates 模版文件夹 相应的目录下执行bin&#x2F;novel-crawl.sh restart、bin&#x2F;no">
+<meta property="og:description" content="WebP 介绍WebP 是一种同时提供了有损压缩和无损压缩的图片文件格式，可以大大压缩图片的大小，并且图片的质量和 png、jpeg 等相同。WebP 的无损压缩比 png 格式的文件平均少了 45％ 的大小。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://s1.ax1x.com/2022/07/19/jozrfP.jpg">
-<meta property="article:published_time" content="2022-07-18T00:21:11.000Z">
-<meta property="article:modified_time" content="2022-07-18T09:34:23.591Z">
+<meta property="og:image" content="https://xxyopen.com/2022/07/20/web/webp.htmlhttps:/youdoc.gitee.io/resource/images/blog/article/webp_logo.webp">
+<meta property="article:published_time" content="2022-07-20T02:00:08.000Z">
+<meta property="article:modified_time" content="2022-07-20T01:13:08.494Z">
 <meta property="article:author" content="xxy">
-<meta property="article:tag" content="novel-plus">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="性能优化">
+<meta property="article:tag" content="WebP">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s1.ax1x.com/2022/07/19/jozrfP.jpg">
+<meta name="twitter:image" content="https://xxyopen.com/2022/07/20/web/webp.htmlhttps:/youdoc.gitee.io/resource/images/blog/article/webp_logo.webp">
   <link rel="alternate" href="atom.xml" type="application/atom+xml">
   <!-- 站点验证相关 -->
   
@@ -170,15 +172,15 @@
 
             <article itemscope itemtype="https://schema.org/Article">
     
-    <link itemprop="mainEntityOfPage" href="https://xxyopen.com/2022/07/18/doc/novel-plus/install/newupdate.html">
+    <link itemprop="mainEntityOfPage" href="https://xxyopen.com/2022/07/20/web/webp.html">
     <div class="kratos-hentry kratos-post-inner clearfix">
         <header class="kratos-entry-header">
             
-                <h1 class="kratos-entry-title text-center" itemprop="name headline">novel-plus v3.6.1 之后版本升级指南</h1>
+                <h1 class="kratos-entry-title text-center" itemprop="name headline">性能优化：使用 WebP 格式图片</h1>
             
             
             <ul class="kratos-post-meta text-center">
-                <li><time datetime="2022-07-18T00:21:11.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2022-07-18</time></li>
+                <li><time datetime="2022-07-20T02:00:08.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2022-07-20</time></li>
                 <li itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <i class="fa fa-user"></i> 作者 <span itemprop="name">xxy</span>
                 </li>
@@ -186,7 +188,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        279
+                        ~3.88K
                     
                     字
                 </li>
@@ -196,21 +198,31 @@
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
                 <div class="icon"><i class="fa fa-warning"></i></div>
-                <div class="text"><p>本文最后编辑于 <time datetime="1658136863591"></time> 前，其中的内容可能需要更新。</p></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1658279588494"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
             <hr />
-            <div itemprop="articleBody"><div class="alert alert-warning"><div class="icon"><i class="fa fa-warning"></i></div><div class="text"><p>为了稳妥起见，升级前请先压缩服务器上的安装目录 novel-plus 进行备份。</p>
-</div></div>
-
-<h2 id="升级步骤"><a href="#升级步骤" class="headerlink" title="升级步骤"></a>升级步骤</h2><ol>
-<li>根据 <a target="_blank" rel="noopener" href="https://github.com/201206030/novel-plus/blob/develop_xxy/doc/sql/readme.md">sql 文件说明</a> 执行增量 sql 文件</li>
-<li>替换<code>novel-crawl.jar</code>、<code>novel-front.jar</code>和<code>novel-admin.jar</code>文件为新版本</li>
-<li>覆盖 <code>novel-front/templates</code> 模版文件夹</li>
-<li>相应的目录下执行<code>bin/novel-crawl.sh restart</code>、<code>bin/novel-front.sh restart</code>和<code>bin/novel-admin.sh restart</code>命令重启程序</li>
+            <div itemprop="articleBody"><h2 id="WebP-介绍"><a href="#WebP-介绍" class="headerlink" title="WebP 介绍"></a>WebP 介绍</h2><p>WebP 是一种同时提供了有损压缩和无损压缩的图片文件格式，可以大大压缩图片的大小，并且图片的质量和 png、jpeg 等相同。WebP 的无损压缩比 png 格式的文件平均少了 45％ 的大小。<span id="more"></span></p>
+<p>目前大约 95.77% 的浏览器都支持 WebP 格式的图片，其中 Safari 浏览器仅在 Big Sur 及以上的 macOS 系统才支持 WebP。在不兼容的情况下，我们需要进行相应的降级措施。</p>
+<h2 id="降级处理原则"><a href="#降级处理原则" class="headerlink" title="降级处理原则"></a>降级处理原则</h2><p>判断浏览器是否支持 WebP 格式的图片：</p>
+<ul>
+<li>支持：展示 WebP 格式的图片</li>
+<li>不支持：展示原始格式的图片</li>
+</ul>
+<h2 id="降级处理方式"><a href="#降级处理方式" class="headerlink" title="降级处理方式"></a>降级处理方式</h2><ol>
+<li>JS 处理</li>
 </ol>
-<div class="alert alert-danger"><div class="icon"><i class="fa fa-exclamation"></i></div><div class="text"><p>自己修改过的模版文件可能会被覆盖，请自行备份。</p>
-</div></div></div>
+<p>使用 JS 替换图片的 URL，类似图片懒加载的原理，可用于 CSS 中的图片、背景图片：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">/** </span><br><span class="line">* 判断浏览器是否支持 WebP 的两种方式</span><br><span class="line">*/</span><br><span class="line">// 方式1: 通过尝试加载一张 WebP 格式的图片来判断</span><br><span class="line">function isSupportWebP(callback) &#123;</span><br><span class="line">  const imgUrl = &#x27;https://youdoc.gitee.io/resource/images/blog/config/avatar.webp&#x27;;</span><br><span class="line">  const image = new Image();</span><br><span class="line">  image.src = imgUrl;</span><br><span class="line">  image.onload = function () &#123;</span><br><span class="line">    // 加载成功，说明支持 WebP</span><br><span class="line">    callback(true);</span><br><span class="line">  &#125;</span><br><span class="line">  image.onerror = function () &#123;</span><br><span class="line">    // 加载失败，说明不支持 WebP</span><br><span class="line">    callback(false);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/** </span><br><span class="line">* 选择浏览器支持的图片格式</span><br><span class="line">*/</span><br><span class="line">function loadImg(imgElement, compressedImg, originalImg) &#123;</span><br><span class="line">  isSupportWebP((isSupport) =&gt; &#123;</span><br><span class="line">    imgElement.src = isSupport ? compressedImg : originalImg;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 方式2: 通过判断 HTMLCanvasElement.toDataURL() 返回的 dataURI 来判断</span><br><span class="line">function isSupportWebP() &#123;</span><br><span class="line">  const str = document.createElement(&#x27;canvas&#x27;).toDataURL(&#x27;image/WebP&#x27;);</span><br><span class="line">  // 如果支持则会返回传入的类型 image/WebP --&gt; data:image/WebP;base64,UklGRtgCAABXRUJQVlA4WAoAAAAwAAAAKwEAlQAASUNDUBgCAAAAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z3BhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABYWVogAAAAAAAA9tYAAQAAAADTLW1sdWMAAAAAAAAAAQAAAAxlblVTAAAAIAAAABwARwBvAG8AZwBsAGUAIABJAG4AYwAuACAAMgAwADEANkFMUEgSAAAAAQcQEREQkCT+/x9F9D/tf0MAVlA4IIAAAABwDQCdASosAZYAPm02mUmkIyKhICgAgA2JaW7hdrEbQAnsA99snIe+2TkPfbJyHvtk5D32ych77ZOQ99snIe+2TkPfbJyHvtk5D32ych77ZOQ99snIe+2TkPfbJyHvtk5D32ych77ZOQ99snIe+2TkPfasAAD+/9YAAAAAAAAAAA==</span><br><span class="line">  // 如果不支持则会返回默认值 image/png --&gt; data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACWCAYAAABkW7XSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADGSURBVHhe7cExAQAAAMKg9U9tCF8gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAONUAv9QAAcDhjokAAAAASUVORK5CYII</span><br><span class="line">  return str.indexOf(&#x27;image/WebP&#x27;) &gt; -1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/** </span><br><span class="line">* 选择浏览器支持的图片格式</span><br><span class="line">*/</span><br><span class="line">function getImg(compressedImg, originalImg) &#123;</span><br><span class="line">  const isSupport = isSupportWebP();</span><br><span class="line">  return isSupport ? compressedImg : originalImg;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 页面加载完成后替换所有图片的 URL</span><br><span class="line">window.onload = function () &#123;</span><br><span class="line">  const isSupport = isSupportWebP();</span><br><span class="line">  Array.from(document.querySelectorAll(&#x27;img&#x27;))</span><br><span class="line">    .forEach(function (i) &#123;</span><br><span class="line">      let originalSrc = i.attributes[&#x27;data-src&#x27;].value;</span><br><span class="line">      let compressedSrc = i.attributes[&#x27;data-webp-src&#x27;].value;</span><br><span class="line">      i.src = isSupport ? compressedSrc : originalSrc;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>HTML 处理</li>
+</ol>
+<p><code>&lt;picture&gt;</code> 是 H5 中的一个新标签，类似 <code>&lt;video&gt;</code> 它也可以指定多个格式的资源，由浏览器选择自己支持的格式进行加载。浏览器会优先选择 <code>&lt;picture&gt;</code> 元素中最匹配的子 <code>&lt;source&gt;</code> 元素，如果没有匹配的，就选择 <code>&lt;img&gt;</code> 元素的 src 属性中的 URL 进行加载。</p>
+<p>如下所示，如果浏览器支持 image&#x2F;WebP 类型的图片，则加载 <code>&lt;source&gt;</code> 元素中 srcset 属性指向的资源，如果不支持则跳过 <code>&lt;source&gt;</code> 元素，加载 <code>&lt;img&gt;</code> 元素。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;picture&gt;</span><br><span class="line">    &lt;source type=&quot;image/WebP&quot; srcset=&quot;https://youdoc.gitee.io/resource/images/blog/config/avatar.webp&quot; /&gt;</span><br><span class="line">    &lt;img src=&quot;https://youdoc.gitee.io/resource/images/blog/config/avatar.png&quot;&gt; </span><br><span class="line">&lt;/picture&gt;</span><br></pre></td></tr></table></figure>
+
+</div>
         </div>
         
             <div class="kratos-copyright text-center clearfix">
@@ -265,7 +277,7 @@
     <script type="text/javascript">
         $(()=>{
             new QRCode("wechat-qr", {
-                text: "https://xxyopen.com/2022/07/18/doc/novel-plus/install/newupdate.html",
+                text: "https://xxyopen.com/2022/07/20/web/webp.html",
                 width: 150,
                 height: 150,
                 correctLevel : QRCode.CorrectLevel.H
@@ -277,14 +289,9 @@
             const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
             const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
             const twitterBase   = "https://twitter.com/intent/tweet?";
-            const hostUrl       = "https://xxyopen.com/2022/07/18/doc/novel-plus/install/newupdate.html";
-            const title         = "「novel-plus v3.6.1 之后版本升级指南」";
-            const excerpt       = `为了稳妥起见，升级前请先压缩服务器上的安装目录 novel-plus 进行备份。
-
-
-升级步骤
-根据 sql 文件说明 执行增量 sql 文件
-替换novel-crawl.jar、novel-front.jar和novel-admin...`;
+            const hostUrl       = "https://xxyopen.com/2022/07/20/web/webp.html";
+            const title         = "「性能优化：使用 WebP 格式图片」";
+            const excerpt       = `WebP 介绍WebP 是一种同时提供了有损压缩和无损压缩的图片文件格式，可以大大压缩图片的大小，并且图片的质量和 png、jpeg 等相同。WebP 的无损压缩比 png 格式的文件平均少了 45％ 的大小。`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -303,10 +310,10 @@
             <div class="footer-tag clearfix">
                 <div class="pull-left">
                 <i class="fa fa-tags"></i>
-                    <a class="tag-none-link" href="/tags/novel-plus/" rel="tag">novel-plus</a>
+                    <a class="tag-none-link" href="/tags/WebP/" rel="tag">WebP</a>, <a class="tag-none-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a>, <a class="tag-none-link" href="/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" rel="tag">性能优化</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2022-07-18T09:34:23.591Z" itemprop="dateModified">最后编辑：2022-07-18</time>
+                    <time datetime="2022-07-20T01:13:08.494Z" itemprop="dateModified">最后编辑：2022-07-20</time>
                 </div>
             </div>
         </footer>
@@ -315,13 +322,9 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" novel-plus v3.6.1 之前版本升级 3.6.1 版本指南" href="/2022/07/18/doc/novel-plus/install/oldupdate.html">&lt; 上一篇</a>
+                <a title=" 几个免费的静态网站托管平台对比" href="/2022/07/19/tools/pages_host.html">&lt; 上一篇</a>
             </div>
             
-            
-            <div class="nav-next clearfix">
-                <a title=" 接口调试利器 EasyYapi 插件" href="/2022/07/18/os/easyyapi.html">下一篇 &gt;</a>
-            </div>
             
         </nav>
     
@@ -330,8 +333,8 @@
 
 <script>
     window.livereOptions = {
-        refer: 'xxyopen.com/2022/07/18/doc/novel-plus/install/newupdate.html',
-        site: 'https://xxyopen.com/2022/07/18/doc/novel-plus/install/newupdate.html',
+        refer: 'xxyopen.com/2022/07/20/web/webp.html',
+        site: 'https://xxyopen.com/2022/07/20/web/webp.html',
         eagerLoading: true //主题会自己处理lazy load，没有必要让LiveRe的脚本再去做lazy load的处理
     };
     var load_comm = () => {
