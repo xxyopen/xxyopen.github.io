@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>xxyopen</title>
   
-  <subtitle> 开源项目和开发技术交流分享</subtitle>
+  <subtitle>一个技术博客&amp;学习社区&amp;分享平台</subtitle>
   <link href="https://xxyopen.com/atom.xml" rel="self"/>
   
   <link href="https://xxyopen.com/"/>
