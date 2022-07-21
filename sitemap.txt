@@ -1,3 +1,4 @@
+https://xxyopen.com/2022/07/18/os/novel-plus.html
 https://xxyopen.com/2022/07/18/doc/novel-plus/install/bt.html
 https://xxyopen.com/2022/07/19/tools/pages_host.html
 https://xxyopen.com/2022/07/20/web/webp.html
@@ -14,7 +15,6 @@ https://xxyopen.com/2022/07/18/doc/shell/base.html
 https://xxyopen.com/2022/07/18/doc/novel-plus/proxy.html
 https://xxyopen.com/2022/07/18/doc/novel-plus/install/oldupdate.html
 https://xxyopen.com/2022/07/18/doc/novel-plus/install/newupdate.html
-https://xxyopen.com/2022/07/18/os/novel-plus.html
 https://xxyopen.com/2022/07/18/os/nav.html
 https://xxyopen.com/2022/07/18/note/java/springboot3/use.html
 https://xxyopen.com/2022/07/18/note/java/springboot3/start.html
