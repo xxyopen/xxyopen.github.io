@@ -2,6 +2,87 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://xxyopen.com/2022/07/18/note/java/springboot3/core.html</loc>
+    
+    <lastmod>2022-07-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xxyopen.com/2022/07/18/note/java/springboot3/use.html</loc>
+    
+    <lastmod>2022-07-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xxyopen.com/2022/07/18/note/java/springboot3/start.html</loc>
+    
+    <lastmod>2022-07-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xxyopen.com/2022/07/18/doc/shell/base.html</loc>
+    
+    <lastmod>2022-07-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xxyopen.com/2022/07/18/doc/novel-plus/proxy.html</loc>
+    
+    <lastmod>2022-07-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xxyopen.com/2022/07/17/agree/java_code_style.html</loc>
+    
+    <lastmod>2022-07-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xxyopen.com/2022/07/18/java/flyweight_pattern.html</loc>
+    
+    <lastmod>2022-07-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xxyopen.com/2022/07/20/web/webp.html</loc>
+    
+    <lastmod>2022-07-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xxyopen.com/2022/07/18/es/esclient.html</loc>
+    
+    <lastmod>2022-07-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://xxyopen.com/2022/07/22/tools/image_host.html</loc>
     
     <lastmod>2022-07-22</lastmod>
@@ -38,33 +119,6 @@
   </url>
   
   <url>
-    <loc>https://xxyopen.com/2022/07/20/web/webp.html</loc>
-    
-    <lastmod>2022-07-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xxyopen.com/2022/07/17/agree/java_code_style.html</loc>
-    
-    <lastmod>2022-07-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xxyopen.com/2022/07/18/java/flyweight_pattern.html</loc>
-    
-    <lastmod>2022-07-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://xxyopen.com/2022/07/18/os/novel.html</loc>
     
     <lastmod>2022-07-18</lastmod>
@@ -84,15 +138,6 @@
   
   <url>
     <loc>https://xxyopen.com/2022/07/18/mysql/mysqlshell.html</loc>
-    
-    <lastmod>2022-07-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xxyopen.com/2022/07/18/es/esclient.html</loc>
     
     <lastmod>2022-07-18</lastmod>
     
@@ -128,24 +173,6 @@
   </url>
   
   <url>
-    <loc>https://xxyopen.com/2022/07/18/doc/shell/base.html</loc>
-    
-    <lastmod>2022-07-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xxyopen.com/2022/07/18/doc/novel-plus/proxy.html</loc>
-    
-    <lastmod>2022-07-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://xxyopen.com/2022/07/18/doc/novel-plus/install/oldupdate.html</loc>
     
     <lastmod>2022-07-18</lastmod>
@@ -165,33 +192,6 @@
   
   <url>
     <loc>https://xxyopen.com/2022/07/18/os/nav.html</loc>
-    
-    <lastmod>2022-07-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xxyopen.com/2022/07/18/note/java/springboot3/use.html</loc>
-    
-    <lastmod>2022-07-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xxyopen.com/2022/07/18/note/java/springboot3/start.html</loc>
-    
-    <lastmod>2022-07-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xxyopen.com/2022/07/18/note/java/springboot3/core.html</loc>
     
     <lastmod>2022-07-18</lastmod>
     
