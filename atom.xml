@@ -6,7 +6,7 @@
   <link href="https://xxyopen.com/atom.xml" rel="self"/>
   
   <link href="https://xxyopen.com/"/>
-  <updated>2022-07-22T03:35:18.767Z</updated>
+  <updated>2022-07-23T09:45:57.722Z</updated>
   <id>https://xxyopen.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Spring Boot 中一种解决 @RequestBody 接收 Json 数据导致 XSS 攻击的简单方法</title>
+    <link href="https://xxyopen.com/2022/07/23/java/xss.html"/>
+    <id>https://xxyopen.com/2022/07/23/java/xss.html</id>
+    <published>2022-07-23T09:23:11.000Z</published>
+    <updated>2022-07-23T09:45:57.722Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>前后端分离项目，对于 POST 和 PUT 类型的请求方法，后端基本都是通过 @RequestBody 注解接收 application&#x2F;json 格式的请求数据，以往那种通过过滤器 Filter + 装饰器 Wrapper 来解决表单传参 XSS 攻击的方式并不适用。在 Spring Boot 中，我们可以通过配置全局的 Json 反序列化器转义特殊字符来解决 XSS 攻击。</p><h3 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * JSON 全局反序列化器</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> xiongxiaoyang</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2022/5/21</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@JsonComponent</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">GlobalJsonDeserializer</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 字符串反序列化器</span></span><br><span class="line"><span class="comment">     * 过滤特殊字符，解决 XSS 攻击</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title class_">StringDeserializer</span> <span class="keyword">extends</span> <span class="title class_">JsonDeserializer</span>&lt;String&gt; &#123;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="keyword">public</span> String <span class="title function_">deserialize</span><span class="params">(JsonParser jsonParser, DeserializationContext deserializationContext)</span> <span class="keyword">throws</span> IOException, JacksonException &#123;</span><br><span class="line"><span class="comment">// 实际代码就这一行</span></span><br><span class="line">            <span class="keyword">return</span> jsonParser.getValueAsString()</span><br><span class="line">                    .replace(<span class="string">&quot;&lt;&quot;</span>, <span class="string">&quot;&amp;lt;&quot;</span>)</span><br><span class="line">                    .replace(<span class="string">&quot;&gt;&quot;</span>, <span class="string">&quot;&amp;gt;&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h3&gt;&lt;p&gt;前后端分离项目，对于 POST 和 PUT 类型的请求方法，后端基本都是通过 @RequestBody 注解接收 application&amp;#</summary>
+      
+    
+    
+    
+    <category term="Java" scheme="https://xxyopen.com/categories/Java/"/>
+    
+    
+    <category term="java" scheme="https://xxyopen.com/tags/java/"/>
+    
+    <category term="xss" scheme="https://xxyopen.com/tags/xss/"/>
+    
+  </entry>
   
   <entry>
     <title>几个免费又好用的国内图床分享</title>
@@ -531,32 +557,6 @@
     <category term="java" scheme="https://xxyopen.com/tags/java/"/>
     
     <category term="设计模式" scheme="https://xxyopen.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL 官方多线程逻辑备份工具</title>
-    <link href="https://xxyopen.com/2022/07/18/mysql/mysqlshell.html"/>
-    <id>https://xxyopen.com/2022/07/18/mysql/mysqlshell.html</id>
-    <published>2022-07-17T23:33:11.000Z</published>
-    <updated>2022-07-18T11:04:14.512Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p><a href="https://dev.mysql.com/doc/mysql-shell/8.0/en">MySQL Shell</a> 是 MySQL 的高级命令行客户端和代码编辑器。除了 SQL，MySQL Shell 还为 JavaScript 和 Python 提供脚本功能。当 MySQL Shell 通过 X 协议连接到 MySQL 服务器时，X DevAPI 可用于处理关系数据和文档数据。 </p><p>MySQL Shell 8.0.21 包括一些新的易用、高性能和集成的工具（MySQL Shell Dump &amp; Dump Loading Utility）用来创建逻辑转储和执行逻辑还原。该序列工具以  MySQL Shell 8.0.17 中引入的多线程 CSV 导入工具 util.importTable() 为基础构建以便轻松转储和加载整个数据库实例或一组 schema。该序列工具包括：</p><ul><li><p>util.dumpInstance()：转储整个数据库实例，包括用户</p></li><li><p>util.dumpSchemas()：转储一组数据库 schema</p></li><li><p>util.loadDump()：将转储加载到目标数据库中</p></li></ul><p>主要特色功能包括：</p><ul><li><p>多线程转储，将较大的表分成较小的块，速度高达 3GB &#x2F; s</p></li><li><p>并行加载块，结合 MySQL Server 8.0.21 中的禁用 InnoDB Redo Log 的功能，加载性能可以超过 200MB &#x2F; s</p></li><li><p>在转储的同时进行加载</p></li><li><p>中断后继续加载数据（断点续传）</p></li><li><p>内置压缩（zstd 和 gzip）</p></li><li><p>加载数据后推迟二级索引的创建</p></li><li><p>直接从 OCI 对象存储中转储和加载</p></li><li><p>兼容 OCI 的 MySQL 数据库服务模式，使得向云的迁移变得容易</p></li></ul><h3 id="MySQL-Shell-安装"><a href="#MySQL-Shell-安装" class="headerlink" title="MySQL Shell 安装"></a>MySQL Shell 安装</h3><p>MySQL Shell 提供了 Windows、Linux 和  Mac 的安装支持，具体请查看如下的官方安装文档：</p><p><a href="https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-install.html">https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-install.html</a></p><h3 id="Dump-amp-Dump-Loading-Utility"><a href="#Dump-amp-Dump-Loading-Utility" class="headerlink" title="Dump &amp; Dump Loading Utility"></a>Dump &amp; Dump Loading Utility</h3><p>MySQL Shell Dump &amp; Dump Loading Utility 的使用以及与其它各种主流逻辑转储和加载工具 mysqldump,、mysqlpump 和 mydumper 的比较结果如下：</p><ul><li>数据以大约 256 MB 的块形式转储</li></ul><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">mysqlsh-js&gt; </span><span class="language-bash">util.dumpSchemas([<span class="string">&quot;&lt;db&gt;&quot;</span>],</span> </span><br><span class="line">                             &quot;&lt;directory&gt;&quot;,</span><br><span class="line">                             &#123;threads: 88, </span><br><span class="line">                             bytesPerChunk: &quot;256M&quot;&#125;)</span><br></pre></td></tr></table></figure><p><img src="/images/tools/mysql/dump.png"></p><ul><li>加载</li></ul><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">mysqlsh-js&gt; </span><span class="language-bash">util.loadDump(<span class="string">&quot;&lt;directory&gt;&quot;</span>,</span> </span><br><span class="line">                          &#123;threads: 88&#125;)</span><br></pre></td></tr></table></figure><p><img src="/images/tools/mysql/load.png"></p><p>Redo Log 禁用的情况下，MySQL Shell 能够快速转储数据，高达近 <code>3GB/s</code>，并以 <code>200MB/s</code> 以上的速度加载数据。</p><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p>[1] <a href="https://dev.mysql.com/blog-archive/mysql-shell-dump-load-part-1-demo">https://dev.mysql.com/blog-archive/mysql-shell-dump-load-part-1-demo</a></p><p>[2] <a href="https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-utilities-dump-instance-schema.html">https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-utilities-dump-instance-schema.html</a></p><p>[3] <a href="https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-utilities-load-dump.html">https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-utilities-load-dump.html</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://dev.mysql.com/doc/mysql-shell/8.0/en&quot;&gt;MySQL Shell&lt;/a&gt;</summary>
-      
-    
-    
-    
-    <category term="MySQL" scheme="https://xxyopen.com/categories/MySQL/"/>
-    
-    
-    <category term="工具" scheme="https://xxyopen.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="MySQL" scheme="https://xxyopen.com/tags/MySQL/"/>
     
   </entry>
   
