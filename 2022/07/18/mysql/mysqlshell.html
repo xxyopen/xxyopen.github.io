@@ -359,25 +359,23 @@
         </nav>
     
     
-        <div id="lv-container" class="post-comments lazy-load" data-id="city" data-uid="MTAyMC81NjgxOS8zMzI4Mw=="></div>
-
+        <div class="post-comments lazy-load">
+    <div id="tcomment"></div>
+</div>
 <script>
-    window.livereOptions = {
-        refer: 'xxyopen.com/2022/07/18/mysql/mysqlshell.html',
-        site: 'https://xxyopen.com/2022/07/18/mysql/mysqlshell.html',
-        eagerLoading: true //主题会自己处理lazy load，没有必要让LiveRe的脚本再去做lazy load的处理
-    };
     var load_comm = () => {
-        if (typeof LivereTower === 'undefined') {
-            var d = document, s = d.createElement('script');
-            s.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-            (d.head || d.body).appendChild(s);
+        const init = () => {
+            twikoo.init({ envId: 'https://twikoo-six-xi.vercel.app', el: '#tcomment' });
+        }
+        if (typeof twikoo === 'undefined') {
+            const src = 'https://unpkg.com/twikoo@latest/dist/twikoo.all.min.js';
+            $.getScript(src, init);
         } else {
-            window.LivereTower.init();
+            init();
         }
     };
 </script>
-<noscript>Please enable JavaScript to view the <a target="_blank" href="https://livere.com/" rel="nofollow noopener">comments powered by LiveRe.</a></noscript>
+<noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://twikoo.js.org/">comments powered by Twikoo.</a></noscript>
     
 </article>
 
