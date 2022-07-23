@@ -24,7 +24,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s1.ax1x.com/2022/07/19/jozrfP.jpg">
 <meta property="article:published_time" content="2022-07-17T23:43:12.000Z">
-<meta property="article:modified_time" content="2022-07-22T10:31:07.631Z">
+<meta property="article:modified_time" content="2022-07-22T14:05:13.864Z">
 <meta property="article:author" content="xxy">
 <meta property="article:tag" content="SpringBoot3">
 <meta property="article:tag" content="学习笔记">
@@ -197,7 +197,7 @@
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
                 <div class="icon"><i class="fa fa-warning"></i></div>
-                <div class="text"><p>本文最后编辑于 <time datetime="1658485867631"></time> 前，其中的内容可能需要更新。</p></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1658498713864"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
                 <div class="kratos-post-inner-toc">
@@ -471,9 +471,10 @@
 <p>多文档属性文件通常与激活属性结合使用，例如 spring.config.activate.on-profile。</p>
 <h4 id="激活属性"><a href="#激活属性" class="headerlink" title="激活属性"></a>激活属性</h4><p>有时候仅仅在满足某些条件才激活一组属性的方式是非常有用，我们可以通过使用 spring.config.activate.* 属性有条件地激活属性文档。</p>
 <p>我们可以使用以下的激活属性：</p>
-<pre><code>1. on-profile：表达式与当前 profiles 匹配才能被激活
-2. on-cloud-platform：检测到 CloudPlatform 才能被激活.
-</code></pre>
+<ol>
+<li>on-profile：表达式与当前 profiles 匹配才能被激活</li>
+<li>on-cloud-platform：检测到 CloudPlatform 才能被激活</li>
+</ol>
 <p>例如，以下内容指定当程序运行在 Kubernetes 上并且 prod 或 staging 配置处于激活状态时，第二个文档才会被激活。</p>
 <figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">myprop</span>=<span class="string">always-set</span></span><br><span class="line"><span class="comment">#---</span></span><br><span class="line"><span class="attr">spring.config.activate.on-cloud-platform</span>=<span class="string">kubernetes</span></span><br><span class="line"><span class="attr">spring.config.activate.on-profile</span>=<span class="string">prod | staging</span></span><br><span class="line"><span class="attr">myotherprop</span>=<span class="string">sometimes-set</span></span><br></pre></td></tr></table></figure>
 
@@ -806,7 +807,7 @@
                     <a class="tag-none-link" href="/tags/SpringBoot3/" rel="tag">SpringBoot3</a>, <a class="tag-none-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2022-07-22T10:31:07.631Z" itemprop="dateModified">最后编辑：2022-07-22</time>
+                    <time datetime="2022-07-22T14:05:13.864Z" itemprop="dateModified">最后编辑：2022-07-22</time>
                 </div>
             </div>
         </footer>
