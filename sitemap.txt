@@ -1,3 +1,4 @@
+https://www.xxyopen.com/2022/07/25/doc/shell/example.html
 https://www.xxyopen.com/2022/07/18/java/flyweight_pattern.html
 https://www.xxyopen.com/2022/07/23/java/xss.html
 https://www.xxyopen.com/2022/07/18/es/esclient.html
