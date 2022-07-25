@@ -1,3 +1,4 @@
+https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/bt.html
 https://www.xxyopen.com/2022/07/25/doc/shell/example.html
 https://www.xxyopen.com/2022/07/18/java/flyweight_pattern.html
 https://www.xxyopen.com/2022/07/23/java/xss.html
@@ -5,7 +6,6 @@ https://www.xxyopen.com/2022/07/18/es/esclient.html
 https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/package.html
 https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/source.html
 https://www.xxyopen.com/2022/07/19/tools/pages_host.html
-https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/bt.html
 https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/oldupdate.html
 https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/newupdate.html
 https://www.xxyopen.com/2022/07/18/doc/novel-plus/proxy.html
