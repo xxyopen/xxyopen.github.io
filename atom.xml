@@ -3,11 +3,11 @@
   <title>xxyopen</title>
   
   <subtitle>一个技术博客&amp;学习社区&amp;分享平台</subtitle>
-  <link href="https://xxyopen.com/atom.xml" rel="self"/>
+  <link href="https://www.xxyopen.com/atom.xml" rel="self"/>
   
-  <link href="https://xxyopen.com/"/>
+  <link href="https://www.xxyopen.com/"/>
   <updated>2022-07-24T08:53:32.805Z</updated>
-  <id>https://xxyopen.com/</id>
+  <id>https://www.xxyopen.com/</id>
   
   <author>
     <name>xxy</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Spring Boot 中一种防止 @RequestBody 接收 Json 数据导致 XSS 攻击的简单方法</title>
-    <link href="https://xxyopen.com/2022/07/23/java/xss.html"/>
-    <id>https://xxyopen.com/2022/07/23/java/xss.html</id>
+    <link href="https://www.xxyopen.com/2022/07/23/java/xss.html"/>
+    <id>https://www.xxyopen.com/2022/07/23/java/xss.html</id>
     <published>2022-07-23T09:23:11.000Z</published>
     <updated>2022-07-24T08:53:32.805Z</updated>
     
@@ -33,19 +33,19 @@
     
     
     
-    <category term="Java" scheme="https://xxyopen.com/categories/Java/"/>
+    <category term="Java" scheme="https://www.xxyopen.com/categories/Java/"/>
     
     
-    <category term="java" scheme="https://xxyopen.com/tags/java/"/>
+    <category term="java" scheme="https://www.xxyopen.com/tags/java/"/>
     
-    <category term="xss" scheme="https://xxyopen.com/tags/xss/"/>
+    <category term="xss" scheme="https://www.xxyopen.com/tags/xss/"/>
     
   </entry>
   
   <entry>
     <title>几个免费又好用的国内图床分享</title>
-    <link href="https://xxyopen.com/2022/07/22/tools/image_host.html"/>
-    <id>https://xxyopen.com/2022/07/22/tools/image_host.html</id>
+    <link href="https://www.xxyopen.com/2022/07/22/tools/image_host.html"/>
+    <id>https://www.xxyopen.com/2022/07/22/tools/image_host.html</id>
     <published>2022-07-21T23:18:08.000Z</published>
     <updated>2022-07-22T03:35:18.767Z</updated>
     
@@ -58,16 +58,16 @@
     
     
     
-    <category term="工具" scheme="https://xxyopen.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    <category term="工具" scheme="https://www.xxyopen.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
-    <category term="图床" scheme="https://xxyopen.com/tags/%E5%9B%BE%E5%BA%8A/"/>
+    <category term="图床" scheme="https://www.xxyopen.com/tags/%E5%9B%BE%E5%BA%8A/"/>
     
   </entry>
   
   <entry>
     <title>性能优化：使用 WebP 格式图片</title>
-    <link href="https://xxyopen.com/2022/07/20/web/webp.html"/>
-    <id>https://xxyopen.com/2022/07/20/web/webp.html</id>
+    <link href="https://www.xxyopen.com/2022/07/20/web/webp.html"/>
+    <id>https://www.xxyopen.com/2022/07/20/web/webp.html</id>
     <published>2022-07-20T02:00:08.000Z</published>
     <updated>2022-07-22T14:05:13.870Z</updated>
     
@@ -78,21 +78,21 @@
     
     
     
-    <category term="WEB前端" scheme="https://xxyopen.com/categories/WEB%E5%89%8D%E7%AB%AF/"/>
+    <category term="WEB前端" scheme="https://www.xxyopen.com/categories/WEB%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="前端" scheme="https://xxyopen.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://www.xxyopen.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-    <category term="性能优化" scheme="https://xxyopen.com/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    <category term="性能优化" scheme="https://www.xxyopen.com/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     
-    <category term="WebP" scheme="https://xxyopen.com/tags/WebP/"/>
+    <category term="WebP" scheme="https://www.xxyopen.com/tags/WebP/"/>
     
   </entry>
   
   <entry>
     <title>几个免费的静态网站托管平台对比</title>
-    <link href="https://xxyopen.com/2022/07/19/tools/pages_host.html"/>
-    <id>https://xxyopen.com/2022/07/19/tools/pages_host.html</id>
+    <link href="https://www.xxyopen.com/2022/07/19/tools/pages_host.html"/>
+    <id>https://www.xxyopen.com/2022/07/19/tools/pages_host.html</id>
     <published>2022-07-19T13:22:17.000Z</published>
     <updated>2022-07-23T03:58:41.659Z</updated>
     
@@ -105,16 +105,16 @@
     
     
     
-    <category term="工具" scheme="https://xxyopen.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    <category term="工具" scheme="https://www.xxyopen.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
-    <category term="网站托管" scheme="https://xxyopen.com/tags/%E7%BD%91%E7%AB%99%E6%89%98%E7%AE%A1/"/>
+    <category term="网站托管" scheme="https://www.xxyopen.com/tags/%E7%BD%91%E7%AB%99%E6%89%98%E7%AE%A1/"/>
     
   </entry>
   
   <entry>
     <title>novel-plus 宝塔安装教程</title>
-    <link href="https://xxyopen.com/2022/07/18/doc/novel-plus/install/bt.html"/>
-    <id>https://xxyopen.com/2022/07/18/doc/novel-plus/install/bt.html</id>
+    <link href="https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/bt.html"/>
+    <id>https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/bt.html</id>
     <published>2022-07-18T00:30:11.000Z</published>
     <updated>2022-07-23T03:35:28.253Z</updated>
     
@@ -127,21 +127,21 @@
     
     
     
-    <category term="教程" scheme="https://xxyopen.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="novel-plus" scheme="https://xxyopen.com/categories/%E6%95%99%E7%A8%8B/novel-plus/"/>
+    <category term="novel-plus" scheme="https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/novel-plus/"/>
     
     
-    <category term="novel-plus" scheme="https://xxyopen.com/tags/novel-plus/"/>
+    <category term="novel-plus" scheme="https://www.xxyopen.com/tags/novel-plus/"/>
     
-    <category term="宝塔面板" scheme="https://xxyopen.com/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/"/>
+    <category term="宝塔面板" scheme="https://www.xxyopen.com/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/"/>
     
   </entry>
   
   <entry>
     <title>全新的 Elasticsearch Java API Client 体验</title>
-    <link href="https://xxyopen.com/2022/07/18/es/esclient.html"/>
-    <id>https://xxyopen.com/2022/07/18/es/esclient.html</id>
+    <link href="https://www.xxyopen.com/2022/07/18/es/esclient.html"/>
+    <id>https://www.xxyopen.com/2022/07/18/es/esclient.html</id>
     <published>2022-07-18T00:24:20.000Z</published>
     <updated>2022-07-24T06:41:01.023Z</updated>
     
@@ -157,17 +157,17 @@
     
     
     
-    <category term="Elasticsearch" scheme="https://xxyopen.com/categories/Elasticsearch/"/>
+    <category term="Elasticsearch" scheme="https://www.xxyopen.com/categories/Elasticsearch/"/>
     
     
-    <category term="Elasticsearch" scheme="https://xxyopen.com/tags/Elasticsearch/"/>
+    <category term="Elasticsearch" scheme="https://www.xxyopen.com/tags/Elasticsearch/"/>
     
   </entry>
   
   <entry>
     <title>接口调试利器 EasyYapi 插件</title>
-    <link href="https://xxyopen.com/2022/07/18/os/easyyapi.html"/>
-    <id>https://xxyopen.com/2022/07/18/os/easyyapi.html</id>
+    <link href="https://www.xxyopen.com/2022/07/18/os/easyyapi.html"/>
+    <id>https://www.xxyopen.com/2022/07/18/os/easyyapi.html</id>
     <published>2022-07-18T00:22:11.000Z</published>
     <updated>2022-07-18T11:08:41.689Z</updated>
     
@@ -181,23 +181,23 @@
     
     
     
-    <category term="开源项目推荐" scheme="https://xxyopen.com/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%8E%A8%E8%8D%90/"/>
+    <category term="开源项目推荐" scheme="https://www.xxyopen.com/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%8E%A8%E8%8D%90/"/>
     
     
-    <category term="工具" scheme="https://xxyopen.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    <category term="工具" scheme="https://www.xxyopen.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
-    <category term="开源项目" scheme="https://xxyopen.com/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
+    <category term="开源项目" scheme="https://www.xxyopen.com/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
     
-    <category term="接口调试" scheme="https://xxyopen.com/tags/%E6%8E%A5%E5%8F%A3%E8%B0%83%E8%AF%95/"/>
+    <category term="接口调试" scheme="https://www.xxyopen.com/tags/%E6%8E%A5%E5%8F%A3%E8%B0%83%E8%AF%95/"/>
     
-    <category term="IDEA插件" scheme="https://xxyopen.com/tags/IDEA%E6%8F%92%E4%BB%B6/"/>
+    <category term="IDEA插件" scheme="https://www.xxyopen.com/tags/IDEA%E6%8F%92%E4%BB%B6/"/>
     
   </entry>
   
   <entry>
     <title>novel-plus v3.6.1+ 版本升级指南</title>
-    <link href="https://xxyopen.com/2022/07/18/doc/novel-plus/install/newupdate.html"/>
-    <id>https://xxyopen.com/2022/07/18/doc/novel-plus/install/newupdate.html</id>
+    <link href="https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/newupdate.html"/>
+    <id>https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/newupdate.html</id>
     <published>2022-07-18T00:21:11.000Z</published>
     <updated>2022-07-23T02:51:21.820Z</updated>
     
@@ -211,19 +211,19 @@
     
     
     
-    <category term="教程" scheme="https://xxyopen.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="novel-plus" scheme="https://xxyopen.com/categories/%E6%95%99%E7%A8%8B/novel-plus/"/>
+    <category term="novel-plus" scheme="https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/novel-plus/"/>
     
     
-    <category term="novel-plus" scheme="https://xxyopen.com/tags/novel-plus/"/>
+    <category term="novel-plus" scheme="https://www.xxyopen.com/tags/novel-plus/"/>
     
   </entry>
   
   <entry>
     <title>novel-plus v3.6.1 之前版本升级 3.6.1+ 指南</title>
-    <link href="https://xxyopen.com/2022/07/18/doc/novel-plus/install/oldupdate.html"/>
-    <id>https://xxyopen.com/2022/07/18/doc/novel-plus/install/oldupdate.html</id>
+    <link href="https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/oldupdate.html"/>
+    <id>https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/oldupdate.html</id>
     <published>2022-07-18T00:20:11.000Z</published>
     <updated>2022-07-23T02:57:34.260Z</updated>
     
@@ -241,19 +241,19 @@
     
     
     
-    <category term="教程" scheme="https://xxyopen.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="novel-plus" scheme="https://xxyopen.com/categories/%E6%95%99%E7%A8%8B/novel-plus/"/>
+    <category term="novel-plus" scheme="https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/novel-plus/"/>
     
     
-    <category term="novel-plus" scheme="https://xxyopen.com/tags/novel-plus/"/>
+    <category term="novel-plus" scheme="https://www.xxyopen.com/tags/novel-plus/"/>
     
   </entry>
   
   <entry>
     <title>novel-plus 的爬虫程序 HTTP 代理设置</title>
-    <link href="https://xxyopen.com/2022/07/18/doc/novel-plus/proxy.html"/>
-    <id>https://xxyopen.com/2022/07/18/doc/novel-plus/proxy.html</id>
+    <link href="https://www.xxyopen.com/2022/07/18/doc/novel-plus/proxy.html"/>
+    <id>https://www.xxyopen.com/2022/07/18/doc/novel-plus/proxy.html</id>
     <published>2022-07-18T00:17:11.000Z</published>
     <updated>2022-07-23T02:40:32.471Z</updated>
     
@@ -268,19 +268,19 @@
     
     
     
-    <category term="教程" scheme="https://xxyopen.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="novel-plus" scheme="https://xxyopen.com/categories/%E6%95%99%E7%A8%8B/novel-plus/"/>
+    <category term="novel-plus" scheme="https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/novel-plus/"/>
     
     
-    <category term="novel-plus" scheme="https://xxyopen.com/tags/novel-plus/"/>
+    <category term="novel-plus" scheme="https://www.xxyopen.com/tags/novel-plus/"/>
     
   </entry>
   
   <entry>
     <title>novel-plus 包安装教程</title>
-    <link href="https://xxyopen.com/2022/07/18/doc/novel-plus/install/package.html"/>
-    <id>https://xxyopen.com/2022/07/18/doc/novel-plus/install/package.html</id>
+    <link href="https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/package.html"/>
+    <id>https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/package.html</id>
     <published>2022-07-18T00:10:11.000Z</published>
     <updated>2022-07-24T05:58:01.091Z</updated>
     
@@ -294,19 +294,19 @@
     
     
     
-    <category term="教程" scheme="https://xxyopen.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="novel-plus" scheme="https://xxyopen.com/categories/%E6%95%99%E7%A8%8B/novel-plus/"/>
+    <category term="novel-plus" scheme="https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/novel-plus/"/>
     
     
-    <category term="novel-plus" scheme="https://xxyopen.com/tags/novel-plus/"/>
+    <category term="novel-plus" scheme="https://www.xxyopen.com/tags/novel-plus/"/>
     
   </entry>
   
   <entry>
     <title>Docker Compose 一键部署 novel-plus</title>
-    <link href="https://xxyopen.com/2022/07/18/doc/novel-plus/install/docker.html"/>
-    <id>https://xxyopen.com/2022/07/18/doc/novel-plus/install/docker.html</id>
+    <link href="https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/docker.html"/>
+    <id>https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/docker.html</id>
     <published>2022-07-18T00:10:11.000Z</published>
     <updated>2022-07-23T02:33:44.617Z</updated>
     
@@ -320,21 +320,21 @@
     
     
     
-    <category term="教程" scheme="https://xxyopen.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="novel-plus" scheme="https://xxyopen.com/categories/%E6%95%99%E7%A8%8B/novel-plus/"/>
+    <category term="novel-plus" scheme="https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/novel-plus/"/>
     
     
-    <category term="novel-plus" scheme="https://xxyopen.com/tags/novel-plus/"/>
+    <category term="novel-plus" scheme="https://www.xxyopen.com/tags/novel-plus/"/>
     
-    <category term="Docker" scheme="https://xxyopen.com/tags/Docker/"/>
+    <category term="Docker" scheme="https://www.xxyopen.com/tags/Docker/"/>
     
   </entry>
   
   <entry>
     <title>novel-plus 源码安装教程</title>
-    <link href="https://xxyopen.com/2022/07/18/doc/novel-plus/install/source.html"/>
-    <id>https://xxyopen.com/2022/07/18/doc/novel-plus/install/source.html</id>
+    <link href="https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/source.html"/>
+    <id>https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/source.html</id>
     <published>2022-07-18T00:08:11.000Z</published>
     <updated>2022-07-24T05:50:10.783Z</updated>
     
@@ -348,19 +348,19 @@
     
     
     
-    <category term="教程" scheme="https://xxyopen.com/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="novel-plus" scheme="https://xxyopen.com/categories/%E6%95%99%E7%A8%8B/novel-plus/"/>
+    <category term="novel-plus" scheme="https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/novel-plus/"/>
     
     
-    <category term="novel-plus" scheme="https://xxyopen.com/tags/novel-plus/"/>
+    <category term="novel-plus" scheme="https://www.xxyopen.com/tags/novel-plus/"/>
     
   </entry>
   
   <entry>
     <title>原创文学 CMS 系统</title>
-    <link href="https://xxyopen.com/2022/07/18/os/novel-plus.html"/>
-    <id>https://xxyopen.com/2022/07/18/os/novel-plus.html</id>
+    <link href="https://www.xxyopen.com/2022/07/18/os/novel-plus.html"/>
+    <id>https://www.xxyopen.com/2022/07/18/os/novel-plus.html</id>
     <published>2022-07-18T00:01:11.000Z</published>
     <updated>2022-07-21T22:42:06.292Z</updated>
     
@@ -374,21 +374,21 @@
     
     
     
-    <category term="开源项目推荐" scheme="https://xxyopen.com/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%8E%A8%E8%8D%90/"/>
+    <category term="开源项目推荐" scheme="https://www.xxyopen.com/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%8E%A8%E8%8D%90/"/>
     
     
-    <category term="开源项目" scheme="https://xxyopen.com/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
+    <category term="开源项目" scheme="https://www.xxyopen.com/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
     
-    <category term="小说项目" scheme="https://xxyopen.com/tags/%E5%B0%8F%E8%AF%B4%E9%A1%B9%E7%9B%AE/"/>
+    <category term="小说项目" scheme="https://www.xxyopen.com/tags/%E5%B0%8F%E8%AF%B4%E9%A1%B9%E7%9B%AE/"/>
     
-    <category term="novel-plus" scheme="https://xxyopen.com/tags/novel-plus/"/>
+    <category term="novel-plus" scheme="https://www.xxyopen.com/tags/novel-plus/"/>
     
   </entry>
   
   <entry>
     <title>使用 GitHub Pages 免费打造程序员专属网站导航</title>
-    <link href="https://xxyopen.com/2022/07/18/os/nav.html"/>
-    <id>https://xxyopen.com/2022/07/18/os/nav.html</id>
+    <link href="https://www.xxyopen.com/2022/07/18/os/nav.html"/>
+    <id>https://www.xxyopen.com/2022/07/18/os/nav.html</id>
     <published>2022-07-17T23:55:11.000Z</published>
     <updated>2022-07-18T03:56:19.514Z</updated>
     
@@ -406,19 +406,19 @@
     
     
     
-    <category term="开源项目推荐" scheme="https://xxyopen.com/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%8E%A8%E8%8D%90/"/>
+    <category term="开源项目推荐" scheme="https://www.xxyopen.com/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%8E%A8%E8%8D%90/"/>
     
     
-    <category term="工具" scheme="https://xxyopen.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    <category term="工具" scheme="https://www.xxyopen.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
-    <category term="开源项目" scheme="https://xxyopen.com/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
+    <category term="开源项目" scheme="https://www.xxyopen.com/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
     
   </entry>
   
   <entry>
     <title>Spring Boot 3 + Vue 3 学习型开源项目</title>
-    <link href="https://xxyopen.com/2022/07/18/os/novel.html"/>
-    <id>https://xxyopen.com/2022/07/18/os/novel.html</id>
+    <link href="https://www.xxyopen.com/2022/07/18/os/novel.html"/>
+    <id>https://www.xxyopen.com/2022/07/18/os/novel.html</id>
     <published>2022-07-17T23:52:45.000Z</published>
     <updated>2022-07-18T11:11:17.185Z</updated>
     
@@ -433,23 +433,23 @@
     
     
     
-    <category term="开源项目推荐" scheme="https://xxyopen.com/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%8E%A8%E8%8D%90/"/>
+    <category term="开源项目推荐" scheme="https://www.xxyopen.com/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%8E%A8%E8%8D%90/"/>
     
     
-    <category term="开源项目" scheme="https://xxyopen.com/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
+    <category term="开源项目" scheme="https://www.xxyopen.com/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
     
-    <category term="小说项目" scheme="https://xxyopen.com/tags/%E5%B0%8F%E8%AF%B4%E9%A1%B9%E7%9B%AE/"/>
+    <category term="小说项目" scheme="https://www.xxyopen.com/tags/%E5%B0%8F%E8%AF%B4%E9%A1%B9%E7%9B%AE/"/>
     
-    <category term="SpringBoot3" scheme="https://xxyopen.com/tags/SpringBoot3/"/>
+    <category term="SpringBoot3" scheme="https://www.xxyopen.com/tags/SpringBoot3/"/>
     
-    <category term="novel" scheme="https://xxyopen.com/tags/novel/"/>
+    <category term="novel" scheme="https://www.xxyopen.com/tags/novel/"/>
     
   </entry>
   
   <entry>
     <title>Spring Boot 3 核心功能</title>
-    <link href="https://xxyopen.com/2022/07/18/note/java/springboot3/core.html"/>
-    <id>https://xxyopen.com/2022/07/18/note/java/springboot3/core.html</id>
+    <link href="https://www.xxyopen.com/2022/07/18/note/java/springboot3/core.html"/>
+    <id>https://www.xxyopen.com/2022/07/18/note/java/springboot3/core.html</id>
     <published>2022-07-17T23:43:12.000Z</published>
     <updated>2022-07-22T14:05:13.864Z</updated>
     
@@ -463,21 +463,21 @@
     
     
     
-    <category term="学习笔记" scheme="https://xxyopen.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://www.xxyopen.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="Spring Boot 3" scheme="https://xxyopen.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Spring-Boot-3/"/>
+    <category term="Spring Boot 3" scheme="https://www.xxyopen.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Spring-Boot-3/"/>
     
     
-    <category term="SpringBoot3" scheme="https://xxyopen.com/tags/SpringBoot3/"/>
+    <category term="SpringBoot3" scheme="https://www.xxyopen.com/tags/SpringBoot3/"/>
     
-    <category term="学习笔记" scheme="https://xxyopen.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://www.xxyopen.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>Spring Boot 3 使用</title>
-    <link href="https://xxyopen.com/2022/07/18/note/java/springboot3/use.html"/>
-    <id>https://xxyopen.com/2022/07/18/note/java/springboot3/use.html</id>
+    <link href="https://www.xxyopen.com/2022/07/18/note/java/springboot3/use.html"/>
+    <id>https://www.xxyopen.com/2022/07/18/note/java/springboot3/use.html</id>
     <published>2022-07-17T23:40:51.000Z</published>
     <updated>2022-07-22T14:05:13.869Z</updated>
     
@@ -491,21 +491,21 @@
     
     
     
-    <category term="学习笔记" scheme="https://xxyopen.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://www.xxyopen.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="Spring Boot 3" scheme="https://xxyopen.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Spring-Boot-3/"/>
+    <category term="Spring Boot 3" scheme="https://www.xxyopen.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Spring-Boot-3/"/>
     
     
-    <category term="SpringBoot3" scheme="https://xxyopen.com/tags/SpringBoot3/"/>
+    <category term="SpringBoot3" scheme="https://www.xxyopen.com/tags/SpringBoot3/"/>
     
-    <category term="学习笔记" scheme="https://xxyopen.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://www.xxyopen.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>Spring Boot 3 入门</title>
-    <link href="https://xxyopen.com/2022/07/18/note/java/springboot3/start.html"/>
-    <id>https://xxyopen.com/2022/07/18/note/java/springboot3/start.html</id>
+    <link href="https://www.xxyopen.com/2022/07/18/note/java/springboot3/start.html"/>
+    <id>https://www.xxyopen.com/2022/07/18/note/java/springboot3/start.html</id>
     <published>2022-07-17T23:38:58.000Z</published>
     <updated>2022-07-22T14:05:13.868Z</updated>
     
@@ -519,21 +519,21 @@
     
     
     
-    <category term="学习笔记" scheme="https://xxyopen.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://www.xxyopen.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="Spring Boot 3" scheme="https://xxyopen.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Spring-Boot-3/"/>
+    <category term="Spring Boot 3" scheme="https://www.xxyopen.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Spring-Boot-3/"/>
     
     
-    <category term="SpringBoot3" scheme="https://xxyopen.com/tags/SpringBoot3/"/>
+    <category term="SpringBoot3" scheme="https://www.xxyopen.com/tags/SpringBoot3/"/>
     
-    <category term="学习笔记" scheme="https://xxyopen.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://www.xxyopen.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>Integer.valueOf() 的享元模式应用</title>
-    <link href="https://xxyopen.com/2022/07/18/java/flyweight_pattern.html"/>
-    <id>https://xxyopen.com/2022/07/18/java/flyweight_pattern.html</id>
+    <link href="https://www.xxyopen.com/2022/07/18/java/flyweight_pattern.html"/>
+    <id>https://www.xxyopen.com/2022/07/18/java/flyweight_pattern.html</id>
     <published>2022-07-17T23:37:58.000Z</published>
     <updated>2022-07-24T09:10:58.839Z</updated>
     
@@ -551,12 +551,12 @@
     
     
     
-    <category term="Java" scheme="https://xxyopen.com/categories/Java/"/>
+    <category term="Java" scheme="https://www.xxyopen.com/categories/Java/"/>
     
     
-    <category term="java" scheme="https://xxyopen.com/tags/java/"/>
+    <category term="java" scheme="https://www.xxyopen.com/tags/java/"/>
     
-    <category term="设计模式" scheme="https://xxyopen.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <category term="设计模式" scheme="https://www.xxyopen.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
