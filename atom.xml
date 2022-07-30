@@ -6,7 +6,7 @@
   <link href="https://www.xxyopen.com/atom.xml" rel="self"/>
   
   <link href="https://www.xxyopen.com/"/>
-  <updated>2022-07-28T13:37:52.901Z</updated>
+  <updated>2022-07-30T10:51:57.008Z</updated>
   <id>https://www.xxyopen.com/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>扫盲：Java 的版本发布和试用功能说明</title>
+    <link href="https://www.xxyopen.com/2022/07/30/java/version.html"/>
+    <id>https://www.xxyopen.com/2022/07/30/java/version.html</id>
+    <published>2022-07-30T10:51:08.000Z</published>
+    <updated>2022-07-30T10:51:57.008Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="版本号"><a href="#版本号" class="headerlink" title="版本号"></a>版本号</h2><p>Java 早期的版本使用带小数点的数字 1.1～1.4 代表主版本号，Java 5 开始变成了使用整数代表主版本号。</p><h2 id="发布节奏"><a href="#发布节奏" class="headerlink" title="发布节奏"></a>发布节奏</h2><ol><li><p>Java 9 开始，每六个月发布一个新版本，其中包括短期支持版本（Short-Term-Support，STS）和长期支持版本（Long-Term-Support，LTS），每三年会有一个长期支持版本（LTS 版本），Java 11、Java 17 都是 LTS 版本。</p></li><li><p>Java 17 之后的 LTS 版本是 Java 21，将于 2023 年 9 月推出，LTS 版本的发布周期将从现有的三年缩短至两年。</p></li><li><p>STS 版本的支持周期是六个月，只要有新版本发布，即停止对老版本 STS 的支持；LTS 版本会得到至少三年以上性能、稳定性和安全性方面的更新支持。</p></li></ol><p><strong>推荐使用生命周期较长的 LTS 版本</strong>，这样会在较长的时间内获得性能、稳定性和安全性方面的更新，不用付出额外的精力去关注 STS 版本，也无需担心 STS 版本的快速更新所带来的影响。</p><h2 id="试用功能"><a href="#试用功能" class="headerlink" title="试用功能"></a>试用功能</h2><p>STS 版本 和 LTS 版本都会包含一些不同类型的试用功能，让用户可以体验和指出问题，具体如下：</p><ul><li><p>实验功能（Experimental）：该功能处于早期阶段，完成度只有 25% 左右。</p></li><li><p>预览功能（Preview）：该功能已完全实现，在最终确定之前可能会有所调整。</p></li><li><p>孵化功能（Incubating）：不是 Java 发布内容的一部分，Java 下载包中不会包含这些内容，需要主动获取。</p></li></ul><p>实验功能和孵化功能统称为非正式功能，默认不会被启用，需要通过命令行或 IDE 的设置菜单手动启用它们。由于无法保证这些功能之后能够长期存在，我们不应该依赖这些试用性质的功能。</p><h2 id="OpenJDK-和-OracleJDK"><a href="#OpenJDK-和-OracleJDK" class="headerlink" title="OpenJDK 和 OracleJDK"></a>OpenJDK 和 OracleJDK</h2><p>Java 7 开始，所有的 JDK 都源自于 OpenJDK ，OpenJDK 与 其他 JDK 的关系就如同 Linux 与它的众多发行版。</p><p>OpenJDK 是由 <a href="https://openjdk.org/">OpenJDK 社区</a> 、Oracle、IBM 领导，连同 Alibaba、Amazon、Ampere、Azul、BellSoft、Canonical、Fujitsu、Google、Huawei、Intel、Java Community、JetBrains、London Java Community、Microsoft、Red Hat、SAP、SouJava、SUSE、Tencent、Twitter、VMWare 等第三方共同开发、维护的 Java SE 开源参考实现。</p><p>OpenJDK 只产生 OpenJDK 源码，并不提供可以直接使用的二进制文件格式。现在能直接使用的二进制文件格式的 JDK 都是被编译之后的程序。 关系图如下：</p><p><img src="https://youdoc.gitee.io/resource/images/blog/article/jdk_relation.png"></p><p>OracleJDK builds 包括了一个开源版本的 Oracle’s OpenJDK（基于 GPL 开源）和商业版本的 OracleJDK。</p><p>大部分情况下，OracleJDK 指的是 Oracle 公司推出的商业版 JDK。</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p>[1]《On Java 基础卷》<br>[2] <a href="https://zh.wikipedia.org/zh-cn/Java%E7%89%88%E6%9C%AC%E5%8E%86%E5%8F%B2">https://zh.wikipedia.org/zh-cn/Java版本历史</a><br>[3] <a href="https://openjdk.org/">https://openjdk.org</a><br>[4] <a href="https://www.oracle.com/news/zh-cn/announcement/oracle-releases-java-17-2021-09-14">https://www.oracle.com/news/zh-cn/announcement/oracle-releases-java-17-2021-09-14</a><br>[5] <a href="https://www.oracle.com/java/technologies/downloads">https://www.oracle.com/java/technologies/downloads</a><br>[6] <a href="https://www.cnblogs.com/HeavenZhi/p/14881194.html">https://www.cnblogs.com/HeavenZhi/p/14881194.html</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;版本号&quot;&gt;&lt;a href=&quot;#版本号&quot; class=&quot;headerlink&quot; title=&quot;版本号&quot;&gt;&lt;/a&gt;版本号&lt;/h2&gt;&lt;p&gt;Java 早期的版本使用带小数点的数字 1.1～1.4 代表主版本号，Java 5 开始变成了使用整数代表主版本号。&lt;/p&gt;
+&lt;h2</summary>
+      
+    
+    
+    
+    <category term="Java" scheme="https://www.xxyopen.com/categories/Java/"/>
+    
+    
+    <category term="java" scheme="https://www.xxyopen.com/tags/java/"/>
+    
+    <category term="扫盲" scheme="https://www.xxyopen.com/tags/%E6%89%AB%E7%9B%B2/"/>
+    
+    <category term="JDK" scheme="https://www.xxyopen.com/tags/JDK/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux 下检测远程主机端口是否打开的几种方式</title>
     <link href="https://www.xxyopen.com/2022/07/28/linux/test_port.html"/>
     <id>https://www.xxyopen.com/2022/07/28/linux/test_port.html</id>
     <published>2022-07-28T12:48:28.000Z</published>
-    <updated>2022-07-28T13:37:52.901Z</updated>
+    <updated>2022-07-29T00:36:59.260Z</updated>
     
     <content type="html"><![CDATA[<ol><li>telnet host port 方式</li></ol><p>telnet 命令用于使用 TELNET 协议与另一个主机进行交互通信。可以对另一主机进行远程登录和管理操作，也可以通过 telnet 来确认远程主机的某个端口是否开放，是日常网络故障排错的重要组成部分。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@iZwz9e2l6djkn7vw4xvic9Z ~]<span class="comment"># telnet 47.106.243.172 8888</span></span><br><span class="line">Trying 47.106.243.172...</span><br><span class="line">Connected to 47.106.243.172.</span><br></pre></td></tr></table></figure><ol start="2"><li>nmap host -p port 方式</li></ol><p>nmap，也就是 Network Mapper，是 Linux 下的网络扫描和嗅探工具包。</p><p>其基本功能有三个：</p><p>（1）扫描主机端口，嗅探所提供的网络服务</p><p>（2）探测一组主机是否在线</p><p>（3）推断主机所用的操作系统，到达主机经过的路由，系统已开放端口的软件版本</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@iZwz9e2l6djkn7vw4xvic9Z ~]<span class="comment"># nmap 47.106.243.172 -p 8888</span></span><br><span class="line"></span><br><span class="line">Starting Nmap 6.40 ( http://nmap.org ) at 2022-07-28 20:42 CST</span><br><span class="line">Nmap scan report <span class="keyword">for</span> 47.106.243.172</span><br><span class="line">Host is up (0.0030s latency).</span><br><span class="line">PORT     STATE SERVICE</span><br><span class="line">8888/tcp open  sun-answerbook</span><br><span class="line"></span><br><span class="line">Nmap <span class="keyword">done</span>: 1 IP address (1 host up) scanned <span class="keyword">in</span> 0.07 seconds</span><br><span class="line"></span><br></pre></td></tr></table></figure><ol start="3"><li>nc -v host port 方式</li></ol><p>nc 是 netcat 的简写，有着网络界的瑞士军刀美誉。因为它短小精悍、功能实用，被设计为一个简单、可靠的网络工具。</p><p>其基本功能有四个：</p><p>（1）实现任意 TCP&#x2F;UDP 端口的侦听，nc 可以作为 server 以 TCP 或 UDP 方式侦听指定端口</p><p>（2）端口的扫描，nc 可以作为 client 发起 TCP 或 UDP 连接</p><p>（3）机器之间传输文件</p><p>（4）机器之间网络测速   </p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@iZwz9e2l6djkn7vw4xvic9Z ~]<span class="comment"># nc -v 47.106.243.172 8888</span></span><br><span class="line">Ncat: Version 7.50 ( https://nmap.org/ncat )</span><br><span class="line">Ncat: Connected to 47.106.243.172:8888.</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -523,36 +552,6 @@
     <category term="小说项目" scheme="https://www.xxyopen.com/tags/%E5%B0%8F%E8%AF%B4%E9%A1%B9%E7%9B%AE/"/>
     
     <category term="novel-plus" scheme="https://www.xxyopen.com/tags/novel-plus/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用 GitHub Pages 免费打造程序员专属网站导航</title>
-    <link href="https://www.xxyopen.com/2022/07/18/os/nav.html"/>
-    <id>https://www.xxyopen.com/2022/07/18/os/nav.html</id>
-    <published>2022-07-17T23:55:11.000Z</published>
-    <updated>2022-07-18T03:56:19.514Z</updated>
-    
-    <content type="html"><![CDATA[<p>当我们遇到心仪的网站时一般会如何做呢？我想大部分同学都会选择放入浏览器收藏夹以便日后查看。这样做初期很方便，但是随着时间的推移，会逐渐暴露出以下问题：</p><ol><li><p>浏览器书签太多，层级复杂，管理极不方便，查找内容慢</p></li><li><p>不同浏览器之间无法共享书签，每次更换浏览器都要重新导入&#x2F;导出书签</p></li><li><p>浏览器书签需要同步至云端保存，否则数据会丢失</p></li><li><p>不同终端、不同平台的书签无法共享或共享困难</p></li></ol><p>…</p><p>今天教大家使用 GitHub Pages 在 10 分钟内打造一个永久免费、专属于自己的高大上导航网站，既能完美解决浏览器书签的短板问题，又能尽显个人逼格。废话不多说，直接上效果图：</p><p><img src="/images/tools/nav/nav1.png"><br><img src="/images/tools/nav/nav2.png"><br><img src="/images/tools/nav/nav3.png"></p><p>我这里使用的是一个 GitHub 开源项目 xjh22222228&#x2F;nav，可以帮助制作纯静态、支持SEO、在线编辑的强大导航网站，内置收录多达 800+ 的优质网站。除此之外，还支持如下的功能特性：</p><ul><li>三叉树分类、结构清晰、分类清晰。</li><li>支持一个网站关联多个网址。</li><li>颜值与简约并存，不再是杀马特时代。</li><li>完全开源，轻松定制化。</li><li>支持多种浏览模式，创新。</li><li>支持足迹记忆。</li><li>支持移动端浏览。</li><li>支持搜索查询。</li><li>支持自定义引擎搜索。</li><li>多款主题切换。</li><li>支持暗黑模式。</li><li>支持后台管理, 无需部署。</li><li>支持从 Chrome 书签导入。</li><li>多种 Loading 加载动画。</li></ul><p>按照以下 5 步即可成功在 GitHub Pages 中部署我们的导航网站：</p><ol><li>Fork <a href="https://github.com/xjh22222228/nav">nav 项目</a>。</li></ol><p><img src="/images/tools/nav/nav10.png"></p><ol start="2"><li>打开 <code>https://github.com/settings/tokens</code> 申请 token, 勾选相应的权限, 如果不懂就全部选中，复制并保存 token，这里一定要把 token 记录下来，后面登录管理后台还会用到。</li></ol><p><img src="/images/tools/nav/nav11.png"><br><img src="/images/tools/nav/nav12.png"></p><ol start="3"><li>打开 <code>https://github.com/用户名/nav/settings/secrets/actions/new</code> 添加上一步申请的 token， name 一定要填写大写的 TOKEN。</li></ol><p><img src="/images/tools/nav/nav15.png"></p><ol start="4"><li>打开 <code>https://github.com/用户名/nav/actions</code> 点击<code>绿色按钮</code>。</li></ol><p><img src="/images/tools/nav/nav16.png"></p><ol start="5"><li>修改项目配置文件 nav.config.ts，这一步一定要做，否则不会触发部署流程。</li></ol><p><img src="/images/tools/nav/nav8.png"><br><img src="/images/tools/nav/nav9.png"></p><p>打开 <code>https://github.com/用户名/nav/actions</code> 可以看到部署的进度：</p><p><img src="/images/tools/nav/nav7.png"></p><p>大概几分钟部署成功后，打开 <code>https://用户名.github.io/nav</code> 就能看到我们的导航网站了。</p><p>打开 <code>https://用户名.github.io/nav/#/system</code> 即可进入导航网站的管理后台。</p><p><strong>注：以上链接中的用户名均需要替换为你本人的 GitHub 用户名。</strong></p><p>此时，可以将浏览器的主页设置为我们的导航网站，方便我们快速进入：</p><p><img src="/images/tools/nav/nav5.png"></p><h2 id="开源地址"><a href="#开源地址" class="headerlink" title="开源地址"></a>开源地址</h2><p><a href="https://github.com/xjh22222228/nav">https://github.com/xjh22222228/nav</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;当我们遇到心仪的网站时一般会如何做呢？我想大部分同学都会选择放入浏览器收藏夹以便日后查看。这样做初期很方便，但是随着时间的推移，会逐渐暴露出以下问题：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;浏览器书签太多，层级复杂，管理极不方便，查找内容慢&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;不同</summary>
-      
-    
-    
-    
-    <category term="开源项目推荐" scheme="https://www.xxyopen.com/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%8E%A8%E8%8D%90/"/>
-    
-    
-    <category term="工具" scheme="https://www.xxyopen.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="开源项目" scheme="https://www.xxyopen.com/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
     
   </entry>
   

@@ -1,5 +1,6 @@
-https://www.xxyopen.com/2022/07/28/linux/port.html
+https://www.xxyopen.com/2022/07/30/java/version.html
 https://www.xxyopen.com/2022/07/28/linux/test_port.html
+https://www.xxyopen.com/2022/07/28/linux/port.html
 https://www.xxyopen.com/2022/07/18/linux/yum_error.html
 https://www.xxyopen.com/2022/07/27/os/regex.html
 https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/bt.html
@@ -55,6 +56,8 @@ https://www.xxyopen.com/tags/xss/
 https://www.xxyopen.com/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/
 https://www.xxyopen.com/tags/Linux/
 https://www.xxyopen.com/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/
+https://www.xxyopen.com/tags/%E6%89%AB%E7%9B%B2/
+https://www.xxyopen.com/tags/JDK/
 https://www.xxyopen.com/categories/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/
 https://www.xxyopen.com/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%8E%A8%E8%8D%90/
 https://www.xxyopen.com/categories/MySQL/
