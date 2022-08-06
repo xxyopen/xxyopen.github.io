@@ -1,3 +1,7 @@
+https://www.xxyopen.com/2022/08/06/java/launcher.html
+https://www.xxyopen.com/2022/07/18/note/java/springboot3/use.html
+https://www.xxyopen.com/2022/07/18/note/java/springboot3/core.html
+https://www.xxyopen.com/2022/07/18/note/java/springboot3/start.html
 https://www.xxyopen.com/2022/08/06/java/thread.html
 https://www.xxyopen.com/2022/07/30/java/version.html
 https://www.xxyopen.com/2022/07/28/linux/test_port.html
@@ -17,9 +21,6 @@ https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/newupdate.html
 https://www.xxyopen.com/2022/07/18/doc/novel-plus/proxy.html
 https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/docker.html
 https://www.xxyopen.com/2022/07/20/web/webp.html
-https://www.xxyopen.com/2022/07/18/note/java/springboot3/use.html
-https://www.xxyopen.com/2022/07/18/note/java/springboot3/start.html
-https://www.xxyopen.com/2022/07/18/note/java/springboot3/core.html
 https://www.xxyopen.com/2022/07/18/doc/shell/base.html
 https://www.xxyopen.com/2022/07/17/agree/java_code_style.html
 https://www.xxyopen.com/2022/07/22/tools/image_host.html
@@ -61,6 +62,7 @@ https://www.xxyopen.com/tags/%E6%89%AB%E7%9B%B2/
 https://www.xxyopen.com/tags/JDK/
 https://www.xxyopen.com/tags/%E7%BA%BF%E7%A8%8B/
 https://www.xxyopen.com/tags/%E8%BF%9B%E7%A8%8B/
+https://www.xxyopen.com/tags/SpringBoot/
 https://www.xxyopen.com/categories/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/
 https://www.xxyopen.com/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%8E%A8%E8%8D%90/
 https://www.xxyopen.com/categories/MySQL/

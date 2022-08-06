@@ -9,8 +9,34 @@
     <atom:link href="https://www.xxyopen.com/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>专注于开源项目和开发技术的研究与分享</description>
-    <pubDate>Sat, 06 Aug 2022 06:15:30 GMT</pubDate>
+    <pubDate>Sat, 06 Aug 2022 11:44:10 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Spring Boot 如何加载非 Classpath 类路径下的外部 JAR 和配置文件</title>
+      <link>https://www.xxyopen.com/2022/08/06/java/launcher.html</link>
+      <guid>https://www.xxyopen.com/2022/08/06/java/launcher.html</guid>
+      <pubDate>Sat, 06 Aug 2022 11:28:58 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h2 id=&quot;Launcher（启动器）&quot;&gt;&lt;a href=&quot;#Launcher（启动器）&quot; class=&quot;headerlink&quot; title=&quot;Launcher（启动器）&quot;&gt;&lt;/a&gt;Launcher（启动器）&lt;/h2&gt;&lt;p&gt;&lt;code&gt;org.springframework.</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h2 id="Launcher（启动器）"><a href="#Launcher（启动器）" class="headerlink" title="Launcher（启动器）"></a>Launcher（启动器）</h2><p><code>org.springframework.boot.loader.Launcher</code> 类是一个特殊的引导类，是 Spring Boot 可执行 jar 的主要入口点，它是 Spring Boot jar 文件中的实际 Main-Class，用于设置适当的 URLClassLoader 并最终调用 Spring Boot 项目中定义的 main() 方法。</p><p><code>Launcher</code>有三个子类（JarLauncher、WarLauncher 和 PropertiesLauncher），与那些直接在类路径上的文件不同，它们的目的是从目录中加载嵌套 jar 或 war 文件中的资源（例如 .class 文件等）。对于 JarLauncher 和 WarLauncher，加载路径是固定的，JarLauncher 在 <code>BOOT-INF/lib/</code>中加载，而 WarLauncher 在 <code>WEB-INF/lib/</code> 和 <code>WEB-INF/lib-provided/</code> 中加载。我们可以在这些路径下添加我们想要加载的其它 jar，例如下例中的 a.jar：</p><p><img src="https://s1.ax1x.com/2022/08/06/vurDZn.png"></p><p>默认情况下，PropertiesLauncher 在 <code>BOOT-INF/lib/</code> 中加载，我们可以通过设置 loader.properties 中的 <code>loader.path</code> 或 <code>LOADER_PATH</code> 环境变量来增加其它的加载位置。</p><h3 id="PropertiesLauncher"><a href="#PropertiesLauncher" class="headerlink" title="PropertiesLauncher"></a>PropertiesLauncher</h3><p>PropertiesLauncher 有一些可以通过外部属性（系统属性、环境变量、清单条目或 loader.properties）启用的特定功能。</p><ul><li>loader.path：配置逗号分隔的 Classpath 类路径，例如 lib,${HOME}&#x2F;app&#x2F;lib，前面的路径优先，类似于 javac 命令中的 -classpath。</li><li>loader.home：用于解析 loader.path 配置的相对路径，默认是 ${user.dir}。</li></ul><p>我们可以通过如下配置来选择使用 PropertiesLauncher：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">mainClass</span>&gt;</span>$&#123;start.class&#125;<span class="tag">&lt;/<span class="name">mainClass</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">layout</span>&gt;</span>ZIP<span class="tag">&lt;/<span class="name">layout</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><p>默认是根据 <code>&lt;packing&gt;</code> 打包类型( jar 或 war）来确定 Launcher 类型，这里是通过 <layout>ZIP</layout> 配置来选择使用哪个 Launcher：</p><ul><li>JAR</li><li>WAR</li><li>ZIP：使用 PropertiesLauncher</li><li>NONE: 不捆绑引导加载程序</li></ul><p>打包成功后，我们通过 <code>java -jar -Dloader.path=conf,lib &lt;jarName&gt;.jar</code> 命令来启动程序，则 ${user.dir}&#x2F;lib 中的外部 jar，${user.dir}&#x2F;conf 中的外部配置均会被加载。</p>]]></content:encoded>
+      
+      
+      <category domain="https://www.xxyopen.com/categories/Java/">Java</category>
+      
+      
+      <category domain="https://www.xxyopen.com/tags/SpringBoot/">SpringBoot</category>
+      
+      
+      <comments>https://www.xxyopen.com/2022/08/06/java/launcher.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>扫盲：守护进程、后台进程、守护线程和用户线程</title>
@@ -562,34 +588,6 @@
       
       
       <comments>https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/docker.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>novel-plus 源码安装教程</title>
-      <link>https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/source.html</link>
-      <guid>https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/source.html</guid>
-      <pubDate>Mon, 18 Jul 2022 00:08:11 GMT</pubDate>
-      
-        
-        
-      <description>&lt;h3 id=&quot;JDK-安装&quot;&gt;&lt;a href=&quot;#JDK-安装&quot; class=&quot;headerlink&quot; title=&quot;JDK 安装&quot;&gt;&lt;/a&gt;JDK 安装&lt;/h3&gt;&lt;p&gt;  建议&lt;a href=&quot;https://docs.oracle.com/javase/8/docs/tec</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<h3 id="JDK-安装"><a href="#JDK-安装" class="headerlink" title="JDK 安装"></a>JDK 安装</h3><p>  建议<a href="https://docs.oracle.com/javase/8/docs/technotes/guides/install/linux_jdk.html">安装 JDK 8</a></p><h3 id="MySQL-安装"><a href="#MySQL-安装" class="headerlink" title="MySQL 安装"></a>MySQL 安装</h3><ol><li><a href="https://dev.mysql.com/doc/refman/8.0/en/linux-installation.html">安装 MySQL 服务</a></li><li>修改 MySQL<code>max_allowed_packet </code>配置（建议 100M）</li><li>新建数据库，设置编码为 utf8mb4</li><li>执行 doc&#x2F;sql&#x2F;novel_plus.sql 脚本文件</li></ol><h3 id="Maven-安装"><a href="#Maven-安装" class="headerlink" title="Maven 安装"></a>Maven 安装</h3><p>  <a href="https://maven.apache.org/install.html">安装 Apache Maven</a></p><h3 id="源码打包"><a href="#源码打包" class="headerlink" title="源码打包"></a>源码打包</h3><p>  novel-plus 根目录下执行打包命令<code>mvn clean package -Dmaven.test.skip</code></p><h3 id="爬虫安装"><a href="#爬虫安装" class="headerlink" title="爬虫安装"></a>爬虫安装</h3><ol><li>上传 novel-crawl&#x2F;target&#x2F;build&#x2F;novel-crawl.zip 压缩包到 Linux 服务器的 novel-crawl 目录</li><li>使用<code>unzip novel-crawl.zip</code>命令解压 novel-crawl.zip</li><li>修改 <code>config/application-common-prod.yml</code> 文件中的数据库配置</li><li>修改 <code>config/application-common-prod.yml</code> 文件中的管理员账号密码</li><li>根据需要<a href="/2022/07/18/doc/novel-plus/proxy.html">设置爬虫的代理IP</a></li><li>novel-crawl 目录下使用<code>bin/novel-crawl.sh start</code>命令启动爬虫程序</li><li>打开浏览器，默认<code>8083</code>端口访问</li><li>选择已有或新增爬虫源（支持自定义爬虫规则），点击<code>开启</code>按钮，开始采集小说数据</li><li>novel-crawl 目录下使用<code>bin/novel-crawl.sh status</code>命令查看爬虫程序的运行状态</li></ol><h3 id="前台安装"><a href="#前台安装" class="headerlink" title="前台安装"></a>前台安装</h3><ol><li>上传 novel-front&#x2F;target&#x2F;build&#x2F;novel-front.zip 压缩包到 Linux 服务器的 novel-front 目录</li><li>使用<code>unzip novel-front.zip</code>命令解压 novel-front.zip</li><li>修改 <code>config/application-common-prod.yml</code> 文件中的数据库配置</li><li>修改 <code>config/application-website.yml</code> 配置文件中的网站信息</li><li>novel-front 目录下使用<code>bin/novel-front.sh start</code>命令启动前台程序</li><li>打开浏览器，默认<code>8085</code>端口访问</li><li>novel-front 目录下使用<code>bin/novel-front.sh stop</code>命令停止前台程序</li><li>novel-front 目录下使用<code>bin/novel-front.sh restart</code>命令重启前台程序</li><li>novel-front 目录下使用<code>bin/novel-front.sh status</code>命令查看前台程序的运行状态</li></ol><h3 id="后台安装"><a href="#后台安装" class="headerlink" title="后台安装"></a>后台安装</h3><ol><li>上传 novel-admin&#x2F;target&#x2F;build&#x2F;novel-admin.zip 压缩包到 Linux 服务器的 novel-admin 目录</li><li>使用<code>unzip novel-admin.zip</code>命令解压 novel-admin.zip</li><li>修改 <code>config/application-prod.yml</code> 文件中的数据库配置</li><li>novel-admin 目录下使用<code>bin/novel-admin.sh start</code>命令启动后台程序</li><li>打开浏览器，默认<code>8088</code>端口访问</li><li>novel-admin 目录下使用<code>bin/novel-admin.sh stop</code>命令停止后台程序</li><li>novel-admin 目录下使用<code>bin/novel-admin.sh restart</code>命令重启后台程序</li><li>novel-admin 目录下使用<code>bin/novel-admin.sh status</code>命令查看后台程序的运行状态</li></ol><div class="alert alert-info"><div class="icon"><i class="fa fa-info"></i></div><div class="text"><p>部分环境（如新版 macOS 系统）获取不到主机 IP，需要手动修改 hosts 文件，增加 IP-主机名（通过 hostname 命令查看主机名）的映射。</p></div></div><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@iZwz9e2l6djkn7vw4xvic9Z ~]<span class="comment"># hostname</span></span><br><span class="line">iZwz9e2l6djkn7vw4xvic9Z</span><br></pre></td></tr></table></figure><p>正确配置：</p><figure class="highlight text"><figcaption><span>/etc/hosts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">172.18.5.192 iZwz9e2l6djkn7vw4xvic9Z  iZwz9e2l6djkn7vw4xvic9Z</span><br></pre></td></tr></table></figure><p>错误配置：</p><figure class="highlight text"><figcaption><span>/etc/hosts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1 iZwz9e2l6djkn7vw4xvic9Z  iZwz9e2l6djkn7vw4xvic9Z</span><br></pre></td></tr></table></figure>]]></content:encoded>
-      
-      
-      <category domain="https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
-      
-      <category domain="https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/novel-plus/">novel-plus</category>
-      
-      
-      <category domain="https://www.xxyopen.com/tags/novel-plus/">novel-plus</category>
-      
-      
-      <comments>https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/source.html#disqus_thread</comments>
       
     </item>
     

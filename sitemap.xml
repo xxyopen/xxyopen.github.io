@@ -2,6 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.xxyopen.com/2022/08/06/java/launcher.html</loc>
+    
+    <lastmod>2022-08-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.xxyopen.com/2022/07/18/note/java/springboot3/use.html</loc>
+    
+    <lastmod>2022-08-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.xxyopen.com/2022/07/18/note/java/springboot3/core.html</loc>
+    
+    <lastmod>2022-08-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.xxyopen.com/2022/07/18/note/java/springboot3/start.html</loc>
+    
+    <lastmod>2022-08-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.xxyopen.com/2022/08/06/java/thread.html</loc>
     
     <lastmod>2022-08-06</lastmod>
@@ -165,33 +201,6 @@
   
   <url>
     <loc>https://www.xxyopen.com/2022/07/20/web/webp.html</loc>
-    
-    <lastmod>2022-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.xxyopen.com/2022/07/18/note/java/springboot3/use.html</loc>
-    
-    <lastmod>2022-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.xxyopen.com/2022/07/18/note/java/springboot3/start.html</loc>
-    
-    <lastmod>2022-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.xxyopen.com/2022/07/18/note/java/springboot3/core.html</loc>
     
     <lastmod>2022-07-22</lastmod>
     
@@ -501,6 +510,13 @@
   
   <url>
     <loc>https://www.xxyopen.com/tags/%E8%BF%9B%E7%A8%8B/</loc>
+    <lastmod>2022-08-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.xxyopen.com/tags/SpringBoot/</loc>
     <lastmod>2022-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
