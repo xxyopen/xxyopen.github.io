@@ -9,8 +9,40 @@
     <atom:link href="https://www.xxyopen.com/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>专注于开源项目和开发技术的研究与分享</description>
-    <pubDate>Sat, 30 Jul 2022 13:28:17 GMT</pubDate>
+    <pubDate>Sat, 06 Aug 2022 06:15:30 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>扫盲：守护进程、后台进程、守护线程和用户线程</title>
+      <link>https://www.xxyopen.com/2022/08/06/java/thread.html</link>
+      <guid>https://www.xxyopen.com/2022/08/06/java/thread.html</guid>
+      <pubDate>Sat, 06 Aug 2022 06:16:06 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h2 id=&quot;线程和进程&quot;&gt;&lt;a href=&quot;#线程和进程&quot; class=&quot;headerlink&quot; title=&quot;线程和进程&quot;&gt;&lt;/a&gt;线程和进程&lt;/h2&gt;&lt;p&gt;进程是对运行时程序的封装，是&lt;code&gt;资源分配的最小单位&lt;/code&gt;，进程实现了操作系统的并发，进程在执行过程中</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h2 id="线程和进程"><a href="#线程和进程" class="headerlink" title="线程和进程"></a>线程和进程</h2><p>进程是对运行时程序的封装，是<code>资源分配的最小单位</code>，进程实现了操作系统的并发，进程在执行过程中拥有独立的内存单元。</p><p>线程是进程的子任务，是 <code>CPU 调度的最小单位</code>，线程实现了进程内部的并发，多个线程共享进程的内存。</p><h2 id="守护进程和后台程序"><a href="#守护进程和后台程序" class="headerlink" title="守护进程和后台程序"></a>守护进程和后台程序</h2><p>守护进程（Daemon）是在后台运行的一种特殊进程，它脱离于终端，不会被任何终端所产生的信号打断，它在执行过程中所产生信息也不在任何终端上显示，守护进程周期性地执行某种任务或等待处理某些发生的事件。</p><p>Linux 的大多数服务器就是用守护进程实现的，例如：Internet 服务器 inetd 和 Web 服务器 httpd。</p><p>后台程序是在后台运行的程序，可以通过 <code>Command &amp;</code> 来运行，后台程序并未完全脱离终端，终端未关闭前还是会往终端输出结果。如果终端关闭，那么程序也会被关闭。</p><h3 id="nohup"><a href="#nohup" class="headerlink" title="nohup"></a>nohup</h3><p><code>nohup Command</code>用于不挂断地运行命令，即使终端关闭了也会一直运行，我们可以通过运行 <code>nohup Command &amp;</code> 来达到守护进程的部分效果。</p><p>例如，我们经常通过<code>nohup java -jar &lt;jarName&gt;.jar &amp;</code> 命令来<a href="https://docs.xxyopen.com/course/novel/6.html#%E5%90%8E%E7%AB%AF%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2">运行 Spring Boot 项目</a>。</p><p>默认情况下，所有输出都被重定向到当前目录一个名为 nohup.out 的文件中，nohup.out 相当于日志，如果当前目录的 nohup.out 文件不可写，输出重定向到 $HOME&#x2F;nohup.out 文件中，如果没有文件能创建或打开以用于追加，那么 Command 参数指定的命令不可调用。</p><h2 id="前后台程序切换"><a href="#前后台程序切换" class="headerlink" title="前后台程序切换"></a>前后台程序切换</h2><h3 id="前台程序到后台运行"><a href="#前台程序到后台运行" class="headerlink" title="前台程序到后台运行"></a>前台程序到后台运行</h3><p>运行如下命令即可切换前台程序到后台运行：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ctrl + z  <span class="comment"># 将一个正在前台运行的程序放到后台，并处于暂停状态</span></span><br><span class="line"><span class="built_in">bg</span> %进程序号 <span class="comment"># 继续运行一个后台暂停的程序，如果只有一个程序，可省略参数</span></span><br></pre></td></tr></table></figure><p>示例如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">zsh: suspended  java -jar target/novel-front-3.6.2.jar</span><br><span class="line">xiongxiaoyang@xiongxiangdeAir novel-front % <span class="built_in">bg</span> %1</span><br><span class="line">[1]  + continued  java -jar target/novel-front-3.6.2.jar</span><br></pre></td></tr></table></figure><h3 id="后台程序到前台运行"><a href="#后台程序到前台运行" class="headerlink" title="后台程序到前台运行"></a>后台程序到前台运行</h3><p>运行如下命令即可切换后台程序到前台运行：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">fg</span> %进程序号 <span class="comment"># 如果只有一个程序，可省略参数</span></span><br></pre></td></tr></table></figure><p>示例如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xiongxiaoyang@xiongxiangdeAir novel-front % <span class="built_in">fg</span> %1</span><br><span class="line">[1]  + running    java -jar target/novel-front-3.6.2.jar</span><br></pre></td></tr></table></figure><h2 id="用户线程和守护线程"><a href="#用户线程和守护线程" class="headerlink" title="用户线程和守护线程"></a>用户线程和守护线程</h2><p>在 Java 中，线程分为<code>用户线程</code>和<code>守护线程</code>，守护线程是用来为用户线程服务的，当一个程序中的所有用户线程都结束之后，无论守护线程是否在工作都会跟随用户线程一起结束，垃圾回收机制就是典型的守护线程。 </p><p>守护线程从业务逻辑层面来看权重比较低，但对于线程调度器来说无论是守护线程还是用户线程，在优先级相同的情况下被执行的概率都是相同的。</p><p>举个例子，当 main 线程退出后，里面的子线程还在运行，如果我们通过<code>Thread::setDaemon(true)</code>将子线程设置为守护线程后，子线程会随着 main 线程的结束而退出。 </p>]]></content:encoded>
+      
+      
+      <category domain="https://www.xxyopen.com/categories/Java/">Java</category>
+      
+      
+      <category domain="https://www.xxyopen.com/tags/java/">java</category>
+      
+      <category domain="https://www.xxyopen.com/tags/%E6%89%AB%E7%9B%B2/">扫盲</category>
+      
+      <category domain="https://www.xxyopen.com/tags/%E7%BA%BF%E7%A8%8B/">线程</category>
+      
+      <category domain="https://www.xxyopen.com/tags/%E8%BF%9B%E7%A8%8B/">进程</category>
+      
+      
+      <comments>https://www.xxyopen.com/2022/08/06/java/thread.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>扫盲：Java 的版本发布和试用功能说明</title>
@@ -558,36 +590,6 @@
       
       
       <comments>https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/source.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>原创文学 CMS 系统</title>
-      <link>https://www.xxyopen.com/2022/07/18/os/novel-plus.html</link>
-      <guid>https://www.xxyopen.com/2022/07/18/os/novel-plus.html</guid>
-      <pubDate>Mon, 18 Jul 2022 00:01:11 GMT</pubDate>
-      
-        
-        
-      <description>&lt;h2 id=&quot;项目介绍&quot;&gt;&lt;a href=&quot;#项目介绍&quot; class=&quot;headerlink&quot; title=&quot;项目介绍&quot;&gt;&lt;/a&gt;项目介绍&lt;/h2&gt;&lt;p&gt;novel-plus 是一个多端（PC、WAP）阅读，功能完善的原创文学 CMS 系统。由前台门户系统、作家后台管理系统、平</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<h2 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h2><p>novel-plus 是一个多端（PC、WAP）阅读，功能完善的原创文学 CMS 系统。由前台门户系统、作家后台管理系统、平台后台管理系统和爬虫管理系统等多个子系统构成，包括小说推荐、作品检索、小说排行、小说阅读、小说评论、会员中心、作家专区等功能，支持自定义多模版、可拓展的多种小说内容存储方式（内置数据库分表存储和 TXT 文本存储）、阅读主题切换、多爬虫源自动采集和更新数据、会员充值、订阅模式、新闻发布和实时统计报表。</p><h2 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">novel-plus -- 父工程</span><br><span class="line">├── novel-common -- 通用模块</span><br><span class="line">├── novel-front -- 前台门户&amp;作家后台</span><br><span class="line">├── novel-crawl -- 爬虫</span><br><span class="line">├── novel-admin -- 平台后台</span><br><span class="line">└── templates -- 前端模版</span><br></pre></td></tr></table></figure><h2 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h2><table><thead><tr><th>技术</th><th>说明</th></tr></thead><tbody><tr><td>Spring Boot</td><td>Spring 应用快速开发脚手架</td></tr><tr><td>MyBatis</td><td>持久层 ORM 框架</td></tr><tr><td>MyBatis Dynamic SQL</td><td>MyBatis 动态 SQL</td></tr><tr><td>PageHelper</td><td>MyBatis 分页插件</td></tr><tr><td>MyBatis Generator</td><td>持久层代码生成插件</td></tr><tr><td>Sharding-JDBC</td><td>代码层分库分表中间件</td></tr><tr><td>JJWT</td><td>JWT 登录支持</td></tr><tr><td>Spring Security</td><td>安全框架</td></tr><tr><td>Apache Shiro</td><td>安全框架</td></tr><tr><td>Ehcache</td><td>Java 进程内缓存框架(默认缓存)</td></tr><tr><td>Redis</td><td>分布式缓存(缓存替换方案，默认关闭，一行配置开启)</td></tr><tr><td>Elasticsearch</td><td>搜索引擎(搜索增强方案，默认关闭，一行配置开启)</td></tr><tr><td>RabbitMQ</td><td>消息队列(流量削峰，默认关闭，一行配置开启)</td></tr><tr><td>Aliyun OSS</td><td>阿里云对象存储服务(图片存储方式之一，一行配置即可切换)</td></tr><tr><td>FastDFS</td><td>开源轻量级分布式文件系统(图片存储方式之一，一行配置即可切换)</td></tr><tr><td>Redisson</td><td>实现分布式锁</td></tr><tr><td>Lombok</td><td>简化对象封装工具</td></tr><tr><td>Docker</td><td>应用容器引擎</td></tr><tr><td>MySQL</td><td>数据库服务</td></tr><tr><td>Thymeleaf</td><td>模板引擎</td></tr><tr><td>Layui</td><td>前端 UI 框架</td></tr></tbody></table><h2 id="爬虫规则"><a href="#爬虫规则" class="headerlink" title="爬虫规则"></a>爬虫规则</h2><ul><li>已发布</li></ul><ol><li>顶点6小说网</li><li>爱看小说网</li><li>顶点小说</li><li>笔趣阁U</li><li>蜡笔小说</li><li>墨坛库</li></ol><ul><li>内置规则</li></ul><ol><li>百书斋</li><li>书包网</li><li>书趣阁</li><li>笔趣阁</li><li>i笔趣阁</li><li>新笔趣阁</li></ol><div class="alert alert-danger"><div class="icon"><i class="fa fa-exclamation"></i></div><div class="text"><p>本项目提供的爬虫工具仅用于采集项目初期的测试数据，请勿用于商业盈利。 用户使用本系统从事任何违法违规的事情，一切后果由用户自行承担，作者不承担任何责任。</p></div></div><h2 id="开源地址"><a href="#开源地址" class="headerlink" title="开源地址"></a>开源地址</h2><p><a href="https://github.com/201206030/novel-plus">https://github.com/201206030/novel-plus</a></p>]]></content:encoded>
-      
-      
-      <category domain="https://www.xxyopen.com/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%8E%A8%E8%8D%90/">开源项目推荐</category>
-      
-      
-      <category domain="https://www.xxyopen.com/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/">开源项目</category>
-      
-      <category domain="https://www.xxyopen.com/tags/%E5%B0%8F%E8%AF%B4%E9%A1%B9%E7%9B%AE/">小说项目</category>
-      
-      <category domain="https://www.xxyopen.com/tags/novel-plus/">novel-plus</category>
-      
-      
-      <comments>https://www.xxyopen.com/2022/07/18/os/novel-plus.html#disqus_thread</comments>
       
     </item>
     
