@@ -9,8 +9,42 @@
     <atom:link href="https://www.xxyopen.com/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>专注于开源项目和开发技术的研究与分享</description>
-    <pubDate>Sat, 06 Aug 2022 11:44:10 GMT</pubDate>
+    <pubDate>Sun, 07 Aug 2022 00:04:58 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>基于 Docker 部署 novel-plus（小说精品屋-plus）</title>
+      <link>https://www.xxyopen.com/2022/08/07/doc/novel-plus/install/base_docker.html</link>
+      <guid>https://www.xxyopen.com/2022/08/07/doc/novel-plus/install/base_docker.html</guid>
+      <pubDate>Sun, 07 Aug 2022 00:08:18 GMT</pubDate>
+      
+        
+        
+      <description>&lt;ol&gt;
+&lt;li&gt;爬虫安装&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;安装命令：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<ol><li>爬虫安装</li></ol><p>安装命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -e dburl=<span class="string">&quot;jdbc:mysql://&lt;数据库IP&gt;:&lt;数据库端口号&gt;/&lt;数据库名&gt;?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai&quot;</span> \</span><br><span class="line">-e username=<span class="string">&quot;&lt;数据库登录用户名&gt;&quot;</span> \</span><br><span class="line">-e password=<span class="string">&quot;&lt;数据库登录密码&gt;&quot;</span> \</span><br><span class="line">-p 8088:80 \</span><br><span class="line">201206030/novel-crawl:&lt;版本号&gt;</span><br></pre></td></tr></table></figure><p>使用示例：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -e dburl=<span class="string">&quot;jdbc:mysql://192.168.0.58:3306/novle-plus?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai&quot;</span> \</span><br><span class="line">-e username=<span class="string">&quot;root&quot;</span> \</span><br><span class="line">-e password=<span class="string">&quot;123456&quot;</span> \</span><br><span class="line">-p 8088:80 \</span><br><span class="line">201206030/novel-crawl:3.5.1</span><br></pre></td></tr></table></figure><ol start="2"><li>前台安装</li></ol><p>安装命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -e dburl=<span class="string">&quot;jdbc:mysql://&lt;数据库IP&gt;:&lt;数据库端口号&gt;/&lt;数据库名&gt;?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai&quot;</span> \</span><br><span class="line">-e username=<span class="string">&quot;&lt;数据库登录用户名&gt;&quot;</span> \</span><br><span class="line">-e password=<span class="string">&quot;&lt;数据库登录密码&gt;&quot;</span> \</span><br><span class="line">-p 80:8080 \</span><br><span class="line">201206030/novel-front:&lt;版本号&gt;</span><br></pre></td></tr></table></figure><p>使用示例：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -e dburl=<span class="string">&quot;jdbc:mysql://192.168.0.58:3306/novle-plus?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai&quot;</span> \</span><br><span class="line">-e username=<span class="string">&quot;root&quot;</span> \</span><br><span class="line">-e password=<span class="string">&quot;123456&quot;</span> \</span><br><span class="line">-p 80:8080 \</span><br><span class="line">201206030/novel-front:3.5.4</span><br></pre></td></tr></table></figure><ol start="3"><li>管理后台安装：</li></ol><p>安装命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -e dburl=<span class="string">&quot;jdbc:mysql://&lt;数据库IP&gt;:&lt;数据库端口号&gt;/&lt;数据库名&gt;?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai&quot;</span> \</span><br><span class="line">-e username=<span class="string">&quot;&lt;数据库登录用户名&gt;&quot;</span> \</span><br><span class="line">-e password=<span class="string">&quot;&lt;数据库登录密码&gt;&quot;</span> \</span><br><span class="line">-p 8088:80 \</span><br><span class="line">201206030/novel-admin:&lt;版本号&gt;</span><br></pre></td></tr></table></figure><p>使用示例：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -e dburl=<span class="string">&quot;jdbc:mysql://192.168.0.58:3306/novle-plus?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai&quot;</span> \</span><br><span class="line">-e username=<span class="string">&quot;root&quot;</span> \</span><br><span class="line">-e password=<span class="string">&quot;123456&quot;</span> \</span><br><span class="line">-p 8088:80 \</span><br><span class="line">201206030/novel-admin:3.1.0</span><br></pre></td></tr></table></figure><div class="alert alert-warning"><div class="icon"><i class="fa fa-warning"></i></div><div class="text"><p>为了兼容老版本的升级，Docker 所有版本均关闭了小说内容分表功能，小白最好仅选用一种方式安装和升级，升级版本不要更换安装方式，升级版本后，需要执行一下数据库的增量 SQL 文件。</p></div></div>]]></content:encoded>
+      
+      
+      <category domain="https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
+      
+      <category domain="https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/novel-plus/">novel-plus</category>
+      
+      
+      <category domain="https://www.xxyopen.com/tags/novel-plus/">novel-plus</category>
+      
+      <category domain="https://www.xxyopen.com/tags/Docker/">Docker</category>
+      
+      
+      <comments>https://www.xxyopen.com/2022/08/07/doc/novel-plus/install/base_docker.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Spring Boot 如何加载非 Classpath 类路径下的外部 JAR 和配置文件</title>
@@ -356,7 +390,7 @@
     </item>
     
     <item>
-      <title>novel-plus 宝塔安装教程</title>
+      <title>novel-plus（小说精品屋-plus） 宝塔安装教程</title>
       <link>https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/bt.html</link>
       <guid>https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/bt.html</guid>
       <pubDate>Mon, 18 Jul 2022 00:30:11 GMT</pubDate>
@@ -445,7 +479,7 @@
     </item>
     
     <item>
-      <title>novel-plus v3.6.1+ 版本升级指南</title>
+      <title>novel-plus（小说精品屋-plus） v3.6.1+ 版本升级指南</title>
       <link>https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/newupdate.html</link>
       <guid>https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/newupdate.html</guid>
       <pubDate>Mon, 18 Jul 2022 00:21:11 GMT</pubDate>
@@ -473,7 +507,7 @@
     </item>
     
     <item>
-      <title>novel-plus v3.6.1 之前版本升级 3.6.1+ 指南</title>
+      <title>novel-plus（小说精品屋-plus） v3.6.1 之前版本升级 3.6.1+ 指南</title>
       <link>https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/oldupdate.html</link>
       <guid>https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/oldupdate.html</guid>
       <pubDate>Mon, 18 Jul 2022 00:20:11 GMT</pubDate>
@@ -505,7 +539,7 @@
     </item>
     
     <item>
-      <title>novel-plus 的爬虫程序 HTTP 代理设置</title>
+      <title>novel-plus（小说精品屋-plus） 的爬虫程序 HTTP 代理设置</title>
       <link>https://www.xxyopen.com/2022/07/18/doc/novel-plus/proxy.html</link>
       <guid>https://www.xxyopen.com/2022/07/18/doc/novel-plus/proxy.html</guid>
       <pubDate>Mon, 18 Jul 2022 00:17:11 GMT</pubDate>
@@ -534,7 +568,7 @@
     </item>
     
     <item>
-      <title>novel-plus 包安装教程</title>
+      <title>novel-plus（小说精品屋-plus） 包安装教程</title>
       <link>https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/package.html</link>
       <guid>https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/package.html</guid>
       <pubDate>Mon, 18 Jul 2022 00:10:11 GMT</pubDate>
@@ -558,36 +592,6 @@
       
       
       <comments>https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/package.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Docker Compose 一键部署 novel-plus</title>
-      <link>https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/docker.html</link>
-      <guid>https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/docker.html</guid>
-      <pubDate>Mon, 18 Jul 2022 00:10:11 GMT</pubDate>
-      
-        
-        
-      <description>&lt;div class=&quot;alert alert-info&quot;&gt;&lt;div class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-info&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class=&quot;text&quot;&gt;&lt;p&gt;本安装教程仅用于 3.5.4 版本的网站系统安装，且无法自定义配置，适用于想快</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<div class="alert alert-info"><div class="icon"><i class="fa fa-info"></i></div><div class="text"><p>本安装教程仅用于 3.5.4 版本的网站系统安装，且无法自定义配置，适用于想快速体验的用户。</p></div></div><h2 id="测试环境"><a href="#测试环境" class="headerlink" title="测试环境"></a>测试环境</h2><p><code>CentOS 7</code></p><h2 id="Docker-安装"><a href="#Docker-安装" class="headerlink" title="Docker 安装"></a>Docker 安装</h2><ol><li>下载并运行 Docker 一键安装脚本</li></ol><p><code>curl -sSL https://get.daocloud.io/docker | sh</code></p><ol start="2"><li>启动 Docker 服务</li></ol><p><code>systemctl start docker</code></p><ol start="3"><li>查看 Docker 版本</li></ol><p><code>docker -v</code></p><h2 id="Docker-Compose-安装"><a href="#Docker-Compose-安装" class="headerlink" title="Docker Compose 安装"></a>Docker Compose 安装</h2><ol><li>下载 Docker Compose 运行脚本</li></ol><p><code>curl -L https://github.com/docker/compose/releases/download/1.28.6/run.sh &gt; /usr/local/bin/docker-compose</code></p><ol start="2"><li>脚本文件授权</li></ol><p><code>chmod +x /usr/local/bin/docker-compose</code></p><ol start="3"><li>查看 Docker Compose 版本</li></ol><p><code>docker-compose --version</code></p><h2 id="Docker-Composo-部署-novel-plus"><a href="#Docker-Composo-部署-novel-plus" class="headerlink" title="Docker Composo 部署 novel-plus"></a>Docker Composo 部署 novel-plus</h2><ol><li>创建 MySQL 数据目录</li></ol><p><code>mkdir -p /data/docker/db/mysql</code></p><ol start="2"><li>下载数据库初始化脚本</li></ol><p><code>curl -L https://gitee.com/novel_dev_team/novel-plus/attach_files/721333/download &gt; /data/docker/db/init.sql</code></p><ol start="3"><li>下载 Docker Compose 容器编排的配置文件</li></ol><p><code>curl -L https://gitee.com/novel_dev_team/novel-plus/attach_files/721385/download &gt; docker-compose.yaml</code></p><ol start="4"><li>启动并运行所有容器</li></ol><p><code>docker-compose up -d</code></p><h2 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h2><p>爬虫：<a href="http://ip:8081/">http://ip:8081</a><br>前台：<a href="http://ip:8080/">http://ip:8080</a><br>后台：<a href="http://ip:8088/">http://ip:8088</a></p>]]></content:encoded>
-      
-      
-      <category domain="https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/">教程</category>
-      
-      <category domain="https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/novel-plus/">novel-plus</category>
-      
-      
-      <category domain="https://www.xxyopen.com/tags/novel-plus/">novel-plus</category>
-      
-      <category domain="https://www.xxyopen.com/tags/Docker/">Docker</category>
-      
-      
-      <comments>https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/docker.html#disqus_thread</comments>
       
     </item>
     
