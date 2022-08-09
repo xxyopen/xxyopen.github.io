@@ -71,6 +71,29 @@
         }
       }
     
+
+    @media screen and (max-width: 1700px) { /*当屏幕尺寸小于1500px时，应用下面的CSS样式*/
+      .minAd {
+        display: none !important;
+      }
+      .maxAd {
+        display: none !important;
+      }
+      .middleAd {
+         display: block !important;
+      }
+    }
+    @media screen and (max-width: 1500px) { /*当屏幕尺寸小于600px时，应用下面的CSS样式*/
+      .minAd {
+        display: block !important;
+      }
+      .maxAd {
+        display: none !important;
+      }
+      .middleAd {
+        display: none !important;
+      }
+    }
   </style>
   
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7927582798443371"
@@ -442,10 +465,22 @@
     </div>
 </section>
         
-        <div id="adDiv" style="z-index:100px; position:fixed;bottom:50px; right:0px; float:right; z-index:500;">
+        <div class="maxAd" style="z-index:100px; position:fixed;bottom:50px; right:0px; float:right; z-index:500;">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7927582798443371"
+            crossorigin="anonymous"></script>
+       <!-- 正方形广告-大 -->
+       <ins class="adsbygoogle"
+            style="display:inline-block;width:300px;height:300px"
+            data-ad-client="ca-pub-7927582798443371"
+            data-ad-slot="4074222516"></ins>
+       <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+       </script>
+        </div>
+        <div class="middleAd" style="display: none;z-index:100px; position:fixed;bottom:50px; right:0px; float:right; z-index:500;">
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7927582798443371"
      crossorigin="anonymous"></script>
-<!-- 正方形广告 -->
+<!-- 正方形广告-中 -->
 <ins class="adsbygoogle"
      style="display:inline-block;width:200px;height:200px"
      data-ad-client="ca-pub-7927582798443371"
@@ -454,6 +489,19 @@
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
         </div>
+        <div class="minAd" style="display: none;z-index:100px; position:fixed;bottom:50px; right:0px; float:right; z-index:500;">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7927582798443371"
+            crossorigin="anonymous"></script>
+       <!-- 正方形广告-小 -->
+       <ins class="adsbygoogle"
+            style="display:inline-block;width:145px;height:145px"
+            data-ad-client="ca-pub-7927582798443371"
+            data-ad-slot="8467380209"></ins>
+       <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+       </script>
+        </div>
+
         </div>
     </div>
 </div>
