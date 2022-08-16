@@ -1,3 +1,5 @@
+https://www.xxyopen.com/2022/07/19/tools/pages_host.html
+https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/bt.html
 https://www.xxyopen.com/2022/07/18/doc/novel-plus/proxy.html
 https://www.xxyopen.com/2022/07/18/os/novel.html
 https://www.xxyopen.com/2022/08/07/doc/novel-plus/install/base_docker.html
@@ -6,7 +8,6 @@ https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/package.html
 https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/oldupdate.html
 https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/newupdate.html
 https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/docker.html
-https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/bt.html
 https://www.xxyopen.com/2022/08/06/java/launcher.html
 https://www.xxyopen.com/2022/07/18/note/java/springboot3/use.html
 https://www.xxyopen.com/2022/07/18/note/java/springboot3/core.html
@@ -21,7 +22,6 @@ https://www.xxyopen.com/2022/07/25/doc/shell/example.html
 https://www.xxyopen.com/2022/07/18/java/flyweight_pattern.html
 https://www.xxyopen.com/2022/07/23/java/xss.html
 https://www.xxyopen.com/2022/07/18/es/esclient.html
-https://www.xxyopen.com/2022/07/19/tools/pages_host.html
 https://www.xxyopen.com/2022/07/20/web/webp.html
 https://www.xxyopen.com/2022/07/18/doc/shell/base.html
 https://www.xxyopen.com/2022/07/17/agree/java_code_style.html

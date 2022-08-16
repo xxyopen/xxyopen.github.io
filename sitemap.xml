@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.xxyopen.com/2022/07/19/tools/pages_host.html</loc>
+    
+    <lastmod>2022-08-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/bt.html</loc>
+    
+    <lastmod>2022-08-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.xxyopen.com/2022/07/18/doc/novel-plus/proxy.html</loc>
     
     <lastmod>2022-08-16</lastmod>
@@ -66,15 +84,6 @@
   
   <url>
     <loc>https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/docker.html</loc>
-    
-    <lastmod>2022-08-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/bt.html</loc>
     
     <lastmod>2022-08-07</lastmod>
     
@@ -203,15 +212,6 @@
     <loc>https://www.xxyopen.com/2022/07/18/es/esclient.html</loc>
     
     <lastmod>2022-07-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.xxyopen.com/2022/07/19/tools/pages_host.html</loc>
-    
-    <lastmod>2022-07-23</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
