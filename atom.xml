@@ -6,7 +6,7 @@
   <link href="https://www.xxyopen.com/atom.xml" rel="self"/>
   
   <link href="https://www.xxyopen.com/"/>
-  <updated>2022-08-07T01:59:36.602Z</updated>
+  <updated>2022-08-21T13:10:15.951Z</updated>
   <id>https://www.xxyopen.com/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>重置 Docker 容器中 MySQL8 实例的 root 帐户密码，解决忘记密码的问题</title>
+    <link href="https://www.xxyopen.com/2022/08/21/mysql/reset_pass.html"/>
+    <id>https://www.xxyopen.com/2022/08/21/mysql/reset_pass.html</id>
+    <published>2022-08-21T13:08:16.000Z</published>
+    <updated>2022-08-21T13:10:15.951Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>如果我们是通过非 Docker 方式安装的 MySQL，可以直接通过<code>mysqld --skip-grant-tables</code>命令跳过权限表的限制，无密码启动 MySQL 服务，这样任何账号都无需密码就可以登录到 MySQL 服务，然后进行密码重置的操作就行了，非常简单。</p><p>如果我们是通过 Docker 方式安装的 MySQL，如何重置密码呢？本文将介绍如何重置 Docker 容器中 MySQL8 实例的 root 帐户密码以解决忘记密码的问题。</p></blockquote><p>具体操作步骤如下：</p><ol><li><p>登录到 MySQL8 的 Docker 容器中</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it &lt;容器ID&gt; bash</span><br></pre></td></tr></table></figure></li><li><p>通过<code>vi</code>或<code>vim</code>命令修改 MySQL8 的 <code>my.cnf</code> 配置文件，在最后一行增加<code>skip-grant-tables</code>配置</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/mysql/my.cnf</span><br></pre></td></tr></table></figure><p>修改后的<code>my.cnf</code>配置文件内容如下：</p><figure class="highlight plaintext"><figcaption><span>my.cnf</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"># Copyright (c) 2017, Oracle and/or its affiliates. All rights reserved.</span><br><span class="line">#</span><br><span class="line"># This program is free software; you can redistribute it and/or modify</span><br><span class="line"># it under the terms of the GNU General Public License as published by</span><br><span class="line"># the Free Software Foundation; version 2 of the License.</span><br><span class="line">#</span><br><span class="line"># This program is distributed in the hope that it will be useful,</span><br><span class="line"># but WITHOUT ANY WARRANTY; without even the implied warranty of</span><br><span class="line"># MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span><br><span class="line"># GNU General Public License for more details.</span><br><span class="line">#</span><br><span class="line"># You should have received a copy of the GNU General Public License</span><br><span class="line"># along with this program; if not, write to the Free Software</span><br><span class="line"># Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA</span><br><span class="line"></span><br><span class="line">#</span><br><span class="line"># The MySQL  Server configuration file.</span><br><span class="line">#</span><br><span class="line"># For explanations see</span><br><span class="line"># http://dev.mysql.com/doc/mysql/en/server-system-variables.html</span><br><span class="line"></span><br><span class="line">[mysqld]</span><br><span class="line">pid-file        = /var/run/mysqld/mysqld.pid</span><br><span class="line">socket          = /var/run/mysqld/mysqld.sock</span><br><span class="line">datadir         = /var/lib/mysql</span><br><span class="line">secure-file-priv= NULL</span><br><span class="line"># Disabling symbolic-links is recommended to prevent assorted security risks</span><br><span class="line">symbolic-links=0</span><br><span class="line"></span><br><span class="line"># Custom config should go here</span><br><span class="line">!includedir /etc/mysql/conf.d/</span><br><span class="line">skip-grant-tables</span><br></pre></td></tr></table></figure><p>如果执行<code>vi</code>或<code>vim</code>命令时提示<code>bash: vi: command not found</code> 或 <code>bash: vim: command not found</code>，需要先通过如下命令安装<code>vi</code>或<code>vim</code>：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt-get install vim</span><br></pre></td></tr></table></figure><p>如果安装<code>vi</code>或<code>vim</code>失败，出现<code>Temporary failure resolving &#39;deb.debian.org</code>提示，需要先退出 Docker 容器，在宿主机上创建<code>/etc/docker/daemon.json</code>文件，重启 Docker 服务后继续登录到 MySQL8 的 Docker 容器中安装<code>vi</code>或<code>vim</code>。<br>1）退出 MySQL 容器</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure><p>2）创建并编辑 daemon.json 文件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/docker/daemon.json</span><br></pre></td></tr></table></figure><figure class="highlight json"><figcaption><span>daemon.json</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;dns&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;8.8.8.8&quot;</span><span class="punctuation">,</span> <span class="string">&quot;8.8.4.4&quot;</span><span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><p>3）重启 Docker 服务</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service docker restart</span><br></pre></td></tr></table></figure><p>4）继续登录到 MySQL8 的 Docker 容器中</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it &lt;容器ID&gt; bash</span><br></pre></td></tr></table></figure></li><li><p>修改<code>my.cnf</code>配置文件后，退出并重启 MySQL 容器<br>1）退出 MySQL 容器</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure><p>2）重启 MySQL 容器</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker restart &lt;容器ID&gt;</span><br></pre></td></tr></table></figure></li><li><p>免密登录到 MySQL 容器中的 MySQL 服务</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it &lt;容器ID&gt; mysql -uroot </span><br></pre></td></tr></table></figure></li><li><p>修改 root 账号登录密码</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">use mysql;</span><br><span class="line">flush privileges;</span><br><span class="line">alter user &#x27;root&#x27;@&#x27;localhost&#x27; identified by &#x27;123456&#x27;;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure><p><strong>注：<code>alter user</code>之前需要先<code>flush privileges</code>，否则会出现<code>ERROR 1290 (HY000): The MySQL server is running with the --skip-grant-tables option so it cannot execute this statement</code>。</strong></p></li><li><p>退出 MySQL 登录，重新登录到 MySQL8 的 Docker 容器中，修改<code>my.cnf</code>配置文件，去掉<code>skip-grant-tables</code>配置后重启 MySQL 容器即可</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;如果我们是通过非 Docker 方式安装的 MySQL，可以直接通过&lt;code&gt;mysqld --skip-grant-tables&lt;/code&gt;命令跳过权限表的限制，无密码启动 MySQL 服务，这样任何账号都无需密码就可以登录到 MySQL 服</summary>
+      
+    
+    
+    
+    <category term="MySQL" scheme="https://www.xxyopen.com/categories/MySQL/"/>
+    
+    
+    <category term="MySQL" scheme="https://www.xxyopen.com/tags/MySQL/"/>
+    
+    <category term="Docker" scheme="https://www.xxyopen.com/tags/Docker/"/>
+    
+    <category term="重置密码" scheme="https://www.xxyopen.com/tags/%E9%87%8D%E7%BD%AE%E5%AF%86%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>修复 MySQL 安装时错误 Error:GPG check FAILED</title>
+    <link href="https://www.xxyopen.com/2022/08/21/mysql/gpg_check_failed.html"/>
+    <id>https://www.xxyopen.com/2022/08/21/mysql/gpg_check_failed.html</id>
+    <published>2022-08-21T13:01:18.000Z</published>
+    <updated>2022-08-21T13:10:03.587Z</updated>
+    
+    <content type="html"><![CDATA[<p>根据 MySQL 官方文档《<a href="https://dev.mysql.com/doc/refman/8.0/en/linux-installation-yum-repo.html">使用 MySQL Yum 存储库在 Linux 上安装 MySQL</a>》安装 MySQL 步骤如下：</p><ol><li><p>下载 MySQL 发行包</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://repo.mysql.com/mysql80-community-release-el8-1.noarch.rpm</span><br></pre></td></tr></table></figure></li><li><p>安装下载的 MySQL 发行包</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install mysql80-community-release-el8-1.noarch.rpm</span><br></pre></td></tr></table></figure></li><li><p>禁用默认 MySQL 模块</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum module <span class="built_in">disable</span> mysql</span><br></pre></td></tr></table></figure><p><strong>注：仅限 EL8 系统，基于 EL8 的系统（例如 RHEL8 和 Oracle Linux 8）包含默认启用的 MySQL 模块，除非禁用此模块，否则它会屏蔽 MySQL 存储库提供的包。</strong></p></li><li><p>安装 MySQL 服务</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install mysql-community-server</span><br></pre></td></tr></table></figure></li><li><p>启动 MySQL 服务</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mysqld</span><br></pre></td></tr></table></figure></li><li><p>查看 MySQL 服务状态</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status mysqld</span><br></pre></td></tr></table></figure></li></ol><p>在第 4 步安装 MySQL 服务时出现了<code>Error: GPG check FAILED</code>错误，需要导入新的<code>GPG key</code>：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022</span><br></pre></td></tr></table></figure><p>导入成功后，再次运行第 4 步的安装 MySQL 服务命令即可。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;根据 MySQL 官方文档《&lt;a href=&quot;https://dev.mysql.com/doc/refman/8.0/en/linux-installation-yum-repo.html&quot;&gt;使用 MySQL Yum 存储库在 Linux 上安装 MySQL&lt;/a&gt;》安装</summary>
+      
+    
+    
+    
+    <category term="MySQL" scheme="https://www.xxyopen.com/categories/MySQL/"/>
+    
+    
+    <category term="MySQL" scheme="https://www.xxyopen.com/tags/MySQL/"/>
+    
+  </entry>
   
   <entry>
     <title>基于 Docker 安装 novel-plus（小说精品屋-plus）</title>
@@ -493,59 +546,6 @@
     &lt;div class=&quot;panel-body&quot;&gt;
         &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;v2.5.0 之前版本升级需要设置</summary>
-      
-    
-    
-    
-    <category term="教程" scheme="https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="novel-plus" scheme="https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/novel-plus/"/>
-    
-    
-    <category term="novel-plus" scheme="https://www.xxyopen.com/tags/novel-plus/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>novel-plus（小说精品屋-plus） 的爬虫程序 HTTP 代理设置</title>
-    <link href="https://www.xxyopen.com/2022/07/18/doc/novel-plus/proxy.html"/>
-    <id>https://www.xxyopen.com/2022/07/18/doc/novel-plus/proxy.html</id>
-    <published>2022-07-18T00:17:11.000Z</published>
-    <updated>2022-08-16T00:47:00.354Z</updated>
-    
-    <content type="html"><![CDATA[<p>爬虫程序 3.6.2 版本已经开始支持通过设置 HTTP 代理来助力小说数据采集了。</p><p>代理默认关闭，如果需要开启则修改 <code>novel-crawl/config/application-common-prod.yml</code> 文件中的 HTTP 代理配置。</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># HTTP 代理配置</span></span><br><span class="line"><span class="attr">http:</span></span><br><span class="line">  <span class="attr">proxy:</span></span><br><span class="line">    <span class="comment"># 是否开启 HTTP 代理，true-开启，false-不开启</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">false</span></span><br><span class="line">    <span class="comment"># 代理 IP</span></span><br><span class="line">    <span class="attr">ip:</span> <span class="string">u493.kdltps.com</span></span><br><span class="line">    <span class="comment"># 代理端口号</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">15818</span></span><br></pre></td></tr></table></figure><div class="alert alert-info"><div class="icon"><i class="fa fa-info"></i></div><div class="text"><p>如果 application-common-prod.yml 文件中没有以上配置，则手动加入以上配置到 application-common-prod.yml 文件末尾。</p></div></div><p>代理 IP 可以使用免费的也可以使用付费的，已实验过快代理（👉 <a href="https://www.kuaidaili.com/?ref=mdpz65syhqup">立即前往</a>）提供的免费代理和付费隧道代理试用（新用户可以试用 4 个小时，只需要设置一个固定IP，云端会自动切换IP，每次请求都会自动转发到不同IP）。</p><p><img src="https://youdoc.github.io/img/kuai5.png"><br><img src="https://youdoc.github.io/img/kuai6.png"><br><img src="https://youdoc.github.io/img/kuai7.png"></p><p>获取上图中的隧道host和HTTP端口填入上面的<code>application-common-prod.yml</code>文件中即可。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;爬虫程序 3.6.2 版本已经开始支持通过设置 HTTP 代理来助力小说数据采集了。&lt;/p&gt;
-&lt;p&gt;代理默认关闭，如果需要开启则修改 &lt;code&gt;novel-crawl/config/application-common-prod.yml&lt;/code&gt; 文件中的 HTTP </summary>
-      
-    
-    
-    
-    <category term="教程" scheme="https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="novel-plus" scheme="https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/novel-plus/"/>
-    
-    
-    <category term="novel-plus" scheme="https://www.xxyopen.com/tags/novel-plus/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>novel-plus（小说精品屋-plus） 包安装教程</title>
-    <link href="https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/package.html"/>
-    <id>https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/package.html</id>
-    <published>2022-07-18T00:10:11.000Z</published>
-    <updated>2022-08-16T00:58:16.998Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="JDK-安装"><a href="#JDK-安装" class="headerlink" title="JDK 安装"></a>JDK 安装</h2><p>  建议<a href="https://docs.oracle.com/javase/8/docs/technotes/guides/install/linux_jdk.html">安装 JDK 8</a></p><h2 id="MySQL-安装"><a href="#MySQL-安装" class="headerlink" title="MySQL 安装"></a>MySQL 安装</h2><ol><li><a href="https://dev.mysql.com/doc/refman/8.0/en/linux-installation.html">安装 MySQL 服务</a></li><li>修改 MySQL<code>max_allowed_packet </code>配置（建议 100M）</li><li>新建数据库，设置编码为 utf8mb4</li><li>执行 <a href="https://github.com/201206030/novel-plus/releases/download/v3.6.1/sql.zip">sql.zip</a>&#x2F;novel_plus.sql 脚本文件</li></ol><h2 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h2><p>   Linux 服务器上创建<code>novel-plus</code>、<code>novel-plus/novel-crawl</code>、<code>novel-plus/novel-front</code>、<code>novel-plus/novel-admin</code>目录。</p><h2 id="爬虫安装"><a href="#爬虫安装" class="headerlink" title="爬虫安装"></a>爬虫安装</h2><ol><li>上传 <a href="https://github.com/201206030/novel-plus/releases/download/v3.6.2/novel-crawl.zip">novel-crawl.zip</a> 压缩包到 Linux 服务器的 novel-crawl 目录</li><li>使用<code>unzip novel-crawl.zip</code>命令解压 novel-crawl.zip</li><li>修改 <code>config/application-common-prod.yml</code> 文件中的数据库配置</li><li>修改 <code>config/application-common-prod.yml</code> 文件中的管理员账号密码</li><li>根据需要<a href='/2022/07/18/doc/novel-plus/proxy.html' target="_blank">设置爬虫的代理IP</a></li><li>novel-crawl 目录下使用<code>bin/novel-crawl.sh start</code>命令启动爬虫程序</li><li>打开浏览器，默认<code>8083</code>端口访问</li><li>选择已有或新增爬虫源（支持自定义爬虫规则），点击<code>开启</code>按钮，开始采集小说数据</li><li>novel-crawl 目录下使用<code>bin/novel-crawl.sh stop</code>命令停止爬虫程序</li><li>novel-crawl 目录下使用<code>bin/novel-crawl.sh restart</code>命令重启爬虫程序</li><li>novel-crawl 目录下使用<code>bin/novel-crawl.sh status</code>命令查看爬虫程序的运行状态</li></ol><h2 id="前台安装"><a href="#前台安装" class="headerlink" title="前台安装"></a>前台安装</h2><ol><li>上传 <a href="https://github.com/201206030/novel-plus/releases/download/v3.6.1/novel-front.zip">novel-front.zip</a> 压缩包到 Linux 服务器的 novel-front 目录</li><li>使用<code>unzip novel-front.zip</code>命令解压 novel-front.zip</li><li>修改 <code>config/application-common-prod.yml</code> 文件中的数据库配置</li><li>修改 <code>config/application-website.yml</code> 配置文件中的网站信息</li><li>novel-front 目录下使用<code>bin/novel-front.sh start</code>命令启动前台程序</li><li>打开浏览器，默认<code>8085</code>端口访问</li><li>novel-front 目录下使用<code>bin/novel-front.sh stop</code>命令停止前台程序</li><li>novel-front 目录下使用<code>bin/novel-front.sh restart</code>命令重启前台程序</li><li>novel-front 目录下使用<code>bin/novel-front.sh status</code>命令查看前台程序的运行状态</li></ol><h2 id="后台安装"><a href="#后台安装" class="headerlink" title="后台安装"></a>后台安装</h2><ol><li>上传 <a href="https://github.com/201206030/novel-plus/releases/download/v3.6.1/novel-admin.zip">novel-admin.zip</a> 压缩包到 Linux 服务器的 novel-admin 目录</li><li>使用<code>unzip novel-admin.zip</code>命令解压 novel-admin.zip</li><li>修改 <code>config/application-prod.yml</code> 文件中的数据库配置</li><li>novel-admin 目录下使用<code>bin/novel-admin.sh start</code>命令启动后台程序</li><li>打开浏览器，默认<code>8088</code>端口访问</li><li>novel-admin 目录下使用<code>bin/novel-admin.sh stop</code>命令停止后台程序</li><li>novel-admin 目录下使用<code>bin/novel-admin.sh restart</code>命令重启后台程序</li><li>novel-admin 目录下使用<code>bin/novel-admin.sh status</code>命令查看后台程序的运行状态</li></ol><div class="alert alert-info"><div class="icon"><i class="fa fa-info"></i></div><div class="text"><p>部分环境（如新版 macOS 系统）获取不到主机 IP，需要手动修改 hosts 文件，增加 IP-主机名（通过 hostname 命令查看主机名）的映射。</p></div></div><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@iZwz9e2l6djkn7vw4xvic9Z ~]<span class="comment"># hostname</span></span><br><span class="line">iZwz9e2l6djkn7vw4xvic9Z</span><br></pre></td></tr></table></figure><p>正确配置：</p><figure class="highlight text"><figcaption><span>/etc/hosts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">172.18.5.192 iZwz9e2l6djkn7vw4xvic9Z  iZwz9e2l6djkn7vw4xvic9Z</span><br></pre></td></tr></table></figure><p>错误配置：</p><figure class="highlight text"><figcaption><span>/etc/hosts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1 iZwz9e2l6djkn7vw4xvic9Z  iZwz9e2l6djkn7vw4xvic9Z</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;JDK-安装&quot;&gt;&lt;a href=&quot;#JDK-安装&quot; class=&quot;headerlink&quot; title=&quot;JDK 安装&quot;&gt;&lt;/a&gt;JDK 安装&lt;/h2&gt;&lt;p&gt;  建议&lt;a href=&quot;https://docs.oracle.com/javase/8/docs/tec</summary>
       
     
     
