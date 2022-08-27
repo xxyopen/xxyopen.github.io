@@ -6,7 +6,7 @@
   <link href="https://www.xxyopen.com/atom.xml" rel="self"/>
   
   <link href="https://www.xxyopen.com/"/>
-  <updated>2022-08-21T13:10:15.951Z</updated>
+  <updated>2022-08-27T14:13:36.935Z</updated>
   <id>https://www.xxyopen.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GitHub 加速神器：平均下载速度可达 3 MB/s（亲测）</title>
+    <link href="https://www.xxyopen.com/2022/08/27/os/githubspeed.html"/>
+    <id>https://www.xxyopen.com/2022/08/27/os/githubspeed.html</id>
+    <published>2022-08-27T14:13:08.000Z</published>
+    <updated>2022-08-27T14:13:36.935Z</updated>
+    
+    <content type="html"><![CDATA[<p>大家好，今天给大家推荐一个 GitHub 加速工具，帮助大家解决 Github 下载速度慢的问题，先看下效果图。</p><p><img src="https://youdoc.gitee.io/resource/images/blog/article/githubspeed/githubspeed3.png"></p><p>因为经常帮助用户安装 <a href="https://github.com/201206030/novel-plus">novel-plus</a> 系统，需要远程连接用户电脑去下载 GitHub 上的附件，有时会遇到下载速度极慢的情况，即使设置了 VPN 也作用不大。于是抽空试了一些 GitHub 加速的方法，发现了一个非常不错的浏览器加速插件，对于 GitHub 仓库里的附件下载，平均下载速度可达 3MB&#x2F;s，算是目前用过的一款比较好的 GitHub 加速工具了，特此分享给大家。</p><p>该工具名为 Fast-GitHub，支持 Chrome、Safari 和 Edge 浏览器，源码已在 GitHub 上开源，支持 GitHub 仓库源码的 Git 和 ZIP 下载加速以及仓库附件的下载加速。</p><p><img src="https://youdoc.gitee.io/resource/images/blog/article/githubspeed/githubspped6.png"></p><p>如果要在 Chrome 浏览器中使用该插件，直接打开 <a href="https://chrome.google.com/webstore/category/extensions?hl=zh-CN">chrome 应用商店</a>，搜索 GitHub加速，然后添加插件即可。</p><p><img src="https://youdoc.gitee.io/resource/images/blog/article/githubspeed/githubspped7.png"></p><p>如果无法打开 chrome 应用商店的话，可以直接前往 <a href="https://github.com/fhefh2015/Fast-GitHub">GitHub 仓库</a>下载离线安装包。</p><p><img src="https://youdoc.gitee.io/resource/images/blog/article/githubspeed/githubspeed4.png"></p><p>​下载完离线安装包后，需要先解压 ZIP 文件，然后打开 Chrome 浏览器扩展程序，加载已解压的扩展程序即可。</p><p><img src="https://youdoc.gitee.io/resource/images/blog/article/githubspeed/githubspped5.png"></p><p>安装成功后，再次打开 Github 仓库，可以看到多了一个加速按钮。</p><p><img src="https://youdoc.gitee.io/resource/images/blog/article/githubspeed/githubspeed1.png"></p><p>打开 GitHub 仓库的发行页面，发现每个附件右边多了一个加速下载的按钮，点击即可加速下载附件。</p><p><img src="https://youdoc.gitee.io/resource/images/blog/article/githubspeed/githubspeed2.png"></p><p>GitHub 地址：<a href="https://github.com/fhefh2015/Fast-GitHub">https://github.com/fhefh2015/Fast-GitHub</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;大家好，今天给大家推荐一个 GitHub 加速工具，帮助大家解决 Github 下载速度慢的问题，先看下效果图。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://youdoc.gitee.io/resource/images/blog/article/githubspee</summary>
+      
+    
+    
+    
+    <category term="开源项目推荐" scheme="https://www.xxyopen.com/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%8E%A8%E8%8D%90/"/>
+    
+    
+    <category term="工具" scheme="https://www.xxyopen.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="开源项目" scheme="https://www.xxyopen.com/tags/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/"/>
+    
+    <category term="GitHub加速" scheme="https://www.xxyopen.com/tags/GitHub%E5%8A%A0%E9%80%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>重置 Docker 容器中 MySQL8 实例的 root 帐户密码，解决忘记密码的问题</title>
@@ -516,36 +545,6 @@
       
       
     <summary type="html">&lt;div class=&quot;alert alert-warning&quot;&gt;&lt;div class=&quot;icon&quot;&gt;&lt;i class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;div class=&quot;text&quot;&gt;&lt;p&gt;为了稳妥起见，升级前请先压缩服务器上的安装目录 novel-plu</summary>
-      
-    
-    
-    
-    <category term="教程" scheme="https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="novel-plus" scheme="https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/novel-plus/"/>
-    
-    
-    <category term="novel-plus" scheme="https://www.xxyopen.com/tags/novel-plus/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>novel-plus（小说精品屋-plus） v3.6.1 之前版本升级 3.6.1+ 指南</title>
-    <link href="https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/oldupdate.html"/>
-    <id>https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/oldupdate.html</id>
-    <published>2022-07-18T00:20:11.000Z</published>
-    <updated>2022-08-16T00:57:43.981Z</updated>
-    
-    <content type="html"><![CDATA[<div class="panel panel-warning">    <div class="panel-title">注意事项</div>    <div class="panel-body">        <ol><li><p>v2.5.0 之前版本升级需要设置 <code>spring.autoconfigure.exclude=io.shardingsphere.shardingjdbc.spring.boot.SpringBootConfiguration</code> 来关闭分表功能，否则会导致程序报错或数据混乱。</p></li><li><p>启动新版程序前请先使用传统方式（kill 进程号的方式）停止老版程序的运行。</p></li><li><p>新版程序不要和老版程序安装在同一个位置，例如老版安装在 <code>/www/novel-plus</code> 目录，则新版应该安装在 <code>/www/novel-plus-new</code>目录</p></li></ol>    </div>    </div><h2 id="升级步骤"><a href="#升级步骤" class="headerlink" title="升级步骤"></a>升级步骤</h2><ol><li>根据 <a href="https://github.com/201206030/novel-plus/blob/develop_xxy/doc/sql/readme.md">sql 文件说明</a> 执行增量 sql 文件</li><li>程序安装</li></ol><ul><li><p>创建目录</p><p>   Linux 服务器上创建<code>novel-plus-new</code>、<code>novel-plus-new/novel-crawl</code>、<code>novel-plus-new/novel-front</code>、<code>novel-plus-new/novel-admin</code>目录。</p></li><li><p>爬虫安装</p><ol><li>上传 <a href="https://github.com/201206030/novel-plus/releases/download/v3.6.2/novel-crawl.zip">novel-crawl.zip</a> 压缩包到 Linux 服务器的 novel-crawl 目录</li><li>使用<code>unzip novel-crawl.zip</code>命令解压 novel-crawl.zip</li><li>修改 <code>config/application-common-prod.yml</code> 文件中的数据库配置</li><li>修改 <code>config/application-common-prod.yml</code> 文件中的管理员账号密码</li><li>根据需要<a href='/2022/07/18/doc/novel-plus/proxy.html' target="_blank">设置爬虫的代理IP</a></li><li>novel-crawl 目录下使用<code>bin/novel-crawl.sh start</code>命令启动爬虫程序</li><li>打开浏览器，默认<code>8083</code>端口访问</li><li>选择已有或新增爬虫源（支持自定义爬虫规则），点击<code>开启</code>按钮，开始采集小说数据</li><li>novel-crawl 目录下使用<code>bin/novel-crawl.sh stop</code>命令停止爬虫程序</li><li>novel-crawl 目录下使用<code>bin/novel-crawl.sh restart</code>命令重启爬虫程序</li><li>novel-crawl 目录下使用<code>bin/novel-crawl.sh status</code>命令查看爬虫程序的运行状态</li></ol></li><li><p>前台安装</p><ol><li>上传 <a href="https://github.com/201206030/novel-plus/releases/download/v3.6.1/novel-front.zip">novel-front.zip</a> 压缩包到 Linux 服务器的 novel-front 目录</li><li>使用<code>unzip novel-front.zip</code>命令解压 novel-front.zip</li><li>修改 <code>config/application-common-prod.yml</code> 文件中的数据库配置</li><li>修改 <code>config/application-website.yml</code> 配置文件中的网站信息</li><li>novel-front 目录下使用<code>bin/novel-front.sh start</code>命令启动前台程序</li><li>打开浏览器，默认<code>8085</code>端口访问</li><li>novel-front 目录下使用<code>bin/novel-front.sh stop</code>命令停止前台程序</li><li>novel-front 目录下使用<code>bin/novel-front.sh restart</code>命令重启前台程序</li><li>novel-front 目录下使用<code>bin/novel-front.sh status</code>命令查看前台程序的运行状态</li></ol></li><li><p>后台安装</p><ol><li>上传 <a href="https://github.com/201206030/novel-plus/releases/download/v3.6.1/novel-admin.zip">novel-admin.zip</a> 压缩包到 Linux 服务器的 novel-admin 目录</li><li>使用<code>unzip novel-admin.zip</code>命令解压 novel-admin.zip</li><li>修改 <code>config/application-prod.yml</code> 文件中的数据库配置</li><li>novel-admin 目录下使用<code>bin/novel-admin.sh start</code>命令启动后台程序</li><li>打开浏览器，默认<code>8088</code>端口访问</li><li>novel-admin 目录下使用<code>bin/novel-admin.sh stop</code>命令停止后台程序</li><li>novel-admin 目录下使用<code>bin/novel-admin.sh restart</code>命令重启后台程序</li><li>novel-admin 目录下使用<code>bin/novel-admin.sh status</code>命令查看后台程序的运行状态</li></ol></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;div class=&quot;panel panel-warning&quot;&gt;
-    &lt;div class=&quot;panel-title&quot;&gt;注意事项&lt;/div&gt;
-    &lt;div class=&quot;panel-body&quot;&gt;
-        &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;v2.5.0 之前版本升级需要设置</summary>
       
     
     

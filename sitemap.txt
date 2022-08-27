@@ -1,3 +1,4 @@
+https://www.xxyopen.com/2022/08/27/os/githubspeed.html
 https://www.xxyopen.com/2022/08/21/mysql/reset_pass.html
 https://www.xxyopen.com/2022/08/21/mysql/gpg_check_failed.html
 https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/bt.html
@@ -67,6 +68,7 @@ https://www.xxyopen.com/tags/%E7%BA%BF%E7%A8%8B/
 https://www.xxyopen.com/tags/%E8%BF%9B%E7%A8%8B/
 https://www.xxyopen.com/tags/SpringBoot/
 https://www.xxyopen.com/tags/%E9%87%8D%E7%BD%AE%E5%AF%86%E7%A0%81/
+https://www.xxyopen.com/tags/GitHub%E5%8A%A0%E9%80%9F/
 https://www.xxyopen.com/categories/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/
 https://www.xxyopen.com/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%8E%A8%E8%8D%90/
 https://www.xxyopen.com/categories/MySQL/
