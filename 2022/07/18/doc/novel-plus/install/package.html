@@ -17,16 +17,16 @@
   
     <meta name="keywords" content="novel-plus" />
   
-  <meta name="description" content="JDK 安装  建议安装 JDK 8 MySQL 安装 安装 MySQL 服务 修改 MySQLmax_allowed_packet 配置（建议 100M） 新建数据库，设置编码为 utf8mb4 执行 sql.zip&#x2F;novel_plus.sql 脚本文件  创建目录   Linux 服务器上创建novel-plus、novel-plus&#x2F;novel-crawl、novel-plus&#x2F;">
+  <meta name="description" content="JDK 安装  建议安装 JDK 8 MySQL 安装 安装 MySQL 服务 修改 MySQLmax_allowed_packet 配置（建议 100M） 新建数据库，设置编码为 utf8mb4 执行 sql.zip&#x2F;novel_plus.sql 脚本文件  Redis 安装https:&#x2F;&#x2F;redis.io&#x2F;docs&#x2F;getting-started&#x2F;installation 创建目录">
 <meta property="og:type" content="article">
 <meta property="og:title" content="novel-plus（小说精品屋-plus） 包安装教程">
 <meta property="og:url" content="https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/package.html">
 <meta property="og:site_name" content="xxyopen">
-<meta property="og:description" content="JDK 安装  建议安装 JDK 8 MySQL 安装 安装 MySQL 服务 修改 MySQLmax_allowed_packet 配置（建议 100M） 新建数据库，设置编码为 utf8mb4 执行 sql.zip&#x2F;novel_plus.sql 脚本文件  创建目录   Linux 服务器上创建novel-plus、novel-plus&#x2F;novel-crawl、novel-plus&#x2F;">
+<meta property="og:description" content="JDK 安装  建议安装 JDK 8 MySQL 安装 安装 MySQL 服务 修改 MySQLmax_allowed_packet 配置（建议 100M） 新建数据库，设置编码为 utf8mb4 执行 sql.zip&#x2F;novel_plus.sql 脚本文件  Redis 安装https:&#x2F;&#x2F;redis.io&#x2F;docs&#x2F;getting-started&#x2F;installation 创建目录">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s1.ax1x.com/2022/07/19/jozrfP.jpg">
 <meta property="article:published_time" content="2022-07-18T00:10:11.000Z">
-<meta property="article:modified_time" content="2022-08-16T00:58:16.998Z">
+<meta property="article:modified_time" content="2023-04-15T09:57:53.454Z">
 <meta property="article:author" content="xxy">
 <meta property="article:tag" content="novel-plus">
 <meta name="twitter:card" content="summary">
@@ -219,7 +219,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        ~1.80K
+                        ~2.09K
                     
                     字
                 </li>
@@ -241,11 +241,13 @@
 <li>新建数据库，设置编码为 utf8mb4</li>
 <li>执行 <a target="_blank" rel="noopener" href="https://github.com/201206030/novel-plus/releases/download/v3.6.1/sql.zip">sql.zip</a>&#x2F;novel_plus.sql 脚本文件</li>
 </ol>
+<h2 id="Redis-安装"><a href="#Redis-安装" class="headerlink" title="Redis 安装"></a>Redis 安装</h2><p><a target="_blank" rel="noopener" href="https://redis.io/docs/getting-started/installation">https://redis.io/docs/getting-started/installation</a></p>
 <h2 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h2><p>   Linux 服务器上创建<code>novel-plus</code>、<code>novel-plus/novel-crawl</code>、<code>novel-plus/novel-front</code>、<code>novel-plus/novel-admin</code>目录。</p>
 <h2 id="爬虫安装"><a href="#爬虫安装" class="headerlink" title="爬虫安装"></a>爬虫安装</h2><ol>
 <li>上传 <a target="_blank" rel="noopener" href="https://github.com/201206030/novel-plus/releases/download/v3.6.2/novel-crawl.zip">novel-crawl.zip</a> 压缩包到 Linux 服务器的 novel-crawl 目录</li>
 <li>使用<code>unzip novel-crawl.zip</code>命令解压 novel-crawl.zip</li>
-<li>修改 <code>config/application-common-prod.yml</code> 文件中的数据库配置</li>
+<li>修改 <code>config/application-common-prod.yml</code> 文件中的 MySQL 配置</li>
+<li>修改 <code>config/application-common-prod.yml</code> 文件中的 Redis 配置（4.0.0 版本前默认不需要修改）</li>
 <li>修改 <code>config/application-common-prod.yml</code> 文件中的管理员账号密码</li>
 <li>根据需要<a href='/2022/07/18/doc/novel-plus/proxy.html' target="_blank">设置爬虫的代理IP</a></li>
 <li>novel-crawl 目录下使用<code>bin/novel-crawl.sh start</code>命令启动爬虫程序</li>
@@ -258,8 +260,9 @@
 <h2 id="前台安装"><a href="#前台安装" class="headerlink" title="前台安装"></a>前台安装</h2><ol>
 <li>上传 <a target="_blank" rel="noopener" href="https://github.com/201206030/novel-plus/releases/download/v3.6.1/novel-front.zip">novel-front.zip</a> 压缩包到 Linux 服务器的 novel-front 目录</li>
 <li>使用<code>unzip novel-front.zip</code>命令解压 novel-front.zip</li>
-<li>修改 <code>config/application-common-prod.yml</code> 文件中的数据库配置</li>
-<li>修改 <code>config/application-website.yml</code> 配置文件中的网站信息</li>
+<li>修改 <code>config/application-common-prod.yml</code> 文件中的 MySQL 配置</li>
+<li>修改 <code>config/application-common-prod.yml</code> 文件中的 Redis 配置（4.0.0 版本前默认不需要修改）</li>
+<li>修改 <code>config/application-website.yml</code> 配置文件中的网站信息（4.0.0 版本后不需要修改）</li>
 <li>novel-front 目录下使用<code>bin/novel-front.sh start</code>命令启动前台程序</li>
 <li>打开浏览器，默认<code>8085</code>端口访问</li>
 <li>novel-front 目录下使用<code>bin/novel-front.sh stop</code>命令停止前台程序</li>
@@ -269,7 +272,8 @@
 <h2 id="后台安装"><a href="#后台安装" class="headerlink" title="后台安装"></a>后台安装</h2><ol>
 <li>上传 <a target="_blank" rel="noopener" href="https://github.com/201206030/novel-plus/releases/download/v3.6.1/novel-admin.zip">novel-admin.zip</a> 压缩包到 Linux 服务器的 novel-admin 目录</li>
 <li>使用<code>unzip novel-admin.zip</code>命令解压 novel-admin.zip</li>
-<li>修改 <code>config/application-prod.yml</code> 文件中的数据库配置</li>
+<li>修改 <code>config/application-prod.yml</code> 文件中的 MySQL 配置</li>
+<li>修改 <code>config/application-prod.yml</code> 文件中的 Redis 配置（4.0.0 版本前默认不需要修改）</li>
 <li>novel-admin 目录下使用<code>bin/novel-admin.sh start</code>命令启动后台程序</li>
 <li>打开浏览器，默认<code>8088</code>端口访问</li>
 <li>novel-admin 目录下使用<code>bin/novel-admin.sh stop</code>命令停止后台程序</li>
@@ -380,7 +384,7 @@ MySQL 安装
                     <a class="tag-none-link" href="/tags/novel-plus/" rel="tag">novel-plus</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2022-08-16T00:58:16.998Z" itemprop="dateModified">最后编辑：2022-08-16</time>
+                    <time datetime="2023-04-15T09:57:53.454Z" itemprop="dateModified">最后编辑：2023-04-15</time>
                 </div>
             </div>
         </footer>
