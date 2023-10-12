@@ -17,16 +17,16 @@
   
     <meta name="keywords" content="Docker, novel-plus" />
   
-  <meta name="description" content="爬虫安装  安装命令： 12345docker run -d -e dburl&#x3D;&quot;jdbc:mysql:&#x2F;&#x2F;&lt;数据库IP&gt;:&lt;数据库端口号&gt;&#x2F;&lt;数据库名&gt;?useUnicode&#x3D;true&amp;characterEncoding&#x3D;utf-8&amp;useSSL&#x3D;false&amp;serverTimezone&#x3D;Asia&#x2F;Shanghai&amp;quot">
+  <meta name="description" content="爬虫安装  安装命令： 12345678docker run -d -e dburl&#x3D;&quot;jdbc:mysql:&#x2F;&#x2F;&lt;数据库IP&gt;:&lt;数据库端口号&gt;&#x2F;&lt;数据库名&gt;?useUnicode&#x3D;true&amp;characterEncoding&#x3D;utf-8&amp;useSSL&#x3D;false&amp;serverTimezone&#x3D;Asia&#x2F;Shanghai&amp;q">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基于 Docker 安装 novel-plus（小说精品屋-plus）">
 <meta property="og:url" content="https://www.xxyopen.com/2022/08/07/doc/novel-plus/install/base_docker.html">
 <meta property="og:site_name" content="xxyopen">
-<meta property="og:description" content="爬虫安装  安装命令： 12345docker run -d -e dburl&#x3D;&quot;jdbc:mysql:&#x2F;&#x2F;&lt;数据库IP&gt;:&lt;数据库端口号&gt;&#x2F;&lt;数据库名&gt;?useUnicode&#x3D;true&amp;characterEncoding&#x3D;utf-8&amp;useSSL&#x3D;false&amp;serverTimezone&#x3D;Asia&#x2F;Shanghai&amp;quot">
+<meta property="og:description" content="爬虫安装  安装命令： 12345678docker run -d -e dburl&#x3D;&quot;jdbc:mysql:&#x2F;&#x2F;&lt;数据库IP&gt;:&lt;数据库端口号&gt;&#x2F;&lt;数据库名&gt;?useUnicode&#x3D;true&amp;characterEncoding&#x3D;utf-8&amp;useSSL&#x3D;false&amp;serverTimezone&#x3D;Asia&#x2F;Shanghai&amp;q">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s1.ax1x.com/2022/07/19/jozrfP.jpg">
 <meta property="article:published_time" content="2022-08-07T00:08:18.000Z">
-<meta property="article:modified_time" content="2022-08-07T01:59:36.602Z">
+<meta property="article:modified_time" content="2023-10-12T08:27:49.222Z">
 <meta property="article:author" content="xxy">
 <meta property="article:tag" content="novel-plus">
 <meta property="article:tag" content="Docker">
@@ -220,7 +220,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        ~2.11K
+                        ~2.84K
                     
                     字
                 </li>
@@ -239,28 +239,28 @@
 <li>爬虫安装</li>
 </ol>
 <p>安装命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -e dburl=<span class="string">&quot;jdbc:mysql://&lt;数据库IP&gt;:&lt;数据库端口号&gt;/&lt;数据库名&gt;?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai&quot;</span> \</span><br><span class="line">-e username=<span class="string">&quot;&lt;数据库登录用户名&gt;&quot;</span> \</span><br><span class="line">-e password=<span class="string">&quot;&lt;数据库登录密码&gt;&quot;</span> \</span><br><span class="line">-p &lt;自定义爬虫端口号&gt;:8081 \</span><br><span class="line">201206030/novel-crawl:&lt;版本号&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -e dburl=<span class="string">&quot;jdbc:mysql://&lt;数据库IP&gt;:&lt;数据库端口号&gt;/&lt;数据库名&gt;?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai&quot;</span> \</span><br><span class="line">-e username=<span class="string">&quot;&lt;数据库登录用户名&gt;&quot;</span> \</span><br><span class="line">-e password=<span class="string">&quot;&lt;数据库登录密码&gt;&quot;</span> \</span><br><span class="line">-e redishost=<span class="string">&quot;&lt;Redis IP&gt;&quot;</span> \</span><br><span class="line">-e redisport=<span class="string">&quot;&lt;Redis 端口号&gt;&quot;</span> \</span><br><span class="line">-e redispwd=<span class="string">&quot;&lt;Redis 密码&gt;&quot;</span> \</span><br><span class="line">-p &lt;自定义爬虫端口号&gt;:8081 \</span><br><span class="line">201206030/novel-crawl:&lt;版本号&gt;</span><br></pre></td></tr></table></figure>
 
 <p>使用示例：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -e dburl=<span class="string">&quot;jdbc:mysql://192.168.0.58:3306/novle-plus?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai&quot;</span> \</span><br><span class="line">-e username=<span class="string">&quot;root&quot;</span> \</span><br><span class="line">-e password=<span class="string">&quot;123456&quot;</span> \</span><br><span class="line">-p 8081:8081 \</span><br><span class="line">201206030/novel-crawl:3.5.1</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -e dburl=<span class="string">&quot;jdbc:mysql://192.168.0.100:3306/novle-plus?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai&quot;</span> \</span><br><span class="line">-e username=<span class="string">&quot;root&quot;</span> \</span><br><span class="line">-e password=<span class="string">&quot;123456&quot;</span> \</span><br><span class="line">-e redishost=<span class="string">&quot;192.168.0.100&quot;</span> \</span><br><span class="line">-e redisport=<span class="string">&quot;6379&quot;</span> \</span><br><span class="line">-e redispwd=<span class="string">&quot;test123456&quot;</span> \</span><br><span class="line">-p 8081:8081 \</span><br><span class="line">201206030/novel-crawl:4.2.0</span><br></pre></td></tr></table></figure>
 
 <ol start="2">
 <li>前台安装</li>
 </ol>
 <p>安装命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -e dburl=<span class="string">&quot;jdbc:mysql://&lt;数据库IP&gt;:&lt;数据库端口号&gt;/&lt;数据库名&gt;?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai&quot;</span> \</span><br><span class="line">-e username=<span class="string">&quot;&lt;数据库登录用户名&gt;&quot;</span> \</span><br><span class="line">-e password=<span class="string">&quot;&lt;数据库登录密码&gt;&quot;</span> \</span><br><span class="line">-p &lt;自定义前台端口号&gt;:8080 \</span><br><span class="line">201206030/novel-front:&lt;版本号&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -e dburl=<span class="string">&quot;jdbc:mysql://&lt;数据库IP&gt;:&lt;数据库端口号&gt;/&lt;数据库名&gt;?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai&quot;</span> \</span><br><span class="line">-e username=<span class="string">&quot;&lt;数据库登录用户名&gt;&quot;</span> \</span><br><span class="line">-e password=<span class="string">&quot;&lt;数据库登录密码&gt;&quot;</span> \</span><br><span class="line">-e redishost=<span class="string">&quot;&lt;Redis IP&gt;&quot;</span> \</span><br><span class="line">-e redisport=<span class="string">&quot;&lt;Redis 端口号&gt;&quot;</span> \</span><br><span class="line">-e redispwd=<span class="string">&quot;&lt;Redis 密码&gt;&quot;</span> \</span><br><span class="line">-p &lt;自定义前台端口号&gt;:8083 \</span><br><span class="line">201206030/novel-front:&lt;版本号&gt;</span><br></pre></td></tr></table></figure>
 
 <p>使用示例：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -e dburl=<span class="string">&quot;jdbc:mysql://192.168.0.58:3306/novle-plus?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai&quot;</span> \</span><br><span class="line">-e username=<span class="string">&quot;root&quot;</span> \</span><br><span class="line">-e password=<span class="string">&quot;123456&quot;</span> \</span><br><span class="line">-p 80:8080 \</span><br><span class="line">201206030/novel-front:3.5.4</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -e dburl=<span class="string">&quot;jdbc:mysql://192.168.0.100:3306/novle-plus?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai&quot;</span> \</span><br><span class="line">-e username=<span class="string">&quot;root&quot;</span> \</span><br><span class="line">-e password=<span class="string">&quot;123456&quot;</span> \</span><br><span class="line">-e redishost=<span class="string">&quot;192.168.0.100&quot;</span> \</span><br><span class="line">-e redisport=<span class="string">&quot;6379&quot;</span> \</span><br><span class="line">-e redispwd=<span class="string">&quot;test123456&quot;</span> \</span><br><span class="line">-p 80:8083 \</span><br><span class="line">201206030/novel-front:4.2.0</span><br></pre></td></tr></table></figure>
 
 <ol start="3">
 <li>管理后台安装</li>
 </ol>
 <p>安装命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -e dburl=<span class="string">&quot;jdbc:mysql://&lt;数据库IP&gt;:&lt;数据库端口号&gt;/&lt;数据库名&gt;?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai&quot;</span> \</span><br><span class="line">-e username=<span class="string">&quot;&lt;数据库登录用户名&gt;&quot;</span> \</span><br><span class="line">-e password=<span class="string">&quot;&lt;数据库登录密码&gt;&quot;</span> \</span><br><span class="line">-p &lt;自定义管理后台端口号&gt;:80 \</span><br><span class="line">201206030/novel-admin:&lt;版本号&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -e dburl=<span class="string">&quot;jdbc:mysql://&lt;数据库IP&gt;:&lt;数据库端口号&gt;/&lt;数据库名&gt;?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai&quot;</span> \</span><br><span class="line">-e username=<span class="string">&quot;&lt;数据库登录用户名&gt;&quot;</span> \</span><br><span class="line">-e password=<span class="string">&quot;&lt;数据库登录密码&gt;&quot;</span> \</span><br><span class="line">-e redishost=<span class="string">&quot;&lt;Redis IP&gt;&quot;</span> \</span><br><span class="line">-e redisport=<span class="string">&quot;&lt;Redis 端口号&gt;&quot;</span> \</span><br><span class="line">-e redispwd=<span class="string">&quot;&lt;Redis 密码&gt;&quot;</span> \</span><br><span class="line">-p &lt;自定义管理后台端口号&gt;:80 \</span><br><span class="line">201206030/novel-admin:&lt;版本号&gt;</span><br></pre></td></tr></table></figure>
 
 <p>使用示例：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -e dburl=<span class="string">&quot;jdbc:mysql://192.168.0.58:3306/novle-plus?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai&quot;</span> \</span><br><span class="line">-e username=<span class="string">&quot;root&quot;</span> \</span><br><span class="line">-e password=<span class="string">&quot;123456&quot;</span> \</span><br><span class="line">-p 8088:80 \</span><br><span class="line">201206030/novel-admin:3.1.0</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -e dburl=<span class="string">&quot;jdbc:mysql://192.168.0.100:3306/novle-plus?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai&quot;</span> \</span><br><span class="line">-e username=<span class="string">&quot;root&quot;</span> \</span><br><span class="line">-e password=<span class="string">&quot;123456&quot;</span> \</span><br><span class="line">-e redishost=<span class="string">&quot;192.168.0.100&quot;</span> \</span><br><span class="line">-e redisport=<span class="string">&quot;6379&quot;</span> \</span><br><span class="line">-e redispwd=<span class="string">&quot;test123456&quot;</span> \</span><br><span class="line">-p 8088:80 \</span><br><span class="line">201206030/novel-admin:4.2.0</span><br></pre></td></tr></table></figure>
 
 <ol start="4">
 <li>放行端口号</li>
@@ -346,7 +346,7 @@
 爬虫安装
 
 安装命令：
-12345docker run -d -e dburl=&quot;jdbc:mysql://&lt;数据库IP&gt;:&lt;数据库端口号&gt;/&lt;数据库名&gt;?useUnicode=true...`;
+12345678docker run -d -e dburl=&quot;jdbc:mysql://&lt;数据库IP&gt;:&lt;数据库端口号&gt;/&lt;数据库名&gt;?useUnicode=t...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -368,7 +368,7 @@
                     <a class="tag-none-link" href="/tags/Docker/" rel="tag">Docker</a>, <a class="tag-none-link" href="/tags/novel-plus/" rel="tag">novel-plus</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2022-08-07T01:59:36.602Z" itemprop="dateModified">最后编辑：2022-08-07</time>
+                    <time datetime="2023-10-12T08:27:49.222Z" itemprop="dateModified">最后编辑：2023-10-12</time>
                 </div>
             </div>
         </footer>
