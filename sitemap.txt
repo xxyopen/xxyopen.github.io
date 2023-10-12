@@ -1,3 +1,4 @@
+https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/bt.html
 https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/package.html
 https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/source.html
 https://www.xxyopen.com/2023/04/04/docker/docker_compose/health_check.html
@@ -7,7 +8,6 @@ https://www.xxyopen.com/2022/07/22/tools/image_host.html
 https://www.xxyopen.com/2022/08/27/os/githubspeed.html
 https://www.xxyopen.com/2022/08/21/mysql/reset_pass.html
 https://www.xxyopen.com/2022/08/21/mysql/gpg_check_failed.html
-https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/bt.html
 https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/oldupdate.html
 https://www.xxyopen.com/2022/07/18/doc/novel-plus/proxy.html
 https://www.xxyopen.com/2022/07/19/tools/pages_host.html
