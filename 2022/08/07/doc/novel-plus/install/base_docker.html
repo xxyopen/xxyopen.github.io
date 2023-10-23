@@ -26,7 +26,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s1.ax1x.com/2022/07/19/jozrfP.jpg">
 <meta property="article:published_time" content="2022-08-07T00:08:18.000Z">
-<meta property="article:modified_time" content="2023-10-22T11:23:47.812Z">
+<meta property="article:modified_time" content="2023-10-23T03:24:34.678Z">
 <meta property="article:author" content="xxy">
 <meta property="article:tag" content="Docker">
 <meta property="article:tag" content="novel-plus">
@@ -235,7 +235,7 @@
             </div>
             
                 <div class="kratos-post-inner-toc">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Docker-%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">Docker 安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL-%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">MySQL 安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis-%E5%AE%89%E8%A3%85"><span class="toc-number">3.</span> <span class="toc-text">Redis 安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%88%AC%E8%99%AB%E5%AE%89%E8%A3%85"><span class="toc-number">4.</span> <span class="toc-text">爬虫安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E5%8F%B0%E5%AE%89%E8%A3%85"><span class="toc-number">5.</span> <span class="toc-text">前台安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E5%90%8E%E5%8F%B0%E5%AE%89%E8%A3%85"><span class="toc-number">6.</span> <span class="toc-text">管理后台安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%B2%E7%81%AB%E5%A2%99%E6%94%BE%E8%A1%8C%E7%AB%AF%E5%8F%A3"><span class="toc-number">7.</span> <span class="toc-text">防火墙放行端口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E8%AE%BF%E9%97%AE"><span class="toc-number">8.</span> <span class="toc-text">浏览器访问</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Docker-%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">Docker 安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL-%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">MySQL 安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis-%E5%AE%89%E8%A3%85"><span class="toc-number">3.</span> <span class="toc-text">Redis 安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%88%AC%E8%99%AB%E5%AE%89%E8%A3%85"><span class="toc-number">4.</span> <span class="toc-text">爬虫安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E5%8F%B0%E5%AE%89%E8%A3%85"><span class="toc-number">5.</span> <span class="toc-text">前台安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E5%90%8E%E5%8F%B0%E5%AE%89%E8%A3%85"><span class="toc-number">6.</span> <span class="toc-text">管理后台安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%B2%E7%81%AB%E5%A2%99%E6%94%BE%E8%A1%8C%E7%AB%AF%E5%8F%A3"><span class="toc-number">7.</span> <span class="toc-text">防火墙放行端口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E8%AE%BF%E9%97%AE"><span class="toc-number">8.</span> <span class="toc-text">浏览器访问</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%86%E9%A2%91%E6%BC%94%E7%A4%BA"><span class="toc-number">9.</span> <span class="toc-text">视频演示</span></a></li></ol>
                 </div>
             
             <hr />
@@ -266,10 +266,12 @@
 
 <h2 id="防火墙放行端口"><a href="#防火墙放行端口" class="headerlink" title="防火墙放行端口"></a>防火墙放行端口</h2><p>如果你的服务器开启了防火墙（一般的公有云厂商都提供了自己的防火墙，可以在云管理后台进行管理），需要放行爬虫、前台和后台的端口才能被远程访问，在本示例中应该放行 8081、80 和 8088 端口。</p>
 <h2 id="浏览器访问"><a href="#浏览器访问" class="headerlink" title="浏览器访问"></a>浏览器访问</h2><p>http:&#x2F;&#x2F;&lt;服务器IP&gt;:&lt;自定义程序端口号&gt;</p>
-<div class="alert alert-warning"><div class="icon"><i class="fa fa-warning"></i></div><div class="text"><p>为了兼容老版本的升级，Docker 所有版本均关闭了小说内容分表功能，小白最好仅选用一种方式安装和升级，升级版本不要更换安装方式，升级版本后，需要执行一下数据库的增量 SQL 文件。</p>
-</div></div>
+<h2 id="视频演示"><a href="#视频演示" class="headerlink" title="视频演示"></a>视频演示</h2><iframe src="//player.bilibili.com/player.html?aid=959963088&bvid=BV1Jp4y1M7Wk&cid=1307853284&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
-</div>
+
+
+<div class="alert alert-warning"><div class="icon"><i class="fa fa-warning"></i></div><div class="text"><p>为了兼容老版本的升级，Docker 所有版本均关闭了小说内容分表功能，小白最好仅选用一种方式安装和升级，升级版本不要更换安装方式，升级版本后，需要执行一下数据库的增量 SQL 文件。</p>
+</div></div></div>
         </div>
         
             <div class="kratos-copyright text-center clearfix">
@@ -361,7 +363,7 @@ MySQL 安装1docker run -itd --name mysql-novel-plus -...`;
                     <a class="tag-none-link" href="/tags/Docker/" rel="tag">Docker</a>, <a class="tag-none-link" href="/tags/novel-plus/" rel="tag">novel-plus</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2023-10-22T11:23:47.812Z" itemprop="dateModified">最后编辑：2023-10-22</time>
+                    <time datetime="2023-10-23T03:24:34.678Z" itemprop="dateModified">最后编辑：2023-10-23</time>
                 </div>
             </div>
         </footer>
@@ -476,7 +478,7 @@ MySQL 安装1docker run -itd --name mysql-novel-plus -...`;
         <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
     </h4>
     <div class="textwidget">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Docker-%E5%AE%89%E8%A3%85"><span class="toc-text">Docker 安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL-%E5%AE%89%E8%A3%85"><span class="toc-text">MySQL 安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis-%E5%AE%89%E8%A3%85"><span class="toc-text">Redis 安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%88%AC%E8%99%AB%E5%AE%89%E8%A3%85"><span class="toc-text">爬虫安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E5%8F%B0%E5%AE%89%E8%A3%85"><span class="toc-text">前台安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E5%90%8E%E5%8F%B0%E5%AE%89%E8%A3%85"><span class="toc-text">管理后台安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%B2%E7%81%AB%E5%A2%99%E6%94%BE%E8%A1%8C%E7%AB%AF%E5%8F%A3"><span class="toc-text">防火墙放行端口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E8%AE%BF%E9%97%AE"><span class="toc-text">浏览器访问</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Docker-%E5%AE%89%E8%A3%85"><span class="toc-text">Docker 安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL-%E5%AE%89%E8%A3%85"><span class="toc-text">MySQL 安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis-%E5%AE%89%E8%A3%85"><span class="toc-text">Redis 安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%88%AC%E8%99%AB%E5%AE%89%E8%A3%85"><span class="toc-text">爬虫安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E5%8F%B0%E5%AE%89%E8%A3%85"><span class="toc-text">前台安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%A1%E7%90%86%E5%90%8E%E5%8F%B0%E5%AE%89%E8%A3%85"><span class="toc-text">管理后台安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%B2%E7%81%AB%E5%A2%99%E6%94%BE%E8%A1%8C%E7%AB%AF%E5%8F%A3"><span class="toc-text">防火墙放行端口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E8%AE%BF%E9%97%AE"><span class="toc-text">浏览器访问</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%86%E9%A2%91%E6%BC%94%E7%A4%BA"><span class="toc-text">视频演示</span></a></li></ol>
     </div>
 </aside>
 
