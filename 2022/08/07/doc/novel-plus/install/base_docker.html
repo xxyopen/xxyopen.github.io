@@ -17,16 +17,16 @@
   
     <meta name="keywords" content="Docker, novel-plus" />
   
-  <meta name="description" content="Docker 安装Ubuntu 环境 ｜ Debian 环境 ｜ CentOS 环境 ｜ Windows 环境 ｜ MacOS 环境 MySQL 安装1docker run -itd --name mysql-novel-plus -p 33066:3306 -e MYSQL_ROOT_PASSWORD&#x3D;novel_plus_1022 201206030&#x2F;mysql-novel-plus:4.3.">
+  <meta name="description" content="本安装教程本着“最简安装”的原则，为技术小白所定制，不考虑实际生产问题（性能、安全、资源占用等），不会实时更新镜像，仅适用于想快速体验系统功能的用户，不推荐在生产环境中使用。   Docker 安装Ubuntu 环境 ｜ Debian 环境 ｜ CentOS 环境 ｜ Windows 环境 ｜ MacOS 环境 MySQL 安装1docker run -itd --name mysql-novel">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基于 Docker 安装 novel-plus（小说精品屋-plus）">
 <meta property="og:url" content="https://www.xxyopen.com/2022/08/07/doc/novel-plus/install/base_docker.html">
 <meta property="og:site_name" content="xxyopen">
-<meta property="og:description" content="Docker 安装Ubuntu 环境 ｜ Debian 环境 ｜ CentOS 环境 ｜ Windows 环境 ｜ MacOS 环境 MySQL 安装1docker run -itd --name mysql-novel-plus -p 33066:3306 -e MYSQL_ROOT_PASSWORD&#x3D;novel_plus_1022 201206030&#x2F;mysql-novel-plus:4.3.">
+<meta property="og:description" content="本安装教程本着“最简安装”的原则，为技术小白所定制，不考虑实际生产问题（性能、安全、资源占用等），不会实时更新镜像，仅适用于想快速体验系统功能的用户，不推荐在生产环境中使用。   Docker 安装Ubuntu 环境 ｜ Debian 环境 ｜ CentOS 环境 ｜ Windows 环境 ｜ MacOS 环境 MySQL 安装1docker run -itd --name mysql-novel">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s1.ax1x.com/2022/07/19/jozrfP.jpg">
 <meta property="article:published_time" content="2022-08-07T00:08:18.000Z">
-<meta property="article:modified_time" content="2023-10-23T03:24:34.678Z">
+<meta property="article:modified_time" content="2023-11-21T00:03:42.930Z">
 <meta property="article:author" content="xxy">
 <meta property="article:tag" content="Docker">
 <meta property="article:tag" content="novel-plus">
@@ -220,7 +220,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        ~3.46K
+                        ~3.55K
                     
                     字
                 </li>
@@ -239,7 +239,10 @@
                 </div>
             
             <hr />
-            <div itemprop="articleBody"><h2 id="Docker-安装"><a href="#Docker-安装" class="headerlink" title="Docker 安装"></a>Docker 安装</h2><p><a target="_blank" rel="noopener" href="https://www.runoob.com/docker/ubuntu-docker-install.html">Ubuntu 环境</a> ｜ <a target="_blank" rel="noopener" href="https://www.runoob.com/docker/debian-docker-install.html">Debian 环境</a> ｜ <a target="_blank" rel="noopener" href="https://www.runoob.com/docker/centos-docker-install.html">CentOS 环境</a> ｜ <a target="_blank" rel="noopener" href="https://www.runoob.com/docker/windows-docker-install.html">Windows 环境</a> ｜ <a target="_blank" rel="noopener" href="https://www.runoob.com/docker/macos-docker-install.html">MacOS 环境</a></p>
+            <div itemprop="articleBody"><div class="alert alert-info"><div class="icon"><i class="fa fa-info"></i></div><div class="text"><p>本安装教程本着“最简安装”的原则，为技术小白所定制，不考虑实际生产问题（性能、安全、资源占用等），不会实时更新镜像，仅适用于想快速体验系统功能的用户，不推荐在生产环境中使用。</p>
+</div></div>
+
+<h2 id="Docker-安装"><a href="#Docker-安装" class="headerlink" title="Docker 安装"></a>Docker 安装</h2><p><a target="_blank" rel="noopener" href="https://www.runoob.com/docker/ubuntu-docker-install.html">Ubuntu 环境</a> ｜ <a target="_blank" rel="noopener" href="https://www.runoob.com/docker/debian-docker-install.html">Debian 环境</a> ｜ <a target="_blank" rel="noopener" href="https://www.runoob.com/docker/centos-docker-install.html">CentOS 环境</a> ｜ <a target="_blank" rel="noopener" href="https://www.runoob.com/docker/windows-docker-install.html">Windows 环境</a> ｜ <a target="_blank" rel="noopener" href="https://www.runoob.com/docker/macos-docker-install.html">MacOS 环境</a></p>
 <h2 id="MySQL-安装"><a href="#MySQL-安装" class="headerlink" title="MySQL 安装"></a>MySQL 安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -itd --name mysql-novel-plus -p 33066:3306 -e MYSQL_ROOT_PASSWORD=novel_plus_1022 201206030/mysql-novel-plus:4.3.0-RC1</span><br></pre></td></tr></table></figure>
 
 <h2 id="Redis-安装"><a href="#Redis-安装" class="headerlink" title="Redis 安装"></a>Redis 安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -itd --name redis-novel-plus -p 63796:6379 redis --requirepass <span class="string">&quot;novel_plus_1022&quot;</span></span><br></pre></td></tr></table></figure>
@@ -340,8 +343,10 @@
             const twitterBase   = "https://twitter.com/intent/tweet?";
             const hostUrl       = "https://www.xxyopen.com/2022/08/07/doc/novel-plus/install/base_docker.html";
             const title         = "「基于 Docker 安装 novel-plus（小说精品屋-plus）」";
-            const excerpt       = `Docker 安装Ubuntu 环境 ｜ Debian 环境 ｜ CentOS 环境 ｜ Windows 环境 ｜ MacOS 环境
-MySQL 安装1docker run -itd --name mysql-novel-plus -...`;
+            const excerpt       = `本安装教程本着“最简安装”的原则，为技术小白所定制，不考虑实际生产问题（性能、安全、资源占用等），不会实时更新镜像，仅适用于想快速体验系统功能的用户，不推荐在生产环境中使用。
+
+
+Docker 安装Ubuntu 环境 ｜ Debian...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -363,7 +368,7 @@ MySQL 安装1docker run -itd --name mysql-novel-plus -...`;
                     <a class="tag-none-link" href="/tags/Docker/" rel="tag">Docker</a>, <a class="tag-none-link" href="/tags/novel-plus/" rel="tag">novel-plus</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2023-10-23T03:24:34.678Z" itemprop="dateModified">最后编辑：2023-10-23</time>
+                    <time datetime="2023-11-21T00:03:42.930Z" itemprop="dateModified">最后编辑：2023-11-21</time>
                 </div>
             </div>
         </footer>
