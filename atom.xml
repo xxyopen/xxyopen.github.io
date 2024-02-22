@@ -6,7 +6,7 @@
   <link href="https://www.xxyopen.com/atom.xml" rel="self"/>
   
   <link href="https://www.xxyopen.com/"/>
-  <updated>2023-12-06T11:58:26.391Z</updated>
+  <updated>2024-02-22T15:28:06.898Z</updated>
   <id>https://www.xxyopen.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CentOS 环境下卸载 MySQL 重装新版本</title>
+    <link href="https://www.xxyopen.com/2024/02/22/mysql/mysql_uninstall.html"/>
+    <id>https://www.xxyopen.com/2024/02/22/mysql/mysql_uninstall.html</id>
+    <published>2024-02-22T15:32:18.000Z</published>
+    <updated>2024-02-22T15:28:06.898Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>停止 MySQL 服务并卸载所有 MySQL 相关的软件包。这可以通过以下命令完成：</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl stop mysqld  </span><br><span class="line">sudo yum remove mysql-server mysql mysql-libs mysql-server</span><br></pre></td></tr></table></figure><ol start="2"><li>查找并删除所有与 MySQL 相关的配置文件和目录。通常，MySQL 的配置文件位于 &#x2F;etc&#x2F;my.cnf，数据目录位于 &#x2F;var&#x2F;lib&#x2F;mysql。可以使用以下命令删除这些文件和目录：</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">rm</span> -rf /var/lib/mysql  </span><br><span class="line">sudo <span class="built_in">rm</span> /etc/my.cnf</span><br></pre></td></tr></table></figure><ol start="3"><li>查询系统中是否还有以 rpm 包安装的 mysql，如果有则卸载：</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep mysql  </span><br><span class="line">sudo yum remove [包名]</span><br></pre></td></tr></table></figure><ol start="4"><li>清理 yum 缓存</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum clean all</span><br></pre></td></tr></table></figure><p><strong>注：如果要重新安装其他版本的话，这一步一定要做。</strong></p><ol start="5"><li>安装 MySQL 新版本</li></ol><p><a href="/2022/08/21/mysql/gpg_check_failed.html">使用 MySQL Yum 存储库在 Linux 上安装 MySQL</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;停止 MySQL 服务并卸载所有 MySQL 相关的软件包。这可以通过以下命令完成：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class</summary>
+      
+    
+    
+    
+    <category term="MySQL" scheme="https://www.xxyopen.com/categories/MySQL/"/>
+    
+    
+    <category term="MySQL" scheme="https://www.xxyopen.com/tags/MySQL/"/>
+    
+  </entry>
   
   <entry>
     <title>如何给 Sring Boot 项目的 jar 包加密防止反编译，并绑定指定机器运行</title>
@@ -192,14 +219,14 @@
     <link href="https://www.xxyopen.com/2022/08/21/mysql/gpg_check_failed.html"/>
     <id>https://www.xxyopen.com/2022/08/21/mysql/gpg_check_failed.html</id>
     <published>2022-08-21T13:01:18.000Z</published>
-    <updated>2022-08-21T13:10:03.587Z</updated>
+    <updated>2024-02-22T15:18:34.697Z</updated>
     
-    <content type="html"><![CDATA[<p>根据 MySQL 官方文档《<a href="https://dev.mysql.com/doc/refman/8.0/en/linux-installation-yum-repo.html">使用 MySQL Yum 存储库在 Linux 上安装 MySQL</a>》安装 MySQL 步骤如下：</p><ol><li><p>下载 MySQL 发行包</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://repo.mysql.com/mysql80-community-release-el8-1.noarch.rpm</span><br></pre></td></tr></table></figure></li><li><p>安装下载的 MySQL 发行包</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install mysql80-community-release-el8-1.noarch.rpm</span><br></pre></td></tr></table></figure></li><li><p>禁用默认 MySQL 模块</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum module <span class="built_in">disable</span> mysql</span><br></pre></td></tr></table></figure><p><strong>注：仅限 EL8 系统，基于 EL8 的系统（例如 RHEL8 和 Oracle Linux 8）包含默认启用的 MySQL 模块，除非禁用此模块，否则它会屏蔽 MySQL 存储库提供的包。</strong></p></li><li><p>安装 MySQL 服务</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install mysql-community-server</span><br></pre></td></tr></table></figure></li><li><p>启动 MySQL 服务</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mysqld</span><br></pre></td></tr></table></figure></li><li><p>查看 MySQL 服务状态</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status mysqld</span><br></pre></td></tr></table></figure></li></ol><p>在第 4 步安装 MySQL 服务时出现了<code>Error: GPG check FAILED</code>错误，需要导入新的<code>GPG key</code>：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022</span><br></pre></td></tr></table></figure><p>导入成功后，再次运行第 4 步的安装 MySQL 服务命令即可。</p>]]></content>
+    <content type="html"><![CDATA[<p>根据 MySQL 官方文档《<a href="https://dev.mysql.com/doc/refman/8.0/en/linux-installation-yum-repo.html">使用 MySQL Yum 存储库在 Linux 上安装 MySQL</a>》在 CentOS 8 安装 MySQL 步骤如下：</p><ol><li><p>下载 MySQL 发行包</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://repo.mysql.com/mysql80-community-release-el8-1.noarch.rpm</span><br></pre></td></tr></table></figure><p><strong>注：可以去 <a href="https://repo.mysql.com/">MySQL仓库</a> 查看你需要安装的版本，示例中的 el8 指的是 Enterprise Linux 8，这是 Red Hat Enterprise Linux (RHEL) 8 和其衍生版本（如 CentOS 8）的代号。</strong></p></li><li><p>安装下载的 MySQL 发行包</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install mysql80-community-release-el8-1.noarch.rpm</span><br></pre></td></tr></table></figure></li><li><p>禁用默认 MySQL 模块</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum module <span class="built_in">disable</span> mysql</span><br></pre></td></tr></table></figure><p><strong>注：仅限 EL8 系统，基于 EL8 的系统（例如 RHEL8 和 Oracle Linux 8）包含默认启用的 MySQL 模块，除非禁用此模块，否则它会屏蔽 MySQL 存储库提供的包。</strong></p></li><li><p>安装 MySQL 服务</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install mysql-community-server</span><br></pre></td></tr></table></figure></li><li><p>启动 MySQL 服务</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mysqld</span><br></pre></td></tr></table></figure></li><li><p>查看 MySQL 服务状态</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status mysqld</span><br></pre></td></tr></table></figure></li></ol><p>在第 4 步安装 MySQL 服务时出现了<code>Error: GPG check FAILED</code>错误，需要导入新的<code>GPG key</code>：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022</span><br></pre></td></tr></table></figure><p>导入成功后，再次运行第 4 步的安装 MySQL 服务命令即可。</p><p><strong>注：GPG key 文件需要去 <a href="https://repo.mysql.com/">MySQL仓库</a> 查看最新的。</strong></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;根据 MySQL 官方文档《&lt;a href=&quot;https://dev.mysql.com/doc/refman/8.0/en/linux-installation-yum-repo.html&quot;&gt;使用 MySQL Yum 存储库在 Linux 上安装 MySQL&lt;/a&gt;》安装</summary>
+    <summary type="html">&lt;p&gt;根据 MySQL 官方文档《&lt;a href=&quot;https://dev.mysql.com/doc/refman/8.0/en/linux-installation-yum-repo.html&quot;&gt;使用 MySQL Yum 存储库在 Linux 上安装 MySQL&lt;/a&gt;》在 </summary>
       
     
     
@@ -526,35 +553,6 @@
     <category term="工具" scheme="https://www.xxyopen.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
     <category term="网站托管" scheme="https://www.xxyopen.com/tags/%E7%BD%91%E7%AB%99%E6%89%98%E7%AE%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>yum 安装软件提示 [Errno 14] curl#6 - &quot;Could not resolve host: mirrors.cloud.aliyuncs.com; 未知的错误&quot;</title>
-    <link href="https://www.xxyopen.com/2022/07/18/linux/yum_error.html"/>
-    <id>https://www.xxyopen.com/2022/07/18/linux/yum_error.html</id>
-    <published>2022-07-18T03:38:28.000Z</published>
-    <updated>2022-07-28T13:35:55.429Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li>更改 DNS</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> -e <span class="string">&quot;# Generated by NetworkManager\nnameserver 114.114.114.114\nnameserver 119.29.29.29&quot;</span> &gt; /etc/resolv.conf</span><br></pre></td></tr></table></figure><ol start="2"><li>重启网络服务</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart network</span><br></pre></td></tr></table></figure><ol start="3"><li>更新 yum 缓存</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum clean all</span><br></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum makecache</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;更改 DNS&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td c</summary>
-      
-    
-    
-    
-    <category term="Linux" scheme="https://www.xxyopen.com/categories/Linux/"/>
-    
-    
-    <category term="Linux" scheme="https://www.xxyopen.com/tags/Linux/"/>
-    
-    <category term="解决方案" scheme="https://www.xxyopen.com/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     
   </entry>
   
