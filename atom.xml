@@ -6,7 +6,7 @@
   <link href="https://www.xxyopen.com/atom.xml" rel="self"/>
   
   <link href="https://www.xxyopen.com/"/>
-  <updated>2024-02-22T15:28:06.898Z</updated>
+  <updated>2024-02-27T04:11:10.684Z</updated>
   <id>https://www.xxyopen.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CentOS 安装 Nginx 提示：&quot;No package nginx available.&quot;</title>
+    <link href="https://www.xxyopen.com/2024/02/27/linux/nginx_no_package.html"/>
+    <id>https://www.xxyopen.com/2024/02/27/linux/nginx_no_package.html</id>
+    <published>2024-02-27T04:12:06.000Z</published>
+    <updated>2024-02-27T04:11:10.684Z</updated>
+    
+    <content type="html"><![CDATA[<p>根据 Nginx 官方文档《<a href="https://nginx.org/en/linux_packages.html#instructions">Linux 软件包安装</a>》在 CentOS 7 上安装 Nginx 步骤如下：</p><ol><li><p>安装必备组件：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install yum-utils</span><br></pre></td></tr></table></figure></li><li><p>设置 yum 存储库</p><figure class="highlight re"><figcaption><span>/etc/yum.repos.d/nginx.repo</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">[<span class="identifier">nginx</span>-<span class="identifier">stable</span>]</span></span><br><span class="line">name=nginx stable repo</span><br><span class="line">baseurl=http:<span class="comment">//nginx.org/packages/centos/$releasever/$basearch/</span></span><br><span class="line">gpgcheck=<span class="number">1</span></span><br><span class="line">enabled=<span class="number">1</span></span><br><span class="line">gpgkey=https:<span class="comment">//nginx.org/keys/nginx_signing.key</span></span><br><span class="line">module_hotfixes=<span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="literal">[<span class="identifier">nginx</span>-<span class="identifier">mainline</span>]</span></span><br><span class="line">name=nginx mainline repo</span><br><span class="line">baseurl=http:<span class="comment">//nginx.org/packages/mainline/centos/$releasever/$basearch/</span></span><br><span class="line">gpgcheck=<span class="number">1</span></span><br><span class="line">enabled=<span class="number">0</span></span><br><span class="line">gpgkey=https:<span class="comment">//nginx.org/keys/nginx_signing.key</span></span><br><span class="line">module_hotfixes=<span class="literal">true</span></span><br></pre></td></tr></table></figure></li><li><p>安装 nginx</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install nginx</span><br></pre></td></tr></table></figure></li></ol><p>在第 3 步安装 nginx 时出现了<code>No package nginx available.</code>，通过 <code>yum list |grep nginx</code> 命令查看 nginx 相关的软件包，发现并没有 nginx.x86_64 软件包：</p><p><img src="/images/nginx_no_package.png"></p><p>这个时候，如果是在开发或测试环境可以直接选择安装 nginx-debug.x86_64 软件包，如果是在生产环境则需要通过 RPM 包或源码安装。</p><blockquote><p>nginx-debug.x86_64 是一个针对 x86_64 架构系统的 Nginx 调试版本。与标准的 Nginx 相比，调试版本包含了更多的调试信息和工具，旨在帮助开发者和系统管理员诊断问题、跟踪错误以及更好地理解 Nginx 的内部运行机制。</p><p>当您在开发和测试环境中遇到 Nginx 的问题时，使用 nginx-debug.x86_64 可以提供更多的上下文和详细信息，从而更容易找到问题的根源。这个调试版本通常包含了额外的日志记录、断言检查和其他调试功能，这些功能在标准的 Nginx 版本中可能不可用或受到限制。</p><p>需要注意的是，由于调试版本通常包含了更多的功能和信息，它的性能可能会略低于标准版本。因此，在生产环境中，通常会推荐使用标准的 Nginx 版本，而在开发和测试环境中，nginx-debug.x86_64 可能会非常有用。</p></blockquote><h3 id="RPM-包安装"><a href="#RPM-包安装" class="headerlink" title="RPM 包安装"></a>RPM 包安装</h3><ol><li>下载 Nginx 的 RPM 包</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://nginx.org/packages/centos/7/x86_64/RPMS/nginx-1.22.1-1.el7.ngx.x86_64.rpm</span><br></pre></td></tr></table></figure><blockquote><p>可以通过 <a href="https://nginx.org/packages/centos">https://nginx.org/packages/centos</a> 链接查看你需要安装 Nginx 版本的 RPM 包下载地址，如果是 CentOS7 x86 平台，则访问链接为：<a href="https://nginx.org/packages/centos/7/x86_64/RPMS">https://nginx.org/packages/centos/7/x86_64/RPMS</a></p></blockquote><ol start="2"><li>安装 Nginx 的 RPM 包</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo rpm -ivh nginx-1.22.1-1.el7.ngx.x86_64</span><br></pre></td></tr></table></figure><p>其中 -i 表示安装，-v 表示详细输出，-h 显示安装进度。</p><p><strong>注：如果安装失败，提示 <code>libpcre2-8.so.0()(64bit) is needed by nginx-1:1.22.1-1.el7.ngx.x86_64</code> 之类的，那么需要安装&#x2F;升级依赖库或升级操作系统或重新选择一个较旧的 Nginx 版本。</strong></p><ol start="3"><li>启动 Nginx 服务</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start nginx</span><br></pre></td></tr></table></figure><ol start="4"><li>验证安装</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl status nginx</span><br></pre></td></tr></table></figure><ol start="5"><li>设置自动启动</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl <span class="built_in">enable</span> nginx</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;根据 Nginx 官方文档《&lt;a href=&quot;https://nginx.org/en/linux_packages.html#instructions&quot;&gt;Linux 软件包安装&lt;/a&gt;》在 CentOS 7 上安装 Nginx 步骤如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;</summary>
+      
+    
+    
+    
+    <category term="Linux" scheme="https://www.xxyopen.com/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://www.xxyopen.com/tags/Linux/"/>
+    
+    <category term="CentOS" scheme="https://www.xxyopen.com/tags/CentOS/"/>
+    
+    <category term="Nginx" scheme="https://www.xxyopen.com/tags/Nginx/"/>
+    
+  </entry>
   
   <entry>
     <title>CentOS 环境下卸载 MySQL 重装新版本</title>
@@ -531,28 +561,6 @@
     <category term="性能优化" scheme="https://www.xxyopen.com/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     
     <category term="WebP" scheme="https://www.xxyopen.com/tags/WebP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>几个免费的静态网站托管平台对比</title>
-    <link href="https://www.xxyopen.com/2022/07/19/tools/pages_host.html"/>
-    <id>https://www.xxyopen.com/2022/07/19/tools/pages_host.html</id>
-    <published>2022-07-19T13:22:17.000Z</published>
-    <updated>2022-08-16T00:28:43.525Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>如果我们想搭建自己的博客网站又不愿意支付昂贵的服务器费用，那么使用静态博客+静态网站托管平台的方式会是一种非常好的选择。<span id="more"></span>本文将分享几个免费的静态网站托管平台及其在国内的网站速度对比以供选择。</p></blockquote><h2 id="Gitee-Pages"><a href="#Gitee-Pages" class="headerlink" title="Gitee Pages"></a>Gitee Pages</h2><p>简介：国内最大的代码托管平台。</p><p>优点：稳定性强，由于服务器位于上海，国内访问速度非常快。</p><p>缺点：仓库的最大容量和单个文件大小有限制，对仓库内容非常敏感，需要实名认证，自定义域名和自动部署都需要收费。</p><p>个人观点：Gitee Pages 非常适合不需要自定义域名并且网站内容少、内容几乎不变的场景，例如<a href="https://xiongxyang.gitee.io/">小说精品屋官网</a>。由于 Gitee Pages 对仓库内容非常敏感，每次部署前都会对仓库内容进行检查，部署博客的话会经常遇到部署失败的情况，而且内容校验规则也会发生变化，如果网站内容比较多，有时候排查整改起来会比较麻烦，所以建博客我现在几乎不考虑使用 Gitee Pages 了。</p><p>👉 <a href="https://gitee.com/">前往官网</a></p><h2 id="GitHub-Pages"><a href="#GitHub-Pages" class="headerlink" title="GitHub Pages"></a>GitHub Pages</h2><p>简介：全球最大的代码托管平台。</p><p>优点：稳定性强，部署简单，使用方便，支持自定义域名。</p><p>缺点：国内访问速度一般，拒绝百度爬虫访问。</p><p>个人观点：如果不想太折腾并且对百度收录没有要求的话可以选择 GitHub Pages。</p><p>👉 <a href="https://github.com/">前往官网</a></p><h2 id="Cloudflare-Pages"><a href="#Cloudflare-Pages" class="headerlink" title="Cloudflare Pages"></a>Cloudflare Pages</h2><p>简介：Cloudflare 推出的全新网页托管服务。</p><p>优点：不限站点数、请求数和带宽，全球都拥有 CDN 节点，支持自定义域名和自动部署。</p><p>缺点：国内访问速度和稳定性一般，每月构建次数、文件数量和大小都有限制。</p><p>个人观点：放弃 Gitee Pages 和 GitHub Pages 后的一个选择，稳定性不好，经常超时，不过有时候挺快的。</p><p>👉 <a href="https://pages.cloudflare.com/">前往官网</a></p><h2 id="Vercel"><a href="#Vercel" class="headerlink" title="Vercel"></a>Vercel</h2><p>简介：一个开箱即用的网站托管服务，全球都拥有 CDN 节点，支持自定义域名和自动部署，前身叫 ZEIT。</p><p>优点：国内访问速度比 Github Pages 和 Cloudflare Pages 要快，支持自定义域名和自动部署。</p><p>缺点：构建次数和构建时长有限制，每月带宽限制 100G。</p><p>个人观点：博客托管的最终选择，国内访问速度是除了 Gitee Pages 外目前使用过最快的，<a href="https://www.xxyopen.com/">个人博客</a>现已托管到 Vercel 上。</p><p>👉 <a href="https://vercel.com/">前往官网</a></p><h2 id="不同平台网站速度对比"><a href="#不同平台网站速度对比" class="headerlink" title="不同平台网站速度对比"></a>不同平台网站速度对比</h2><p>以部署在不同平台上的<a href="https://www.xxyopen.com/">个人博客</a>网站作为测试网站，右边为 Vercel 部署的网站：</p><ol><li>Vercel 和 Cloudflare Pages 网站速度对比：</li></ol><p><img src="https://s1.ax1x.com/2022/07/19/j7zq0g.png"></p><ol start="2"><li>Vercel 和 Github Pages 对比：</li></ol><p><img src="https://s1.ax1x.com/2022/07/19/j7zbnS.png"></p><ol start="3"><li>Vercel 和 Gitee Pages 对比：</li></ol><p><img src="https://s1.ax1x.com/2022/07/19/j7z7X8.png"></p><p>结论：Gitee Pages 限制太多。国外首选 Vercel，否则 GitHub Pages 和 Cloudflare Pages 相差不大，但 GitHub Pages 的稳定性更好，如果想要自己的博客网站被百度搜索引擎收录，那么选择 Cloudflare Pages，否则选择 GitHub Pages。</p><h2 id="其它静态网站托管平台"><a href="#其它静态网站托管平台" class="headerlink" title="其它静态网站托管平台"></a>其它静态网站托管平台</h2><p>其它常见的托管平台还有：</p><ul><li><a href="https://coding.net/">Coding Pages</a>：被腾讯收购，收费，送代金劵可以试用几个月</li><li><a href="https://netlify.com/">Netlify</a>： 国外、免费，国内访问速度还可以，但和 Vercel 一样，带宽限制为每月 100G，可作为 Vercel 的替代方案</li><li><a href="https://cloud.tencent.com/document/product/876/40270">CloudBase 静态网站托管</a>：腾讯云推出的静态网站托管服务，收费</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;如果我们想搭建自己的博客网站又不愿意支付昂贵的服务器费用，那么使用静态博客+静态网站托管平台的方式会是一种非常好的选择。</summary>
-    
-    
-    
-    
-    <category term="工具" scheme="https://www.xxyopen.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="网站托管" scheme="https://www.xxyopen.com/tags/%E7%BD%91%E7%AB%99%E6%89%98%E7%AE%A1/"/>
     
   </entry>
   
