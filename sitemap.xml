@@ -11,6 +11,60 @@
   </url>
   
   <url>
+    <loc>https://www.xxyopen.com/2022/07/20/web/webp.html</loc>
+    
+    <lastmod>2024-05-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.xxyopen.com/2022/07/18/os/novel.html</loc>
+    
+    <lastmod>2024-05-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.xxyopen.com/2023/12/06/os/jarencrypted.html</loc>
+    
+    <lastmod>2024-05-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.xxyopen.com/2022/08/27/os/githubspeed.html</loc>
+    
+    <lastmod>2024-05-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.xxyopen.com/2022/07/30/java/version.html</loc>
+    
+    <lastmod>2024-05-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.xxyopen.com/2023/04/04/docker/docker_compose/health_check.html</loc>
+    
+    <lastmod>2024-05-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.xxyopen.com/2024/02/27/linux/nginx_no_package.html</loc>
     
     <lastmod>2024-02-27</lastmod>
@@ -32,15 +86,6 @@
     <loc>https://www.xxyopen.com/2022/08/21/mysql/gpg_check_failed.html</loc>
     
     <lastmod>2024-02-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.xxyopen.com/2023/12/06/os/jarencrypted.html</loc>
-    
-    <lastmod>2023-12-06</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -83,15 +128,6 @@
   </url>
   
   <url>
-    <loc>https://www.xxyopen.com/2023/04/04/docker/docker_compose/health_check.html</loc>
-    
-    <lastmod>2023-04-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.xxyopen.com/2023/03/27/doc/novel/install/docker.html</loc>
     
     <lastmod>2023-04-02</lastmod>
@@ -101,27 +137,9 @@
   </url>
   
   <url>
-    <loc>https://www.xxyopen.com/2022/07/18/os/novel.html</loc>
-    
-    <lastmod>2023-01-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.xxyopen.com/2022/07/22/tools/image_host.html</loc>
     
     <lastmod>2022-09-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.xxyopen.com/2022/08/27/os/githubspeed.html</loc>
-    
-    <lastmod>2022-08-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -227,15 +245,6 @@
   </url>
   
   <url>
-    <loc>https://www.xxyopen.com/2022/07/30/java/version.html</loc>
-    
-    <lastmod>2022-07-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.xxyopen.com/2022/07/28/linux/test_port.html</loc>
     
     <lastmod>2022-07-29</lastmod>
@@ -302,15 +311,6 @@
     <loc>https://www.xxyopen.com/2022/07/18/es/esclient.html</loc>
     
     <lastmod>2022-07-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.xxyopen.com/2022/07/20/web/webp.html</loc>
-    
-    <lastmod>2022-07-22</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
