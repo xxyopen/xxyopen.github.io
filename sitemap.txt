@@ -1,3 +1,4 @@
+https://www.xxyopen.com/2024/09/14/github/access.html
 https://www.xxyopen.com/2022/07/30/java/version.html
 https://www.xxyopen.com/2023/12/06/os/jarencrypted.html
 https://www.xxyopen.com/2023/04/04/docker/docker_compose/health_check.html
@@ -80,6 +81,7 @@ https://www.xxyopen.com/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/
 https://www.xxyopen.com/tags/%E5%AE%89%E5%85%A8/
 https://www.xxyopen.com/tags/CentOS/
 https://www.xxyopen.com/tags/Nginx/
+https://www.xxyopen.com/tags/GitHub/
 https://www.xxyopen.com/categories/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/
 https://www.xxyopen.com/categories/Elasticsearch/
 https://www.xxyopen.com/categories/Java/
@@ -94,3 +96,4 @@ https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/novel-plus/
 https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/Shell/
 https://www.xxyopen.com/categories/%E6%95%99%E7%A8%8B/novel/
 https://www.xxyopen.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Spring-Boot-3/
+https://www.xxyopen.com/categories/GitHub/
