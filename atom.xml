@@ -6,7 +6,7 @@
   <link href="https://www.xxyopen.com/atom.xml" rel="self"/>
   
   <link href="https://www.xxyopen.com/"/>
-  <updated>2024-09-14T04:14:56.682Z</updated>
+  <updated>2025-03-22T01:34:36.505Z</updated>
   <id>https://www.xxyopen.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>novel-plus 5.0.0 发布：架构全面升级，新增 AI 写作功能</title>
+    <link href="https://www.xxyopen.com/2025/03/17/news/novel-plus-v5.0.0.html"/>
+    <id>https://www.xxyopen.com/2025/03/17/news/novel-plus-v5.0.0.html</id>
+    <published>2025-03-17T05:01:11.000Z</published>
+    <updated>2025-03-22T01:34:36.505Z</updated>
+    
+    <content type="html"><![CDATA[<p>novel-plus 5.0.0 已发布，主要改变如下：</p><p><strong>架构升级</strong></p><ul><li><strong>Java 版本</strong>：从旧版本升级到 Java 21。</li><li><strong>Spring Boot 版本</strong>：从旧版本升级到 3.4.0。</li><li><strong>ShardingSphere-JDBC</strong>：从旧版本升级到 5.5.1。</li><li><strong>其他依赖</strong>：同步更新了多个相关依赖库以确保兼容性和安全性。</li></ul><p><strong>前台功能增强</strong></p><ul><li><strong>作家专区</strong>：新增 AI 写作功能，提升创作效率。</li></ul><p><strong>爬虫功能改进</strong></p><ul><li><strong>代理 IP 设置</strong>：增加了支持用户名密码的代理 IP 配置。</li><li><strong>编码支持</strong>：新增对非 UTF-8 编码网站的采集支持。</li><li><strong>分类与流程优化</strong>：改进了分类规则和采集流程，增强了对更多网站的支持。</li><li><strong>修复失效规则</strong>：修正了若干已失效的爬虫规则。</li></ul><p><strong>其他</strong></p><ul><li><strong>Bug 修复与优化</strong>：解决了多个已知问题，并进行了性能优化。</li></ul><h3 id="项目介绍"><a href="#项目介绍" class="headerlink" title="项目介绍"></a>项目介绍</h3><p><a href="https://github.com/201206030/novel-plus">novel-plus</a> 是一个多端（PC、WAP）阅读，功能完善的原创文学 CMS<br>系统。由前台门户系统、作家后台管理系统、平台后台管理系统和爬虫管理系统等多个子系统构成，包括小说推荐、作品检索、小说排行、小说阅读、小说评论、会员中心、作家专区等功能，支持自定义多模版、可拓展的多种小说内容存储方式（内置数据库分表存储和<br>TXT 文本存储）、阅读主题切换、多爬虫源自动采集和更新数据、AI 写作、会员充值、订阅模式、新闻发布和实时统计报表。</p><p><img src="https://www.xxyopen.com/images/green_novel.png"></p><p><img src="https://www.xxyopen.com/images/ai_editor.png" alt="AI 编辑器"></p><h3 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">novel-plus -- 父工程</span><br><span class="line">├── novel-common -- 通用模块</span><br><span class="line">├── novel-front -- 前台门户&amp;作家后台</span><br><span class="line">├── novel-crawl -- 爬虫</span><br><span class="line">├── novel-admin -- 管理后台</span><br><span class="line">└── templates -- 前端模版</span><br></pre></td></tr></table></figure><h3 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h3><table><thead><tr><th>技术</th><th>说明</th></tr></thead><tbody><tr><td>Spring Boot</td><td>Spring 应用快速开发脚手架</td></tr><tr><td>Spring AI</td><td>Spring 官方 AI 框架</td></tr><tr><td>MyBatis</td><td>持久层 ORM 框架</td></tr><tr><td>MyBatis Dynamic SQL</td><td>Mybatis 动态 sql</td></tr><tr><td>PageHelper</td><td>MyBatis 分页插件</td></tr><tr><td>MyBatis Generator</td><td>持久层代码生成插件</td></tr><tr><td>Sharding-JDBC</td><td>代码层分库分表中间件</td></tr><tr><td>JJWT</td><td>JWT 登录支持</td></tr><tr><td>Spring Security</td><td>安全框架</td></tr><tr><td>Apache Shiro</td><td>安全框架</td></tr><tr><td>Redis</td><td>缓存方案</td></tr><tr><td>Aliyun OSS</td><td>阿里云对象存储服务（图片存储备选方案）</td></tr><tr><td>Lombok</td><td>简化对象封装工具</td></tr><tr><td>Docker</td><td>应用容器引擎</td></tr><tr><td>MySQL</td><td>数据库服务</td></tr><tr><td>Thymeleaf</td><td>模板引擎</td></tr><tr><td>Layui</td><td>前端 UI 框架</td></tr></tbody></table><h3 id="项目演示"><a href="#项目演示" class="headerlink" title="项目演示"></a>项目演示</h3><p><a href="https://www.bilibili.com/video/BV1Zo4y187Mi">https://www.bilibili.com/video/BV1Zo4y187Mi</a></p><h3 id="AI写作说明"><a href="#AI写作说明" class="headerlink" title="AI写作说明"></a>AI写作说明</h3><p>novel-plus 5.x 版本已集成 Spring 官方最新发布的 Spring AI 框架，在小说章节发布页面的文本编辑器中推出了多项智能编辑功能，包括 AI 扩写、缩写、续写及文本润色等。这些功能的设计灵感来源于百家号文章编辑器中的 AI 助手。</p><p>目前，AI 编辑功能仍处于实验阶段，仅实现了基础的核心功能。我们非常重视用户的实际使用体验和反馈，未来将根据用户需求和使用情况，持续优化和调整该功能。如果用户反馈积极，我们计划进一步开发更高级的 AI 功能，例如自动生成有声小说、智能情节推荐等，以全面提升 novel-plus 的创作能力和用户体验。</p><p>我们将持续关注 AI 技术的发展，并致力于将其与小说创作场景深度融合，为用户带来更智能、更便捷的创作工具。</p><p>由于 DeepSeek 官方 API 目前不可用，novel-plus 项目默认使用的是第三方<a href="https://cloud.siliconflow.cn/i/DOgMRH9S">硅基流动</a>提供的 API，采用的 AI 模型为：<code>deepseek-ai/DeepSeek-R1-Distill-Llama-8B</code>（DeepSeek-R1 的蒸馏版本，免费使用）。只需注册一个硅基流动账号，创建一个 API 密钥，并将其添加到 novel-plus 项目 novel-front 模块的 yaml 配置文件中，即可体验 novel-plus 项目的 AI 写作功能。</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">ai:</span></span><br><span class="line">    <span class="attr">openai:</span></span><br><span class="line">      <span class="attr">api-key:</span> <span class="string">sk-rrrupturhdofbiqzjutduuiceecpvfqlnvmgcyiaipbdikoi</span></span><br><span class="line">      <span class="attr">base-url:</span> <span class="string">https://api.siliconflow.cn</span></span><br><span class="line">      <span class="attr">chat:</span></span><br><span class="line">        <span class="attr">options:</span></span><br><span class="line">          <span class="attr">model:</span> <span class="string">deepseek-ai/DeepSeek-R1-Distill-Llama-8B</span></span><br></pre></td></tr></table></figure><blockquote><p>安装教程在<a href="https://docs.xxyopen.com/course/novelplus/1.html">老版本教程</a>的基础上做如下修改：</p><ol><li><code>JDK</code>安装时请选择版本<code>21</code></li><li><code>MySQL</code>的连接配置请修改<code>shardingsphere-jdbc.yml</code>文件</li><li><code>Redis</code>的连接配置请修改<code>application.yml</code>文件</li></ol><p>注意：<a href="https://docs.xxyopen.com/course/novelplus/1.html">老版本教程</a>中提到的配置文件<code>application-common-prod.yml</code>和<code>application-prod.yml</code>统一更名为<code>application.yml</code></p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;novel-plus 5.0.0 已发布，主要改变如下：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;架构升级&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Java 版本&lt;/strong&gt;：从旧版本升级到 Java 21。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Spring </summary>
+      
+    
+    
+    
+    <category term="新闻" scheme="https://www.xxyopen.com/categories/%E6%96%B0%E9%97%BB/"/>
+    
+    <category term="novel-plus" scheme="https://www.xxyopen.com/categories/%E6%96%B0%E9%97%BB/novel-plus/"/>
+    
+    
+    <category term="novel-plus" scheme="https://www.xxyopen.com/tags/novel-plus/"/>
+    
+  </entry>
   
   <entry>
     <title>无需翻墙，一种访问 GitHub 的简单方法</title>
@@ -542,28 +572,6 @@
     <category term="java" scheme="https://www.xxyopen.com/tags/java/"/>
     
     <category term="xss" scheme="https://www.xxyopen.com/tags/xss/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>几个免费又好用的国内图床分享</title>
-    <link href="https://www.xxyopen.com/2022/07/22/tools/image_host.html"/>
-    <id>https://www.xxyopen.com/2022/07/22/tools/image_host.html</id>
-    <published>2022-07-21T23:18:08.000Z</published>
-    <updated>2022-09-03T01:08:11.643Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>图床一般是指储存图片的服务器，有国内和国外之分。国外的图床有空间距离等因素会导致访问速度很慢，影响图片的显示速度。国内分为单线空间、多线空间和 CDN 加速三种。<span id="more"></span></p></blockquote><div class="alert alert-warning"><div class="icon"><i class="fa fa-warning"></i></div><div class="text"><p>我们在选择图床的时候，应该慎重。由于服务器、带宽、人员、技术投资、市场宣传等的投入经常导致图床网站好景不长，不得不关闭图片外链或者商用甚至闭站，我们在做好选择后，最好也做一下图片的备份。（推荐 GitHub 备份）</p></div></div><p>在之前《<a href="/2022/07/19/tools/pages_host.html">几个免费的静态网站托管平台对比</a>》文章中，我介绍了可以使用 Vercel 或 Netlify 来零费用托管我们的静态网站，但是这两个相对比较好用的平台都有每月流量限制。为了节省流量，我们可以使用图床来托管我们网站中的图片，并<code>使用 GitHub 仓库进行备份</code>。</p><h3 id="路过图床"><a href="#路过图床" class="headerlink" title="路过图床"></a>路过图床</h3><p>免费公共图床，成立至今已有 11 年的历史了，它拥有无限空间，无限流量，原图保存, 全球 CDN 加速，已托管 1800 万+的图片。</p><p>优点：使用简单、免费、无限空间、无限流量，成立时间长，跑路概率相对较低。</p><p>缺点：图片加载速度一般。</p><p>官网：<a href="https://imgse.com/">https://imgse.com</a></p><p><strong>注：路过图床是我正在使用以及使用最多的图床。</strong></p><h3 id="七牛云对象存储"><a href="#七牛云对象存储" class="headerlink" title="七牛云对象存储"></a>七牛云对象存储</h3><p>国内领先的企业级云服务商提供的云存储服务。</p><p>优点：企业技术支持，有免费空间和每月免费流量，CDN 加速。</p><p>缺点：免费空间只有 10G，需要自己绑定已备案的域名，略麻烦。</p><p>官网：<a href="https://qiniu.com/">https://qiniu.com</a></p><p><strong>注：又拍云和七牛云体验差不多，但是需要在网站底部添加他们网站的 logo。</strong></p><h3 id="聚合图床"><a href="#聚合图床" class="headerlink" title="聚合图床"></a>聚合图床</h3><p>一个聚合了多个免费图床的图床。</p><p>优点：一键分发，多处备份。</p><p>缺点：免费版有 1 万张图片数量限制。</p><p>官网：<a href="https://superbed.cn/">https://superbed.cn</a></p><h3 id="ImgURL"><a href="#ImgURL" class="headerlink" title="ImgURL"></a>ImgURL</h3><p>一个开源的简单、纯粹图床程序，让个人图床多一个选择。</p><p>优点：开源，支持自建图床，支持拖拽、粘贴等多种上传方式。</p><p>缺点：个人项目，上线时间短。</p><p>官网：<a href="https://imgurl.org/">https://imgurl.org</a></p><p>开源地址：<a href="https://github.com/helloxz/imgurl">https://github.com/helloxz/imgurl</a></p><h3 id="其它图床"><a href="#其它图床" class="headerlink" title="其它图床"></a>其它图床</h3><p>如果有条件的话可以选择阿里云、腾讯云等知名云服务商的对象存储服务来做图床，大厂服务有保证，几乎不会出现图片外链失效的问题。</p>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;图床一般是指储存图片的服务器，有国内和国外之分。国外的图床有空间距离等因素会导致访问速度很慢，影响图片的显示速度。国内分为单线空间、多线空间和 CDN 加速三种。</summary>
-    
-    
-    
-    
-    <category term="工具" scheme="https://www.xxyopen.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="图床" scheme="https://www.xxyopen.com/tags/%E5%9B%BE%E5%BA%8A/"/>
     
   </entry>
   
