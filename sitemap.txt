@@ -1,3 +1,4 @@
+https://www.xxyopen.com/2022/07/18/doc/novel-plus/proxy.html
 https://www.xxyopen.com/2022/07/18/os/novel-plus.html
 https://www.xxyopen.com/2025/03/17/news/novel-plus-v5.0.0.html
 https://www.xxyopen.com/2022/07/18/os/novel.html
@@ -19,7 +20,6 @@ https://www.xxyopen.com/2023/03/27/doc/novel/install/docker.html
 https://www.xxyopen.com/2022/07/22/tools/image_host.html
 https://www.xxyopen.com/2022/08/21/mysql/reset_pass.html
 https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/oldupdate.html
-https://www.xxyopen.com/2022/07/18/doc/novel-plus/proxy.html
 https://www.xxyopen.com/2022/07/19/tools/pages_host.html
 https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/newupdate.html
 https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/docker.html
