@@ -9,14 +9,14 @@
     <atom:link href="https://www.xxyopen.com/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>专注于开源项目和开发技术的研究与分享</description>
-    <pubDate>Mon, 23 Jun 2025 13:16:34 GMT</pubDate>
+    <pubDate>Mon, 30 Jun 2025 09:47:19 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
       <title>为什么 novel-plus 必须从 JDK8 升级到 JDK21？</title>
-      <link>https://www.xxyopen.com/2025/06/30/java/jdk8-jdk21.html</link>
-      <guid>https://www.xxyopen.com/2025/06/30/java/jdk8-jdk21.html</guid>
-      <pubDate>Mon, 30 Jun 2025 06:16:06 GMT</pubDate>
+      <link>https://www.xxyopen.com/2025/06/23/java/jdk8-jdk21.html</link>
+      <guid>https://www.xxyopen.com/2025/06/23/java/jdk8-jdk21.html</guid>
+      <pubDate>Mon, 23 Jun 2025 06:16:06 GMT</pubDate>
       
         
         
@@ -37,7 +37,7 @@
       <category domain="https://www.xxyopen.com/tags/novel-plus/">novel-plus</category>
       
       
-      <comments>https://www.xxyopen.com/2025/06/30/java/jdk8-jdk21.html#disqus_thread</comments>
+      <comments>https://www.xxyopen.com/2025/06/23/java/jdk8-jdk21.html#disqus_thread</comments>
       
     </item>
     
