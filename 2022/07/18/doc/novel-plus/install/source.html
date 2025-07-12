@@ -18,16 +18,16 @@
   
     <meta name="keywords" content="novel-plus" />
   
-  <meta name="description" content="JDK 安装建议安装 JDK 8 MySQL 安装 安装 MySQL 服务 执行 doc&#x2F;sql&#x2F;novel_plus.sql 脚本文件  Redis 安装https:&#x2F;&#x2F;redis.io&#x2F;docs&#x2F;getting-started&#x2F;installation Maven 安装安装 Apache Maven 源码打包novel-plus 根目录下执行打包命令mvn clean pa">
+  <meta name="description" content="JDK 安装安装 JDK 21 MySQL 安装 安装 MySQL 服务 执行 doc&#x2F;sql&#x2F;novel_plus.sql 脚本文件  Redis 安装https:&#x2F;&#x2F;redis.io&#x2F;docs&#x2F;getting-started&#x2F;installation Maven 安装安装 Apache Maven 源码打包novel-plus 根目录下执行打包命令mvn clean pac">
 <meta property="og:type" content="article">
 <meta property="og:title" content="novel-plus（小说精品屋-plus） 源码安装教程">
 <meta property="og:url" content="https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/source.html">
 <meta property="og:site_name" content="xxyopen">
-<meta property="og:description" content="JDK 安装建议安装 JDK 8 MySQL 安装 安装 MySQL 服务 执行 doc&#x2F;sql&#x2F;novel_plus.sql 脚本文件  Redis 安装https:&#x2F;&#x2F;redis.io&#x2F;docs&#x2F;getting-started&#x2F;installation Maven 安装安装 Apache Maven 源码打包novel-plus 根目录下执行打包命令mvn clean pa">
+<meta property="og:description" content="JDK 安装安装 JDK 21 MySQL 安装 安装 MySQL 服务 执行 doc&#x2F;sql&#x2F;novel_plus.sql 脚本文件  Redis 安装https:&#x2F;&#x2F;redis.io&#x2F;docs&#x2F;getting-started&#x2F;installation Maven 安装安装 Apache Maven 源码打包novel-plus 根目录下执行打包命令mvn clean pac">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s1.ax1x.com/2022/07/19/jozrfP.jpg">
 <meta property="article:published_time" content="2022-07-18T00:08:11.000Z">
-<meta property="article:modified_time" content="2023-10-22T11:04:05.572Z">
+<meta property="article:modified_time" content="2025-07-12T11:17:44.056Z">
 <meta property="article:author" content="xxy">
 <meta property="article:tag" content="novel-plus">
 <meta name="twitter:card" content="summary">
@@ -220,7 +220,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        ~2.03K
+                        ~1.96K
                     
                     字
                 </li>
@@ -235,32 +235,33 @@
             </div>
             
             <hr />
-            <div itemprop="articleBody"><h3 id="JDK-安装"><a href="#JDK-安装" class="headerlink" title="JDK 安装"></a>JDK 安装</h3><p>建议<a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/technotes/guides/install/linux_jdk.html">安装 JDK 8</a></p>
+            <div itemprop="articleBody"><h3 id="JDK-安装"><a href="#JDK-安装" class="headerlink" title="JDK 安装"></a>JDK 安装</h3><p><a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/21/install/installation-jdk-linux-platforms.html">安装 JDK 21</a></p>
 <h3 id="MySQL-安装"><a href="#MySQL-安装" class="headerlink" title="MySQL 安装"></a>MySQL 安装</h3><ol>
 <li><a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/8.0/en/linux-installation.html">安装 MySQL 服务</a></li>
 <li>执行 doc&#x2F;sql&#x2F;novel_plus.sql 脚本文件</li>
 </ol>
 <h3 id="Redis-安装"><a href="#Redis-安装" class="headerlink" title="Redis 安装"></a>Redis 安装</h3><p><a target="_blank" rel="noopener" href="https://redis.io/docs/getting-started/installation">https://redis.io/docs/getting-started/installation</a></p>
 <h3 id="Maven-安装"><a href="#Maven-安装" class="headerlink" title="Maven 安装"></a>Maven 安装</h3><p><a target="_blank" rel="noopener" href="https://maven.apache.org/install.html">安装 Apache Maven</a></p>
-<h3 id="源码打包"><a href="#源码打包" class="headerlink" title="源码打包"></a>源码打包</h3><p>novel-plus 根目录下执行打包命令<code>mvn clean package -Dmaven.test.skip</code></p>
+<h3 id="源码打包"><a href="#源码打包" class="headerlink" title="源码打包"></a>源码打包</h3><p>novel-plus 根目录下执行打包命令<code>mvn clean package -Dmaven.test.skip=true</code></p>
 <h3 id="爬虫安装"><a href="#爬虫安装" class="headerlink" title="爬虫安装"></a>爬虫安装</h3><ol>
 <li>上传 novel-crawl&#x2F;target&#x2F;build&#x2F;novel-crawl.zip 压缩包到 Linux 服务器的 novel-crawl 目录</li>
 <li>使用<code>unzip novel-crawl.zip</code>命令解压 novel-crawl.zip</li>
-<li>修改 <code>config/application-common-prod.yml</code> 文件中的 MySQL 配置</li>
-<li>修改 <code>config/application-common-prod.yml</code> 文件中的 Redis 配置（4.0.0 版本前默认不需要修改）</li>
-<li>修改 <code>config/application-common-prod.yml</code> 文件中的管理员账号密码</li>
+<li>修改 <code>config/shardingsphere-jdbc.yml</code> 文件中的 MySQL 配置</li>
+<li>修改 <code>config/application.yml</code> 文件中的 Redis 配置</li>
+<li>修改 <code>config/application.yml</code> 文件中的管理员账号密码</li>
 <li>根据需要<a href='/2022/07/18/doc/novel-plus/proxy.html' target="_blank">设置爬虫的代理IP</a></li>
 <li>novel-crawl 目录下使用<code>bin/novel-crawl.sh start</code>命令启动爬虫程序</li>
 <li>打开浏览器，默认<code>8083</code>端口访问</li>
 <li>选择已有或新增爬虫源（支持自定义爬虫规则），点击<code>开启</code>按钮，开始采集小说数据</li>
+<li>novel-crawl 目录下使用<code>bin/novel-crawl.sh stop</code>命令停止爬虫程序</li>
+<li>novel-crawl 目录下使用<code>bin/novel-crawl.sh restart</code>命令重启爬虫程序</li>
 <li>novel-crawl 目录下使用<code>bin/novel-crawl.sh status</code>命令查看爬虫程序的运行状态</li>
 </ol>
 <h3 id="前台安装"><a href="#前台安装" class="headerlink" title="前台安装"></a>前台安装</h3><ol>
 <li>上传 novel-front&#x2F;target&#x2F;build&#x2F;novel-front.zip 压缩包到 Linux 服务器的 novel-front 目录</li>
 <li>使用<code>unzip novel-front.zip</code>命令解压 novel-front.zip</li>
-<li>修改 <code>config/application-common-prod.yml</code> 文件中的 MySQL 配置</li>
-<li>修改 <code>config/application-common-prod.yml</code> 文件中的 Redis 配置（4.0.0 版本前默认不需要修改）</li>
-<li>修改 <code>config/application-website.yml</code> 配置文件中的网站信息（4.0.0 版本后不需要修改）</li>
+<li>修改 <code>config/shardingsphere-jdbc.yml</code> 文件中的 MySQL 配置</li>
+<li>修改 <code>config/application.yml</code> 文件中的 Redis 配置</li>
 <li>novel-front 目录下使用<code>bin/novel-front.sh start</code>命令启动前台程序</li>
 <li>打开浏览器，默认<code>8085</code>端口访问</li>
 <li>novel-front 目录下使用<code>bin/novel-front.sh stop</code>命令停止前台程序</li>
@@ -270,15 +271,15 @@
 <h3 id="后台安装"><a href="#后台安装" class="headerlink" title="后台安装"></a>后台安装</h3><ol>
 <li>上传 novel-admin&#x2F;target&#x2F;build&#x2F;novel-admin.zip 压缩包到 Linux 服务器的 novel-admin 目录</li>
 <li>使用<code>unzip novel-admin.zip</code>命令解压 novel-admin.zip</li>
-<li>修改 <code>config/application-prod.yml</code> 文件中的 MySQL 配置</li>
-<li>修改 <code>config/application-prod.yml</code> 文件中的 Redis 配置（4.0.0 版本前默认不需要修改）</li>
+<li>修改 <code>config/shardingsphere-jdbc.yml</code> 文件中的 MySQL 配置</li>
+<li>修改 <code>config/application.yml</code> 文件中的 Redis 配置</li>
 <li>novel-admin 目录下使用<code>bin/novel-admin.sh start</code>命令启动后台程序</li>
 <li>打开浏览器，默认<code>8088</code>端口访问</li>
 <li>novel-admin 目录下使用<code>bin/novel-admin.sh stop</code>命令停止后台程序</li>
 <li>novel-admin 目录下使用<code>bin/novel-admin.sh restart</code>命令重启后台程序</li>
 <li>novel-admin 目录下使用<code>bin/novel-admin.sh status</code>命令查看后台程序的运行状态</li>
 </ol>
-<div class="alert alert-info"><div class="icon"><i class="fa fa-info"></i></div><div class="text"><p>部分环境（如新版 macOS 系统）获取不到主机 IP，需要手动修改 hosts 文件，增加 IP-主机名（通过 hostname 命令查看主机名）的映射。</p>
+<div class="alert alert-info"><div class="icon"><i class="fa fa-info"></i></div><div class="text"><p>部分环境获取不到主机 IP，需要手动修改 hosts 文件，增加 IP-主机名（通过 hostname 命令查看主机名）的映射。</p>
 </div></div>
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@iZwz9e2l6djkn7vw4xvic9Z ~]<span class="comment"># hostname</span></span><br><span class="line">iZwz9e2l6djkn7vw4xvic9Z</span><br></pre></td></tr></table></figure>
@@ -355,12 +356,12 @@
             const twitterBase   = "https://twitter.com/intent/tweet?";
             const hostUrl       = "https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/source.html";
             const title         = "「novel-plus（小说精品屋-plus） 源码安装教程」";
-            const excerpt       = `JDK 安装建议安装 JDK 8
+            const excerpt       = `JDK 安装安装 JDK 21
 MySQL 安装
 安装 MySQL 服务
 执行 doc&#x2F;sql&#x2F;novel_plus.sql 脚本文件
 
-Redis 安装https://redis.io/docs/getting...`;
+Redis 安装https://redis.io/docs/getting-...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -382,7 +383,7 @@ Redis 安装https://redis.io/docs/getting...`;
                     <a class="tag-none-link" href="/tags/novel-plus/" rel="tag">novel-plus</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2023-10-22T11:04:05.572Z" itemprop="dateModified">最后编辑：2023-10-22</time>
+                    <time datetime="2025-07-12T11:17:44.056Z" itemprop="dateModified">最后编辑：2025-07-12</time>
                 </div>
             </div>
         </footer>
