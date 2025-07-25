@@ -18,16 +18,16 @@
   
     <meta name="keywords" content="novel-plus" />
   
-  <meta name="description" content="大家在购买代理IP之前一定要先测试能不能用，快代理目前访问境外网站的话需要先提交审核。   爬虫程序 3.6.2 版本已经开始支持通过设置 HTTP 代理来助力小说数据采集了。 代理默认关闭，如果需要开启则修改 novel-crawl&#x2F;config&#x2F;application.yml 文件中的 HTTP 代理配置。 12345678910111213# HTTP 代理配置http:  proxy:">
+  <meta name="description" content="在使用爬虫采集数据时，最初的体验可能非常顺畅，但随着请求频率的提高，问题也随之而来。很多网站会对频繁请求的同一 IP 进行限制，如触发验证码、封禁访问、限速等，导致爬虫被识别甚至彻底阻断。 此外，一些网站还会限制特定国家或地区的访问 IP，使得爬虫在部分地域环境下失效。 novel-plus 是一个开源免费的小说 CMS 系统，它内置了多个爬虫源，可自动采集互联网上的小说内容。为了提高稳定性，no">
 <meta property="og:type" content="article">
 <meta property="og:title" content="novel-plus（小说精品屋-plus） 的爬虫程序 HTTP 代理设置">
 <meta property="og:url" content="https://www.xxyopen.com/2022/07/18/doc/novel-plus/proxy.html">
 <meta property="og:site_name" content="xxyopen">
-<meta property="og:description" content="大家在购买代理IP之前一定要先测试能不能用，快代理目前访问境外网站的话需要先提交审核。   爬虫程序 3.6.2 版本已经开始支持通过设置 HTTP 代理来助力小说数据采集了。 代理默认关闭，如果需要开启则修改 novel-crawl&#x2F;config&#x2F;application.yml 文件中的 HTTP 代理配置。 12345678910111213# HTTP 代理配置http:  proxy:">
+<meta property="og:description" content="在使用爬虫采集数据时，最初的体验可能非常顺畅，但随着请求频率的提高，问题也随之而来。很多网站会对频繁请求的同一 IP 进行限制，如触发验证码、封禁访问、限速等，导致爬虫被识别甚至彻底阻断。 此外，一些网站还会限制特定国家或地区的访问 IP，使得爬虫在部分地域环境下失效。 novel-plus 是一个开源免费的小说 CMS 系统，它内置了多个爬虫源，可自动采集互联网上的小说内容。为了提高稳定性，no">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s1.ax1x.com/2022/07/19/jozrfP.jpg">
 <meta property="article:published_time" content="2022-07-18T00:17:11.000Z">
-<meta property="article:modified_time" content="2025-07-12T11:09:12.761Z">
+<meta property="article:modified_time" content="2025-07-25T13:14:39.450Z">
 <meta property="article:author" content="xxy">
 <meta property="article:tag" content="novel-plus">
 <meta name="twitter:card" content="summary">
@@ -220,7 +220,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        608
+                        1212
                     
                     字
                 </li>
@@ -235,19 +235,44 @@
             </div>
             
             <hr />
-            <div itemprop="articleBody"><div class="alert alert-info"><div class="icon"><i class="fa fa-info"></i></div><div class="text"><p>大家在购买代理IP之前一定要先测试能不能用，快代理目前访问境外网站的话需要先提交审核。</p>
-</div></div>
-
-<p>爬虫程序 3.6.2 版本已经开始支持通过设置 HTTP 代理来助力小说数据采集了。</p>
-<p>代理默认关闭，如果需要开启则修改 <code>novel-crawl/config/application.yml</code> 文件中的 HTTP 代理配置。</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># HTTP 代理配置</span></span><br><span class="line"><span class="attr">http:</span></span><br><span class="line">  <span class="attr">proxy:</span></span><br><span class="line">    <span class="comment"># 是否开启 HTTP 代理，true-开启，false-不开启</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">false</span></span><br><span class="line">    <span class="comment"># 代理 IP</span></span><br><span class="line">    <span class="attr">ip:</span> <span class="string">us.swiftproxy.net</span></span><br><span class="line">    <span class="comment"># 代理端口号</span></span><br><span class="line">    <span class="attr">port:</span> <span class="number">7878</span></span><br><span class="line">    <span class="comment"># 代理用户名</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">swiftproxy_u</span></span><br><span class="line">    <span class="comment"># 代理密码</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">swiftproxy_p</span></span><br></pre></td></tr></table></figure>
-
-<div class="alert alert-info"><div class="icon"><i class="fa fa-info"></i></div><div class="text"><p>如果 application.yml 文件中没有以上配置，则手动加入以上配置到 application.yml 文件末尾。</p>
-</div></div>
-
-<p>代理 IP 可以使用免费的也可以使用付费的，已实验过快代理（👉 <a target="_blank" rel="noopener" href="https://www.kuaidaili.com/?ref=mdpz65syhqup">立即前往</a>）提供的免费代理和付费隧道代理试用（新用户可以试用 4 个小时，只需要设置一个固定IP，云端会自动切换IP，每次请求都会自动转发到不同IP）。</p>
-<p><img src="https://youdoc.github.io/img/kuai5.png"><br><img src="https://youdoc.github.io/img/kuai6.png"><br><img src="https://youdoc.github.io/img/kuai7.png"></p>
-<p>获取上图中的隧道host和HTTP端口填入上面的<code>application.yml</code>文件中即可。</p>
+            <div itemprop="articleBody"><p>在使用爬虫采集数据时，最初的体验可能非常顺畅，但随着请求频率的提高，问题也随之而来。很多网站会对频繁请求的同一 IP 进行限制，如触发验证码、封禁访问、限速等，导致爬虫被识别甚至彻底阻断。</p>
+<p>此外，一些网站还会限制特定国家或地区的访问 IP，使得爬虫在部分地域环境下失效。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/201206030/novel-plus">novel-plus</a> 是一个开源免费的小说 CMS 系统，它内置了多个爬虫源，可自动采集互联网上的小说内容。为了提高稳定性，novel-plus 会优先选择那些没有反爬措施或地域限制的网站。但随着使用人数和请求量的增长，这些网站也可能开始部署反爬机制，导致原本正常的采集任务失败。</p>
+<p>此时，除了更换爬虫源以外，更稳妥的方式就是<strong>给爬虫配置代理 IP</strong>，尤其是<strong>动态代理 IP</strong>。</p>
+<p>使用动态代理的优势包括：</p>
+<ul>
+<li><strong>规避限制</strong>：动态 IP 可模拟来自不同用户与地区的访问，绕过大多数网站的封禁与反爬机制；</li>
+<li><strong>提升成功率</strong>：IP 轮换机制可大幅减少失败请求，提升采集效率；</li>
+<li><strong>全球访问能力</strong>：通过住宅或 ISP 代理，访问被地理限制的网站；</li>
+<li><strong>隐藏真实身份</strong>：避免暴露真实服务器地址，有效保护隐私与业务安全。</li>
+</ul>
+<p>本文将以 <a target="_blank" rel="noopener" href="https://bestproxy.com/">BestProxy</a>（支持免费试用，已验证可用）为例，演示如何为 novel-plus 配置动态代理 IP，助力稳定、高效的数据采集。</p>
+<blockquote>
+<p><strong>BestProxy</strong> 是一家企业级代理服务提供商，专注于高质量的住宅代理与数据中心代理。平台拥有超过 <strong>8000万真实 IP</strong>，覆盖全球 <strong>200+ 国家和地区</strong>，广泛应用于网页爬虫、广告验证、市场调研、电商数据抓取、社交媒体管理等场景。</p>
+<p><strong>主要产品包括：</strong></p>
+<ul>
+<li><strong>住宅代理</strong>（HTTP&#x2F;SOCKS5）：高匿名性、支持粘性会话；</li>
+<li><strong>不限量住宅代理</strong>：无限流量，适合高并发、多账户环境；</li>
+<li><strong>静态住宅代理</strong>：专用静态 IP，稳定可靠；</li>
+<li><strong>静态数据中心代理</strong>：低延迟高速度，适用于任务密集型场景；</li>
+<li><strong>长效 ISP 代理</strong>：结合住宅与数据中心优势，支持长时间会话；</li>
+<li><strong>网页爬虫 API</strong>：支持 100+ 网站，一键获取结构化数据。</li>
+</ul>
+<p>BestProxy 提供统一仪表盘、IP 白名单、实时数据分析、API 集成等功能，适合开发者和企业快速部署。<strong>目前不支持中国大陆地区使用</strong>。</p>
+</blockquote>
+<p><strong>1. 注册账号</strong><br>前往 <a target="_blank" rel="noopener" href="https://bestproxy.com/">BestProxy 官网</a> 注册并登录账户。</p>
+<p><img src="/images/proxy/proxy0.png"></p>
+<p><strong>2. 获取套餐</strong><br>可直接购买代理套餐，或联系客服申请试用额度。</p>
+<p><img src="/images/proxy/proxy2.png"><br><img src="/images/proxy/proxy3.png"></p>
+<p><strong>3. 添加子用户</strong><br>进入 <a target="_blank" rel="noopener" href="https://bestproxy.com/zh/user/userlist">用户列表页面</a>，填写信息添加子账号。</p>
+<p><img src="/images/proxy/proxy4.png"></p>
+<p><strong>4. 生成代理配置</strong><br>访问 <a target="_blank" rel="noopener" href="https://bestproxy.com/zh/user/get-proxy/residential/">代理设置页面</a>，使用代理生成器生成代理配置。</p>
+<p><img src="/images/proxy/proxy6.png"></p>
+<p><strong>5. 修改配置文件</strong><br>将生成的代理配置填入 <code>novel-front</code> 和 <code>novel-crawl</code> 的 <code>application.yml</code> 配置文件中，重启服务即可生效。</p>
+<p><img src="/images/proxy/proxy7.png"></p>
+<blockquote>
+<p><strong>温馨提示：</strong>无论在何处购买代理 IP，请务必先测试其可用性。由于网络环境和应用场景的不同，代理 IP 的表现可能存在差异，提前验证可有效避免后期使用中出现故障或浪费。</p>
+</blockquote>
 </div>
         </div>
         
@@ -317,11 +342,8 @@
             const twitterBase   = "https://twitter.com/intent/tweet?";
             const hostUrl       = "https://www.xxyopen.com/2022/07/18/doc/novel-plus/proxy.html";
             const title         = "「novel-plus（小说精品屋-plus） 的爬虫程序 HTTP 代理设置」";
-            const excerpt       = `大家在购买代理IP之前一定要先测试能不能用，快代理目前访问境外网站的话需要先提交审核。
-
-
-爬虫程序 3.6.2 版本已经开始支持通过设置 HTTP 代理来助力小说数据采集了。
-代理默认关闭，如果需要开启则修改 novel-crawl...`;
+            const excerpt       = `在使用爬虫采集数据时，最初的体验可能非常顺畅，但随着请求频率的提高，问题也随之而来。很多网站会对频繁请求的同一 IP 进行限制，如触发验证码、封禁访问、限速等，导致爬虫被识别甚至彻底阻断。
+此外，一些网站还会限制特定国家或地区的访问 ...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -343,7 +365,7 @@
                     <a class="tag-none-link" href="/tags/novel-plus/" rel="tag">novel-plus</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2025-07-12T11:09:12.761Z" itemprop="dateModified">最后编辑：2025-07-12</time>
+                    <time datetime="2025-07-25T13:14:39.450Z" itemprop="dateModified">最后编辑：2025-07-25</time>
                 </div>
             </div>
         </footer>
