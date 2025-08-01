@@ -18,16 +18,16 @@
   
     <meta name="keywords" content="novel-plus" />
   
-  <meta name="description" content="JDK 安装安装 JDK 21 MySQL 安装 安装 MySQL 服务 执行 doc&#x2F;sql&#x2F;novel_plus.sql 脚本文件  Redis 安装https:&#x2F;&#x2F;redis.io&#x2F;docs&#x2F;getting-started&#x2F;installation Maven 安装安装 Apache Maven 源码打包novel-plus 根目录下执行打包命令mvn clean pac">
+  <meta name="description" content="前置要求本教程基于 Linux 系统 安装开源小说系统 novel-plus。如需使用其他安装方式，请参考 novel-plus 官方安装文档。 安装前请确保你的服务器满足以下要求：  操作系统：Linux 或 Windows（Windows 用户请将文中相关命令和工具替换为对应的 Windows 版本） 内存：建议至少 2 GB 硬盘空间：建议预留至少 10 GB（按业务需求分配）   环境安装">
 <meta property="og:type" content="article">
 <meta property="og:title" content="novel-plus（小说精品屋-plus） 源码安装教程">
 <meta property="og:url" content="https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/source.html">
 <meta property="og:site_name" content="xxyopen">
-<meta property="og:description" content="JDK 安装安装 JDK 21 MySQL 安装 安装 MySQL 服务 执行 doc&#x2F;sql&#x2F;novel_plus.sql 脚本文件  Redis 安装https:&#x2F;&#x2F;redis.io&#x2F;docs&#x2F;getting-started&#x2F;installation Maven 安装安装 Apache Maven 源码打包novel-plus 根目录下执行打包命令mvn clean pac">
+<meta property="og:description" content="前置要求本教程基于 Linux 系统 安装开源小说系统 novel-plus。如需使用其他安装方式，请参考 novel-plus 官方安装文档。 安装前请确保你的服务器满足以下要求：  操作系统：Linux 或 Windows（Windows 用户请将文中相关命令和工具替换为对应的 Windows 版本） 内存：建议至少 2 GB 硬盘空间：建议预留至少 10 GB（按业务需求分配）   环境安装">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s1.ax1x.com/2022/07/19/jozrfP.jpg">
 <meta property="article:published_time" content="2022-07-18T00:08:11.000Z">
-<meta property="article:modified_time" content="2025-07-12T11:17:44.056Z">
+<meta property="article:modified_time" content="2025-08-01T01:32:52.465Z">
 <meta property="article:author" content="xxy">
 <meta property="article:tag" content="novel-plus">
 <meta name="twitter:card" content="summary">
@@ -220,7 +220,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        ~1.96K
+                        ~2.00K
                     
                     字
                 </li>
@@ -235,59 +235,74 @@
             </div>
             
             <hr />
-            <div itemprop="articleBody"><h3 id="JDK-安装"><a href="#JDK-安装" class="headerlink" title="JDK 安装"></a>JDK 安装</h3><p><a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/21/install/installation-jdk-linux-platforms.html">安装 JDK 21</a></p>
-<h3 id="MySQL-安装"><a href="#MySQL-安装" class="headerlink" title="MySQL 安装"></a>MySQL 安装</h3><ol>
-<li><a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/8.0/en/linux-installation.html">安装 MySQL 服务</a></li>
-<li>执行 doc&#x2F;sql&#x2F;novel_plus.sql 脚本文件</li>
-</ol>
-<h3 id="Redis-安装"><a href="#Redis-安装" class="headerlink" title="Redis 安装"></a>Redis 安装</h3><p><a target="_blank" rel="noopener" href="https://redis.io/docs/getting-started/installation">https://redis.io/docs/getting-started/installation</a></p>
-<h3 id="Maven-安装"><a href="#Maven-安装" class="headerlink" title="Maven 安装"></a>Maven 安装</h3><p><a target="_blank" rel="noopener" href="https://maven.apache.org/install.html">安装 Apache Maven</a></p>
-<h3 id="源码打包"><a href="#源码打包" class="headerlink" title="源码打包"></a>源码打包</h3><p>novel-plus 根目录下执行打包命令<code>mvn clean package -Dmaven.test.skip=true</code></p>
-<h3 id="爬虫安装"><a href="#爬虫安装" class="headerlink" title="爬虫安装"></a>爬虫安装</h3><ol>
-<li>上传 novel-crawl&#x2F;target&#x2F;build&#x2F;novel-crawl.zip 压缩包到 Linux 服务器的 novel-crawl 目录</li>
-<li>使用<code>unzip novel-crawl.zip</code>命令解压 novel-crawl.zip</li>
-<li>修改 <code>config/shardingsphere-jdbc.yml</code> 文件中的 MySQL 配置</li>
-<li>修改 <code>config/application.yml</code> 文件中的 Redis 配置</li>
-<li>修改 <code>config/application.yml</code> 文件中的管理员账号密码</li>
-<li>根据需要<a href='/2022/07/18/doc/novel-plus/proxy.html' target="_blank">设置爬虫的代理IP</a></li>
-<li>novel-crawl 目录下使用<code>bin/novel-crawl.sh start</code>命令启动爬虫程序</li>
-<li>打开浏览器，默认<code>8083</code>端口访问</li>
-<li>选择已有或新增爬虫源（支持自定义爬虫规则），点击<code>开启</code>按钮，开始采集小说数据</li>
-<li>novel-crawl 目录下使用<code>bin/novel-crawl.sh stop</code>命令停止爬虫程序</li>
-<li>novel-crawl 目录下使用<code>bin/novel-crawl.sh restart</code>命令重启爬虫程序</li>
-<li>novel-crawl 目录下使用<code>bin/novel-crawl.sh status</code>命令查看爬虫程序的运行状态</li>
-</ol>
-<h3 id="前台安装"><a href="#前台安装" class="headerlink" title="前台安装"></a>前台安装</h3><ol>
-<li>上传 novel-front&#x2F;target&#x2F;build&#x2F;novel-front.zip 压缩包到 Linux 服务器的 novel-front 目录</li>
-<li>使用<code>unzip novel-front.zip</code>命令解压 novel-front.zip</li>
-<li>修改 <code>config/shardingsphere-jdbc.yml</code> 文件中的 MySQL 配置</li>
-<li>修改 <code>config/application.yml</code> 文件中的 Redis 配置</li>
-<li>novel-front 目录下使用<code>bin/novel-front.sh start</code>命令启动前台程序</li>
-<li>打开浏览器，默认<code>8085</code>端口访问</li>
-<li>novel-front 目录下使用<code>bin/novel-front.sh stop</code>命令停止前台程序</li>
-<li>novel-front 目录下使用<code>bin/novel-front.sh restart</code>命令重启前台程序</li>
-<li>novel-front 目录下使用<code>bin/novel-front.sh status</code>命令查看前台程序的运行状态</li>
-</ol>
-<h3 id="后台安装"><a href="#后台安装" class="headerlink" title="后台安装"></a>后台安装</h3><ol>
-<li>上传 novel-admin&#x2F;target&#x2F;build&#x2F;novel-admin.zip 压缩包到 Linux 服务器的 novel-admin 目录</li>
-<li>使用<code>unzip novel-admin.zip</code>命令解压 novel-admin.zip</li>
-<li>修改 <code>config/shardingsphere-jdbc.yml</code> 文件中的 MySQL 配置</li>
-<li>修改 <code>config/application.yml</code> 文件中的 Redis 配置</li>
-<li>novel-admin 目录下使用<code>bin/novel-admin.sh start</code>命令启动后台程序</li>
-<li>打开浏览器，默认<code>8088</code>端口访问</li>
-<li>novel-admin 目录下使用<code>bin/novel-admin.sh stop</code>命令停止后台程序</li>
-<li>novel-admin 目录下使用<code>bin/novel-admin.sh restart</code>命令重启后台程序</li>
-<li>novel-admin 目录下使用<code>bin/novel-admin.sh status</code>命令查看后台程序的运行状态</li>
-</ol>
-<div class="alert alert-info"><div class="icon"><i class="fa fa-info"></i></div><div class="text"><p>部分环境获取不到主机 IP，需要手动修改 hosts 文件，增加 IP-主机名（通过 hostname 命令查看主机名）的映射。</p>
-</div></div>
+            <div itemprop="articleBody"><h3 id="前置要求"><a href="#前置要求" class="headerlink" title="前置要求"></a>前置要求</h3><p>本教程基于 <strong>Linux 系统</strong> 安装开源小说系统 <a target="_blank" rel="noopener" href="https://github.com/201206030/novel-plus">novel-plus</a>。如需使用其他安装方式，请参考 <a target="_blank" rel="noopener" href="https://docs.xxyopen.com/course/novelplus/1.html">novel-plus 官方安装文档</a>。</p>
+<p>安装前请确保你的服务器满足以下要求：</p>
+<ul>
+<li><strong>操作系统</strong>：Linux 或 Windows<br><em>（Windows 用户请将文中相关命令和工具替换为对应的 Windows 版本）</em></li>
+<li><strong>内存</strong>：建议至少 2 GB</li>
+<li><strong>硬盘空间</strong>：建议预留至少 10 GB（按业务需求分配）</li>
+</ul>
+<hr>
+<h3 id="环境安装"><a href="#环境安装" class="headerlink" title="环境安装"></a>环境安装</h3><h4 id="1-安装-JDK"><a href="#1-安装-JDK" class="headerlink" title="1. 安装 JDK"></a>1. 安装 JDK</h4><p>参考 <a target="_blank" rel="noopener" href="https://docs.oracle.com/en/java/javase/21/install/installation-jdk-linux-platforms.html">Oracle JDK 21 官方安装指南</a>安装 JDK 21</p>
+<h4 id="2-安装-MySQL"><a href="#2-安装-MySQL" class="headerlink" title="2. 安装 MySQL"></a>2. 安装 MySQL</h4><ul>
+<li>参考 <a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/8.0/en/linux-installation.html">MySQL 8.0 官方安装指南</a>安装 MySQL 8.0 </li>
+<li>使用可视化工具或命令行，将 <code>novel-plus/doc/sql/novel_plus.sql</code> 脚本导入至 MySQL 中，完成对 <code>novel_plus</code> 数据库的创建和初始化</li>
+</ul>
+<h4 id="3-安装-Redis"><a href="#3-安装-Redis" class="headerlink" title="3. 安装 Redis"></a>3. 安装 Redis</h4><p>参考 <a target="_blank" rel="noopener" href="https://redis.io/docs/getting-started/installation">Redis 官方安装指南</a> 安装 Redis</p>
+<h4 id="4-安装-Maven"><a href="#4-安装-Maven" class="headerlink" title="4. 安装 Maven"></a>4. 安装 Maven</h4><p>参考 <a target="_blank" rel="noopener" href="https://maven.apache.org/install.html">Apache Maven 官方安装指南</a> 安装 Maven</p>
+<hr>
+<h3 id="源码打包"><a href="#源码打包" class="headerlink" title="源码打包"></a>源码打包</h3><p>在 <code>novel-plus</code> 项目根目录下执行以下命令打包项目：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn clean package -Dmaven.test.skip=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
+<hr>
+<h3 id="爬虫程序安装（novel-crawl）"><a href="#爬虫程序安装（novel-crawl）" class="headerlink" title="爬虫程序安装（novel-crawl）"></a>爬虫程序安装（novel-crawl）</h3><p>1.将打包生成的 <code>novel-crawl.zip</code>（位于 <code>novel-crawl/target/build/</code>）复制到 <code>novel-crawl</code> 的服务器安装目录（如 <code>/www/wwwroot/novel-plus/novel-crawl</code>）并解压：</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip novel-crawl.zip</span><br></pre></td></tr></table></figure>
+<p>2.修改配置文件：</p>
+<ul>
+<li><code>config/shardingsphere-jdbc.yml</code>：配置 MySQL</li>
+<li><code>config/application.yml</code>：配置 Redis 和管理员账号</li>
+</ul>
+<p>3.如有需要，<a target="_blank" rel="noopener" href="https://your-site.com/2022/07/18/doc/novel-plus/proxy.html">配置代理 IP</a></p>
+<p>4.启动爬虫：</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/novel-crawl.sh start</span><br></pre></td></tr></table></figure>
+<p>5.浏览器访问 <code>http://&lt;服务器IP&gt;:8083</code>，开启爬虫源采集小说数据</p>
+<p>6.其他常用命令：</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bin/novel-crawl.sh stop</span><br><span class="line">bin/novel-crawl.sh restart</span><br><span class="line">bin/novel-crawl.sh status</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="五、前台程序安装（novel-front）"><a href="#五、前台程序安装（novel-front）" class="headerlink" title="五、前台程序安装（novel-front）"></a>五、前台程序安装（novel-front）</h3><p>1.将打包生成的 <code>novel-front.zip</code>（位于 <code>novel-front/target/build/</code>）复制到 <code>novel-front</code> 的服务器安装目录（如 <code>/www/wwwroot/novel-plus/novel-front</code>）并解压：</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip novel-front.zip</span><br></pre></td></tr></table></figure>
+<p>2.修改配置文件：</p>
+<ul>
+<li><code>config/shardingsphere-jdbc.yml</code>：配置 MySQL</li>
+<li><code>config/application.yml</code>：配置 Redis 和图片保存目录</li>
+</ul>
+<p>3.启动前台程序：</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/novel-front.sh start</span><br></pre></td></tr></table></figure>
+<p>4.浏览器访问 <code>http://&lt;服务器IP&gt;:8085</code></p>
+<p>5.常用命令同上（<code>stop</code>、<code>restart</code>、<code>status</code>）</p>
+<hr>
+<h3 id="六、后台程序安装（novel-admin）"><a href="#六、后台程序安装（novel-admin）" class="headerlink" title="六、后台程序安装（novel-admin）"></a>六、后台程序安装（novel-admin）</h3><p>1.将打包生成的 <code>novel-admin.zip</code>（位于 <code>novel-admin/target/build/</code>）复制到 <code>novel-admin</code> 的服务器安装目录（如 <code>/www/wwwroot/novel-plus/novel-admin</code>）并解压：</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip novel-admin.zip</span><br></pre></td></tr></table></figure>
+<p>2.修改配置文件：</p>
+<ul>
+<li><code>config/shardingsphere-jdbc.yml</code>：配置 MySQL</li>
+<li><code>config/application.yml</code>：配置 Redis</li>
+</ul>
+<p>3.启动后台程序：</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/novel-admin.sh start</span><br></pre></td></tr></table></figure>
+<p>4.浏览器访问 <code>http://&lt;服务器IP&gt;:8088</code></p>
+<p>5.常用命令同上</p>
+<hr>
+<h3 id="配置主机名映射（可选）"><a href="#配置主机名映射（可选）" class="headerlink" title="配置主机名映射（可选）"></a>配置主机名映射（可选）</h3><p>部分环境可能获取不到主机 IP，需要手动修改 <code>/etc/hosts</code> 文件，添加&#x2F;修改 IP 与主机名（可通过<code>hostname</code>命令获取）之间的映射关系：</p>
+<p>获取主机名：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@iZwz9e2l6djkn7vw4xvic9Z ~]<span class="comment"># hostname</span></span><br><span class="line">iZwz9e2l6djkn7vw4xvic9Z</span><br></pre></td></tr></table></figure>
 
-<p>正确配置：</p>
-<figure class="highlight text"><figcaption><span>/etc/hosts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">172.18.5.192 iZwz9e2l6djkn7vw4xvic9Z  iZwz9e2l6djkn7vw4xvic9Z</span><br></pre></td></tr></table></figure>
-<p>错误配置：</p>
-<figure class="highlight text"><figcaption><span>/etc/hosts</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1 iZwz9e2l6djkn7vw4xvic9Z  iZwz9e2l6djkn7vw4xvic9Z</span><br></pre></td></tr></table></figure></div>
+<p>✅ <code>/etc/hosts</code> 正确配置（示例）：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">172.18.5.192 iZwz9e2l6djkn7vw4xvic9Z</span><br></pre></td></tr></table></figure>
+
+<p>❌ <code>/etc/hosts</code> 错误配置（不要使用 127.0.0.1 或 localhost）：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1 iZwz9e2l6djkn7vw4xvic9Z</span><br></pre></td></tr></table></figure></div>
         </div>
         
             <div class="kratos-copyright text-center clearfix">
@@ -356,12 +371,10 @@
             const twitterBase   = "https://twitter.com/intent/tweet?";
             const hostUrl       = "https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/source.html";
             const title         = "「novel-plus（小说精品屋-plus） 源码安装教程」";
-            const excerpt       = `JDK 安装安装 JDK 21
-MySQL 安装
-安装 MySQL 服务
-执行 doc&#x2F;sql&#x2F;novel_plus.sql 脚本文件
+            const excerpt       = `前置要求本教程基于 Linux 系统 安装开源小说系统 novel-plus。如需使用其他安装方式，请参考 novel-plus 官方安装文档。
+安装前请确保你的服务器满足以下要求：
 
-Redis 安装https://redis.io/docs/getting-...`;
+操作系统：Linux 或 Windows（Win...`;
             let _URL;
             switch (dest) {
                 case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
@@ -383,7 +396,7 @@ Redis 安装https://redis.io/docs/getting-...`;
                     <a class="tag-none-link" href="/tags/novel-plus/" rel="tag">novel-plus</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2025-07-12T11:17:44.056Z" itemprop="dateModified">最后编辑：2025-07-12</time>
+                    <time datetime="2025-08-01T01:32:52.465Z" itemprop="dateModified">最后编辑：2025-08-01</time>
                 </div>
             </div>
         </footer>
