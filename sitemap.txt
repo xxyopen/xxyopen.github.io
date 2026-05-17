@@ -1,3 +1,4 @@
+https://www.xxyopen.com/2022/08/07/doc/novel-plus/install/base_docker.html
 https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/package.html
 https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/source.html
 https://www.xxyopen.com/2022/07/18/doc/novel-plus/proxy.html
@@ -16,7 +17,6 @@ https://www.xxyopen.com/2024/02/27/linux/nginx_no_package.html
 https://www.xxyopen.com/2024/02/22/mysql/mysql_uninstall.html
 https://www.xxyopen.com/2022/08/21/mysql/gpg_check_failed.html
 https://www.xxyopen.com/2023/10/12/docker/docker_compose/macOS_install.html
-https://www.xxyopen.com/2022/08/07/doc/novel-plus/install/base_docker.html
 https://www.xxyopen.com/2023/03/27/doc/novel/install/docker.html
 https://www.xxyopen.com/2022/07/22/tools/image_host.html
 https://www.xxyopen.com/2022/08/21/mysql/reset_pass.html
