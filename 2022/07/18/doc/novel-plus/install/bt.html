@@ -18,16 +18,16 @@
   
     <meta name="keywords" content="novel-plus, 宝塔面板" />
   
-  <meta name="description" content="前置要求本教程基于 宝塔Linux面板 9.6.0 安装开源小说系统 novel-plus，由于版本差异，实际操作可能略有不同。如需使用其他方式安装，请参考官方安装文档。在开始安装前，请确保你的服务器满足以下前置要求：  操作系统：Linux 或 Windows 内存：建议至少 2 GB 硬盘空间：根据业务需求分配，建议预留至少 10 GB 控制面板：宝塔面板（建议使用最新版）  MySQL">
+  <meta name="description" content="前置要求本教程基于 宝塔Linux面板 9.6.0 安装开源小说系统 novel-plus，由于版本差异，实际操作可能略有不同。如需使用其他方式安装，请参考官方安装文档。在开始安装前，请确保你的服务器满足以下前置要求：  操作系统：Linux 或 Windows 内存：建议至少 2 GB 硬盘空间：根据业务需求分配，建议预留至少 10 GB 控制面板：宝塔面板（建议使用最新版）  安装文件下载">
 <meta property="og:type" content="article">
 <meta property="og:title" content="novel-plus（小说精品屋-plus） 宝塔安装教程">
 <meta property="og:url" content="https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/bt.html">
 <meta property="og:site_name" content="xxyopen">
-<meta property="og:description" content="前置要求本教程基于 宝塔Linux面板 9.6.0 安装开源小说系统 novel-plus，由于版本差异，实际操作可能略有不同。如需使用其他方式安装，请参考官方安装文档。在开始安装前，请确保你的服务器满足以下前置要求：  操作系统：Linux 或 Windows 内存：建议至少 2 GB 硬盘空间：根据业务需求分配，建议预留至少 10 GB 控制面板：宝塔面板（建议使用最新版）  MySQL">
+<meta property="og:description" content="前置要求本教程基于 宝塔Linux面板 9.6.0 安装开源小说系统 novel-plus，由于版本差异，实际操作可能略有不同。如需使用其他方式安装，请参考官方安装文档。在开始安装前，请确保你的服务器满足以下前置要求：  操作系统：Linux 或 Windows 内存：建议至少 2 GB 硬盘空间：根据业务需求分配，建议预留至少 10 GB 控制面板：宝塔面板（建议使用最新版）  安装文件下载">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/bt.htmlhttps:/s1.ax1x.com/2022/07/18/joBBjA.png">
 <meta property="article:published_time" content="2022-07-18T00:30:11.000Z">
-<meta property="article:modified_time" content="2025-07-29T11:49:20.305Z">
+<meta property="article:modified_time" content="2026-10-14T00:28:40.188Z">
 <meta property="article:author" content="xxy">
 <meta property="article:tag" content="novel-plus">
 <meta property="article:tag" content="宝塔面板">
@@ -221,7 +221,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        ~2.17K
+                        ~2.21K
                     
                     字
                 </li>
@@ -236,7 +236,7 @@
             </div>
             
                 <div class="kratos-post-inner-toc">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E8%A6%81%E6%B1%82"><span class="toc-number">1.</span> <span class="toc-text">前置要求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MySQL-%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">MySQL 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Redis-%E5%AE%89%E8%A3%85"><span class="toc-number">3.</span> <span class="toc-text">Redis 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JDK-%E5%AE%89%E8%A3%85"><span class="toc-number">4.</span> <span class="toc-text">JDK 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-novel-plus-%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95"><span class="toc-number">5.</span> <span class="toc-text">创建 novel-plus 安装目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%88%AC%E8%99%AB%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85"><span class="toc-number">6.</span> <span class="toc-text">爬虫程序安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E5%8F%B0%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85"><span class="toc-number">7.</span> <span class="toc-text">前台程序安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8E%E5%8F%B0%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85"><span class="toc-number">8.</span> <span class="toc-text">后台程序安装</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E8%A6%81%E6%B1%82"><span class="toc-number">1.</span> <span class="toc-text">前置要求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD"><span class="toc-number">2.</span> <span class="toc-text">安装文件下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MySQL-%E5%AE%89%E8%A3%85"><span class="toc-number">3.</span> <span class="toc-text">MySQL 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Redis-%E5%AE%89%E8%A3%85"><span class="toc-number">4.</span> <span class="toc-text">Redis 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JDK-%E5%AE%89%E8%A3%85"><span class="toc-number">5.</span> <span class="toc-text">JDK 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-novel-plus-%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95"><span class="toc-number">6.</span> <span class="toc-text">创建 novel-plus 安装目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%88%AC%E8%99%AB%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85"><span class="toc-number">7.</span> <span class="toc-text">爬虫程序安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E5%8F%B0%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85"><span class="toc-number">8.</span> <span class="toc-text">前台程序安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8E%E5%8F%B0%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85"><span class="toc-number">9.</span> <span class="toc-text">后台程序安装</span></a></li></ol>
                 </div>
             
             <hr />
@@ -249,6 +249,7 @@
 <li><strong>硬盘空间</strong>：根据业务需求分配，建议预留至少 10 GB</li>
 <li><strong>控制面板</strong>：宝塔面板（建议使用最新版）</li>
 </ul>
+<h3 id="安装文件下载"><a href="#安装文件下载" class="headerlink" title="安装文件下载"></a>安装文件下载</h3><p>前往 novel-plus 的 <a target="_blank" rel="noopener" href="https://github.com/201206030/novel-plus/releases">GitHub 发布页面</a>下载最新版本的安装文件。<br><img src="/images/novel-plus_release.png"></p>
 <h3 id="MySQL-安装"><a href="#MySQL-安装" class="headerlink" title="MySQL 安装"></a>MySQL 安装</h3><p>MySQL 5.7 或以上版本均可，建议安装 8.0。</p>
 <ol>
 <li>进入宝塔面板的软件商店搜索 MySQL 安装（如已安装 MySQL，可省略此步骤）。</li>
@@ -263,7 +264,7 @@
 </ol>
 <p><img src="/images/bt/bt3.png"></p>
 <ol start="3">
-<li>导入<a target="_blank" rel="noopener" href="https://github.com/201206030/novel-plus/releases/download/v5.2.4/sql.zip">sql.zip</a>&#x2F;novel_plus.sql 文件到<code>novel_plus</code>数据库。</li>
+<li>导入<code>sql.zip/novel_plus.sql</code> 文件到<code>novel_plus</code>数据库。</li>
 </ol>
 <p><img src="/images/bt/bt4.png"></p>
 <h3 id="Redis-安装"><a href="#Redis-安装" class="headerlink" title="Redis 安装"></a>Redis 安装</h3><p>进入宝塔面板的软件商店搜索 Redis 安装，并设置 Redis 密码。</p>
@@ -280,7 +281,7 @@
 </ol>
 <p><img src="/images/resource/blog/article/novel-plus/install/dir2.png"></p>
 <h3 id="爬虫程序安装"><a href="#爬虫程序安装" class="headerlink" title="爬虫程序安装"></a>爬虫程序安装</h3><ol>
-<li>上传<a target="_blank" rel="noopener" href="https://github.com/201206030/novel-plus/releases/download/v5.2.4/novel-crawl.zip">novel-crawl.zip</a>文件到服务器<code>novel-crawl</code>子目录下，并解压。</li>
+<li>上传<code>novel-crawl.zip</code>文件到服务器<code>novel-crawl</code>子目录下，并解压。</li>
 </ol>
 <p><img src="/images/resource/blog/article/novel-plus/install/crawl2.png"></p>
 <p>解压后的目录结构如下：</p>
@@ -310,7 +311,7 @@
 <ol start="6">
 <li>浏览器输入<code>http://服务器IP:8083</code>后回车访问爬虫系统。</li>
 </ol>
-<h3 id="前台程序安装"><a href="#前台程序安装" class="headerlink" title="前台程序安装"></a>前台程序安装</h3><p>1.上传<a target="_blank" rel="noopener" href="https://github.com/201206030/novel-plus/releases/download/v5.2.4/novel-front.zip">novel-front.zip</a>文件到服务器<code>novel-front</code>子目录下，并解压。</p>
+<h3 id="前台程序安装"><a href="#前台程序安装" class="headerlink" title="前台程序安装"></a>前台程序安装</h3><p>1.上传<code>novel-front.zip</code>文件到服务器<code>novel-front</code>子目录下，并解压。</p>
 <p><img src="/images/resource/blog/article/novel-plus/install/front1.png"></p>
 <p>2.进入<code>config</code>子目录，修改<code>shardingsphere-jdbc.yml</code>文件中的数据库配置和<code>application.yml</code>文件中的 Redis 配置（与爬虫程序的配置修改完全相同）。</p>
 <p>3.根据需要设置爬虫的代理IP。</p>
@@ -323,7 +324,7 @@
 <li>请在项目启动命令<code>java -jar</code>的后面加上<code> -Dspring.profiles.active=prod</code></li>
 </ul>
 <p>5.浏览器输入<code>http://服务器IP:8085</code>后回车访问小说前台。</p>
-<h3 id="后台程序安装"><a href="#后台程序安装" class="headerlink" title="后台程序安装"></a>后台程序安装</h3><p>1.上传<a target="_blank" rel="noopener" href="https://github.com/201206030/novel-plus/releases/download/v5.2.4/novel-admin.zip">novel-admin.zip</a>文件到服务器<code>novel-admin</code>子目录下，并解压。</p>
+<h3 id="后台程序安装"><a href="#后台程序安装" class="headerlink" title="后台程序安装"></a>后台程序安装</h3><p>1.上传<code>novel-admin.zip</code>文件到服务器<code>novel-admin</code>子目录下，并解压。</p>
 <p>2.进入<code>config</code>子目录，修改<code>shardingsphere-jdbc.yml</code>文件中的数据库配置和<code>application.yml</code>文件中的 Redis 配置（与爬虫程序的配置修改相同）。</p>
 <p>3.添加<code>novel-admin</code>项目：网站 → Java项目 → 添加Java项目。</p>
 <ul>
@@ -440,7 +441,7 @@
                     <a class="tag-none-link" href="/tags/novel-plus/" rel="tag">novel-plus</a>, <a class="tag-none-link" href="/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/" rel="tag">宝塔面板</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2025-07-29T11:49:20.305Z" itemprop="dateModified">最后编辑：2025-07-29</time>
+                    <time datetime="2026-10-14T00:28:40.188Z" itemprop="dateModified">最后编辑：2026-10-14</time>
                 </div>
             </div>
         </footer>
@@ -537,7 +538,7 @@
         <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
     </h4>
     <div class="textwidget">
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E8%A6%81%E6%B1%82"><span class="toc-text">前置要求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MySQL-%E5%AE%89%E8%A3%85"><span class="toc-text">MySQL 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Redis-%E5%AE%89%E8%A3%85"><span class="toc-text">Redis 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JDK-%E5%AE%89%E8%A3%85"><span class="toc-text">JDK 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-novel-plus-%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95"><span class="toc-text">创建 novel-plus 安装目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%88%AC%E8%99%AB%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85"><span class="toc-text">爬虫程序安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E5%8F%B0%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85"><span class="toc-text">前台程序安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8E%E5%8F%B0%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85"><span class="toc-text">后台程序安装</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E8%A6%81%E6%B1%82"><span class="toc-text">前置要求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD"><span class="toc-text">安装文件下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MySQL-%E5%AE%89%E8%A3%85"><span class="toc-text">MySQL 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Redis-%E5%AE%89%E8%A3%85"><span class="toc-text">Redis 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JDK-%E5%AE%89%E8%A3%85"><span class="toc-text">JDK 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-novel-plus-%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95"><span class="toc-text">创建 novel-plus 安装目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%88%AC%E8%99%AB%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85"><span class="toc-text">爬虫程序安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%8D%E5%8F%B0%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85"><span class="toc-text">前台程序安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8E%E5%8F%B0%E7%A8%8B%E5%BA%8F%E5%AE%89%E8%A3%85"><span class="toc-text">后台程序安装</span></a></li></ol>
     </div>
 </aside>
 
