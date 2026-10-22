@@ -1,3 +1,4 @@
+https://www.xxyopen.com/2026/10/22/news/novel-app.html
 https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/bt.html
 https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/source.html
 https://www.xxyopen.com/2022/07/18/doc/novel-plus/install/package.html
@@ -84,6 +85,7 @@ https://www.xxyopen.com/tags/%E5%AE%89%E5%85%A8/
 https://www.xxyopen.com/tags/CentOS/
 https://www.xxyopen.com/tags/Nginx/
 https://www.xxyopen.com/tags/GitHub/
+https://www.xxyopen.com/tags/novel-app/
 https://www.xxyopen.com/categories/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/
 https://www.xxyopen.com/categories/Elasticsearch/
 https://www.xxyopen.com/categories/Java/
