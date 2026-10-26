@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  <link rel="icon" href="https://s1.ax1x.com/2022/07/19/jozrfP.jpg">
+  <title>告别手写规则！novel-plus 支持第三方规则导入，新增 CSS、XPath、JSONPath 解析 | xxyopen</title>
+  <meta name="author" content="xxy" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7927582798443371"
+  crossorigin="anonymous"></script> -->
+  
+  
+    <meta name="keywords" content="novel-plus" />
+  
+  <meta name="description" content="novel-plus  是一套功能完善的原创文学 CMS 系统，支持 PC 网站、WAP、H5、Android、iOS 和微信小程序等多个终端，提供一站式小说平台搭建解决方案。 由前台门户系统、作家后台管理系统、平台后台管理系统和爬虫管理系统等多个子系统构成，包括小说推荐、作品检索、小说排行、小说阅读、小说书评、段落评论、小说书单、会员中心、作家专区等功能。 支持自定义多模版、可拓展的多种小说内容">
+<meta property="og:type" content="article">
+<meta property="og:title" content="告别手写规则！novel-plus 支持第三方规则导入，新增 CSS、XPath、JSONPath 解析">
+<meta property="og:url" content="https://www.xxyopen.com/2026/10/26/news/novel-plus-import-rule.html">
+<meta property="og:site_name" content="xxyopen">
+<meta property="og:description" content="novel-plus  是一套功能完善的原创文学 CMS 系统，支持 PC 网站、WAP、H5、Android、iOS 和微信小程序等多个终端，提供一站式小说平台搭建解决方案。 由前台门户系统、作家后台管理系统、平台后台管理系统和爬虫管理系统等多个子系统构成，包括小说推荐、作品检索、小说排行、小说阅读、小说书评、段落评论、小说书单、会员中心、作家专区等功能。 支持自定义多模版、可拓展的多种小说内容">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2022/07/19/jozrfP.jpg">
+<meta property="article:published_time" content="2026-10-26T14:50:51.000Z">
+<meta property="article:modified_time" content="2026-10-26T14:53:04.647Z">
+<meta property="article:author" content="xxy">
+<meta property="article:tag" content="novel-plus">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2022/07/19/jozrfP.jpg">
+  <link rel="alternate" href="atom.xml" type="application/atom+xml">
+  <!-- 站点验证相关 -->
+  
+    
+    
+    
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kratosr.min.css" type="text/css" media="all">
+  
+    <link rel="stylesheet" id="darkmode-css" href="/css/kr-color-dark.min.css" type="text/css" media="(prefers-color-scheme: dark)">
+    <script src="/js/kr-dark.min.js"></script>
+  
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/night-eighties.min.css" type="text/css" media="all">
+  
+  
+  <link rel="stylesheet" id="fontawe-css" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="nprogress-css" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css" type="text/css" media="all">
+  
+  
+  
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/qrcode_js@1.0.0/qrcode.min.js"></script>
+  
+  
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('https://www.xxyopen.com/images/resource/blog/config/banner.webp');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('https://www.xxyopen.com/images/resource/blog/config/bg.webp');
+        }
+      }
+    
+
+    @media (max-width: 1700px){
+
+      .zjAd{
+        display: none !important;
+      }
+
+    }
+
+    @media screen and (max-width: 1700px) { /*当屏幕尺寸小于1500px时，应用下面的CSS样式*/
+      .minAd {
+        display: none !important;
+      }
+      .maxAd {
+        display: none !important;
+      }
+      .middleAd {
+         display: block !important;
+      }
+    }
+    @media screen and (max-width: 600px) { /*当屏幕尺寸小于600px时，应用下面的CSS样式*/
+      .minAd {
+        display: block !important;
+      }
+      .maxAd {
+        display: none !important;
+      }
+      .middleAd {
+        display: none !important;
+      }
+    }
+  </style>
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                                    
+                                        <li><a href="/"><i class="fa fa-home"></i>首页</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/archives/"><i class="fa fa-file"></i>档案馆</a></li>
+                                    
+                                
+                                    
+                                        <li><a href="/friends/"><i class="fa fa-paw"></i>好伙伴</a></li>
+                                    
+                                
+                                    
+                                        <li>
+                                            <a><i class="fa fa-github"></i>开源项目</a>
+                                            <ul class="sub-menu">
+                                                
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://github.com/201206030/novel">novel</a></li>
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://github.com/201206030/novel-plus">novel-plus</a></li>
+                                                    
+                                                
+                                                    
+                                                        <li><a target="_blank" rel="noopener" href="https://github.com/201206030/novel-cloud">novel-cloud</a></li>
+                                                    
+                                                
+                                            </ul>
+                                        </li>
+                                    
+                                
+                                    
+                                        <li><a target="_blank" rel="noopener" href="https://novel.xxyopen.com/service"><i class="fa fa-commenting"></i>联系我们</a></li>
+                                    
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">xxyopen</a></div>
+                    <div class="nav-toggle">
+                        <a class="kratos-nav-toggle js-kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>xxyopen</h2> <br />
+                        <span>一个技术博客&amp;学习社区&amp;分享平台</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+                    
+
+        
+
+            <section class="col-md-8">
+
+        
+
+            <div class="kratos-hentry kratos-post-inner clearfix">
+    <header class="kratos-entry-header">
+        
+<article itemscope itemtype="https://schema.org/Article">
+    
+    <link itemprop="mainEntityOfPage" href="https://www.xxyopen.com/2026/10/26/news/novel-plus-import-rule.html">
+    
+            
+                <h1 class="kratos-entry-title text-center" itemprop="name headline">告别手写规则！novel-plus 支持第三方规则导入，新增 CSS、XPath、JSONPath 解析</h1>
+            
+            
+            <ul class="kratos-post-meta text-center">
+                <li><time datetime="2026-10-26T14:50:51.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2026-10-26</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">xxy</span>
+                </li>
+                <li>
+                    <i class="fa fa-edit"></i> 
+                    
+                    
+                        ~3.63K
+                    
+                    字
+                </li>
+                
+            </ul>
+        </header>
+        
+        <div class="kratos-post-content">
+            <div id="expire-alert" class="alert alert-warning hidden" role="alert">
+                <div class="icon"><i class="fa fa-warning"></i></div>
+                <div class="text"><p>last_modify_alert</p></div>
+            </div>
+            
+            <hr />
+            <div itemprop="articleBody"><p><a target="_blank" rel="noopener" href="https://github.com/201206030/novel-plus">novel-plus</a>  是一套功能完善的原创文学 CMS 系统，支持 PC 网站、WAP、H5、Android、iOS 和微信小程序等多个终端，提供一站式小说平台搭建解决方案。</p>
+<p>由前台门户系统、作家后台管理系统、平台后台管理系统和爬虫管理系统等多个子系统构成，包括小说推荐、作品检索、小说排行、小说阅读、小说书评、段落评论、小说书单、会员中心、作家专区等功能。</p>
+<p>支持自定义多模版、可拓展的多种小说内容存储方式（内置数据库分表存储和 TXT 文本存储）、阅读主题切换、自动采集和更新测试数据、AI写作、会员充值、订阅模式、新闻发布和实时统计报表。</p>
+<p><img src="/images/resource/os/novel-plus/github.png"></p>
+<p>以前，novel-plus 的爬虫规则主要依赖正则表达式，对不熟悉正则的用户来说，上手门槛相对较高。</p>
+<p>现在，采集正式支持 <strong>CSS、XPath、正则表达式、JSONPath 四种解析方式</strong>，并在此基础上尝试实现了 <strong>第三方规则导入</strong> 功能，希望降低规则编写和迁移的成本。</p>
+<p><img src="/images/resource/os/novel-plus/rule_export1.png"><br>目前，第三方规则导入功能 <strong>仅支持阅读 3.0 格式</strong>。</p>
+<p>为了验证方案是否可行，我从网上公开的阅读 3.0 书源中随机挑选了一批规则，尝试导入了十几条。测试结果并不算理想，绝大部分规则无法直接使用，问题主要集中在以下几个方面：</p>
+<ul>
+<li><strong>域名失效</strong>：原站点无法正常访问。</li>
+<li><strong>地域限制</strong>：部分站点对访问来源有限制。</li>
+<li><strong>访问限流</strong>：请求频率受到限制，无法正常采集。</li>
+<li><strong>反爬机制</strong>：站点增加了额外的访问校验。</li>
+<li><strong>规则不兼容</strong>：部分规则依赖 <code>@js:</code> 动态脚本，或者使用了暂未适配的多行组合规则。</li>
+</ul>
+<blockquote>
+<p>针对地域限制、访问限流以及部分反爬问题，可以参考这篇文章：<a href="/2022/07/18/doc/novel-plus/proxy.html">一站式解决爬虫采集难题：提速、稳定访问与 IP 限制</a></p>
+</blockquote>
+<p>不过，也有少数规则成功导入，并且能够正常采集内容。这说明，<strong>第三方规则导入这条路是可行的，后续仍有继续完善的空间</strong>。</p>
+<p><img src="/images/resource/os/novel-plus/rule_export2.png"><br><img src="/images/resource/os/novel-plus/rule_export3.png"></p>
+<p>相关代码目前已经提交到 6.4.x 分支，计划在后续版本中正式发布。现阶段，这项功能还处于持续完善的过程中，暂时不能保证所有第三方规则都能直接导入使用。后续会继续完善规则兼容和导入逻辑，尽量减少手动修改规则的工作量。</p>
+<p>CSS、XPath 和 JSONPath 虽然使用不同的表达式，但在 novel-plus 中，它们共用一套统一的取值后缀。掌握这套语法，就能应对大部分常见的采集需求。</p>
+<table>
+<thead>
+<tr>
+<th>写法</th>
+<th>含义</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>表达式</code></td>
+<td>默认提取文本内容</td>
+<td><code>#bookName</code></td>
+</tr>
+<tr>
+<td><code>表达式::attr(名称)</code></td>
+<td>提取指定属性</td>
+<td><code>a.author::attr(href)</code></td>
+</tr>
+<tr>
+<td><code>表达式::html</code></td>
+<td>提取 HTML，保留标签</td>
+<td><code>#content::html</code></td>
+</tr>
+<tr>
+<td><code>表达式::ownText</code></td>
+<td>仅提取元素自身的直接文本，不包含子孙元素的文本</td>
+<td><code>div.intro::ownText</code></td>
+</tr>
+<tr>
+<td><code>表达式|后端正则</code></td>
+<td>提取结果后，再用正则表达式进行二次处理，优先取第 1 个捕获组</td>
+<td><code>dl dd a::attr(href)|/(\d+)\.html</code></td>
+</tr>
+<tr>
+<td><code>表达式##正则##替换</code></td>
+<td>对提取结果进行正则替换；省略替换内容时，默认删除匹配部分</td>
+<td><code>.content::html##[（(]本章完[)）]</code></td>
+</tr>
+</tbody></table>
+<p>这里特别推荐 <code>|后端正则</code> 这种写法。</p>
+<p>例如，某个章节链接是 <code>https://example.com/book/12345.html</code>，而我们只需要其中的章节 ID <code>12345</code>，就可以直接写：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a::attr(href)|/(\d+)\.html</span><br></pre></td></tr></table></figure>
+
+<p>先提取链接的 <code>href</code> 属性，再通过正则表达式提取章节 ID，无须额外编写处理逻辑。</p>
+<p>另一种常用写法是 <code>##正则##替换</code>，可以在提取内容后进一步清理文本。例如，删除正文末尾的“本章完”等标记。该语法也兼容阅读 3.0 中的 <code>##</code> 过滤写法。</p>
+<p>除了取值后缀，还有一种 <strong>规则级解析前缀</strong>，可以为单条规则单独指定解析方式，优先级高于整源的默认解析设置。</p>
+<p>目前支持以下前缀：</p>
+<ul>
+<li><code>css:</code>：使用 CSS 选择器</li>
+<li><code>xpath:</code>：使用 XPath</li>
+<li><code>json:</code>：使用 JSONPath</li>
+<li><code>regex:</code>：使用正则表达式</li>
+</ul>
+<p>例如，整本书源默认使用 CSS，但某个字段更适合通过 XPath 提取，就可以这样写：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xpath://meta[@property=&#x27;og:novel:author&#x27;]/@content</span><br></pre></td></tr></table></figure>
+
+<p>这样，同一个书源中就可以混合使用不同的解析方式，不必为了某个特殊字段改变整源的配置。</p>
+<p>CSS 选择器基于 jsoup 实现，语法与浏览器中的 <code>querySelector</code> 等选择器比较接近。如果平时经常使用浏览器开发者工具查看网页结构，通常可以比较快地上手。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#bookName                         取书名文本</span><br><span class="line">a.author::attr(href)              取作者链接</span><br><span class="line">#content::html                    取正文 HTML</span><br><span class="line">dl dd a::attr(href)|/(\d+)\.html  提取链接中的章节 ID</span><br></pre></td></tr></table></figure>
+
+<p>这里有一个需要注意的地方是 <strong>novel-plus 对 <code>:eq(n)</code> 做了特殊处理</strong>。</p>
+<p>在 novel-plus 中，<code>:eq(n)</code> 表示选取第 n 个匹配元素；而 jsoup 原生的 <code>:eq(n)</code> 语义是选取父节点下索引为 n 的子元素，两者的含义并不相同。</p>
+<p>例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#list:eq(0) a</span><br></pre></td></tr></table></figure>
+
+<p>表示先选取第一个匹配 <code>#list</code> 的元素，再提取其中的 <code>a</code> 元素。</p>
+<p>不包含 <code>:eq(</code> 的选择器仍按 jsoup 原生规则解析。</p>
+<p>XPath 同样基于 jsoup 的 <code>selectXpath</code> 实现。对于已经熟悉 XPath 的用户，可以直接使用常见的路径表达式，不必重新学习 CSS 选择器。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//h1[@class=&#x27;bookname&#x27;]                    取书名文本</span><br><span class="line">//a[@id=&#x27;author&#x27;]                          取作者节点</span><br><span class="line">//a[@id=&#x27;author&#x27;]/text()                   取作者文本节点</span><br><span class="line">//div[@id=&#x27;content&#x27;]::html                 取正文 HTML</span><br><span class="line">//div[@id=&#x27;list&#x27;]//dd/a::attr(href)|/(\d+)\.html</span><br><span class="line">                                           提取章节 ID</span><br></pre></td></tr></table></figure>
+
+<p>XPath 表达式既可以返回元素，也可以返回文本节点或属性值。例如，<code>text()</code> 和 <code>@attr</code> 这类表达式都可以正常处理，无须为了适配取值逻辑而额外修改规则。</p>
+<p>正则表达式是 novel-plus 原有的解析方式，本次升级并没有取消它，而是在保留原有能力的基础上增加其他选项。</p>
+<p>其提取规则是 <strong>有捕获组时，优先取第 1 个捕获组；没有捕获组时，取整个匹配结果。</strong></p>
+<p>例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1 class=&quot;title&quot;&gt;(.*?)&lt;/h1&gt;           取书名</span><br><span class="line">&lt;div class=&quot;author&quot;&gt;作者：(.*?)&lt;/div&gt;  取作者</span><br></pre></td></tr></table></figure>
+
+<p>对于历史上没有配置解析方式字段的爬虫规则，系统仍默认按照正则表达式处理，尽可能保证旧书源继续兼容，不需要为了升级而批量修改现有规则。</p>
+<p>有些站点的数据并不是直接写在 HTML 页面中，而是通过接口返回 JSON。对于这类站点，JSONPath 往往比 CSS 或 XPath 更直接。</p>
+<p>novel-plus 的 JSONPath 解析基于 Jayway JsonPath 实现，适合从接口响应中提取书名、作者、章节列表、正文等数据。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$.data.bookName                  取书名</span><br><span class="line">$.data.chapters[*].name          提取全部章节名</span><br><span class="line">$.data.chapters[*].url|/(\d+)\.html</span><br><span class="line">                                 提取章节链接中的 ID</span><br><span class="line">$.data.bookDesc                  提取简介字段</span><br></pre></td></tr></table></figure>
+
+<p>其中，<code>$.data.chapters[*].name</code> 中的 <code>[*]</code> 表示匹配数组中的所有元素，可以一次提取多个章节名。</p>
+<p>对于返回对象或数组的表达式，系统会将结果序列化为 JSON 文本返回，方便后续处理。</p>
+<p>需要注意的是，JSONPath 更适合处理已经获取到的 JSON 响应。如果站点需要执行 JavaScript、完成特定请求签名或通过其他方式才能获取数据，仅仅更换解析表达式并不能解决这些问题。</p>
+</div>
+        </div>
+        
+            <div class="kratos-copyright text-center clearfix">
+                <h5 itemprop="copyrightNotice">本作品采用 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</h5>
+            </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+                <div class="post-like-donate text-center clearfix" id="post-like-donate">
+                
+                    <a class="donate" href="javascript:;"><i class="fa fa-bitcoin"></i> 打赏</a>
+                
+                
+                    <a class="share" href="javascript:;"><i class="fa fa-share-alt"></i> 分享</a>
+                    <div class="share-wrap" style="display: none;">
+    <div class="share-group">
+        <a href="javascript:;" class="share-plain qq" onclick="share('qq');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-qq"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain qzone" onclick="share('qzone');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-star"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weixin pop style-plain" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weixin"></i>
+            </div>
+            <div class="share-int">
+                <div class="qrcode" id="wechat-qr"></div>
+                <p>打开微信“扫一扫”，打开网页后点击屏幕右上角分享按钮</p>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain weibo" onclick="share('weibo');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-weibo"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain facebook style-plain" onclick="share('facebook');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-facebook"></i>
+            </div>
+        </a>
+        <a href="javascript:;" class="share-plain twitter style-plain" onclick="share('twitter');" rel="nofollow">
+            <div class="icon-wrap">
+                <i class="fa fa-twitter"></i>
+            </div>
+        </a>
+    </div>
+    <script type="text/javascript">
+        $(()=>{
+            new QRCode("wechat-qr", {
+                text: "https://www.xxyopen.com/2026/10/26/news/novel-plus-import-rule.html",
+                width: 150,
+                height: 150,
+                correctLevel : QRCode.CorrectLevel.H
+            });
+        });
+        function share(dest) {
+            const qqBase        = "https://connect.qq.com/widget/shareqq/index.html?";
+            const weiboBase     = "https://service.weibo.com/share/share.php?";
+            const qzoneBase     = "https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?";
+            const facebookBase  = "https://www.facebook.com/sharer/sharer.php?";
+            const twitterBase   = "https://twitter.com/intent/tweet?";
+            const hostUrl       = "https://www.xxyopen.com/2026/10/26/news/novel-plus-import-rule.html";
+            const title         = "「告别手写规则！novel-plus 支持第三方规则导入，新增 CSS、XPath、JSONPath 解析」";
+            const excerpt       = `novel-plus  是一套功能完善的原创文学 CMS 系统，支持 PC 网站、WAP、H5、Android、iOS 和微信小程序等多个终端，提供一站式小说平台搭建解决方案。
+由前台门户系统、作家后台管理系统、平台后台管理系统和爬虫...`;
+            let _URL;
+            switch (dest) {
+                case "qq"       : _URL = qqBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";     break;
+                case "weibo"    : _URL = weiboBase+"url="+hostUrl+"&title="+title+excerpt;                                 break;
+                case "qzone"    : _URL = qzoneBase+"url="+hostUrl+"&title="+title+"&desc=&summary="+excerpt+"&site=cxpy";  break;
+                case "facebook" : _URL = facebookBase+"u="+hostUrl;                                                        break;
+                case "twitter"  : _URL = twitterBase+"text="+title+excerpt+"&url="+hostUrl;                                break;
+            }
+            window.open(_URL);
+        };
+    </script>
+</div>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/novel-plus/" rel="tag">novel-plus</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2026-10-26T14:53:04.647Z" itemprop="dateModified">最后编辑：2026-10-26</time>
+                </div>
+            </div>
+        </footer>
+
+        <div style="text-align:center">
+            <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7927582798443371"
+            crossorigin="anonymous"></script>
+       
+       <ins class="adsbygoogle"
+            style="display:inline-block;width:728px;height:90px"
+            data-ad-client="ca-pub-7927582798443371"
+            data-ad-slot="6545878150"></ins>
+       <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+       </script> -->
+        </div>
+        
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" novel-app 发布，一套代码支持 H5、Android、iOS、微信小程序" href="/2026/10/22/news/novel-app.html">&lt; 上一篇</a>
+            </div>
+            
+            
+        </nav>
+    
+    
+</article>
+
+        
+
+            </section>
+
+        
+
+                
+            
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="https://www.xxyopen.com/images/resource/blog/config/avatar.webp" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">专注于开源项目和开发技术的研究与分享</p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                47
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                17
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                41
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                    <div class="sticky-area">
+                
+                
+  <!-- <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-github"></i>个人项目</h4>
+    <iframe src="//player.bilibili.com/player.html?aid=662881622&bvid=BV1qa4y1X7uy&cid=1318987973&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+  </aside> -->
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Docker/">Docker</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Elasticsearch/">Elasticsearch</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/GitHub/">GitHub</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MySQL/">MySQL</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/WEB%E5%89%8D%E7%AB%AF/">WEB前端</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Spring-Boot-3/">Spring Boot 3</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%8E%A8%E8%8D%90/">开源项目推荐</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/Shell/">Shell</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/novel/">novel</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/novel-plus/">novel-plus</a><span class="category-list-count">8</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%96%B0%E9%97%BB/">新闻</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%96%B0%E9%97%BB/novel-plus/">novel-plus</a><span class="category-list-count">3</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/">编程规约</a><span class="category-list-count">2</span></li></ul>
+  </aside>
+  <div style="text-align: center;margin-bottom: 15px;">
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7927582798443371"
+ crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+ style="display:block"
+ data-ad-client="ca-pub-7927582798443371"
+ data-ad-slot="7569295149"
+ data-ad-format="auto"
+ data-full-width-responsive="true"></ins>
+<script>
+ (adsbygoogle = window.adsbygoogle || []).push({});
+</script> -->
+</div>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/CentOS/" style="font-size: 0.6em;">CentOS</a> <a href="/tags/Docker/" style="font-size: 0.8em;">Docker</a> <a href="/tags/Docker-Compose/" style="font-size: 0.65em;">Docker Compose</a> <a href="/tags/Elasticsearch/" style="font-size: 0.6em;">Elasticsearch</a> <a href="/tags/Git/" style="font-size: 0.6em;">Git</a> <a href="/tags/GitHub/" style="font-size: 0.6em;">GitHub</a> <a href="/tags/GitHub%E5%8A%A0%E9%80%9F/" style="font-size: 0.65em;">GitHub加速</a> <a href="/tags/IDEA%E6%8F%92%E4%BB%B6/" style="font-size: 0.6em;">IDEA插件</a> <a href="/tags/JDK/" style="font-size: 0.6em;">JDK</a> <a href="/tags/Linux/" style="font-size: 0.7em;">Linux</a> <a href="/tags/MySQL/" style="font-size: 0.7em;">MySQL</a> <a href="/tags/Nginx/" style="font-size: 0.6em;">Nginx</a> <a href="/tags/Shell/" style="font-size: 0.7em;">Shell</a> <a href="/tags/SpringBoot/" style="font-size: 0.75em;">SpringBoot</a> <a href="/tags/SpringBoot3/" style="font-size: 0.7em;">SpringBoot3</a> <a href="/tags/WebP/" style="font-size: 0.6em;">WebP</a> <a href="/tags/java/" style="font-size: 0.8em;">java</a> <a href="/tags/macOS/" style="font-size: 0.6em;">macOS</a>
+      </div>
+  </aside>
+
+            
+                
+  <aside id="krw-posts" class="widget widget-kratos-posts">
+  <h4 class="widget-title"><i class="fa fa-file"></i>最新文章</h4>
+  <div class="tab-content">
+      <ul class="list-group">
+        
+        
+          
+          
+            <a class="list-group-item" href="/2026/10/26/news/novel-plus-import-rule.html"><i class="fa  fa-book"></i> 告别手写规则！novel-plus 支持第三方规则导入，新增 CSS、XPath、JSONPath 解析</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2026/10/22/news/novel-app.html"><i class="fa  fa-book"></i> novel-app 发布，一套代码支持 H5、Android、iOS、微信小程序</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2025/06/23/java/jdk8-jdk21.html"><i class="fa  fa-book"></i> 为什么 novel-plus 必须从 JDK8 升级到 JDK21？</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2025/03/17/news/novel-plus-v5.0.0.html"><i class="fa  fa-book"></i> novel-plus 5.0.0 发布：架构全面升级，新增 AI 写作功能</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/2024/09/14/github/access.html"><i class="fa  fa-book"></i> 无需翻墙，一种访问 GitHub 的简单方法</a>
+            
+          
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+      </ul>
+  </div>
+  </aside>
+  <!-- <div style="text-align: center;margin-top: 15px;">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7927582798443371"
+    crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+    style="display:block"
+    data-ad-client="ca-pub-7927582798443371"
+    data-ad-slot="7569295149"
+    data-ad-format="auto"
+    data-full-width-responsive="true"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div> -->
+
+            
+    </div>
+</section>
+        
+        
+
+        </div>
+    </div>
+</div>
+<footer>
+    <div id="footer"  >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        <li><a target="_blank" rel="nofollow" href="https://weibo.com/u/5262546028"><i class="fa fa-weibo"></i></a></li>
+                        <li><a href="mailto:xxyopen@foxmail.com"><i class="fa fa-envelope"></i></a></li>
+                        
+                        
+                        
+                        
+                        
+                        <li><a target="_blank" rel="nofollow" href="https://github.com/201206030"><i class="fa fa-github"></i></a></li>
+                        <li><a target="_blank" rel="nofollow" href="/atom.xml"><i class="fa fa-rss"></i></a></li>
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2026 xxyopen 版权所有.</li>
+                            <li>本站已运行<span id="span_dt">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by xxy.</li>
+                            <li>Hosted on <a href="https://vercel.com" target="_blank">Vercel</a></li>
+                        </div>
+                        <!-- <div>
+                            <li>Theme <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a></li>
+                            <li>Site built with&nbsp;<i class="fa fa-heart throb" style="color:#d43f57"></i>&nbsp;by xxy.</li>
+                        </div>
+                        <div>
+                            <li>Powered by <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a></li>
+                            <li>Hosted on <a href="https://vercel.com" target="_blank">Vercel</a></li>
+                        </div> -->
+                        <div>
+                            
+                            
+                        </div>
+                    </ul>
+                    <ul style="margin-left: -50px;">
+                        <img width="50" height="50" src="https://docs.xxyopen.com/img/qrcode_for_gh.jpg"/>
+                        <p style="color: rgba(255,255,255,.3);font-size:12px;margin-top: 2px;">公众号</p>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search/">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="box theme-box" id="darkmode-switch">
+                        <span class="fa fa-adjust"></span>
+                    </div>
+                
+                
+            </div>
+            <div class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.4/dist/js/bootstrap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
+<script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+    <script async src="/js/candy.min.js"></script>
+
+
+
+
+    <script defer src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script defer src="/js/kratosr.min.js"></script>
+<script defer src="/js/pjax.min.js"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/layui-src@2.5.5/dist/layui.all.js"></script>
+
+
+
+<!-- Extra support for third-party plguins  -->
+
+
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?7cf4657d9d7b9fc1396e892f0d3f16d8";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    </body>
+</html>
