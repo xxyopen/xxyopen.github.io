@@ -27,7 +27,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://s1.ax1x.com/2022/07/19/jozrfP.jpg">
 <meta property="article:published_time" content="2022-08-07T00:08:18.000Z">
-<meta property="article:modified_time" content="2026-10-29T05:29:51.270Z">
+<meta property="article:modified_time" content="2026-11-12T08:57:04.093Z">
 <meta property="article:author" content="xxy">
 <meta property="article:tag" content="Docker">
 <meta property="article:tag" content="novel-plus">
@@ -221,7 +221,7 @@
                     <i class="fa fa-edit"></i> 
                     
                     
-                        ~4.06K
+                        ~4.12K
                     
                     字
                 </li>
@@ -246,6 +246,9 @@
 <h2 id="Docker-安装"><a href="#Docker-安装" class="headerlink" title="Docker 安装"></a>Docker 安装</h2><p><a target="_blank" rel="noopener" href="https://www.runoob.com/docker/ubuntu-docker-install.html">Ubuntu 环境</a> ｜ <a target="_blank" rel="noopener" href="https://www.runoob.com/docker/debian-docker-install.html">Debian 环境</a> ｜ <a target="_blank" rel="noopener" href="https://www.runoob.com/docker/centos-docker-install.html">CentOS 环境</a> ｜ <a target="_blank" rel="noopener" href="https://www.runoob.com/docker/windows-docker-install.html">Windows 环境</a> ｜ <a target="_blank" rel="noopener" href="https://www.runoob.com/docker/macos-docker-install.html">MacOS 环境</a></p>
 <h2 id="MySQL-安装"><a href="#MySQL-安装" class="headerlink" title="MySQL 安装"></a>MySQL 安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -itd --name mysql-novel-plus -p 33066:3306 -e MYSQL_ROOT_PASSWORD=novel_plus_1022 201206030/mysql-novel-plus:latest</span><br></pre></td></tr></table></figure>
 
+<blockquote>
+<p>MySQL 镜像初始化完成后，后续无需更新镜像。升级版本时，只需执行对应的 <a target="_blank" rel="noopener" href="https://github.com/201206030/novel-plus/tree/master/doc/sql">增量 SQL</a> ，即可完成数据库结构更新。 </p>
+</blockquote>
 <h2 id="Redis-安装"><a href="#Redis-安装" class="headerlink" title="Redis 安装"></a>Redis 安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -itd --name redis-novel-plus -p 63796:6379 redis --requirepass <span class="string">&quot;novel_plus_1022&quot;</span></span><br></pre></td></tr></table></figure>
 
 
@@ -365,7 +368,7 @@ Docker 安装Ubuntu 环境 ｜ Debian 环境 ...`;
                     <a class="tag-none-link" href="/tags/Docker/" rel="tag">Docker</a>, <a class="tag-none-link" href="/tags/novel-plus/" rel="tag">novel-plus</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2026-10-29T05:29:51.270Z" itemprop="dateModified">最后编辑：2026-10-29</time>
+                    <time datetime="2026-11-12T08:57:04.093Z" itemprop="dateModified">最后编辑：2026-11-12</time>
                 </div>
             </div>
         </footer>
