@@ -9,8 +9,40 @@
     <atom:link href="https://www.xxyopen.com/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>专注于开源项目和开发技术的研究与分享</description>
-    <pubDate>Mon, 26 Oct 2026 14:53:04 GMT</pubDate>
+    <pubDate>Tue, 17 Nov 2026 06:44:49 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>输入一条 URL，AI 自动生成规则，novel-plus 爬虫真正实现 0 门槛</title>
+      <link>https://www.xxyopen.com/2026/11/17/news/novel-plus-airule.html</link>
+      <guid>https://www.xxyopen.com/2026/11/17/news/novel-plus-airule.html</guid>
+      <pubDate>Tue, 17 Nov 2026 06:58:23 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;&lt;a href=&quot;https://github.com/201206030/novel-plus&quot;&gt;novel-plus&lt;/a&gt; 是一套功能完善的原创文学 CMS 系统，支持 PC 网站、WAP、H5、Android、iOS 和微信小程序等多个终端，提供从内容管理到用户运营</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p><a href="https://github.com/201206030/novel-plus">novel-plus</a> 是一套功能完善的原创文学 CMS 系统，支持 PC 网站、WAP、H5、Android、iOS 和微信小程序等多个终端，提供从内容管理到用户运营的一站式小说平台搭建解决方案。<br>​<br>项目包含前台门户、作家后台、平台管理后台和爬虫管理系统等多个子系统，提供小说推荐、作品检索、排行榜、在线阅读、书评、段落评论、书单、会员中心、作家专区等功能。<br>​<br>同时，支持多模板自定义、数据库分表和 TXT 文本等多种小说内容存储方式、阅读主题切换、自动采集与更新、AI 写作、会员充值、章节订阅、新闻发布和实时统计报表等功能。</p><p><a href="https://www.xxyopen.com/images/resource/os/novel-plus/new_green1.png"><img src="https://www.xxyopen.com/images/resource/os/novel-plus/new_green1.png" alt="点击查看大图"></a><a href="https://www.xxyopen.com/images/resource/os/novel-plus/new_pc.png"><img src="https://www.xxyopen.com/images/resource/os/novel-plus/new_pc.png" alt="点击查看大图"></a><a href="https://www.xxyopen.com/images/resource/os/novel-plus/new_author.png"><img src="https://www.xxyopen.com/images/resource/os/novel-plus/new_author.png" alt="点击查看大图"></a><a href="https://www.xxyopen.com/images/resource/os/novel-plus/new_admin.png"><img src="https://www.xxyopen.com/images/resource/os/novel-plus/new_admin.png" alt="点击查看大图"></a><br>​此前，novel-plus 爬虫引擎在原有正则表达式解析的基础上，陆续增加了 CSS、XPath、JSONPath 等解析方式，并支持第三方规则导入，进一步降低了爬虫规则的编写和维护成本。<br><a href="/images/resource/os/novel-plus/airule1.png"><img src="/images/resource/os/novel-plus/airule1.png" alt="点击查看大图"></a><br>现在，规则编写正式接入 AI。</p><blockquote><p>不需要了解正则表达式，也不需要手动分析网页结构，只需输入一个小说网站的 URL，AI 就能自动分析页面并生成对应的爬虫规则。</p></blockquote><p><a href="/images/resource/os/novel-plus/airule2.png"><img src="/images/resource/os/novel-plus/airule2.png" alt="点击查看大图"></a><a href="/images/resource/os/novel-plus/airule3.png"><img src="/images/resource/os/novel-plus/airule3.png" alt="点击查看大图"></a><br>为了验证实际效果，目前已经选取飘天文学网和书趣阁进行了测试，分别使用以下两个模型进行对比：</p><ul><li><code>deepseek-ai/DeepSeek-R1-0528-Qwen3-8B</code></li><li><code>tencent/Hy4-preview</code></li></ul><p>测试结果显示，两个模型都能够完成规则生成任务，但实际效果存在一定差异：</p><ul><li><strong>Tencent Hy4-preview：</strong> 本次测试中生成的规则均能正常使用，正确率达到 <code>100%</code>，从规则生成到实际使用，全程无需人工干预。</li><li><strong>DeepSeek R1：</strong> 能够生成大部分规则，但偶尔会出现错误，需要人工检查和修正。<br><a href="/images/resource/os/novel-plus/airule4.png"><img src="/images/resource/os/novel-plus/airule4.png" alt="点击查看大图"></a></li></ul><p>从目前的测试结果来看，AI 自动生成规则已经具备实际应用价值。不过，不同模型的生成质量仍然存在差异，建议在正式采集前进行规则验证。</p><p>目前，相关代码已经推送到 GitHub 仓库的 <code>6.4.x</code> 分支，暂未正式发布，将随后续版本更新上线。</p>]]></content:encoded>
+      
+      
+      <category domain="https://www.xxyopen.com/categories/%E6%96%B0%E9%97%BB/">新闻</category>
+      
+      <category domain="https://www.xxyopen.com/categories/%E6%96%B0%E9%97%BB/novel-plus/">novel-plus</category>
+      
+      
+      <category domain="https://www.xxyopen.com/tags/novel-plus/">novel-plus</category>
+      
+      <category domain="https://www.xxyopen.com/tags/AI/">AI</category>
+      
+      <category domain="https://www.xxyopen.com/tags/%E7%88%AC%E8%99%AB/">爬虫</category>
+      
+      
+      <comments>https://www.xxyopen.com/2026/11/17/news/novel-plus-airule.html#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>告别手写规则！novel-plus 支持第三方规则导入，新增 CSS、XPath、JSONPath 解析</title>
@@ -579,35 +611,6 @@
       
       
       <comments>https://www.xxyopen.com/2022/07/28/linux/test_port.html#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>Linux 查看端口占用情况</title>
-      <link>https://www.xxyopen.com/2022/07/28/linux/port.html</link>
-      <guid>https://www.xxyopen.com/2022/07/28/linux/port.html</guid>
-      <pubDate>Thu, 28 Jul 2022 12:38:28 GMT</pubDate>
-      
-        
-        
-      <description>&lt;p&gt;Linux 查看端口占用情况可以使用 lsof 和 netstat 命令。&lt;/p&gt;
-&lt;h2 id=&quot;lsof&quot;&gt;&lt;a href=&quot;#lsof&quot; class=&quot;headerlink&quot; title=&quot;lsof&quot;&gt;&lt;/a&gt;lsof&lt;/h2&gt;&lt;p&gt;lsof（list open fi</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<p>Linux 查看端口占用情况可以使用 lsof 和 netstat 命令。</p><h2 id="lsof"><a href="#lsof" class="headerlink" title="lsof"></a>lsof</h2><p>lsof（list open files）是一个列出当前系统打开文件的工具。在 Linux 环境下，任何事物都以文件的形式存在，通过文件不仅仅可以访问常规数据，还可以访问网络连接和硬件。如传输控制协议 (TCP) 和用户数据报协议 (UDP) 套接字等，系统在后台都为该应用程序分配了一个文件描述符，无论这个文件的本质如何，该文件描述符为应用程序与基础操作系统之间的交互提供了通用接口。</p><p>lsof 查看端口占用语法格式：<code>lsof -i:端口号</code></p><ul><li>-a 列出打开文件存在的进程</li><li>-c&lt;进程名&gt; 列出指定进程所打开的文件</li><li>-g 列出GID号进程详情</li><li>-d&lt;文件号&gt; 列出占用该文件号的进程</li><li>+d&lt;目录&gt; 列出目录下被打开的文件</li><li>+D&lt;目录&gt; 递归列出目录下被打开的文件</li><li>-n&lt;目录&gt; 列出使用NFS的文件</li><li>-i&lt;条件&gt; 列出符合条件的进程。（4、6、协议、:端口、 @ip ）</li><li>-p&lt;进程号&gt; 列出指定进程号所打开的文件</li><li>-u 列出UID号进程详情</li><li>-h 显示帮助信息</li><li>-v 显示版本信息</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@iZwz9e2l6djkn7vw4xvic9Z ~]<span class="comment"># lsof -i:8888</span></span><br><span class="line">COMMAND  PID USER   FD   TYPE   DEVICE SIZE/OFF NODE NAME</span><br><span class="line">java    2305 root   31u  IPv4 70962891      0t0  TCP *:ddi-tcp-1 (LISTEN)</span><br></pre></td></tr></table></figure><h2 id="netstat"><a href="#netstat" class="headerlink" title="netstat"></a>netstat</h2><p>netstat 是一个基于命令行界面的网络实用工具，可显示当前的网络状态，包括传输控制协议层的连线状况、路由表、网络接口状态和网络协议的统计信息等。netstat 命令适用于类 Unix 系统、IBM OS&#x2F;2 和 Windows NT 操作系统家族。 netstat 可用于查找网络中的问题，并可通过计算网络流量来度量网络性能。</p><p>netstat -tunlp 用于显示 tcp，udp 的端口和进程等相关情况。</p><p>netstat 查看端口占用语法格式：<code>netstat -tunlp | grep 端口号</code></p><ul><li>-t (tcp) 显示 tcp 相关选项</li><li>-u (udp) 显示 udp 相关选项</li><li>-n 拒绝显示别名，能显示数字的全部转化为数字</li><li>-l 仅列出在 Listen（监听）的服务状态</li><li>-p 显示建立相关链接的程序名</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@iZwz9e2l6djkn7vw4xvic9Z ~]<span class="comment"># netstat -tunlp</span></span><br><span class="line">Active Internet connections (only servers)</span><br><span class="line">Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    </span><br><span class="line">tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1026/sshd           </span><br><span class="line">tcp        0      0 0.0.0.0:8888            0.0.0.0:*               LISTEN      2305/java           </span><br><span class="line">tcp6       0      0 :::2375                 :::*                    LISTEN      12854/dockerd       </span><br><span class="line">tcp6       0      0 :::3306                 :::*                    LISTEN      26539/docker-proxy  </span><br><span class="line">udp        0      0 0.0.0.0:68              0.0.0.0:*                           511/dhclient        </span><br><span class="line">udp        0      0 127.0.0.1:323           0.0.0.0:*                           536/chronyd         </span><br><span class="line">udp6       0      0 ::1:323                 :::*                                536/chronyd      </span><br></pre></td></tr></table></figure>]]></content:encoded>
-      
-      
-      <category domain="https://www.xxyopen.com/categories/Linux/">Linux</category>
-      
-      
-      <category domain="https://www.xxyopen.com/tags/Linux/">Linux</category>
-      
-      <category domain="https://www.xxyopen.com/tags/Shell/">Shell</category>
-      
-      
-      <comments>https://www.xxyopen.com/2022/07/28/linux/port.html#disqus_thread</comments>
       
     </item>
     
